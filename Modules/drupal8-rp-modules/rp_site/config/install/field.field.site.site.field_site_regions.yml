@@ -1,0 +1,26 @@
+uuid: 8378e7ef-51e1-4881-96e1-250c6b404d5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_regions
+  module:
+    - rp_site
+id: site.site.field_site_regions
+field_name: field_site_regions
+entity_type: site
+bundle: site
+label: Regions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:region'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

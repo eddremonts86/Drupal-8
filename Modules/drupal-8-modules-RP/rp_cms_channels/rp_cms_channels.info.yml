@@ -1,0 +1,13 @@
+name: 'RP CMS - Channels'
+description: 'Provides Channels content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - field_group
+  - menu_ui
+  - node
+  - path
+  - rp_cms_channels_by_contenttype
+  - user
+package: 'Rebel Penguins CMS - Frontend'

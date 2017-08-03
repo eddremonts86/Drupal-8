@@ -1,0 +1,20 @@
+uuid: 509485fe-b84b-480f-9807-cb20967c9c03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_api_id
+  module:
+    - rp_site
+id: site.site.field_site_api_id
+field_name: field_site_api_id
+entity_type: site
+bundle: site
+label: 'API ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

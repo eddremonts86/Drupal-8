@@ -1,0 +1,134 @@
+langcode: en
+status: true
+dependencies: {  }
+id: site--site
+disabled: false
+path: site
+resourceType: site
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  vid:
+    fieldName: vid
+    publicName: vid
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  revision_created:
+    fieldName: revision_created
+    publicName: revision_created
+    enhancer:
+      id: ''
+    disabled: false
+  revision_user:
+    disabled: true
+    fieldName: revision_user
+    publicName: revision_user
+    enhancer:
+      id: ''
+  revision_log_message:
+    fieldName: revision_log_message
+    publicName: revision_log_message
+    enhancer:
+      id: ''
+    disabled: false
+  user_id:
+    disabled: true
+    fieldName: user_id
+    publicName: user_id
+    enhancer:
+      id: ''
+  name:
+    fieldName: name
+    publicName: name
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: created
+    enhancer:
+      id: ''
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: changed
+    enhancer:
+      id: ''
+    disabled: false
+  revision_translation_affected:
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+    disabled: false
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  field_site_api_id:
+    fieldName: field_site_api_id
+    publicName: field_site_api_id
+    enhancer:
+      id: ''
+    disabled: false
+  field_site_channels:
+    fieldName: field_site_channels
+    publicName: field_site_channels
+    enhancer:
+      id: ''
+    disabled: false
+  field_site_label:
+    fieldName: field_site_label
+    publicName: field_site_label
+    enhancer:
+      id: ''
+    disabled: false
+  field_site_languages:
+    fieldName: field_site_languages
+    publicName: field_site_languages
+    enhancer:
+      id: ''
+    disabled: false
+  field_site_regions:
+    fieldName: field_site_regions
+    publicName: field_site_regions
+    enhancer:
+      id: ''
+    disabled: false
+  field_site_site_group_name:
+    fieldName: field_site_site_group_name
+    publicName: field_site_site_group_name
+    enhancer:
+      id: ''
+    disabled: false
+  field_site_url:
+    fieldName: field_site_url
+    publicName: field_site_url
+    enhancer:
+      id: ''
+    disabled: false

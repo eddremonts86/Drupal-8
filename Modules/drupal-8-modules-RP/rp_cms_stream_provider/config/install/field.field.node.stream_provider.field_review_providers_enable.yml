@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_providers_enable
+    - node.type.stream_provider
+id: node.stream_provider.field_review_providers_enable
+field_name: field_review_providers_enable
+entity_type: node
+bundle: stream_provider
+label: 'Review Providers Enable'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

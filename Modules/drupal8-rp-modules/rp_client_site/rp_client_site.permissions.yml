@@ -1,0 +1,33 @@
+add client_site entities:
+  title: 'Create new Client_site entities'
+
+administer client_site entities:
+  title: 'Administer Client_site entities'
+  description: 'Allow to access the administration form to configure Client_site entities.'
+  restrict access: true
+
+delete client_site entities:
+  title: 'Delete Client_site entities'
+
+edit client_site entities:
+  title: 'Edit Client_site entities'
+
+access client_site overview:
+  title: 'Access the Client_site overview page'
+
+view published client_site entities:
+  title: 'View published Client_site entities'
+
+view unpublished client_site entities:
+  title: 'View unpublished Client_site entities'
+
+view all client_site revisions:
+  title: 'View all Client_site revisions'
+
+revert all client_site revisions:
+  title: 'Revert all Client_site revisions'
+  description: 'Role requires permission <em>view Client_site revisions</em> and <em>edit rights</em> for client_site entities in question or <em>administer client_site entities</em>.'
+
+delete all client_site revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Client_site revisions</em> and <em>delete rights</em> for client_site entities in question or <em>administer client_site entities</em>.'

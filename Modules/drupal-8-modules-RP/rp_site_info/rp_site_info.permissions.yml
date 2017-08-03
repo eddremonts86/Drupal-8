@@ -1,0 +1,33 @@
+add site info entities:
+  title: 'Create new Site info entities'
+
+administer site info entities:
+  title: 'Administer Site info entities'
+  description: 'Allow to access the administration form to configure Site info entities.'
+  restrict access: true
+
+delete site info entities:
+  title: 'Delete Site info entities'
+
+edit site info entities:
+  title: 'Edit Site info entities'
+
+access site info overview:
+  title: 'Access the Site info overview page'
+
+view published site info entities:
+  title: 'View published Site info entities'
+
+view unpublished site info entities:
+  title: 'View unpublished Site info entities'
+
+view all site info revisions:
+  title: 'View all Site info revisions'
+
+revert all site info revisions:
+  title: 'Revert all Site info revisions'
+  description: 'Role requires permission <em>view Site info revisions</em> and <em>edit rights</em> for site info entities in question or <em>administer site info entities</em>.'
+
+delete all site info revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Site info revisions</em> and <em>delete rights</em> for site info entities in question or <em>administer site info entities</em>.'

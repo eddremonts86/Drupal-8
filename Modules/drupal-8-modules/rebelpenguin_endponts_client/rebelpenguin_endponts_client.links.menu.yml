@@ -1,0 +1,14 @@
+rebelpenguin_endponts_client.config:
+  title: Rebel Penguin - Modules
+  parent: system.admin_config
+  route_name: rebelpenguin_endponts_client.description
+  description: 'Domain configuration'
+  weight: 0
+
+rebelpenguin_endponts_client.admin_settings:
+  title: Rebel Penguin - Endpoint Client
+  description: 'example of how to make an admin settings page link'
+  parent: rebelpenguin_endponts_client.config
+  route_name: rebelpenguin_endponts_client.description
+  weight: 1
+

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indsatspolitik_content
+    - node.type.stream_provider
+  module:
+    - text
+id: node.stream_provider.field_indsatspolitik_content
+field_name: field_indsatspolitik_content
+entity_type: node
+bundle: stream_provider
+label: 'Indsatspolitik Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

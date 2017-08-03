@@ -1,0 +1,44 @@
+# This routing.yml file makes both the fapi example description page and the
+# included sample forms available at specific URL's on your site. A route
+# maps a URL path to a controller. For page controllers it defines the
+# function or method that will be called when the page is accessed.  For form
+# controllers the content is determined by the buildForm method defined by the
+# form controller implementation.
+
+# Access to these paths is restricted to users with the permission
+# 'access content'. This is notated as _permission: 'access content'.
+
+# Menu items corresponding to these URLs are defined separately in the
+# rebelpenguin_endponts_client.links.menu.yml file.
+
+rebelpenguin_endponts_client.description:
+  path: 'endpoint_client/configuration'
+  defaults:
+    _controller:  '\Drupal\rebelpenguin_endponts_client\Controller\Page::description'
+    _title: 'Import external content( Drupal Content Repo).'
+  requirements:
+    _permission: 'access content'
+
+rebelpenguin_endponts_client.rebelpenguin_endponts_client_urls:
+  path: 'endpoint_client/saveallurls'
+  defaults:
+    _form:  '\Drupal\rebelpenguin_endponts_client\Form\Rebelpenguin_endponts_client_urls'
+    _title: 'Server and endponints urls'
+  requirements:
+    _permission: 'access content'
+
+rebelpenguin_endponts_client.rebelpenguin_endponts_client_import:
+  path: 'endpoint_client/importnodeandrevisions'
+  defaults:
+    _form:  '\Drupal\rebelpenguin_endponts_client\Form\Rebelpenguin_endponts_client_import'
+    _title: 'Import nodes and revisions'
+  requirements:
+    _permission: 'access content'
+
+rebelpenguin_endponts_client.rebelpenguin_endponts_client_importnodesbytypes:
+  path: 'endpoint_client/importallnodes'
+  defaults:
+    _form:  '\Drupal\rebelpenguin_endponts_client\Form\Rebelpenguin_endponts_client_importnodesbytypes'
+    _title: 'Import all nodes by content type'
+  requirements:
+    _permission: 'access content'

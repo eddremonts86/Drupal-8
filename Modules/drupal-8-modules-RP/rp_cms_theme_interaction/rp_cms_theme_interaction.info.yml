@@ -1,0 +1,14 @@
+name: 'RP CMS -  Theme Interaction'
+type: module
+description: Interaction whit Themplate RP Base - Supply all data.
+core: 8.x
+package: Rebel Penguins CMS - Frontend
+dependencies:
+  - rp_cms_sport_tournament_taxonomy
+  - rp_cms_channels
+  - rp_cms_game_pages
+  - rp_cms_participants_content
+  - rp_cms_sport_internal_pages
+  - rp_cms_sport_pages
+  - rp_cms_stream_provider
+  - rp_cms_tournament_page

@@ -1,0 +1,13 @@
+bundle: rp_cms
+excluded:
+  - core.entity_view_display.node.stream_provider.default
+  - core.entity_view_display.node.stream_provider.teaser
+  - core.entity_view_display.node.article.default
+  - core.entity_view_display.node.article.rss
+  - core.entity_view_display.node.article.teaser
+  - field.field.node.stream_provider.field_tags
+  - field.field.node.article.field_tags
+  - core.entity_form_display.node.article.default
+  - core.entity_form_display.node.stream_provider.default
+  - field.storage.node.field_tags
+required: true

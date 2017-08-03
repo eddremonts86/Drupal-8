@@ -1,0 +1,21 @@
+uuid: f68799ab-cd45-4566-97ad-e2470822bb9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_site
+id: site.field_site_channels
+field_name: field_site_channels
+entity_type: site
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

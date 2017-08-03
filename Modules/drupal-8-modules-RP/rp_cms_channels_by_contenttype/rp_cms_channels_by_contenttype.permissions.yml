@@ -1,0 +1,33 @@
+add channels_by_contenttype entities:
+  title: 'Create new Channels_by_contenttype entities'
+
+administer channels_by_contenttype entities:
+  title: 'Administer Channels_by_contenttype entities'
+  description: 'Allow to access the administration form to configure Channels_by_contenttype entities.'
+  restrict access: true
+
+delete channels_by_contenttype entities:
+  title: 'Delete Channels_by_contenttype entities'
+
+edit channels_by_contenttype entities:
+  title: 'Edit Channels_by_contenttype entities'
+
+access channels_by_contenttype overview:
+  title: 'Access the Channels_by_contenttype overview page'
+
+view published channels_by_contenttype entities:
+  title: 'View published Channels_by_contenttype entities'
+
+view unpublished channels_by_contenttype entities:
+  title: 'View unpublished Channels_by_contenttype entities'
+
+view all channels_by_contenttype revisions:
+  title: 'View all Channels_by_contenttype revisions'
+
+revert all channels_by_contenttype revisions:
+  title: 'Revert all Channels_by_contenttype revisions'
+  description: 'Role requires permission <em>view Channels_by_contenttype revisions</em> and <em>edit rights</em> for channels_by_contenttype entities in question or <em>administer channels_by_contenttype entities</em>.'
+
+delete all channels_by_contenttype revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Channels_by_contenttype revisions</em> and <em>delete rights</em> for channels_by_contenttype entities in question or <em>administer channels_by_contenttype entities</em>.'

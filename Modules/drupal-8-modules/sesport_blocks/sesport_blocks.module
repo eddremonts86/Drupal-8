@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Contains sesport_blocks.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function sesport_blocks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sesport_blocks module.
+    case 'help.page.sesport_blocks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function sesport_blocks_theme($existing, $type, $theme, $path) {
+  return [
+    'sesport_blocks' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => array()
+        ],
+        'template' => 'sesport-blocks'
+      ],
+    'sesport_review' =>
+      [
+        'variables' => [
+          'titulo' => 'Find de bedste provider Reviews',
+          'descripcion' => 'Vi har på SeSport samlet, beskrevet og vurderet de forskellige sportsbookmakere på det danske marked. Læs anmeldelserne og find din favorit!',
+          'tags' => array()
+        ],
+        'template' => 'sesport-review'
+      ],
+    'sesport_front_stream' =>
+      [
+        'variables' => [
+          'titulo' => 'Find din live stream udbyder',
+          'descripcion' => 'Find din live stream udbyder',
+          'tags' => array()
+        ],
+        'template' => 'sesport-front-stream'
+      ],
+    'sesport_front_kampprogram' =>
+      [
+        'variables' => [
+          'titulo' => 'Find din live stream udbyder',
+          'descripcion' => 'Find din live stream udbyder',
+          'tags' => array()
+        ],
+        'template' => 'sesport-front-kampprogram'
+      ]
+  ];
+}

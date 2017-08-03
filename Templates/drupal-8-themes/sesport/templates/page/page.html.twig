@@ -1,0 +1,45 @@
+{% if page.content_headsportsecction %}
+    <section class="o-sport-program sport_home_slider">
+        <div class="container">
+            <div class="col-md-12">
+                {{ page.content_headsportsecction }}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content_generalpages %}
+    {{ page.content_generalpages }}
+{% endif %}
+
+{% if page.content_popularkamp %}
+    <section class="o-sport-program sport_home_slider">
+        <div class="container">
+            <div class="col-md-12">
+                {{ page.content_popularkamp }}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content_Kampprogram %}
+    <section class="o-sport-program sport_home_slider">
+        <div class="container">
+            <div class="col-md-12">
+                {{ page.content_Kampprogram }}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content_stream %}
+    <section class="o-sport-stream">
+        <div class="container">
+            {{ page.content_stream }}
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content %}
+    {{ page.content }}
+{% endif %}

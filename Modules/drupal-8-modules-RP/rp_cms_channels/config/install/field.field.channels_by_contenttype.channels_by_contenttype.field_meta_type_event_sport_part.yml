@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.channels_by_contenttype.field_meta_type_event_sport_part
+  module:
+    - rp_cms_channels_by_contenttype
+id: channels_by_contenttype.channels_by_contenttype.field_meta_type_event_sport_part
+field_name: field_meta_type_event_sport_part
+entity_type: channels_by_contenttype
+bundle: channels_by_contenttype
+label: 'Meta type (Event, Sport, Participant)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/rp_cms_channels_by_contenttype",
+  "type": "drupal-module",
+  "description": "My Awesome Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_cms_channels_by_contenttype",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_cms_channels_by_contenttype",
+    "source": "http://cgit.drupalcode.org/rp_cms_channels_by_contenttype"
+  },
+  "require": { }
+}

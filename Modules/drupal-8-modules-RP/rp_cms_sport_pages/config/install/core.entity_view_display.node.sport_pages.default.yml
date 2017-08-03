@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sport_pages.body
+    - field.field.node.sport_pages.field_sport_api_id
+    - field.field.node.sport_pages.field_sport_name
+    - field.field.node.sport_pages.field_sport_theme_descrption
+    - node.type.sport_pages
+  module:
+    - text
+    - user
+id: node.sport_pages.default
+targetEntityType: node
+bundle: sport_pages
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_sport_api_id: true
+  field_sport_name: true
+  field_sport_theme_descrption: true
+  links: true

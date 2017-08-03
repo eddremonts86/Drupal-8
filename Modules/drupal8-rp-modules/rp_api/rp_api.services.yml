@@ -1,0 +1,7 @@
+services:
+  rp_api.middleware:
+    class: Drupal\rp_api\RPAPIMiddleware
+    tags:
+      - { name: http_middleware, priority: 10 }
+  rp_api.client:
+    class: Drupal\rp_api\RPAPIClient

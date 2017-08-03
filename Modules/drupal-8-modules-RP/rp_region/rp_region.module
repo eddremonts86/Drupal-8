@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_region.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_region_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_region module.
+    case 'help.page.rp_region':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RP Region entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}

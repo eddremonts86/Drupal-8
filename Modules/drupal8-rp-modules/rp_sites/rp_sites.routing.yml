@@ -1,0 +1,46 @@
+entity.rp_site.settings:
+  path: 'admin/structure/rp_site_settings'
+  defaults:
+    _form: '\Drupal\rp_sites\Form\SiteSettingsForm'
+    _title: 'Site Settings'
+  requirements:
+    _permission: 'administer rp_sites entities'
+entity.rp_site.collection:
+  path: '/admin/content/rp_site'
+  defaults:
+    _entity_list: 'rp_site'
+    _title: 'Site list'
+  requirements:
+    _permission: 'access site overview'
+
+entity.rp_site.canonical:
+  path: '/admin/content/rp-site/{rp_site}'
+  defaults:
+    _entity_view: 'rp_site'
+    _title: 'Site'
+  requirements:
+    _entity_access: 'rp_site.view'
+
+entity.rp_site.add_form:
+  path: '/admin/content/rp-site/add'
+  defaults:
+    _entity_form: rp_site.add
+    _title: 'Add Site'
+  requirements:
+    _entity_create_access: rp_site
+
+entity.rp_site.edit_form:
+  path: '/admin/content/rp-site/{rp_site}/edit'
+  defaults:
+    _entity_form: rp_site.edit
+    _title: 'Edit Site'
+  requirements:
+    _entity_access: rp_site.update
+
+entity.rp_site.delete_form:
+  path: '/admin/content/rp-site/{rp_site}/delete'
+  defaults:
+    _entity_form: rp_site.delete
+    _title: 'Delete Site'
+  requirements:
+    _entity_access: rp_site.delete

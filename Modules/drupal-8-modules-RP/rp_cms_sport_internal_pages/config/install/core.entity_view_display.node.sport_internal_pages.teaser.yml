@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sport_internal_pages.body
+    - field.field.node.sport_internal_pages.field_page_type
+    - field.field.node.sport_internal_pages.field_sport_tax
+    - node.type.sport_internal_pages
+  module:
+    - text
+    - user
+id: node.sport_internal_pages.teaser
+targetEntityType: node
+bundle: sport_internal_pages
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_page_type: true
+  field_sport_tax: true

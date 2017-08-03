@@ -1,0 +1,5 @@
+entity.region.add_form:
+  route_name: entity.region.add_form
+  title: 'Add Region'
+  appears_on:
+    - entity.region.collection

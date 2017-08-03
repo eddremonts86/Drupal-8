@@ -1,0 +1,57 @@
+uuid: aae84bed-6038-479d-ad8c-68c318ecec0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.region.region.field_region_code
+    - field.field.region.region.field_region_id
+    - field.field.region.region.field_region_label
+  module:
+    - rp_region
+    - user
+id: region.region.default
+targetEntityType: region
+bundle: region
+mode: default
+content:
+  field_region_code:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_region_id:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_region_label:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

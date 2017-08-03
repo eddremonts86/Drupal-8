@@ -1,0 +1,5 @@
+name: sesport_blocks
+type: module
+description: My Awesome Module
+core: 8.x
+package: Rebel Penguins Apps

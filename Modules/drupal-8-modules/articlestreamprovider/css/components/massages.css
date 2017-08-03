@@ -1,0 +1,17 @@
+#block-customstreamproviders{
+    margin-top: 25px;
+}
+
+.border-panel{
+    border-radius: 6px;
+}
+.border-panel-title{
+    border-radius: 6px 0px;
+}
+.panel-primary > .panel-heading {
+    color: #ffffff;
+    background-color: #008cba;
+    border-color: #008cba;
+    height: auto;
+    min-height: 53px;
+}

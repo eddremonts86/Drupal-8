@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sport_blog_ip_api_id
+    - node.type.sport_internal_blogs
+id: node.sport_internal_blogs.field_sport_blog_ip_api_id
+field_name: field_sport_blog_ip_api_id
+entity_type: node
+bundle: sport_internal_blogs
+label: 'Sport blog IP API ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

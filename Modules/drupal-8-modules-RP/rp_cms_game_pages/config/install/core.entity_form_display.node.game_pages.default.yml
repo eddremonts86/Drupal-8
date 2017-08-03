@@ -1,0 +1,347 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.game_pages.body
+    - field.field.node.game_pages.field_content_section_heading_1
+    - field.field.node.game_pages.field_content_section_heading_2
+    - field.field.node.game_pages.field_field_pspbs_three
+    - field.field.node.game_pages.field_game_channels_ref
+    - field.field.node.game_pages.field_game_date
+    - field.field.node.game_pages.field_game_pages_api_id
+    - field.field.node.game_pages.field_game_participants_tax
+    - field.field.node.game_pages.field_game_tournament
+    - field.field.node.game_pages.field_game_tournament_api_id
+    - field.field.node.game_pages.field_game_tournament_reff
+    - field.field.node.game_pages.field_h2h_section_
+    - field.field.node.game_pages.field_h2h_section_graph_heading
+    - field.field.node.game_pages.field_participant_1
+    - field.field.node.game_pages.field_participant_2
+    - field.field.node.game_pages.field_participant_referent
+    - field.field.node.game_pages.field_promo_box_head_1
+    - field.field.node.game_pages.field_promo_box_head_2
+    - field.field.node.game_pages.field_promo_stream_provider_butt
+    - field.field.node.game_pages.field_promo_stream_provider_head
+    - field.field.node.game_pages.field_promo_stream_provider_poin
+    - field.field.node.game_pages.field_pspbs_tow
+    - field.field.node.game_pages.field_stadium_button
+    - field.field.node.game_pages.field_stadium_content
+    - field.field.node.game_pages.field_stadium_heading
+    - field.field.node.game_pages.field_stream_provider_gp
+    - field.field.node.game_pages.field_tabs_section_se_on_tv_head
+    - field.field.node.game_pages.field_tabs_section_se_online_hea
+    - field.field.node.game_pages.field_tabs_section_travel_headin
+    - field.field.node.game_pages.field_tags
+    - field.field.node.game_pages.field_terms_and_conditions
+    - field.field.node.game_pages.field_wath_tv_heading
+    - field.field.node.game_pages.field_wath_tv_heading_ingen_tv_
+    - field.field.node.game_pages.panelizer
+    - node.type.game_pages
+  module:
+    - field_group
+    - path
+third_party_settings:
+  field_group:
+    group_promo_box:
+      children:
+        - field_field_pspbs_three
+        - field_promo_box_head_1
+        - field_promo_box_head_2
+        - field_promo_stream_provider_butt
+        - field_promo_stream_provider_head
+        - field_promo_stream_provider_poin
+        - field_pspbs_tow
+        - field_terms_and_conditions
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: 'Promo Box'
+    group_general:
+      children:
+        - title
+        - field_tags
+        - field_game_participants_tax
+        - field_game_tournament_reff
+        - field_game_date
+        - uid
+        - created
+        - promote
+        - sticky
+        - path
+        - field_game_tournament
+        - field_participant_1
+        - field_participant_2
+      parent_name: group_game_pages
+      weight: 1
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: General
+    group_content:
+      children:
+        - field_content_section_heading_1
+        - field_content_section_heading_2
+      parent_name: ''
+      weight: 4
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: Content
+    group_tabs_section:
+      children:
+        - field_tabs_section_se_online_hea
+        - field_tabs_section_se_on_tv_head
+        - field_tabs_section_travel_headin
+      parent_name: ''
+      weight: 1
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: 'Tabs Section'
+    group_h2h_section:
+      children:
+        - field_h2h_section_
+        - field_h2h_section_graph_heading
+      parent_name: ''
+      weight: 3
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: 'H2H Section'
+    group_wath_tv:
+      children:
+        - field_wath_tv_heading
+        - field_wath_tv_heading_ingen_tv_
+      parent_name: ''
+      weight: 2
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: 'Wath TV'
+    group_stadium:
+      children:
+        - field_stadium_button
+        - field_stadium_content
+        - field_stadium_heading
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: Stadium
+    group_game_pages:
+      children:
+        - group_general
+        - group_stream_providers_
+        - group_others
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        label: 'Game Pages'
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Game Pages'
+    group_stream_providers_:
+      children:
+        - field_stream_provider_gp
+        - field_game_channels_ref
+      parent_name: group_game_pages
+      weight: 2
+      format_type: tab
+      format_settings:
+        label: 'Stream Providers and Chanels'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Stream Providers and Chanels'
+    group_others:
+      children:
+        - field_game_pages_api_id
+        - field_game_tournament_api_id
+        - field_participant_referent
+      parent_name: group_game_pages
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Others
+id: node.game_pages.default
+targetEntityType: node
+bundle: game_pages
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_game_channels_ref:
+    type: entity_reference_autocomplete
+    weight: 53
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_game_date:
+    weight: -1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_timestamp
+    region: content
+  field_game_pages_api_id:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_game_participants_tax:
+    type: entity_reference_autocomplete
+    weight: -3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_game_tournament_api_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_game_tournament_reff:
+    type: entity_reference_autocomplete
+    weight: -2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_stream_provider_gp:
+    weight: 52
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tags:
+    weight: -4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  path:
+    type: path
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_content_section_heading_1: true
+  field_content_section_heading_2: true
+  field_field_pspbs_three: true
+  field_game_tournament: true
+  field_h2h_section_: true
+  field_h2h_section_graph_heading: true
+  field_participant_1: true
+  field_participant_2: true
+  field_participant_referent: true
+  field_promo_box_head_1: true
+  field_promo_box_head_2: true
+  field_promo_stream_provider_butt: true
+  field_promo_stream_provider_head: true
+  field_promo_stream_provider_poin: true
+  field_pspbs_tow: true
+  field_stadium_button: true
+  field_stadium_content: true
+  field_stadium_heading: true
+  field_tabs_section_se_on_tv_head: true
+  field_tabs_section_se_online_hea: true
+  field_tabs_section_travel_headin: true
+  field_terms_and_conditions: true
+  field_wath_tv_heading: true
+  field_wath_tv_heading_ingen_tv_: true
+  panelizer: true

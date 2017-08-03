@@ -1,0 +1,7 @@
+name: RP CMS -  Sesport Blocks
+type: module
+description: My Awesome Module
+core: 8.x
+package: 'Rebel Penguins CMS - Frontend'
+dependencies:
+  - rp_repo

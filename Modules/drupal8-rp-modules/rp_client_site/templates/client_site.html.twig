@@ -1,0 +1,22 @@
+{#
+/**
+ * @file client_site.html.twig
+ * Default theme implementation to present Client_site data.
+ *
+ * This template is used when viewing Client_site pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_client_site()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('client_site') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

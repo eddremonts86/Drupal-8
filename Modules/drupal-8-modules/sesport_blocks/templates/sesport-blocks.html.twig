@@ -1,0 +1,151 @@
+<div id="ses_block" class="container-fluid o_sport_home_important_events ">
+    <div class="row">
+        <main class='frontpage'>
+            <section class="general_sections stream_back_tabs">
+                <div class="container">
+                    <div class="col-xs-12 list_head">
+                        <h1 class="live_list_head">Udbydere af Live Stream</h1>
+                        <h2 class="live_list_subhead">Læs om de forskellige udbydere af live stream på det danske marked.</h2>
+                        <ul class="nav nav-tabs" role="tablist">
+                            {% for tag in tags %}
+
+                                {% if loop.first %}
+                                    <li role="presentation" class="tabs_stream active">
+                                        <a href="#node-{{ tag.nid.0.value }}" aria-controls="node-{{ tag.nid.0.value }}"
+                                           role="tab"
+                                           data-toggle="tab">{{ tag.title.0.value }}</a>
+                                    </li>
+                                {% else %}
+                                    <li role="presentation" class="tabs_stream">
+                                        <a href="#node-{{ tag.nid.0.value }}" aria-controls="node-{{ tag.nid.0.value }}" role="tab" data-toggle="tab">{{ tag.title.0.value }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="general_sections stream_back_text">
+                <div class="container">
+                    <div class="col-xs-12">
+                        <div class="tab-content stream_desc">
+                            {% for tag_body in tags %}
+                                {% if loop.first %}
+                                    <div role="tabpanel" class="tab-pane active" id="node-{{ tag_body.nid.0.value }}">
+                                        <div class="row row_top">
+                                            <div class="col-md-5 img_stram">
+                                                <div>
+                                                    <a target="_blank" href="go/unibet/lsr/rp"><img
+                                                                class="bordered-mobile" alt="Unibet icon" width="auto"
+                                                                height="auto"
+                                                                src="http://images-v2.sesport.dk/sesport.dk-ver2/oddsproviders-new/351x180/OddsProviderLogo_2_351x180_5461e3d7c46988a8388b4def.png"></a>
+                                                    <p class="align-center gray"><strong>Bonus: 100% 100% bonus op til
+                                                            1.000 kr.</strong></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 head_text_left">
+                                                <div class="five eighths triple-pad-left mobile one-up-mobile no-padded-mobile">
+                                                    <h2 class="stream_name">Unibet</h2>
+                                                    <div class="max-wd300 pull-left">
+                                                        <div class="top_text_stream"><p><i
+                                                                        class="fa fa-check green"></i>&nbsp;Masser af
+                                                                spil på
+                                                                dansk sport</p></div>
+                                                        <div class="top_text_stream"><p><i
+                                                                        class="fa fa-check green"></i>&nbsp;Gode tilbud
+                                                                til
+                                                                danske kunder</p></div>
+                                                        <div class="top_text_stream"><p><i
+                                                                        class="fa fa-check green"></i>&nbsp;Brugervenligt
+                                                                site</p></div>
+                                                        <div class="top_text_stream"><label>
+                                                                <a role="button" class="btn btn-danger btn-cust-block "
+                                                                   target="_blank" href="go/unibet/lsr/rp">
+                                                                    <i class="fa fa-arrow-circle-right"></i> Gå til {{ tag_body.title.0.value }} </a>
+                                                            </label></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row row_desc">
+                                            <div class="col-md-12">
+                                                <div class="tab_panel_text_desc">
+                                                    <h3 class="half-gap-bottom">{{ tag_body.title.0.value }}
+                                                        <span class="strat_left">
+                                                            {% for i in 1.. tag_body.field_properties_rating.0.value %} <em class="fa fa-star"></em> {% endfor %}
+                                                            {% for i in 1.. (5 - tag_body.field_properties_rating.0.value) %}
+                                                                {% if (5 - tag_body.field_properties_rating.0.value) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                            {% endfor %}
+                                                        </span>
+                                                    </h3>
+                                                    <p>{{ tag_body.body.0.value }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div role="tabpanel" class="tab-pane" id="node-{{ tag_body.nid.0.value }}">
+                                        <div class="row row_top">
+                                            <div class="col-md-5 img_stram">
+                                                <div>
+                                                    <a target="_blank" href="go/unibet/lsr/rp"><img
+                                                                class="bordered-mobile" alt="Unibet icon" width="auto"
+                                                                height="auto"
+                                                                src="http://images-v2.sesport.dk/sesport.dk-ver2/oddsproviders-new/351x180/OddsProviderLogo_2_351x180_5461e3d7c46988a8388b4def.png"></a>
+                                                    <p class="align-center gray"><strong>Bonus: 100% 100% bonus op til
+                                                            1.000 kr.</strong></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 head_text_left">
+                                                <div class="five eighths triple-pad-left mobile one-up-mobile no-padded-mobile">
+                                                    <h2 class="stream_name">Unibet</h2>
+                                                    <div class="max-wd300 pull-left">
+                                                        <div class="top_text_stream"><p><i
+                                                                        class="fa fa-check green"></i>&nbsp;Masser af
+                                                                spil på
+                                                                dansk sport</p></div>
+                                                        <div class="top_text_stream"><p><i
+                                                                        class="fa fa-check green"></i>&nbsp;Gode tilbud
+                                                                til
+                                                                danske kunder</p></div>
+                                                        <div class="top_text_stream"><p><i
+                                                                        class="fa fa-check green"></i>&nbsp;Brugervenligt
+                                                                site</p></div>
+                                                        <div class="top_text_stream"><label>
+                                                                <a role="button" class="btn btn-danger btn-cust-block "
+                                                                   target="_blank" href="go/unibet/lsr/rp">
+                                                                    <i class="fa fa-arrow-circle-right"></i>
+                                                                    Gå til {{ tag_body.title.0.value }} </a>
+                                                            </label></div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row row_desc">
+                                            <div class="col-md-12">
+                                                <div class="tab_panel_text_desc">
+                                                    <h3 class="half-gap-bottom">{{ tag_body.title.0.value }}
+                                                        <span class="strat_left">
+                                                            {% for i in 1.. tag_body.field_properties_rating.0.value %} <em class="fa fa-star"></em> {% endfor %}
+                                                            {% for i in 1.. (5 - tag_body.field_properties_rating.0.value) %}
+                                                                {% if (5 - tag_body.field_properties_rating.0.value) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                            {% endfor %}
+                                                        </span>
+                                                    </h3>
+                                                    <p>{{ tag_body.body.0.value }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

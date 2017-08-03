@@ -1,0 +1,14 @@
+<div class="row">
+    {% if is_front == false %}
+        <nav class='o-header__secondary'>
+            <ul> {% for tag in tags %}
+                    <li><a href='/{{ tag|striptags }}'>   {{ tag|striptags }}</a></li>
+                    <li><a href='/{{ tag|striptags }}/live_stream_{{ tag|striptags }}'>Live Stream {{ tag|striptags }}</a></li>
+                    <li><a href='/{{ tag|striptags }}/blog'>{{ tag|striptags }} Blog</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+</div>
+

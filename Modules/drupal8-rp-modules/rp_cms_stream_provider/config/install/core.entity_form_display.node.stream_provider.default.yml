@@ -1,0 +1,645 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stream_provider.body
+    - field.field.node.stream_provider.field_aff_images
+    - field.field.node.stream_provider.field_general_affiliate_link
+    - field.field.node.stream_provider.field_general_label
+    - field.field.node.stream_provider.field_general_sort_order
+    - field.field.node.stream_provider.field_ppc_cs_button_aff
+    - field.field.node.stream_provider.field_ppc_cs_button_h
+    - field.field.node.stream_provider.field_ppc_cs_button_sub
+    - field.field.node.stream_provider.field_ppc_cs_i_one
+    - field.field.node.stream_provider.field_ppc_cs_i_one_sub
+    - field.field.node.stream_provider.field_ppc_cs_i_three
+    - field.field.node.stream_provider.field_ppc_cs_i_three_sub
+    - field.field.node.stream_provider.field_ppc_cs_i_two
+    - field.field.node.stream_provider.field_ppc_cs_i_two_sub
+    - field.field.node.stream_provider.field_ppc_lsp_pd_affl
+    - field.field.node.stream_provider.field_ppc_lsp_pd_bh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_bsh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_disc
+    - field.field.node.stream_provider.field_ppc_lsp_pd_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ione_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ione_sh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ithree_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ithree_sh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_itow_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_itow_sh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_pn
+    - field.field.node.stream_provider.field_ppc_ps_c
+    - field.field.node.stream_provider.field_ppc_ps_h
+    - field.field.node.stream_provider.field_ppc_qs_c
+    - field.field.node.stream_provider.field_ppc_qs_h
+    - field.field.node.stream_provider.field_ppc_us_c
+    - field.field.node.stream_provider.field_properties_price
+    - field.field.node.stream_provider.field_properties_rating
+    - field.field.node.stream_provider.field_properties_video_quality
+    - field.field.node.stream_provider.field_properties_video_size
+    - field.field.node.stream_provider.field_providerpage_detail_cdisc
+    - field.field.node.stream_provider.field_providerpage_detail_conten
+    - field.field.node.stream_provider.field_providerpage_detail_headin
+    - field.field.node.stream_provider.field_providerpage_detail_udvalg
+    - field.field.node.stream_provider.field_stream_provider
+    - field.field.node.stream_provider.field_tags
+    - image.style.thumbnail
+    - node.type.stream_provider
+  module:
+    - field_group
+    - image
+    - link
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tabs_group_:
+      children:
+        - group_general
+        - group_providerpage_detail
+        - group_live_stream_provider_detai
+      parent_name: ''
+      weight: 20
+      format_type: tabs
+      format_settings:
+        label: 'Tabs Group '
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Tabs Group '
+    group_general:
+      children:
+        - group_stream_provider_general_
+        - uid
+        - created
+        - promote
+        - sticky
+        - group_properties
+      parent_name: group_tabs_group_
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: General
+    group_properties:
+      children:
+        - field_properties_video_quality
+        - field_properties_video_size
+        - field_properties_rating
+        - field_properties_price
+      parent_name: group_general
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Properties
+    group_stream_provider_general_:
+      children:
+        - title
+        - field_aff_images
+        - field_stream_provider
+        - field_tags
+        - path
+        - field_general_label
+        - field_general_affiliate_link
+        - field_general_sort_order
+        - body
+      parent_name: group_general
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Stream Provider - General '
+    group_providerpage_detail:
+      children:
+        - field_providerpage_detail_headin
+        - group_udvalg_section
+        - group_quality_section
+        - group_price_section
+        - group_content_section
+        - group_buttons_section
+      parent_name: group_tabs_group_
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'ProviderPage Detail'
+    group_udvalg_section:
+      children:
+        - field_providerpage_detail_udvalg
+        - field_ppc_us_c
+      parent_name: group_providerpage_detail
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Udvalg Section'
+    group_quality_section:
+      children:
+        - field_ppc_qs_h
+        - field_ppc_qs_c
+      parent_name: group_providerpage_detail
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Quality Section'
+    group_price_section:
+      children:
+        - field_ppc_ps_h
+        - field_ppc_ps_c
+      parent_name: group_providerpage_detail
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Price Section'
+    group_content_section:
+      children:
+        - field_ppc_cs_i_one
+        - field_ppc_cs_i_one_sub
+        - field_ppc_cs_i_two
+        - field_ppc_cs_i_two_sub
+        - field_ppc_cs_i_three
+        - field_ppc_cs_i_three_sub
+        - field_providerpage_detail_conten
+        - field_providerpage_detail_cdisc
+      parent_name: group_providerpage_detail
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Content Section'
+    group_buttons_section:
+      children:
+        - field_ppc_cs_button_h
+        - field_ppc_cs_button_sub
+        - field_ppc_cs_button_aff
+      parent_name: group_providerpage_detail
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Buttons Section'
+    group_live_stream_provider_detai:
+      children:
+        - field_ppc_lsp_pd_h
+        - field_ppc_lsp_pd_pn
+        - group_pd_icons_section
+        - group_disclaimer
+        - group_liv_buttons_section
+      parent_name: group_tabs_group_
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Live Stream Provider Detail'
+    group_pd_icons_section:
+      children:
+        - field_ppc_lsp_pd_ione_h
+        - field_ppc_lsp_pd_ione_sh
+        - field_ppc_lsp_pd_itow_h
+        - field_ppc_lsp_pd_itow_sh
+        - field_ppc_lsp_pd_ithree_h
+        - field_ppc_lsp_pd_ithree_sh
+      parent_name: group_live_stream_provider_detai
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Icons Section'
+    group_disclaimer:
+      children:
+        - field_ppc_lsp_pd_disc
+        - field_ppc_lsp_pd_affl
+      parent_name: group_live_stream_provider_detai
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Disclaimer
+    group_liv_buttons_section:
+      children:
+        - field_ppc_lsp_pd_bh
+        - field_ppc_lsp_pd_bsh
+      parent_name: group_live_stream_provider_detai
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        label: 'BUTTONS SECTION'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'BUTTONS SECTION'
+id: node.stream_provider.default
+targetEntityType: node
+bundle: stream_provider
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 36
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_aff_images:
+    weight: -4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_general_affiliate_link:
+    weight: 33
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_general_label:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_general_sort_order:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_ppc_cs_button_aff:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_button_h:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_button_sub:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_one:
+    weight: 46
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_one_sub:
+    weight: 47
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_three:
+    weight: 50
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_three_sub:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_two:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_two_sub:
+    weight: 49
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_affl:
+    weight: 68
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ppc_lsp_pd_bh:
+    weight: 65
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_bsh:
+    weight: 66
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_disc:
+    weight: 67
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ppc_lsp_pd_h:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ione_h:
+    weight: 58
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ione_sh:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ithree_h:
+    weight: 62
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ithree_sh:
+    weight: 63
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_itow_h:
+    weight: 60
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_itow_sh:
+    weight: 61
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_pn:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_ps_c:
+    weight: 45
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ppc_ps_h:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_qs_c:
+    weight: 43
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ppc_qs_h:
+    weight: 42
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_us_c:
+    weight: 41
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_properties_price:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_properties_rating:
+    weight: 37
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_properties_video_quality:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_properties_video_size:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_providerpage_detail_cdisc:
+    weight: 53
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_providerpage_detail_conten:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_providerpage_detail_headin:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_providerpage_detail_udvalg:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_stream_provider:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_tags:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: tournament
+vid: tournament
+description: ''
+hierarchy: 0
+weight: -9

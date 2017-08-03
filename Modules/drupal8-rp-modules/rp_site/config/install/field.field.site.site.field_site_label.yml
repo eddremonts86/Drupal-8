@@ -1,0 +1,20 @@
+uuid: b8cfa48e-3e9e-4c8c-9a79-94482798c0ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_label
+  module:
+    - rp_site
+id: site.site.field_site_label
+field_name: field_site_label
+entity_type: site
+bundle: site
+label: 'Site label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

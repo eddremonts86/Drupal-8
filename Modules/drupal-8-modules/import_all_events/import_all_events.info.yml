@@ -1,0 +1,8 @@
+name: Import All Events
+type: module
+description: Import All Events from API.
+core: 8.x
+package: Rebel Penguins Apps
+dependencies:
+  - drupal:node
+configure: import_all_events.description

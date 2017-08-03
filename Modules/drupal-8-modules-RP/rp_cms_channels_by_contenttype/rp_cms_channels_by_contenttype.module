@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_cms_channels_by_contenttype.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_cms_channels_by_contenttype_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_cms_channels_by_contenttype module.
+    case 'help.page.rp_cms_channels_by_contenttype':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_cms_channels_by_contenttype_theme() {
+  return [
+    'rp_cms_channels_by_contenttype' => [
+      'render element' => 'children',
+    ],
+  ];
+}

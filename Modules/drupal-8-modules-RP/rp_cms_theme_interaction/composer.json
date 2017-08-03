@@ -1,0 +1,15 @@
+{
+  "name": "drupal/rp_cms_theme_interaction",
+  "type": "drupal-module",
+  "description": "Interaction whit Themplate RP Base - Supply all data.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_cms_theme_interaction",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_cms_theme_interaction",
+    "source": "http://cgit.drupalcode.org/rp_cms_theme_interaction"
+  },
+  "require": {
+  }
+}

@@ -1,0 +1,14 @@
+
+# Site menu items definition
+entity.site.collection:
+  title: 'Site list'
+  route_name: entity.site.collection
+  description: 'List Site entities'
+  parent: system.admin_structure
+  weight: 100
+
+site.admin.structure.settings:
+  title: Site settings
+  description: 'Configure Site entities'
+  route_name: site.settings
+  parent: system.admin_structure

@@ -1,0 +1,82 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.site_info.site_info.field_site_info_language
+    - field.field.site_info.site_info.field_site_info_region
+    - field.field.site_info.site_info.field_site_info_site
+    - field.field.site_info.site_info.field_site_info_slogan
+    - field.field.site_info.site_info.field_site_info_sport_heading
+    - field.field.site_info.site_info.field_site_info_sport_subheading
+  module:
+    - rp_site_info
+    - user
+id: site_info.site_info.default
+targetEntityType: site_info
+bundle: site_info
+mode: default
+content:
+  field_site_info_language:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_site_info_region:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_site_info_site:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_site_info_slogan:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_site_info_sport_heading:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_site_info_sport_subheading:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

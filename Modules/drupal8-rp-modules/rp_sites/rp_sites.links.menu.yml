@@ -1,0 +1,11 @@
+entity.rp_site.settings:
+  title: Site settings
+  description: Configure a Site entity type
+  route_name:  entity.rp_site.settings
+  parent: system.admin_structure
+entity.rp_site.collection:
+  title: Site listing
+  description: List of sites
+  route_name: entity.rp_site.collection
+  parent: system.admin_content
+

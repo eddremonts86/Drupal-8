@@ -1,0 +1,5 @@
+entity.client_site.add_form:
+  route_name: entity.client_site.add_form
+  title: 'Add Client_site'
+  appears_on:
+    - entity.client_site.collection

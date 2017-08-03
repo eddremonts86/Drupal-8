@@ -1,0 +1,20 @@
+uuid: 7e83cd15-ba89-40bd-910a-5779ab89f669
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_client_site
+id: client_site.field_site_client_channels
+field_name: field_site_client_channels
+entity_type: client_site
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

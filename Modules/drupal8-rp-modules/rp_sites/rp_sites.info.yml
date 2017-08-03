@@ -1,0 +1,7 @@
+name: RP Sites
+type: module
+description: 'Provides a RP Site entity.'
+package: RP Repo
+version: 8.x-1.0
+core: 8.x
+configure: entity.rp_site.collection

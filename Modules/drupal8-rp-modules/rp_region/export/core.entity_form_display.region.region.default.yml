@@ -1,0 +1,56 @@
+uuid: f9128253-a948-42da-a493-2300a182ebee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.region.region.field_region_code
+    - field.field.region.region.field_region_id
+    - field.field.region.region.field_region_label
+  module:
+    - rp_region
+id: region.region.default
+targetEntityType: region
+bundle: region
+mode: default
+content:
+  field_region_code:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_region_id:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_region_label:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

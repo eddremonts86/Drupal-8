@@ -1,0 +1,14 @@
+name: 'Game Pages'
+description: 'Provides Game Pages content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - field_group
+  - menu_ui
+  - node
+  - path
+  - rp_cms_stream_provider
+  - text
+  - user
+package: 'RP CMS'

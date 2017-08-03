@@ -1,0 +1,1539 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stream_provider.body
+    - field.field.node.stream_provider.field_aff_images
+    - field.field.node.stream_provider.field_api_str_id
+    - field.field.node.stream_provider.field_bonusser_content
+    - field.field.node.stream_provider.field_bonusser_heading
+    - field.field.node.stream_provider.field_bonusser_rating
+    - field.field.node.stream_provider.field_brugervenlighed_content
+    - field.field.node.stream_provider.field_brugervenlighed_heading
+    - field.field.node.stream_provider.field_brugervenlighed_rating
+    - field.field.node.stream_provider.field_buttons_review
+    - field.field.node.stream_provider.field_content_bonus
+    - field.field.node.stream_provider.field_content_bottom_button
+    - field.field.node.stream_provider.field_content_introduction
+    - field.field.node.stream_provider.field_content_pros
+    - field.field.node.stream_provider.field_content_top_button
+    - field.field.node.stream_provider.field_front_page_afiliate_button
+    - field.field.node.stream_provider.field_front_page_heading
+    - field.field.node.stream_provider.field_front_page_icons_1_heading
+    - field.field.node.stream_provider.field_front_page_icons_1_subhead
+    - field.field.node.stream_provider.field_front_page_icons_2_heading
+    - field.field.node.stream_provider.field_front_page_icons_2_subhead
+    - field.field.node.stream_provider.field_front_page_icons_3_heading
+    - field.field.node.stream_provider.field_front_page_icons_3_note
+    - field.field.node.stream_provider.field_front_page_icons_heading
+    - field.field.node.stream_provider.field_front_page_icons_subheadin
+    - field.field.node.stream_provider.field_front_page_price_content
+    - field.field.node.stream_provider.field_front_page_price_heading
+    - field.field.node.stream_provider.field_front_page_quality_content
+    - field.field.node.stream_provider.field_front_page_quality_heading
+    - field.field.node.stream_provider.field_front_page_udvalg_content
+    - field.field.node.stream_provider.field_front_page_udvalg_heading
+    - field.field.node.stream_provider.field_general_affiliate_link
+    - field.field.node.stream_provider.field_general_label
+    - field.field.node.stream_provider.field_general_sort_order
+    - field.field.node.stream_provider.field_ind_og_udbetalinger_conten
+    - field.field.node.stream_provider.field_ind_og_udbetalinger_headin
+    - field.field.node.stream_provider.field_ind_og_udbetalinger_rating
+    - field.field.node.stream_provider.field_indsatspolitik_content
+    - field.field.node.stream_provider.field_indsatspolitik_heading
+    - field.field.node.stream_provider.field_indsatspolitik_rating
+    - field.field.node.stream_provider.field_konklusion_content
+    - field.field.node.stream_provider.field_konklusion_heading
+    - field.field.node.stream_provider.field_konklusion_rating
+    - field.field.node.stream_provider.field_live_stream_provider_detai
+    - field.field.node.stream_provider.field_live_streaming_content
+    - field.field.node.stream_provider.field_live_streaming_heading
+    - field.field.node.stream_provider.field_live_streaming_rating
+    - field.field.node.stream_provider.field_livebetting_content
+    - field.field.node.stream_provider.field_livebetting_heading
+    - field.field.node.stream_provider.field_livebetting_rating
+    - field.field.node.stream_provider.field_meta_description
+    - field.field.node.stream_provider.field_meta_keywords
+    - field.field.node.stream_provider.field_meta_title
+    - field.field.node.stream_provider.field_odds_tilbagebetaling_conte
+    - field.field.node.stream_provider.field_odds_tilbagebetaling_headi
+    - field.field.node.stream_provider.field_odds_tilbagebetaling_ratin
+    - field.field.node.stream_provider.field_page_detail_conten
+    - field.field.node.stream_provider.field_page_detail_price_content
+    - field.field.node.stream_provider.field_ppc_cs_button_aff
+    - field.field.node.stream_provider.field_ppc_cs_button_h
+    - field.field.node.stream_provider.field_ppc_cs_button_sub
+    - field.field.node.stream_provider.field_ppc_cs_i_one
+    - field.field.node.stream_provider.field_ppc_cs_i_one_sub
+    - field.field.node.stream_provider.field_ppc_cs_i_three
+    - field.field.node.stream_provider.field_ppc_cs_i_three_sub
+    - field.field.node.stream_provider.field_ppc_cs_i_two
+    - field.field.node.stream_provider.field_ppc_cs_i_two_sub
+    - field.field.node.stream_provider.field_ppc_lsp_pd_affl
+    - field.field.node.stream_provider.field_ppc_lsp_pd_bh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_bsh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ione_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ione_sh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ithree_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_ithree_sh
+    - field.field.node.stream_provider.field_ppc_lsp_pd_itow_h
+    - field.field.node.stream_provider.field_ppc_lsp_pd_itow_sh
+    - field.field.node.stream_provider.field_ppc_ps_h
+    - field.field.node.stream_provider.field_ppc_qs_h
+    - field.field.node.stream_provider.field_produkter_og_spill_content
+    - field.field.node.stream_provider.field_produkter_og_spill_heading
+    - field.field.node.stream_provider.field_produkter_og_spill_rating
+    - field.field.node.stream_provider.field_properties_price
+    - field.field.node.stream_provider.field_properties_rating
+    - field.field.node.stream_provider.field_properties_video_quality
+    - field.field.node.stream_provider.field_properties_video_size
+    - field.field.node.stream_provider.field_providerpage_detail_conten
+    - field.field.node.stream_provider.field_providerpage_detail_headin
+    - field.field.node.stream_provider.field_providerpage_detail_qualit
+    - field.field.node.stream_provider.field_providerpage_detail_udvalg
+    - field.field.node.stream_provider.field_review_providers_enable
+    - field.field.node.stream_provider.field_show_on_front_page
+    - field.field.node.stream_provider.field_sponsored
+    - field.field.node.stream_provider.field_stream_provider
+    - field.field.node.stream_provider.field_stream_provider_detai
+    - field.field.node.stream_provider.field_stream_provider_type
+    - field.field.node.stream_provider.field_stream_provider_type_api_i
+    - field.field.node.stream_provider.field_support_content
+    - field.field.node.stream_provider.field_support_heading
+    - field.field.node.stream_provider.field_support_rating
+    - field.field.node.stream_provider.field_tags
+    - field.field.node.stream_provider.field_udvalg_content
+    - field.field.node.stream_provider.field_udvalget_content
+    - field.field.node.stream_provider.field_udvalget_heading
+    - field.field.node.stream_provider.field_udvalget_rating
+    - field.field.node.stream_provider.field_vores_erfaring_content
+    - field.field.node.stream_provider.field_vores_erfaring_heading
+    - field.field.node.stream_provider.field_vores_erfaring_rating
+    - field.field.node.stream_provider.field_websiteusability_content
+    - image.style.thumbnail
+    - node.type.stream_provider
+  module:
+    - field_group
+    - image
+    - link
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tabs_group_:
+      children:
+        - group_general
+        - group_front_page
+        - group_providerpage_detail
+        - group_live_stream_provider_detai
+        - group_review_content
+        - group_others
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        label: 'Tabs Group '
+        direction: vertical
+        id: ''
+        classes: ''
+      label: 'Tabs Group '
+    group_general:
+      children:
+        - group_stream_provider_general_
+        - uid
+        - created
+        - promote
+        - sticky
+        - group_properties
+      parent_name: group_tabs_group_
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: General
+    group_properties:
+      children:
+        - field_properties_video_quality
+        - field_properties_video_size
+        - field_properties_rating
+        - field_properties_price
+      parent_name: group_general
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Properties
+    group_stream_provider_general_:
+      children:
+        - title
+        - field_api_str_id
+        - field_aff_images
+        - field_stream_provider
+        - field_sponsored
+        - field_tags
+        - path
+        - field_general_label
+        - field_general_affiliate_link
+        - field_general_sort_order
+        - body
+      parent_name: group_general
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Stream Provider - General '
+    group_providerpage_detail:
+      children:
+        - field_providerpage_detail_headin
+        - group_udvalg_section
+        - group_quality_section
+        - group_price_section
+        - group_content_section
+        - group_buttons_section
+      parent_name: group_tabs_group_
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'ProviderPage Detail'
+    group_udvalg_section:
+      children:
+        - field_providerpage_detail_udvalg
+        - field_udvalg_content
+      parent_name: group_providerpage_detail
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Udvalg Section'
+    group_quality_section:
+      children:
+        - field_ppc_qs_h
+        - field_providerpage_detail_qualit
+      parent_name: group_providerpage_detail
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Quality Section'
+    group_price_section:
+      children:
+        - field_ppc_ps_h
+        - field_page_detail_price_content
+      parent_name: group_providerpage_detail
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Price Section'
+    group_content_section:
+      children:
+        - field_ppc_cs_i_one
+        - field_ppc_cs_i_one_sub
+        - field_ppc_cs_i_two
+        - field_ppc_cs_i_two_sub
+        - field_ppc_cs_i_three
+        - field_ppc_cs_i_three_sub
+        - field_providerpage_detail_conten
+      parent_name: group_providerpage_detail
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Content Section'
+    group_buttons_section:
+      children:
+        - field_ppc_cs_button_h
+        - field_ppc_cs_button_sub
+        - field_ppc_cs_button_aff
+        - field_page_detail_conten
+      parent_name: group_providerpage_detail
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Buttons Section'
+    group_live_stream_provider_detai:
+      children:
+        - field_ppc_lsp_pd_h
+        - group_pd_icons_section
+        - group_disclaimer
+        - group_liv_buttons_section
+      parent_name: group_tabs_group_
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Live Stream Provider Detail'
+    group_pd_icons_section:
+      children:
+        - field_ppc_lsp_pd_ione_h
+        - field_ppc_lsp_pd_ione_sh
+        - field_ppc_lsp_pd_itow_h
+        - field_ppc_lsp_pd_itow_sh
+        - field_ppc_lsp_pd_ithree_h
+        - field_ppc_lsp_pd_ithree_sh
+        - field_live_stream_provider_detai
+      parent_name: group_live_stream_provider_detai
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Icons Section'
+    group_disclaimer:
+      children:
+        - field_ppc_lsp_pd_affl
+        - field_stream_provider_detai
+      parent_name: group_live_stream_provider_detai
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Disclaimer
+    group_liv_buttons_section:
+      children:
+        - field_ppc_lsp_pd_bh
+        - field_ppc_lsp_pd_bsh
+      parent_name: group_live_stream_provider_detai
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        label: 'BUTTONS SECTION'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'BUTTONS SECTION'
+    group_review_content:
+      children:
+        - field_review_providers_enable
+        - group_meta
+        - group_content
+        - group_udvalget
+        - group_produkter_og_spiludvalg
+        - group_live_streaming
+        - group_odds_tilbagebetaling
+        - group_support
+        - group_bonusser
+        - group_brugervenlighed
+        - group_ind_og_udbetalinger
+        - group_vores_erfaring
+        - group_livebetting
+        - group_indsatspolitik
+        - group_konklusion
+      parent_name: group_tabs_group_
+      weight: 23
+      format_type: tab
+      format_settings:
+        label: 'Review Content'
+        formatter: closed
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Review Content'
+    group_meta:
+      children:
+        - field_meta_title
+        - field_meta_keywords
+        - field_meta_description
+      parent_name: group_review_content
+      weight: 76
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Meta
+    group_content:
+      children:
+        - field_content_bonus
+        - field_content_top_button
+        - field_content_bottom_button
+        - field_content_introduction
+        - field_content_pros
+      parent_name: group_review_content
+      weight: 77
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Content
+    group_udvalget:
+      children:
+        - field_udvalget_heading
+        - field_udvalget_rating
+        - field_udvalget_content
+      parent_name: group_review_content
+      weight: 78
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Udvalget
+    group_produkter_og_spiludvalg:
+      children:
+        - field_produkter_og_spill_heading
+        - field_produkter_og_spill_rating
+        - field_produkter_og_spill_content
+      parent_name: group_review_content
+      weight: 79
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Produkter og spiludvalg'
+    group_live_streaming:
+      children:
+        - field_live_streaming_heading
+        - field_live_streaming_rating
+        - field_live_streaming_content
+      parent_name: group_review_content
+      weight: 80
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Live streaming'
+    group_odds_tilbagebetaling:
+      children:
+        - field_odds_tilbagebetaling_headi
+        - field_odds_tilbagebetaling_ratin
+        - field_odds_tilbagebetaling_conte
+      parent_name: group_review_content
+      weight: 81
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Odds / Tilbagebetaling'
+    group_support:
+      children:
+        - field_support_heading
+        - field_support_rating
+        - field_support_content
+      parent_name: group_review_content
+      weight: 82
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Support
+    group_bonusser:
+      children:
+        - field_bonusser_heading
+        - field_bonusser_rating
+        - field_bonusser_content
+      parent_name: group_review_content
+      weight: 83
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Bonusser
+    group_brugervenlighed:
+      children:
+        - field_brugervenlighed_heading
+        - field_brugervenlighed_rating
+        - field_websiteusability_content
+      parent_name: group_review_content
+      weight: 84
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Brugervenlighed
+    group_ind_og_udbetalinger:
+      children:
+        - field_ind_og_udbetalinger_headin
+        - field_ind_og_udbetalinger_rating
+        - field_ind_og_udbetalinger_conten
+      parent_name: group_review_content
+      weight: 85
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Ind- og udbetalinger'
+    group_vores_erfaring:
+      children:
+        - field_vores_erfaring_heading
+        - field_vores_erfaring_rating
+        - field_vores_erfaring_content
+      parent_name: group_review_content
+      weight: 86
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Vores erfaring'
+    group_livebetting:
+      children:
+        - field_livebetting_heading
+        - field_livebetting_rating
+        - field_livebetting_content
+      parent_name: group_review_content
+      weight: 87
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Livebetting
+    group_indsatspolitik:
+      children:
+        - field_indsatspolitik_heading
+        - field_indsatspolitik_rating
+        - field_indsatspolitik_content
+      parent_name: group_review_content
+      weight: 88
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Indsatspolitik
+    group_konklusion:
+      children:
+        - field_konklusion_heading
+        - field_konklusion_rating
+        - field_konklusion_content
+      parent_name: group_review_content
+      weight: 89
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Konklusion
+    group_others:
+      children:
+        - field_stream_provider_type
+        - field_stream_provider_type_api_i
+      parent_name: group_tabs_group_
+      weight: 24
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: Others
+    group_front_page:
+      children:
+        - field_show_on_front_page
+        - field_front_page_heading
+        - field_front_page_quality_heading
+        - field_front_page_quality_content
+        - field_front_page_udvalg_heading
+        - field_front_page_udvalg_content
+        - field_front_page_price_heading
+        - field_front_page_price_content
+        - field_front_page_icons_heading
+        - field_front_page_icons_1_heading
+        - field_front_page_icons_1_subhead
+        - field_front_page_icons_2_heading
+        - field_front_page_icons_3_heading
+        - field_front_page_icons_2_subhead
+        - field_front_page_icons_subheadin
+        - field_buttons_review
+        - field_front_page_afiliate_button
+        - field_front_page_icons_3_note
+      parent_name: group_tabs_group_
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Front Page'
+id: node.stream_provider.default
+targetEntityType: node
+bundle: stream_provider
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_aff_images:
+    weight: -3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_api_str_id:
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_bonusser_content:
+    weight: 91
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_bonusser_heading:
+    weight: 89
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_bonusser_rating:
+    weight: 90
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_brugervenlighed_heading:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_brugervenlighed_rating:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_buttons_review:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content_bonus:
+    weight: 71
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content_bottom_button:
+    weight: 73
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_content_introduction:
+    weight: 74
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_content_pros:
+    weight: 76
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_content_top_button:
+    weight: 72
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_front_page_afiliate_button:
+    weight: 130
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_front_page_heading:
+    weight: 114
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_1_heading:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_1_subhead:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_2_heading:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_2_subhead:
+    weight: 126
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_3_heading:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_3_note:
+    weight: 131
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_front_page_icons_heading:
+    weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_icons_subheadin:
+    weight: 127
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_price_content:
+    weight: 120
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_front_page_price_heading:
+    weight: 119
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_quality_content:
+    weight: 116
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_front_page_quality_heading:
+    weight: 115
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_front_page_udvalg_content:
+    weight: 118
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_front_page_udvalg_heading:
+    weight: 117
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_general_affiliate_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_general_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_general_sort_order:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_ind_og_udbetalinger_conten:
+    weight: 97
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ind_og_udbetalinger_headin:
+    weight: 95
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ind_og_udbetalinger_rating:
+    weight: 96
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_indsatspolitik_content:
+    weight: 106
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_indsatspolitik_heading:
+    weight: 104
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_indsatspolitik_rating:
+    weight: 105
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_konklusion_content:
+    weight: 109
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_konklusion_heading:
+    weight: 107
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_konklusion_rating:
+    weight: 108
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_live_stream_provider_detai:
+    weight: 64
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_live_streaming_content:
+    weight: 80
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_live_streaming_heading:
+    weight: 77
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_live_streaming_rating:
+    weight: 78
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_livebetting_content:
+    weight: 103
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_livebetting_heading:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_livebetting_rating:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_description:
+    weight: 113
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_meta_keywords:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_title:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_odds_tilbagebetaling_conte:
+    weight: 82
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_odds_tilbagebetaling_headi:
+    weight: 80
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_odds_tilbagebetaling_ratin:
+    weight: 81
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_page_detail_conten:
+    weight: 57
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_page_detail_price_content:
+    weight: 45
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ppc_cs_button_aff:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_button_h:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_button_sub:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_one:
+    weight: 46
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_one_sub:
+    weight: 47
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_three:
+    weight: 50
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_three_sub:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_two:
+    weight: 48
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_cs_i_two_sub:
+    weight: 49
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_affl:
+    weight: 68
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ppc_lsp_pd_bh:
+    weight: 65
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_bsh:
+    weight: 66
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_h:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ione_h:
+    weight: 58
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ione_sh:
+    weight: 59
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ithree_h:
+    weight: 62
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_ithree_sh:
+    weight: 63
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_itow_h:
+    weight: 60
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_lsp_pd_itow_sh:
+    weight: 61
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_ps_h:
+    weight: 44
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ppc_qs_h:
+    weight: 42
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_produkter_og_spill_content:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_produkter_og_spill_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_produkter_og_spill_rating:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_properties_price:
+    weight: 38
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_properties_rating:
+    weight: 37
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_properties_video_quality:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_properties_video_size:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_providerpage_detail_conten:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_providerpage_detail_headin:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_providerpage_detail_qualit:
+    weight: 43
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_providerpage_detail_udvalg:
+    weight: 40
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_review_providers_enable:
+    weight: 75
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_show_on_front_page:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sponsored:
+    weight: -1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_stream_provider:
+    weight: -2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_stream_provider_detai:
+    weight: 69
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_stream_provider_type:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_stream_provider_type_api_i:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_support_content:
+    weight: 89
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_support_heading:
+    weight: 87
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_support_rating:
+    weight: 88
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tags:
+    weight: -1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_udvalg_content:
+    weight: 41
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_udvalget_content:
+    weight: 110
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_udvalget_heading:
+    weight: 74
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_udvalget_rating:
+    weight: 75
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vores_erfaring_content:
+    weight: 100
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vores_erfaring_heading:
+    weight: 98
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vores_erfaring_rating:
+    weight: 99
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_websiteusability_content:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  path:
+    type: path
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_brugervenlighed_content: true

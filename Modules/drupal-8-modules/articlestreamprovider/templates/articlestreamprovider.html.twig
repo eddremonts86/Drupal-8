@@ -1,0 +1,66 @@
+<div class="col-lg-6 col-lg-offset-3">
+    {% for tags in tags %}
+    <div class="panel panel-default panel-primary_ border-panel">
+        <div class="panel-heading border-panel-title">
+                <div class="col-lg-6 img_name_stream">
+                    <img class="img-circle img-thumbnail" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/streamproviders-new/34x34/StreamProviderLogo_3_34x34_5461f231c4698816398b4d9c.png">
+                    <b>
+                        {{ tags.title.0.value }}
+                    </b>
+                </div>
+            <div class="col-lg-2 text-center"><b>Kvalitet :</b>  {{ tags.field_kvalitet.0.value }} </div>
+            <div class="col-lg-2 text-center"><b>Afspiller : </b> {{ tags.field_afspiller.0.value }}</div>
+            <div class="col-lg-2 text-center"><b>Pris : </b>{{ tags.field_pris.0.value }} </div>
+
+
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-12">
+                <h3>{{ tags.field_stream_label.0.value |e }}</h3>
+            </div>
+            <div class="col-lg-12">
+
+                <div class="col-lg-3 text-center">
+                    <div class="col-lg-12">{{ tags.field_label_img_1.0.value }}</div>
+                    <div class="col-lg-12">
+                        <img class="top-article-image img-thumbnail" src="{{ file_url(tags.images.img1) }}" />
+                    </div>
+                    <div class="col-lg-12">
+                        {{ tags.field_img_1.0.value }}
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 text-center">
+                    <div class="col-lg-12">{{ tags.field_label_img_2.0.value }}</div>
+                    <div class="col-lg-12">
+                        <img class="top-article-image img-thumbnail" src="{{ file_url(tags.images.img2) }}" />
+                    </div>
+                    <div class="col-lg-12">
+                        {{ tags.field_text_img_2.0.value }}
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 text-center">
+                    <div class="col-lg-12">{{ tags.field_label_img_3.0.value }}</div>
+                    <div class="col-lg-12">
+                        <img class="top-article-image img-thumbnail" src="{{ file_url(tags.images.img3) }}" />
+                    </div>
+                    <div class="col-lg-12">
+                        {{ tags.field_text_img_3.0.value }}
+                    </div>
+                </div>
+
+                <div class="col-lg-3 text-center">
+                    <a role="button" href=" {{ tags.field_stream_buttom_.0.uri }}" class="btn btn-danger">
+                        {{ tags.field_stream_buttom_.0.title |e}}
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{{ attach_library('articlestreamprovider/articles_stream') }}

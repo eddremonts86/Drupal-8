@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.team_content.body
+    - field.field.node.team_content.field_away_article_title
+    - field.field.node.team_content.field_live_stream_button_
+    - field.field.node.team_content.field_page_teams_header
+    - field.field.node.team_content.field_stream_providers_teams
+    - node.type.team_content
+  module:
+    - text
+    - user
+id: node.team_content.teaser
+targetEntityType: node
+bundle: team_content
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_away_article_title: true
+  field_live_stream_button_: true
+  field_page_teams_header: true
+  field_stream_providers_teams: true

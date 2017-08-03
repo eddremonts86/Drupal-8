@@ -1,0 +1,14 @@
+import_all_events.config:
+  title: Rebel Penguin - Modules
+  parent: system.admin_config
+  route_name: import_all_events.description
+  description: 'Domain configuration'
+  weight: 0
+
+import_all_events.config:
+  title: Rebel Penguin - Endpoint Client
+  description: 'example of how to make an admin settings page link'
+  parent: import_all_events.config
+  route_name: import_all_events.description
+  weight: 1
+

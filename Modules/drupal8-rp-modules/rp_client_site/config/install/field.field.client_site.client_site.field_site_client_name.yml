@@ -1,0 +1,20 @@
+uuid: c0815c9b-93b0-4fd8-85f5-6fc84b30aafc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.client_site.field_site_client_name
+  module:
+    - rp_client_site
+id: client_site.client_site.field_site_client_name
+field_name: field_site_client_name
+entity_type: client_site
+bundle: client_site
+label: site_client_name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

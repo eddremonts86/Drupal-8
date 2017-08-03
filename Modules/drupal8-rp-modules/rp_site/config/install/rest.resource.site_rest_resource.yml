@@ -1,0 +1,18 @@
+uuid: 06575144-e139-4810-8554-6568f10c7c53
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_site
+    - serialization
+    - user
+id: site_rest_resource
+plugin_id: site_rest_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

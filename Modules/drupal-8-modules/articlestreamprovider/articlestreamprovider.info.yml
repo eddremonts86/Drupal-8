@@ -1,0 +1,8 @@
+name: Article Stream Provider
+type: module
+description: Stream Providers List
+core: 8.x
+package: Rebel Penguins Apps
+version: '8.x-1.19'
+libraries:
+  - articlestreamprovider/ArticleStreamlibrary

@@ -1,0 +1,21 @@
+uuid: f932c131-fb23-4886-ac0d-190949d01b66
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_client_site
+id: client_site.field_site_client_label
+field_name: field_site_client_label
+entity_type: client_site
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

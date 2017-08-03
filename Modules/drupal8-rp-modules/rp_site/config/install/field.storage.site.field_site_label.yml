@@ -1,0 +1,21 @@
+uuid: 7219fdc6-1c7d-468c-9c58-46d6d9f3817d
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_site
+id: site.field_site_label
+field_name: field_site_label
+entity_type: site
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/import_all_events",
+  "type": "drupal-module",
+  "description": "Import All Events from API.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/import_all_events",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/import_all_events",
+    "source": "http://cgit.drupalcode.org/import_all_events"
+  },
+  "require": { }
+}

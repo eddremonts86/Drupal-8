@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tournament_page.body
+    - field.field.node.tournament_page.field_live_stream_button
+    - field.field.node.tournament_page.field_logo
+    - field.field.node.tournament_page.field_logo_date
+    - field.field.node.tournament_page.field_stream_providers_tp
+    - field.field.node.tournament_page.field_tournament_api_id
+    - field.field.node.tournament_page.field_tournament_head
+    - field.field.node.tournament_page.field_tournament_reff
+    - field.field.node.tournament_page.field_tournament_sport_taxonomy
+    - field.field.node.tournament_page.field_tournament_subheading
+    - node.type.tournament_page
+  module:
+    - text
+    - user
+id: node.tournament_page.teaser
+targetEntityType: node
+bundle: tournament_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_live_stream_button: true
+  field_logo: true
+  field_logo_date: true
+  field_stream_providers_tp: true
+  field_tournament_api_id: true
+  field_tournament_head: true
+  field_tournament_reff: true
+  field_tournament_sport_taxonomy: true
+  field_tournament_subheading: true

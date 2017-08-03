@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - import_all_events
+name: 'Events Details '
+type: events_details
+description: 'Content type that can be used to add <em>Book information</em> page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

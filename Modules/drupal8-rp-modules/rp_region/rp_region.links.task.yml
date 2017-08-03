@@ -1,0 +1,27 @@
+# Region routing definition
+region.settings_tab:
+  route_name: region.settings
+  title: 'Settings'
+  base_route: region.settings
+
+entity.region.canonical:
+  route_name: entity.region.canonical
+  base_route: entity.region.canonical
+  title: 'View'
+
+entity.region.edit_form:
+  route_name: entity.region.edit_form
+  base_route: entity.region.canonical
+  title: 'Edit'
+
+entity.region.version_history:
+  route_name: entity.region.version_history
+  base_route: entity.region.canonical
+  title: 'Revisions'
+
+entity.region.delete_form:
+  route_name:  entity.region.delete_form
+  base_route:  entity.region.canonical
+  title: Delete
+  weight: 10
+

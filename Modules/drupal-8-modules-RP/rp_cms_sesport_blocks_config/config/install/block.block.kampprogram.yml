@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - sesport_blocks
+  theme:
+    - sesport
+id: kampprogram
+theme: sesport
+region: content_kamp
+weight: 0
+provider: null
+plugin: sesport_front_kampprogram
+settings:
+  id: sesport_front_kampprogram
+  label: Kampprogram
+  provider: sesport_blocks
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      sport_internal_blogs: sport_internal_blogs
+      sport_pages: sport_pages
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

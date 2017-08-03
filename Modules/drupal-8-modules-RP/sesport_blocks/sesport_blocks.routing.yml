@@ -1,0 +1,8 @@
+
+sesport_blocks.get_c_m_sdata_getCMSdata:
+  path: '/sesport_blocks/getCMSdata'
+  defaults:
+    _controller: '\Drupal\sesport_blocks\Controller\getCMSdata::getCMSdata'
+    _title: 'getCMSdata'
+  requirements:
+    _permission: 'access content'

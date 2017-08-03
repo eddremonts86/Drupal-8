@@ -1,0 +1,20 @@
+uuid: e4b7239e-2fdc-4d8e-af8e-bcd1d1a85093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_site_group_name
+  module:
+    - rp_site
+id: site.site.field_site_site_group_name
+field_name: field_site_site_group_name
+entity_type: site
+bundle: site
+label: 'Site group name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

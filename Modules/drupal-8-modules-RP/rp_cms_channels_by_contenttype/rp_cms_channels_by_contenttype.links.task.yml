@@ -1,0 +1,27 @@
+# Channels_by_contenttype routing definition
+channels_by_contenttype.settings_tab:
+  route_name: channels_by_contenttype.settings
+  title: 'Settings'
+  base_route: channels_by_contenttype.settings
+
+entity.channels_by_contenttype.canonical:
+  route_name: entity.channels_by_contenttype.canonical
+  base_route: entity.channels_by_contenttype.canonical
+  title: 'View'
+
+entity.channels_by_contenttype.edit_form:
+  route_name: entity.channels_by_contenttype.edit_form
+  base_route: entity.channels_by_contenttype.canonical
+  title: 'Edit'
+
+entity.channels_by_contenttype.version_history:
+  route_name: entity.channels_by_contenttype.version_history
+  base_route: entity.channels_by_contenttype.canonical
+  title: 'Revisions'
+
+entity.channels_by_contenttype.delete_form:
+  route_name:  entity.channels_by_contenttype.delete_form
+  base_route:  entity.channels_by_contenttype.canonical
+  title: Delete
+  weight: 10
+

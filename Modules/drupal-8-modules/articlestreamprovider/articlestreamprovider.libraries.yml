@@ -1,0 +1,11 @@
+articles_stream:
+  css:
+    theme:
+      css/components/articles_stream.css: {}
+  js:
+    js/artstream_jscritp.js: {}
+
+messages:
+  css:
+    theme:
+      css/components/messages.css: {}

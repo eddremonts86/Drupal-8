@@ -1,0 +1,19 @@
+name: 'RP CMS - Stream Provider'
+description: 'Provides Stream Provider content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - field
+  - field_group
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - rp_cms_sport_tournament_taxonomy
+  - taxonomy
+  - text
+  - user
+package: 'Rebel Penguins CMS - Frontend'

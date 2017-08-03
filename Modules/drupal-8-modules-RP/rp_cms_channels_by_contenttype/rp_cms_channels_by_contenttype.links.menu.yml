@@ -1,0 +1,14 @@
+
+# Channels_by_contenttype menu items definition
+entity.channels_by_contenttype.collection:
+  title: 'Channels_by_contenttype list'
+  route_name: entity.channels_by_contenttype.collection
+  description: 'List Channels_by_contenttype entities'
+  parent: system.admin_structure
+  weight: 100
+
+channels_by_contenttype.admin.structure.settings:
+  title: Channels_by_contenttype settings
+  description: 'Configure Channels_by_contenttype entities'
+  route_name: channels_by_contenttype.settings
+  parent: system.admin_structure

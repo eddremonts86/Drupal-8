@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ppc_lsp_pd_bh
+    - node.type.stream_provider
+id: node.stream_provider.field_ppc_lsp_pd_bh
+field_name: field_ppc_lsp_pd_bh
+entity_type: node
+bundle: stream_provider
+label: 'Live Stream Provider Detail - Button Heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

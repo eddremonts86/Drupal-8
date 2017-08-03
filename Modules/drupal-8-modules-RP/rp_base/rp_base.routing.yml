@@ -1,0 +1,32 @@
+
+rp_base.rp_base_controller_index:
+  path: '/admin/rp'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'RebelPenguin'
+  requirements:
+    _permission: 'access rp base configuration'
+
+rp_base.rp_base_controller_entity_content:
+  path: '/admin/rp/entity-content'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Entity Content'
+  requirements:
+    _permission: 'access rp base configuration'
+
+rp_base.rp_base_controller_entity_settings:
+  path: '/admin/rp/entity-settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Entity Settings'
+  requirements:
+    _permission: 'access rp base configuration'
+rp_base.rp_base_config:
+  path: '/admin/rp/rp_base_config'
+  defaults:
+    _form: '\Drupal\rp_base\Form\RPBaseConfig'
+    _title: 'RPBaseConfig'
+  requirements:
+    _access: 'TRUE'
+  

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: stream_provider
+vid: stream_provider
+description: ''
+hierarchy: 0
+weight: -7

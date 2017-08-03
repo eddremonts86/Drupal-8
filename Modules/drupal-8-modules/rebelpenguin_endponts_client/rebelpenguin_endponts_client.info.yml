@@ -1,0 +1,9 @@
+name: Rebel Penguin Endpoints - Client
+type: module
+description: Client RESTful API module.
+author: Eduardo Valdes Inerrate
+core: 8.x
+package: Rebel Penguins Apps
+dependencies:
+  - drupal:node
+configure: rebelpenguin_endponts_client.description

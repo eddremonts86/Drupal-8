@@ -1,0 +1,22 @@
+{#
+/**
+ * @file channels_by_contenttype.html.twig
+ * Default theme implementation to present Channels_by_contenttype data.
+ *
+ * This template is used when viewing Channels_by_contenttype pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_channels_by_contenttype()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('channels_by_contenttype') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

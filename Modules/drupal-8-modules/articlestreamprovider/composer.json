@@ -1,0 +1,14 @@
+{
+  "name": "drupal/articlestreamprovider",
+  "type": "drupal-module",
+  "description": "Stream Providers List",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/articlestreamprovider",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/articlestreamprovider",
+    "source": "http://cgit.drupalcode.org/articlestreamprovider"
+  },
+  "require": { }
+}

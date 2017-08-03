@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tournament_page.body
+    - field.field.node.tournament_page.field_live_stream_button
+    - field.field.node.tournament_page.field_stream_providers_tp
+    - field.field.node.tournament_page.field_tournament_head
+    - field.field.node.tournament_page.field_tournament_subheading
+    - node.type.tournament_page
+  module:
+    - text
+    - user
+id: node.tournament_page.default
+targetEntityType: node
+bundle: tournament_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_live_stream_button:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_stream_providers_tp:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tournament_head:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tournament_subheading:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

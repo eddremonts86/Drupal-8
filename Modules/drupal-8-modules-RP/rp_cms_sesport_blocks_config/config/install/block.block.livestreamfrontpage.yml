@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - sesport_blocks
+  theme:
+    - sesport
+id: livestreamfrontpage
+theme: sesport
+region: content_stream
+weight: 0
+provider: null
+plugin: sesport_front_stream
+settings:
+  id: sesport_front_stream
+  label: 'Live stream(Front Page)'
+  provider: sesport_blocks
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      sport_pages: sport_pages
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

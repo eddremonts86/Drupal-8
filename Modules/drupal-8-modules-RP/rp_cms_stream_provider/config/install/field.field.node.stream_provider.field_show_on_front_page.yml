@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_on_front_page
+    - node.type.stream_provider
+id: node.stream_provider.field_show_on_front_page
+field_name: field_show_on_front_page
+entity_type: node
+bundle: stream_provider
+label: 'Show on Front Page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

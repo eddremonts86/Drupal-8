@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.channels_by_contenttype.channels_by_contenttype.field_cannel_apiid
+    - field.field.channels_by_contenttype.channels_by_contenttype.field_events_apiid
+    - field.field.channels_by_contenttype.channels_by_contenttype.field_meta_type_api_id_event_id
+    - field.field.channels_by_contenttype.channels_by_contenttype.field_meta_type_event_sport_part
+    - field.field.channels_by_contenttype.channels_by_contenttype.field_order_priority
+  module:
+    - rp_cms_channels_by_contenttype
+id: channels_by_contenttype.channels_by_contenttype.default
+targetEntityType: channels_by_contenttype
+bundle: channels_by_contenttype
+mode: default
+content:
+  field_cannel_apiid:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_events_apiid:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_type_api_id_event_id:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meta_type_event_sport_part:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_order_priority:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

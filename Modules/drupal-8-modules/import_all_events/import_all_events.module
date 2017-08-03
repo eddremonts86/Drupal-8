@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains import_all_events.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function import_all_events_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the import_all_events module.
+    case 'help.page.import_all_events':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Import All Events from API.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function import_all_events_theme() {
+  return [
+    'import_all_events' => [
+      'render element' => 'children',
+    ],
+  ];
+}

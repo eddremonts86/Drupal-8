@@ -1,0 +1,65 @@
+<main class='frontpage'>
+    <section class='o-frontpage-hero'>
+        <h1 class='o-frontpage-hero__title'>
+            Live stream fodbold online | Se tennis og håndbold online
+        </h1>
+        <h2 class='o-frontpage-hero__subtitle'>
+            Live stream fodbold og tennis på din computer, tablet eller mobil
+        </h2>
+
+        {% if page.navigation %}
+            {{ page.navigation }}
+        {% endif %}
+
+    </section>
+    <section class='o-frontpage-partners'>
+        <header>Vores Samarbejdspartnere</header>
+        <ul>
+            <li>
+                <a href='/live-stream-reviews/ByURL'>
+                    <img src='http://images-v2.sesport.dk/sesport.dk-ver2/oddsproviders-new/145x39/OddsProviderLogo_3_145x39_54611d53c469889a318b4c79.png'/>
+                </a>
+            </li>
+            <li>
+                <a href='/live-stream-reviews/ByURL'>
+                    <img src='http://images-v2.sesport.dk/sesport.dk-ver2/oddsproviders-new/145x39/OddsProviderLogo_3_145x39_5469fdbfc4698864068b45fd.png'/>
+                </a>
+            </li>
+            <li>
+                <a href='/live-stream-reviews/ByURL'>
+                    <img src='http://images-v2.sesport.dk/sesport.dk-ver2/oddsproviders-new/145x39/OddsProviderLogo_3_145x39_5461e3d7c46988a8388b4def.png'/>
+                </a>
+            </li>
+            <li>
+                <a href='/live-stream-reviews/ByURL'>
+                    <img src='http://images-v2-cdn.sesport.dk/sesport.dk-ver2/oddsproviders-new/145x39/OddsProviderLogo_3_145x39_546a0006c4698865068b4662.png'/>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section class='o-frontpage-bottomcta'>
+        <header>Du får de bedste optakter, det bedste sport, den bedste oversigt, de seneste resultater og meget mere,
+            når du besøger vores side. Se udvalget herunder.
+        </header>
+
+        <aside class='o-frontpage-bottomcta__livestreaming'>
+            <i class="fa fa-laptop" aria-hidden="true"></i>
+            <section>
+                <header>Livestreaming</header>
+                <p>På sesport.dk har du mulighed for at streame det bedste fodbold live fra Superligaen og resten af
+                    Europa, følge de største stjerner i tennissporten og se det vildeste håndbold i verden.</p>
+                <a href='#'>her</a>
+            </section>
+        </aside>
+
+        <div class="row navigation_footer">
+            {% if page.navigation_collapsible %}
+                {{ page.navigation_collapsible }}
+            {% endif %}
+        </div>
+
+
+    </section>
+</main>
+{{ attach_library('sesport/global-styling-homepage') }}
+

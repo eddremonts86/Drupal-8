@@ -1,0 +1,8 @@
+
+import_all_events.description:
+  path: 'import_all_events/getalldata'
+  defaults:
+    _form:  '\Drupal\import_all_events\Form\import_allevents_form'
+    _title: 'Import all nodes by content type'
+  requirements:
+    _permission: 'access content'

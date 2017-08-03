@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_detail_price_content
+    - node.type.stream_provider
+  module:
+    - text
+id: node.stream_provider.field_page_detail_price_content
+field_name: field_page_detail_price_content
+entity_type: node
+bundle: stream_provider
+label: 'Page Detail Price Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

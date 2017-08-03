@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_language.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_language_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_language module.
+    case 'help.page.rp_language':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RP Language Content Entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,12 @@
+name: 'RP CMS - Sport Pages'
+description: 'Provides Sport Pages content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+package: 'Rebel Penguins CMS - Frontend'

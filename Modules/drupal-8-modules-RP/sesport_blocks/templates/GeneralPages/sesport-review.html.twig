@@ -1,0 +1,61 @@
+<div id="ses_review" class="container-fluid o_sport_home_important_events">
+    <div class="row">
+        <main class='frontpage'>
+            <section class="ses_review_setion">
+                <div class="container">
+                    <div class="col-md-12 text-center">
+                        <h3 class="live_list_head">
+                            Find de bedste provider Reviews
+                        </h3>
+                        <h4 class="live_list_subhead"> {{livestreamHead|t }} </h4>
+                    </div>
+                    <div class="col-md-10 col-md-offset-1 live_stream_data">
+                        {% for tag in tags %}
+                            <div class="panel panel-default ">
+                                <div class="panel-body">
+                                    <div class="col-md-3">
+                                        <div class="three twelfth align-center double-pad-top-desktop">
+                                            <a class="provider-tv reDir" target="_blank" id="reDir" onclick="reDir()"
+                                               style="censor:pointer;">
+                                                <img width="146" height="185" alt="bet365 icon" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/streamproviders-new/161x203/StreamProviderLogo_1_161x203_5461f231c4698816398b4d9c.png">
+                                            </a>
+                                           {# {{ file_url(url) }}#}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 text-left">
+                                        <div class="block_stream_name">
+                                            <h3 class="half-gap-bottom">{{ tag.title.0.value }}
+                                                <span class="strat_left">
+                                                    {% for i in 1.. tag.field_properties_rating.0.value %}
+                                                        <em class="fa fa-star"></em>
+                                                    {% endfor %}
+
+                                                    {% for i in 1.. (5 - tag.field_properties_rating.0.value) %}
+                                                        {% if (5 - tag.field_properties_rating.0.value) > 0 %}
+                                                            <em class="fa fa-star-o"></em>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </span>
+                                            </h3>
+                                        </div>
+                                        <div class="block_stream_body">
+                                            <p class="provider-quality-div fs13 zero"> {{ tag.body.0.summary [0:255]}}... </p>
+                                        </div>
+                                        <div class="block_stream_butom">
+                                            <a class="btn btn-default btn-cust-block btn-cust-block-left pull-left" role="button" href="{{ tag.field_general_affiliate_link.0.uri }}" >
+                                                <i class="fa fa-arrow-circle-right"></i> Læs {{ tag.title.0.value }} review</a>
+
+                                            <a class="btn btn-success btn-cust-block btn-cust-block-right pull-right " role="button" target="_blank" rel="nofollow" href="{{ tag.field_general_affiliate_link.0.uri }}">
+                                                <i class="fa fa-arrow-circle-right"></i> {{ tag.field_general_affiliate_link.0.title }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

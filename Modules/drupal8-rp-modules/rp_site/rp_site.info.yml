@@ -1,0 +1,5 @@
+name: RP Site
+type: module
+description: RP Site entity
+core: 8.x
+package: RP

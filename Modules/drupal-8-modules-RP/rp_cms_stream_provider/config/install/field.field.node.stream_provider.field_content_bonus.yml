@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_bonus
+    - node.type.stream_provider
+id: node.stream_provider.field_content_bonus
+field_name: field_content_bonus
+entity_type: node
+bundle: stream_provider
+label: 'Review Providers Content Bonus'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

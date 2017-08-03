@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_channels
+  module:
+    - rp_site
+id: site.site.field_site_channels
+field_name: field_site_channels
+entity_type: site
+bundle: site
+label: Channels
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:channel'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

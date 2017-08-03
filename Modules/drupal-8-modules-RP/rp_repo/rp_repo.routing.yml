@@ -1,0 +1,40 @@
+
+rp_repo.import_api_data_ImportRepoData:
+  path: '/rp_repo/importapidata/edit'
+  defaults:
+    _controller: '\Drupal\rp_repo\Controller\ImportAPIDATA::importApiData'
+    _title: 'Import Api Data'
+  requirements:
+    _permission: 'access content'
+
+rp_repo.import_repo_data_ImportRepoData:
+  path: '/rp_repo/importrepodata/edit'
+  defaults:
+    _controller: '\Drupal\rp_repo\Controller\ImportRepoData::importRepoData'
+    _title: 'Import Repo Data'
+  requirements:
+    _permission: 'access content'
+
+rp_repo.update_clienet_data_UpdateClienetData:
+  path: '/rp_repo/UpdateClienetData'
+  defaults:
+    _controller: '\Drupal\rp_repo\Controller\UpdateClienetData::UpdateClienetData'
+    _title: 'UpdateClienetData'
+  requirements:
+    _permission: 'access content'
+
+rp_repo.delete_client_data_DeleteClientData:
+  path: '/rp_repo/DeleteClientData'
+  defaults:
+    _controller: '\Drupal\rp_repo\Controller\DeleteClientData::DeleteClientData'
+    _title: 'DeleteClientData'
+  requirements:
+    _permission: 'access content'
+
+rp_repo.create_client_data_CreateClientData:
+  path: '/rp_repo/CreateClientData'
+  defaults:
+    _controller: '\Drupal\rp_repo\Controller\CreateClientData::CreateClientData'
+    _title: 'CreateClientData'
+  requirements:
+    _permission: 'access content'

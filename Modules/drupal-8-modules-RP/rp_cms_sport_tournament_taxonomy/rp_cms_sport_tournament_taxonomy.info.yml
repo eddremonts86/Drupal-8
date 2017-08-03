@@ -1,0 +1,12 @@
+name: 'RP CMS - Sports and Tournaments Taxonomy'
+description: 'Sports and Tournaments Taxonomy'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - path
+  - taxonomy
+  - text
+  - user
+  - views
+package: 'Rebel Penguins CMS - Frontend'

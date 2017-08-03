@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sport_internal_pages.body
+    - field.field.node.sport_internal_pages.field_page_type
+    - field.field.node.sport_internal_pages.field_sport_tax
+    - field.field.node.sport_internal_pages.field_sportip_api_id
+    - node.type.sport_internal_pages
+  module:
+    - text
+    - user
+id: node.sport_internal_pages.default
+targetEntityType: node
+bundle: sport_internal_pages
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_page_type:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sportip_api_id:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_sport_tax: true
+  links: true
