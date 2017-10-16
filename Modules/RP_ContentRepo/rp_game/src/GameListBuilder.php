@@ -87,7 +87,7 @@ class GameListBuilder extends EntityListBuilder {
       foreach($games_info_combos as $sic_id => $sic){
         foreach($combos as $i => $combo){
           if($sic == $combo)
-            $game_links[$i] = $this->l(
+            $game_links[] = $this->l(
               $this->buildGameInfoLabelLink($combos_code[$i][0], $combos_code[$i][1],$combos_code[$i][2]),
               new Url(
                 'entity.game_info.edit_form', [

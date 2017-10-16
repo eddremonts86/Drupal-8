@@ -1,0 +1,13 @@
+steveModuleLibraries:
+  version: 1.x
+  css:
+    layout:
+      src/css/steveBase_layout.css: {}
+    theme:
+      src/css/steveBase.css: {}
+  js:
+    src/js/jquery_v1.12.4.js: {}
+    src/js/steveBasejs.js: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings

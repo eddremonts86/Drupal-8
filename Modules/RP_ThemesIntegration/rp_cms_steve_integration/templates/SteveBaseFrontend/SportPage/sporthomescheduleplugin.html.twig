@@ -51,6 +51,7 @@
                                                                 {% for event in events %}
                                                                     <li class="o_program_match">
                                                                         <span class="pull-left program_match_ind border"><a href="{{ event.eventAlias }}"><i class="fs16 fs14-mobile half-pad-right"><i class="fa fa-clock-o"></i> {{ event.eventDate | date("H:i ") }}</i><i class="fs16 fs14-mobile half-pad-right bold-mobile-v">{{ event.eventName }}</i></a></span>
+                                                                        <span class="pull-left program_match_ind border"><a href="{{ event.eventAlias }}">{{ event.title}}</a></span>
                                                                         <span class="pull-right"><a role="button" class="btn btn-success-kamp" href="{{ event.eventAlias }}">Se Kampen <i class="fa fa-arrow-circle-right"></i> </a></span>
                                                                     </li>
                                                                 {% endfor %}
@@ -63,7 +64,6 @@
                                     {% endfor %}
                                 </div>
                             </div>
-
                             {% endfor %}
                         </div>
                     {% endfor %}
@@ -72,9 +72,3 @@
             </div>
         </div>
 </section>
-
-<script>
-  $(document).ready(function(){
-    alert("Has escrito");
-  })
-</script>

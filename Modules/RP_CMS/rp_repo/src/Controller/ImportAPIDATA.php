@@ -90,6 +90,7 @@ class ImportAPIDATA extends ControllerBase {
         $streamProvider = $event['streamprovider'];
         $eventMeta = $event['meta'];
         $Tags_Team = '';
+
         if (isset($sportApiId)) { $sportTags = $creatorObj->createSportPages($sportDrupalId, $sportApiId, $region); }
         if (isset($streamProvider)) { $stream = $creatorObj->createStreamPages($streamProvider, $sportTags);}
         if (isset($competition)) { $creatorObj->createTournamentPages($competition, $sportTags, $sportApiId);}

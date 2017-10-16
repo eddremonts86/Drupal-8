@@ -45,7 +45,6 @@ abstract class SteveBaseControler extends ControllerBase {
       return reset($taxonomy);
     }
   }
-
   public function getTaxonomyAlias($id) {
     $url = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $id])->toString();
     return $url;
@@ -229,7 +228,6 @@ abstract class SteveBaseControler extends ControllerBase {
       return $sportObjFormnat;
     }
   }
-
   public function getClearUrl($s) {
     $s = trim($s, "\t\n\r\0\x0B");
     //--- Latin ---//
@@ -265,6 +263,40 @@ abstract class SteveBaseControler extends ControllerBase {
     $s = trim($s, "\t\n\r\0\x0B");
     return $s;
   }
+
+
+  /*------------- Stream ------------*/
+  public function getStreamList(){
+    $sport = $this->getSport();
+    $obj=array(
+      'vid' => 'stream_provider',
+      'field_stream_sport_promote' => $sport['sportDrupalId']
+    );
+    $list = $this->getTaxonomyByCriterio($obj,1);
+    return $list;
+  }
+  public function getStreamListFormat(){
+    $list = $this->getStreamList();
+    $listFormat = array();
+    foreach ($list as $listF){
+
+
+
+      $listFormat[] = array(
+        'id' => $listF->id(),
+        'streamName' => $listF->name->value,
+        'apiId' => $listF->field_stream_provider_api_id->value,
+        'homePromo' => $listF->field_stream_provider_home_promo->value,
+        'description' => $listF->description->value,
+        'idTabsTemplate'=> $this->getClearUrl($listF->name->value .'_'.$listF->field_stream_provider_api_id->value),
+       /**/
+        'streamRating' => 3,
+        'streamPrice' => '$12',
+      );
+    }
+     return $listFormat;
+  }
+
 
 
 }

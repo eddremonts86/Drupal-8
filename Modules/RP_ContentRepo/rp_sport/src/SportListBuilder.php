@@ -87,7 +87,7 @@ class SportListBuilder extends EntityListBuilder {
       foreach($sports_info_combos as $sic_id => $sic){
         foreach($combos as $i => $combo){
           if($sic == $combo)
-            $sport_links[$i] = $this->l(
+            $sport_links[] = $this->l(
               $this->buildSportInfoLabelLink($combos_code[$i][0], $combos_code[$i][1],$combos_code[$i][2]),
               new Url(
                 'entity.sport_info.edit_form', [

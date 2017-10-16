@@ -7,11 +7,9 @@ global-steve-styling:
         src/css/live/style.min.css: {}
    js:
       src/js/live/jscript.min.js: {}
-
    dependencies:
       - core/jquery
       - core/jquery.once
-
 global-styling-homepage:
    css:
       base:

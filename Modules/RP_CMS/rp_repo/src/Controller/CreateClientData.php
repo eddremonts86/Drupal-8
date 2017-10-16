@@ -34,7 +34,7 @@ class CreateClientData extends ControllerBase {
       $node = [
         'type' => 'sport',
         'title' => $sportName,
-        'field_sport_taxonomy_id' => $taxonomySportId,
+        'field_sport_sport' => $taxonomySportId,
         'field_sport_theme_properties' => '',
         'path' => $alias,
         'body' => [
@@ -65,7 +65,7 @@ class CreateClientData extends ControllerBase {
       $createStreamPages = [
         'type' => $type,
         'title' => $name,
-        'field_sport_taxonomy' => $sportTags,
+        'field_sport_stream_reviews_sport' => $sportTags,
         'field_sport_review_properties' => '',
         'body' => [
           'value' => '',
@@ -90,7 +90,7 @@ class CreateClientData extends ControllerBase {
       $createStreamPages = [
         'type' => $type,
         'title' => $name,
-        'field_sport_blog_taxonomy' => $sportTags,
+        'field_sport_blogs_sport' => $sportTags,
         'field_sport_theme_blog_propertie' => '',
         'body' => [
           'value' => '',
@@ -112,9 +112,11 @@ class CreateClientData extends ControllerBase {
     $rpClient = RPAPIClient::getClient();
     foreach ($streams as $stream) {
       $actualStream = $getInfoObj->getTaxonomyByCriterio($stream['id'], 'field_stream_provider_api_id');
+
         if(empty($actualStream)){
           $streamObj = $rpClient->getStreamprovidersbyID(['id' => $stream['id']]);
-          $streamType = $rpClient->getStreamproviderTypesbyID(['id' => $streamObj['type']]);
+          //$streamType = $rpClient->getStreamproviderTypesbyID(['id' => $streamObj['type']]);
+          $streamType = $streamObj['type'];
           $requestType = array('field_stream_provider_type_apiid' => $streamType['id'],'name' => $streamType['name']);
           $taxonomyStreamType = $getInfoObj->getTaxonomyByCriterioMultiple($requestType);
           if (empty($taxonomyStreamType)) {
