@@ -1,0 +1,63 @@
+.page-header {
+    margin-bottom: 0;
+
+    @media #{$mobile} {
+        & {
+            min-height: 190px;
+            background-position: center center;
+            padding: 0;
+        }
+    }
+
+    .container-inner {
+        @include flex-row($wrap: nowrap, $justify: space-between, $align: flex-start);
+
+        @media #{$mobile} {
+            @include flex-column($align: flex-start);
+        }
+    }
+
+    h1.title {
+
+    }
+
+    .match-ad {
+        flex: 0 auto;
+        max-width: 320px;
+        padding: 20px;
+        background: $page-header-match-ad-background;
+
+        @media #{$mobile} {
+            & {
+                flex: 1;
+                max-width: 100%;
+                padding-bottom: 30px;
+            }
+        }
+
+    }
+}
+
+@each $sport in $sport-names {
+    $sport-branding: map-get($sports, $sport);
+    $primary-color: map-get($sport-branding, 'primary-color');
+    $secondary-color: map-get($sport-branding, 'secondary-color');
+
+    .main-container.#{$sport} {
+        .page-header-main {
+            h1.title {
+                span:nth-child(odd) {
+                    color: $secondary-color;
+                }
+                span:nth-child(even) {
+                    color: $primary-color;
+                }
+                @media #{$mobile} {
+                    span {
+                        color: $primary-color !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Match advertisement implementation for main page header
+ *
+ * Available variables:
+ * - title: The title text.
+ * - subtitle: The subtitle text.
+ * - modes: The modes array.
+ * - details: The details array.
+ * - text: Any shortcode or HTML text.
+ */
+#}
+
+<aside class="match-ad">
+    <div class="hidden-xs">
+        <h2 class="title">{{ title }}</h2>
+        {% if subtitle %}
+            <h3 class="subtitle">{{ subtitle }}</h3>
+        {% endif %}
+        <ul class="modes list-unstyled">
+            {% for item in modes %}
+            <li>
+                <div>
+                    <i class="mode-icon glyphicon {{ item.icon }}"></i>
+                    <span class="mode-label">{{ item.title }}</span>
+                </div>
+                {% if item.subtitle %}
+                    <span class="mode-sublabel">{{ item.subtitle }}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="details">
+        {% if details.label %}
+            <span>{{ details.label }}</span>
+        {% endif %}
+        {% if details.date and details.participants %}
+            <strong>{{ details.date }}{{ details.participants }}</strong>
+        {% endif %}
+        {% if details.button is iterable %}
+            <a role="button"
+               class="{{ details.button.class }}"
+               href="{{ details.button.url }}">
+                 <i class="glyphicon glyphicon-chevron-right"></i>
+                 <span>{{ details.button.label }}</span>
+            </a>
+        {% endif %}
+    </div>
+</aside>

@@ -1,0 +1,15 @@
+.top-bar {
+    @include flex-row($justify: flex-end);
+    width: 100%;
+    background: black;
+    padding: 8px;
+    .sites {
+        a.site-link {
+            .flag-icon {
+                margin-left: 4px;
+                width: 24px;
+                line-height: 18px;
+            }
+        }
+    }
+}

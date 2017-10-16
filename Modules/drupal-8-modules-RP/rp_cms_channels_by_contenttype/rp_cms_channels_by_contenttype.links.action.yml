@@ -1,5 +1,0 @@
-entity.channels_by_contenttype.add_form:
-  route_name: entity.channels_by_contenttype.add_form
-  title: 'Add Channels_by_contenttype'
-  appears_on:
-    - entity.channels_by_contenttype.collection

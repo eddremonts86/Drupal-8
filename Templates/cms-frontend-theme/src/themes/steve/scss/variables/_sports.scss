@@ -1,0 +1,45 @@
+$soccer-primary: #699908 !default;
+$soccer-secondary: #fff !default;
+$soccer-gradient: linear-gradient(to bottom, #81ac10 0, #4f8500 100%) !default;
+$soccer-gradient-hover: linear-gradient(to top, #81ac10 0, #4f8500 100%) !default;
+$tennis-primary: #e07800 !default;
+$tennis-secondary: #fff !default;
+$tennis-gradient: linear-gradient(to bottom, #b75309 0, #ec9307 100%) !default;
+$tennis-gradient-hover: linear-gradient(to top, #b75309 0, #ec9307 100%) !default;
+$handball-primary: #006695 !default;
+$handball-secondary: #fff !default;
+$handball-gradient: linear-gradient(to bottom, #349bcb 0, #225287 100%) !default;
+$handball-gradient-hover: linear-gradient(to top, #349bcb 0, #225287 100%) !default;
+
+// list of sports
+$sports: (
+    'soccer': (
+        'primary-color': $soccer-primary,
+        'secondary-color': $soccer-secondary,
+        'gradient': $soccer-gradient,
+        'gradient-hover': $soccer-gradient-hover,
+    ),
+    'tennis': (
+        'primary-color': $tennis-primary,
+        'secondary-color': $tennis-secondary,
+        'gradient': $tennis-gradient,
+        'gradient-hover': $tennis-gradient-hover,
+    ),
+    'handball': (
+        'primary-color': $handball-primary,
+        'secondary-color': $handball-secondary,
+        'gradient': $handball-gradient,
+        'gradient-hover': $handball-gradient-hover,
+    ),
+);
+
+$sport-names: map-keys($sports);
+
+$sport-button-color: #fff;
+$sport-button-font-size: 30px;
+$sport-button-font-size-mobile: 15px;
+$sport-button-font-weight: 700;
+$sport-button-border: 1px solid #213600;
+$sport-button-box-shadow: 0 0 10px #000;
+$sport-button-padding: 7.5px 30px;
+$sport-button-icon-background: #fff;

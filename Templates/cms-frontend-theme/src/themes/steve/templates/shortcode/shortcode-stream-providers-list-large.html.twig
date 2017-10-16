@@ -1,0 +1,141 @@
+{#
+/**
+ * @file
+ * Stream providers large list dummy template
+ *
+ * Available variables:
+ * - title: The title text.
+ * - background_image
+ * - stream_providers: Array of providers
+ * - arrow_background_image
+ */
+#}
+
+<section class="stream-providers stream-providers__list--large" style="background-image: url({{ file_url(background_image) }})">
+    <div class="container-inner">
+        {% if title %}
+            <h2 class="stream-providers__title">{{ title }}</h2>
+        {% endif %}
+        {% for provider in stream_providers %}
+            {% if loop.first %}
+            <div class="stream-providers__list__item stream-providers__list__item--promoted">
+                <div class="stream-providers__list__item__branding">
+                    <img class="stream-providers__list__item__logo"
+                        src="{{ file_url(provider.logo) }}" />
+                </div>
+                <div class="stream-providers__list__item__body">
+                    <div class="stream-providers__list__item__body__left">
+                        <h3 class="stream-providers__list__item__body__label">
+                            {{ provider.label }}
+                        </h3>
+                        <div class="stream-providers__list__item__details">
+                            {% for detail in provider.details %}
+                                <div class="stream-providers__list__item__details__detail">
+                                    <b class="stream-providers__list__item__details__detail__label">
+                                        {{ detail.label }}:
+                                    </b>
+                                    <span class="stream-providers__list__item__details__detail__value">
+                                        {{ detail.value }}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="stream-providers__list__item__body__steps">
+                            {% for step in provider.steps %}
+                                <div class="stream-providers__list__item__body__steps__step">
+                                    <span class="stream-providers__list__item__body__steps__step__title">
+                                        {{ step.title }}
+                                    </span>
+                                    <img class="stream-providers__list__item__body__steps__step__image"
+                                        src="{{ file_url(step.image) }}" width="92" height="70" />
+                                    <span class="stream-providers__list__item__body__steps__step__subtitle">
+                                        {{ step.subtitle }}
+                                    </span>
+                                </div>
+                                <div class="stream-providers__list__item__body__steps__separator">
+                                    <img src="{{ file_url(provider.steps_separator) }}" />
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="stream-providers__list__item__body__right">
+                        <a role="button"
+                           class="stream-providers__list__item__body__button
+                                {{ provider.button.class }}"
+                           href="{{ provider.button.url }}">
+                             <i class="stream-providers__list__item__body__button__icon
+                                fa fa-chevron-circle-right"></i>
+                             <span class="stream-providers__list__item__body__button__label">
+                                 {{ provider.button.label }}
+                             </span>
+                             {% if provider.button.sublabel %}
+                                <small class="stream-providers__list__item__body__button__sublabel">
+                                    {{ provider.button.sublabel }}
+                                </small>
+                             {% endif %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if not loop.first %}
+            <div class="stream-providers__list__item stream-providers__list__item--not-promoted">
+                <div class="stream-providers__list__item__branding">
+                    <img class="stream-providers__list__item__logo"
+                        src="{{ file_url(provider.logo) }}" />
+                </div>
+                <div class="stream-providers__list__item__body">
+                    <div class="stream-providers__list__item__body__left">
+                        <h3 class="stream-providers__list__item__body__label">
+                            {{ provider.label }}
+                        </h3>
+                        <div class="stream-providers__list__item__details">
+                            {% for detail in provider.details %}
+                                <div class="stream-providers__list__item__details__detail">
+                                    <b class="stream-providers__list__item__details__detail__label">
+                                        {{ detail.label }}:
+                                    </b>
+                                    <span class="stream-providers__list__item__details__detail__value">
+                                        {{ detail.value }}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="stream-providers__list__item__body__steps">
+                            {% if provider.steps_label %}
+                                <h4 class="stream-providers__list__item__body__steps__label">
+                                    {{ provider.steps_label }}</h4>
+                            {% endif %}
+                            {% for step in provider.steps %}
+                                <div class="stream-providers__list__item__body__steps__step">
+                                    <span class="stream-providers__list__item__body__steps__step__title">
+                                        {{ step.title }}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="stream-providers__list__item__body__right">
+                        <a role="button"
+                           class="stream-providers__list__item__body__button
+                                {{ provider.button.class }}"
+                           href="{{ provider.button.url }}">
+                             <i class="stream-providers__list__item__body__button__icon
+                                fa fa-chevron-circle-right"></i>
+                             <span class="stream-providers__list__item__body__button__label">
+                                 {{ provider.button.label }}
+                             </span>
+                             {% if provider.button.sublabel %}
+                                <small class="stream-providers__list__item__body__button__sublabel">
+                                    {{ provider.button.sublabel }}
+                                </small>
+                             {% endif %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

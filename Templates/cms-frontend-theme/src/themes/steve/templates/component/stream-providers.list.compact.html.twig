@@ -1,0 +1,94 @@
+{#
+/**
+ * @file
+ * @name Stream Providers List: Compact
+ * @type template
+ * @description Stream providers listed as vertical compact items template
+ * @author Armando Soriano <arm4design@gmail.com>
+ * @see node--game_pages.html.twig
+ *
+ * @variables:
+ *  - stream_providers, an array of providers
+ */
+#}
+
+<div class="stream-providers__list stream-providers__list--compact">
+    {% for provider in stream_providers %}
+        <div class="stream-providers__list__item">
+            <div class="stream-providers__list__item__header">
+                <div class="stream-providers__list__item__header__branding">
+                    <img class="stream-providers__list__item__header__logo"
+                        src="{{ file_url(provider.logo) }}" height="35" />
+                    <h3 class="stream-providers__list__item__header__name">
+                        {{ provider.name }}
+                    </h3>
+                    <span class="stream-providers__list__item__header__rating">
+                        {% for rate in provider.rating %}
+                            <i class="fa fa-{{ rate }}"></i>
+                        {% endfor %}
+                    </span>
+                </div>
+                <div class="stream-providers__list__item__header__details">
+                    {% for detail in provider.details %}
+                        <div class="stream-providers__list__item__header__details__detail">
+                            <i class="stream-providers__list__item__header__details__detail__icon
+                                {{ detail.icon }}"></i>
+                            <b class="stream-providers__list__item__header__details__detail__label">
+                                {{ detail.label }}
+                            </b>
+                            <span class="stream-providers__list__item__header__details__detail__value">
+                                {{ detail.value }}
+                            </span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="stream-providers__list__item__body">
+                <div class="stream-providers__list__item__body__left">
+                    <h3 class="stream-providers__list__item__body__label">
+                        {{ provider.label }}
+                    </h3>
+                    <div class="stream-providers__list__item__body__steps">
+                        {% for step in provider.steps %}
+                            <div class="stream-providers__list__item__body__steps__step">
+                                <span class="stream-providers__list__item__body__steps__step__title">
+                                    {{ step.title }}
+                                </span>
+                                <img class="stream-providers__list__item__body__steps__step__image"
+                                    src="{{ file_url(step.image) }}" />
+                                <span class="stream-providers__list__item__body__steps__step__subtitle">
+                                    {{ step.subtitle }}
+                                </span>
+                            </div>
+                            {% if not loop.last %}
+                                <div class="stream-providers__list__item__body__steps__separator">
+                                    <img src="{{ file_url(provider.steps_separator) }}" />
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="stream-providers__list__item__body__right">
+                    <small class="stream-providers__list__item__body__notice">
+                        {{ provider.notice }}
+                    </small>
+                    <a role="button"
+                       class="stream-providers__list__item__body__button
+                            {{ provider.button.class }}"
+                       href="{{ provider.button.url }}">
+                         <i class="stream-providers__list__item__body__button__icon
+                            fa fa-chevron-circle-right"></i>
+                         <span class="stream-providers__list__item__body__button__label">
+                             {{ provider.button.label }}
+                         </span>
+                         {% if provider.button.sublabel %}
+                            <small class="stream-providers__list__item__body__button__sublabel">
+                                {{ provider.button.sublabel }}
+                            </small>
+                         {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

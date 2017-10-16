@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.competition.field_competition_parent
+  module:
+    - rp_competition
+id: competition.competition.field_competition_parent
+field_name: field_competition_parent
+entity_type: competition
+bundle: competition
+label: Parent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:competition'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

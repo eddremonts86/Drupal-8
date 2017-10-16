@@ -1,0 +1,144 @@
+.schedule {
+    padding: 20px;
+
+    .title {
+        text-transform: uppercase;
+        color: $schedule-title-color;
+        margin-bottom: 20px;
+    }
+
+    .accordion-panel.level-2 {
+        border-top: 1px solid lighten(map-get($schedule-tournament, 'color'), 35%);
+
+        &:first-of-type {
+            border-top: 0;
+        }
+    }
+
+    .accordion-trigger {
+
+        &.date-level {
+            justify-content: space-between !important;
+            font-size: map-get($schedule-date, 'font-size');
+            border-radius: 0;
+            border: 0;
+            box-shadow: map-get($schedule-date, 'box-shadow');
+
+            &.collapsed {
+                background: map-get($schedule-collapsed, 'background');
+                color: map-get($schedule-collapsed, 'color');
+
+                &:hover {
+                    background: map-get($schedule-hover, 'background');
+                    color: map-get($schedule-hover, 'color');
+                }
+            }
+
+        }
+
+        &.tournament-level {
+            background: map-get($schedule-tournament, 'background');
+            color: map-get($schedule-tournament, 'color');
+
+            .tournament-logo {
+
+            }
+
+            .tournament-name {
+                font-weight: bold;
+                margin: 0 10px;
+            }
+
+            .tournament-events-count {
+
+            }
+        }
+
+        &.event-level {
+            @include flex-row
+            background: map-get($schedule-event, 'background');
+            color: map-get($schedule-event, 'color');
+            border-top: 1px solid lighten(map-get($schedule-event, 'color'), 45%);
+
+            &:first-of-type {
+                border-top: 0;
+            }
+
+            .event-time {
+                margin: 0 10px;
+            }
+
+            .event-participants {
+                @media #{$mobile} {
+                    font-weight: bold;
+                    margin-top: 8px;
+                    min-width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .sport-button {
+                padding: 5px 15px;
+                box-shadow: none;
+
+                i {
+                    font-size: 10px;
+                }
+                span {
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+
+                @media #{$mobile} {
+                    & {
+                        margin-top: 14px;
+                        padding: 7px 10px;
+                    }
+                    i {
+                        font-size: 8px;
+                    }
+                    span {
+                        font-size: 12px;
+                        margin-right: 6px;
+                    }
+                }
+
+            }
+
+            @media #{$mobile} {
+                & {
+                    flex-flow: column nowrap !important;
+                }
+
+                .flex-row {
+                    flex-flow: row wrap;
+                    justify-content: center;
+                }
+            }
+
+        }
+
+        .flex-row {
+            flex: 1;
+            @include flex-row;
+        }
+
+    }
+
+}
+
+@each $sport in $sport-names {
+    $sport-branding: map-get($sports, $sport);
+    $primary-color: map-get($sport-branding, 'primary-color');
+    $secondary-color: map-get($sport-branding, 'secondary-color');
+
+    .main-container.#{$sport} {
+        .date-level {
+            background: $primary-color;
+            color: $secondary-color;
+        }
+        .sport-button {
+            @include sport-button($sport);
+        }
+    }
+}

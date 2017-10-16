@@ -1,0 +1,10 @@
+/**
+ * Sports buttons placeholders, which consumes $sports variables
+ * @see variables/sports
+ */
+
+@each $sport in $sport-names {
+    %#{$sport}-button {
+      @include sport-button($sport);
+    }
+}

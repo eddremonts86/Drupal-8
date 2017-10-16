@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.stream_provider.field_stream_provider_api_id
+    - field.field.taxonomy_term.stream_provider.field_stream_provider_home_promo
+    - field.field.taxonomy_term.stream_provider.field_stream_provider_type_apiid
+    - field.field.taxonomy_term.stream_provider.field_streamprovider_logo
+    - field.field.taxonomy_term.stream_provider.field_streamprovider_logo_date
+    - taxonomy.vocabulary.stream_provider
+  module:
+    - text
+id: taxonomy_term.stream_provider.default
+targetEntityType: taxonomy_term
+bundle: stream_provider
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_stream_provider_api_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_stream_provider_home_promo:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_stream_provider_type_apiid:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_streamprovider_logo: true
+  field_streamprovider_logo_date: true

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_site
+    - rp_sport_info
+id: sport_info.field_sport_info_site
+field_name: field_sport_info_site
+entity_type: sport_info
+type: entity_reference
+settings:
+  target_type: site
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

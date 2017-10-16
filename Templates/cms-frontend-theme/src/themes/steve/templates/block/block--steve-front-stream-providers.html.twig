@@ -1,0 +1,12 @@
+<div class="front-stream-providers col-sm-12" role="banner">
+    <div class="container-inner">
+        <h2 class="title">{{ title }}</h2>
+        <div class="list">
+            {% for provider in stream_providers %}
+                <a href="{{ provider.url }}" class="list-item">
+                    <img src="{{ provider.image }}" />
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

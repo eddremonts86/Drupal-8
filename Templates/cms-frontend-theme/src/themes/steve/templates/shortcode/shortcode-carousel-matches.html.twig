@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Carousel implementation
+ *
+ * Available variables:
+ * - attributes: The attributes array.
+ * - title: A title string
+ * - background_image: Url to background image
+ * - slides: An array of slides
+ */
+#}
+
+<div class="carousel carousel--matches" role="heading" style="background-image: url({{ file_url(background_image) }})">
+    {% if title %}
+        <h2 class="carousel__title">{{ title }}</h2>
+    {% endif %}
+    <div class="carousel__slides">
+        {% for slide in slides %}
+            <div class="carousel__slides__slide">
+                <span class="carousel__slides__slide__title">
+                    {{ slide.title }}
+                </span>
+                <span class="carousel__slides__slide__date">
+                    {{ slide.date | date('d M. Y') }} {{ from }} {{ slide.date | date('H:m') }}
+                </span>
+                <span class="carousel__slides__slide__badges">
+                    <img src="{{ file_url(slide.participant_1) }}" width="70" height="70" />
+                    <img src="{{ file_url(slide.participant_2) }}" width="70" height="70" />
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+</div>

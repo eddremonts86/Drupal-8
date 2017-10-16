@@ -1,0 +1,48 @@
+name: SteveThemeBase
+type: theme
+description: Theme base of all Steve Drupal project
+package: Rebel Penguins CMS - Frontend
+core: 8.x
+libraries:
+  - stevethemebase/global-steve-styling
+ 
+base theme: bootstrap
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_footer: 'Navigation (Footer Home)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  sidebar_left: 'Left Sidebar'
+  sidebar_right: 'Right Sidebar'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  content: 'Content'
+  siteflagmenu: 'Site flag menu'
+  siteundermenubar: 'Site under menu bar'
+  generalpageshead: 'General pages head'
+  generalpagesbody: 'General pages body'
+  generalpagesfooter: 'General pages footer'
+  homehead: 'Home head'
+  homepartner: 'Home partner'
+  homebody: 'Home body'
+  homefooter: 'Home footer'
+  sporthomehead: 'Sport home head'
+  sporthomepopularmatch: 'Sport home popular match'
+  sporthomeschedule: 'Sport home schedule'
+  sporthomestreamlist: 'Sport home stream list'
+  sporthomefooter: 'Sport home footer'
+  sportlivestreamhead: 'Sport live stream head'
+  sportlivestreamlist: 'Sport live stream list'
+  sportlivestreamfooter: 'Sport live stream footer'
+  sportbloghead: 'Sport blog head'
+  sportblogbody: 'Sport blog body'
+  sportblogfooter: 'Sport blog footer'
+  eventpagehead: 'Event page head'
+  eventpagecontent: 'Event page content'
+  eventpagestreamlist: 'Event page stream list'
+  eventpagefooter: 'Event page footer'
+  none: 'None'

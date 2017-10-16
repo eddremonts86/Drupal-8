@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - steve
+id: footer_about
+theme: steve
+region: footer
+weight: 0
+provider: null
+plugin: block_content
+settings:
+  id: block_content
+  label: 'About us in page footer'
+  provider: block_content
+  label_display: '0'
+visibility: {  }

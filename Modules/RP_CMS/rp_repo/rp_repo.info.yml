@@ -1,0 +1,13 @@
+name: 'RP CMS - API/Repo Connection Provider'
+type: module
+description: Module to conect a "Client (like sesport.dk)" , "API" and "Content Repo"
+core: 8.x
+package: 'Rebel Penguins CMS - Frontend'
+autor: 'Eduardo Valdes Inerarte'
+dependencies:
+  - rp_api
+  - rp_repoapi
+  - rp_site
+  - rp_site_info
+  - rp_shortcode
+  - rp_cms_events

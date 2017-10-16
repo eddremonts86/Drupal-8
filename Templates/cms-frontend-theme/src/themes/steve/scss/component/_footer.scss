@@ -1,0 +1,144 @@
+/*
+ * Page footer
+ * @see variables/_footer.scss
+ *
+ */
+
+footer.footer {
+    padding: 0;
+
+    .footer-about {
+        @include flex-row;
+        background: $footer-about-background;
+        padding: 14px;
+
+        .container-inner {
+            @include flex-row($justify: space-between);
+        }
+
+        .footer-about-pages {
+            @include flex-row;
+            .footer-about-pages-page {
+                margin-right: 16px;
+                text-transform: uppercase;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                a, i {
+                    color: $footer-about-pages-color;
+                }
+            }
+        }
+
+        .footer-about-copy_co {
+            color: $footer-about-copy_co-color;
+            label {
+                margin: 0 6px 0 0;
+                position: relative;
+                top: 3px;
+            }
+        }
+
+        @media #{$mobile} {
+            .container-inner {
+                @include flex-column;
+            }
+            .footer-about-pages {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .footer-social {
+        background: $footer-social-background;
+        padding: 8px;
+
+        .container-inner {
+            @include flex-row($justify: flex-end);
+        }
+
+        .footer-social-item {
+            margin-right: 8px;
+            @include flex-row;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .footer-legal {
+        background: $footer-legal-background;
+        .container-inner {
+            padding-top: 16px;
+            @include flex-row($justify: space-between);
+
+            > div:first-of-type {
+                @include flex-row;
+            }
+
+            @media #{$mobile} {
+                align-items: flex-start;
+                padding: 16px;
+            }
+        }
+        .footer-legal-image{
+            margin-right: 32px;
+        }
+        .footer-legal-notice {
+            color: $footer-legal-color;
+        }
+        .footer-menu {
+            @include flex-row($wrap: wrap, $justify: flex-end);
+            margin: 0 0 0 12px;
+
+            li {
+                margin-right: 10px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                a {
+                    padding: 0;
+                    color: $footer-legal-color;
+                    &:hover {
+                        background: $footer-legal-color-hover;
+                        text-decoration: underline;
+                    }
+                }
+                &.footer-legal-age-notice {
+                    @include flex-row;
+                    i {
+                        font-style: normal;
+                        font-weight: bold;
+                        &::before {
+                            padding: 8px 5px;
+                            border-radius: 20px;
+                            content: '18+';
+                            margin-right: 8px;
+                            background: $footer-legal-age-notice-icon-background;
+                            color: $footer-legal-age-notice-icon-color;
+                            float: left;
+                        }
+                    }
+                }
+            }
+
+            @media #{$mobile} {
+                @include flex-column($align: flex-end);
+                li {
+                    margin-right: 0;
+                    margin-bottom: 6px;
+                    &.footer-legal-age-notice {
+                        i {
+                            &::before {
+                                padding: 5px 4px;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}

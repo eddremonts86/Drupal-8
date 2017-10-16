@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the steve theme.
+
+steve.settings:
+  type: theme_settings
+  label: 'steve settings'

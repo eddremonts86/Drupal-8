@@ -1,4 +1,0 @@
-bundle: rp_cms
-excluded:
-  - views.view.bol
-required: true

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sport_blogs.body
+    - field.field.node.sport_blogs.field_sport_blogs_sport
+    - field.field.node.sport_blogs.field_sport_theme_blog_propertie
+    - node.type.sport_blogs
+  module:
+    - text
+    - user
+id: node.sport_blogs.teaser
+targetEntityType: node
+bundle: sport_blogs
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_sport_blogs_sport: true
+  field_sport_theme_blog_propertie: true

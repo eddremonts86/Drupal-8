@@ -1,0 +1,72 @@
+
+
+{% if page.content_headsportsecction %}
+   {{ page.content_headsportsecction }}
+{% endif %}
+
+{% if page.content_topsportmenu %}
+    <section>
+        {{ page.content_topsportmenu }}
+    </section>
+{% endif %}
+
+{% if page.content_generalpages %}
+    {{ page.content_generalpages }}
+{% endif %}
+
+{% if page.content_popularkamp %}
+    <section class="o_sport_home_important_events">
+            <div class="row">
+                {{ page.content_popularkamp }}
+            </div>
+    </section>
+{% endif %}
+
+{% if page.sportlivestream %}
+    <main class='frontpage'>
+        {{ page.sportlivestream }}
+    </main>
+{% endif %}
+
+
+{% if page.gamepages %}
+   {{ page.gamepages }}
+{% endif %}
+
+
+{% if page.content_blog %}
+   {{ page.content_blog }}
+{% endif %}
+
+
+{% if page.content_Kampprogram %}
+    <section class="o-sport-program sport_home_slider">
+        <div class="container">
+            <div class="col-md-12">
+                {{ page.content_Kampprogram }}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content_kamp %}
+    <section class="o-sport-program sport_home_slider">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                {{ page.content_kamp }}
+            </div>
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content_stream %}
+    <section class="o-sport-stream">
+        <div class="container">
+            {{ page.content_stream }}
+        </div>
+    </section>
+{% endif %}
+
+{% if page.content %}
+    {{ page.content }}
+{% endif %}

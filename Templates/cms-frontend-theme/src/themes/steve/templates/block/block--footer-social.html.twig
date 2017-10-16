@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * @name Footer social block
+ * @type template
+ * @description Block for social in page's footer. Each vendor APIs are loaded in
+ *  system/html.html.twig
+ * @author Armando Soriano <arm4design@gmail.com>
+ * @see html.html.twig
+ */
+#}
+
+<section class="footer-social">
+    <div class="container-inner">
+        <div class="footer-social-item facebook">
+            <div class="fb-like"
+                data-href="{{ url('<current>') }}"
+                data-layout="button_count"
+                data-action="like"
+                data-size="small"
+                data-show-faces="false"
+                data-share="false"></div>
+        </div>
+        <div class="footer-social-item google">
+            <div class="g-plusone"
+                data-href="{{ url('<current>') }}"
+                data-size="medium"
+                data-annotation="none"></div>
+        </div>
+        <div class="footer-social-item twitter">
+            <a href="https://twitter.com/share"
+                class="twitter-share-button">Tweet</a>
+        </div>
+    </div>
+</section>

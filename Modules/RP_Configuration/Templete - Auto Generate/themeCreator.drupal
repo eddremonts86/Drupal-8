@@ -1,0 +1,34 @@
+drupal gt \
+--theme="SteveThemeBase"  \
+--machine-name="stevethemebase"  \
+--theme-path="/themes/custom"  \
+--description="Theme base of all Steve Drupal project"  \
+--core="8.x"  \
+--package="Rebel Penguins CMS - Frontend"  \
+--global-library="global-steve-styling"  \
+--base-theme="bootstrap"  \
+--breakpoints='"breakpoint_name":"narrow","breakpoint_label":"narrow","breakpoint_media_query":"all and (min-width: 560px) and (max-width: 850px)","breakpoint_weight":"1","breakpoint_multipliers":"1x"'
+
+--regions='"region_name":"Content", "region_machine_name":"content"'  \
+--regions='"region_name":"Head Sport", "region_machine_name":"headSport"'  \
+--regions='"region_name":"Top Sport Menu", "region_machine_name":"topSportMenu"'  \
+--regions='"region_name":"Popular Match", "region_machine_name":"popularMatch"'  \
+--regions='"region_name":"Schedule", "region_machine_name":"schedule"'  \
+--regions='"region_name":"Stream List", "region_machine_name":"streamList"'  \
+--regions='"region_name":"Blog", "region_machine_name":"blog"'  \
+--regions='"region_name":"Home Partner", "region_machine_name":"homePartner"'  \
+--regions='"region_name":"General Pages", "region_machine_name":"generalPages"'  \
+--regions='"region_name":"Sport Live Stream", "region_machine_name":"sportLiveStream"'  \
+--regions='"region_name":"Events Pages", "region_machine_name":"events"'  \
+--regions='"region_name":"Navigation", "region_machine_name":"navigation"'  \
+--regions='"region_name":"Navigation Collapsible", "region_machine_name":"navigationCollapsible"'  \
+--regions='"region_name":"Navigation Footer", "region_machine_name":"navigationFooter"'  \
+--regions='"region_name":"Header", "region_machine_name":"header"'  \
+--regions='"region_name":"Highlighted", "region_machine_name":"highlighted"'  \
+--regions='"region_name":"Help", "region_machine_name":"help"'  \
+--regions='"region_name":"Do not Show", "region_machine_name":"dontShow"'  \
+--regions='"region_name":"Left Sidebar", "region_machine_name":"leftSidebar"'  \
+--regions='"region_name":"Right Sidebar", "region_machine_name":"rightSidebar"'  \
+--regions='"region_name":"Footer", "region_machine_name":"footer"'  \
+--regions='"region_name":"Page top", "region_machine_name":"pageTop"'  \
+--regions='"region_name":"Page Bottom", "region_machine_name":"pageBottom"'  \

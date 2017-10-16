@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_streamprovider_logo_date
+    - taxonomy.vocabulary.stream_provider
+id: taxonomy_term.stream_provider.field_streamprovider_logo_date
+field_name: field_streamprovider_logo_date
+entity_type: taxonomy_term
+bundle: stream_provider
+label: 'Logo Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1506345010
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

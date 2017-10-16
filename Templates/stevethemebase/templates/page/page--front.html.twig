@@ -1,0 +1,21 @@
+<main class='frontpage'>
+
+    <section class='o-frontpage-hero'>
+        {% if page.homehead %}{{ page.homehead }}{% endif %}
+    </section>
+
+    <section class='homePartner'>
+        {% if page.homepartner %}{{ page.homepartner }}{% endif %}
+    </section>
+
+    <section class='o-frontpage-bottomcta'>
+        {% if page.homebody %}{{ page.homebody }}{% endif %}
+    </section>
+
+    <section class='o-frontpage-bottomcta'>
+        {% if page.homefooter %}{{ page.homefooter }}{% endif %}
+    </section>
+
+</main>
+{{ attach_library('stevethemebase/global-styling-homepage') }}
+

@@ -1,0 +1,52 @@
+{#
+    Template: block-steve-navbar
+    Description: Top navigation bar
+#}
+
+{% block navbar %}
+
+    {%
+        set navbar_classes = [
+            'navbar',
+            theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+            theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+            site_base_class ? site_base_class : ''
+        ]
+    %}
+
+    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
+
+        <div class="container-inner">
+
+            <div class="navbar-header">
+                {# Branding #}
+                {# Branding will consume logo.svg placed in the root of the theme #}
+                {{ page.branding }}
+                {# END Branding #}
+            </div>
+
+            {# Navigation #}
+            {% if page.navigation %}
+                <div class="navigation-primary">
+                    {{ page.navigation }}
+                </div>
+            {% endif %}
+            {# END Navigation #}
+
+        </div>
+
+        {# Navigation secondary #}
+        {% if page.navigation %}
+            <div class="navigation-secondary">
+                <div class="container-inner">
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+                        {{ page.navigation }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {# END Navigation secondary #}
+
+    </header>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * @name Game Page Body
+ * @type template
+ * @description Game page body template
+ * @author Armando Soriano <arm4design@gmail.com>
+ * @see node--game_pages.html.twig
+ *
+ * @variables:
+ *  - body
+ */
+#}
+
+<section class="content-body" style="background-image: url({{ file_url(body.background_image) }})">
+    <div class="container-inner">
+        <!-- TODO: work on text fields once are available -->
+        {{ body.text | raw }}
+    </div>
+</section>

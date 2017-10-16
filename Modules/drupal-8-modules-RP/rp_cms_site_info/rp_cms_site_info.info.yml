@@ -1,7 +1,0 @@
-name: RP CMS Site Info
-type: module
-description: RP CMS Site Info sync with api
-core: 8.x
-package: RP
-dependencies:
-  - rp_api

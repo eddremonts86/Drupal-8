@@ -1,0 +1,100 @@
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-serif;
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Footer.
+.footer {
+  // margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  // border-top: 1px solid #E5E5E5;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+body {
+    margin-top: 0!important;
+    -webkit-font-smoothing: antialiased;
+    font-family: $font-family-sans-serif;
+}
+
+.full-width {
+    width: 100%;
+    min-width: 100%;
+}
+
+.container-inner {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.field--name-body {
+    > div {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media #{$tablet} {
+    .container-inner {
+        max-width: (($container-sm - $grid-gutter-width));
+    }
+}
+
+@media #{$normal} {
+    .container-inner {
+        max-width: (($container-md - $grid-gutter-width));
+    }
+}
+
+@media #{$wide} {
+    .container-inner {
+        max-width: (($container-lg - $grid-gutter-width));
+    }
+}

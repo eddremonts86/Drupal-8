@@ -1,6 +1,0 @@
-name: RP API
-type: module
-description: RP API Connect
-package: RP
-version: 8.x-1.0
-core: 8.x

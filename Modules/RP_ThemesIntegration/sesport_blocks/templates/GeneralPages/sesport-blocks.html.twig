@@ -1,0 +1,499 @@
+<div id="ses_block" class="container-fluid o_sport_home_important_events ">
+    <div class="row">
+        <main class='frontpage'>
+            <section class="general_sections stream_back_tabs">
+                <div class="container">
+                    <div class="col-xs-12 list_head">
+                        <h1 class="live_list_head">{{ "Udbydere af Live Stream" |t }}</h1>
+                        <h2 class="live_list_subhead">{{ "Læs om de forskellige udbydere af live stream på det danske marked." |t }}</h2>
+
+                        <ul class="nav nav-tabs" role="tablist">
+                            {% for tag in tags %}
+                                {% if loop.first %}
+                                    <li role="presentation" class="tabs_stream active">
+                                        <a href="#node-{{ tag.idTabsTemplate }}" aria-controls="node-{{ tag.idTabsTemplate }}" role="tab" data-toggle="tab">{{ tag.streamName }}</a>
+                                    </li>
+                                {% else %}
+                                    <li role="presentation" class="tabs_stream">
+                                        <a href="#node-{{ tag.idTabsTemplate }}" aria-controls="node-{{ tag.idTabsTemplate }}" role="tab" data-toggle="tab">{{ tag.streamName }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="general_sections stream_back_text">
+                <div class="container">
+                    <div class="col-xs-12">
+                        <div class="tab-content stream_desc">
+                            {% for tag_body in tags %}
+                                {% if loop.first %}
+                                    <div role="tabpanel" class="tab-pane active" id="node-{{ tag_body.idTabsTemplate }}">
+                                        <div class="row row_top">
+                                            <div class="col-md-5 img_stram">
+                                                <div>
+                                                    <a target="_blank" href="{{tag_body.ReviewProvidersContentTopButtonURL}}">
+                                                        <img class="bordered-mobile" alt="{{ tag_body.streamName }} icon" width="auto" height="auto" src="{{file_url(tag_body.streamIMG)  }} "></a>
+                                                    <p class="align-center gray"><strong>{{ tag_body.ReviewProvidersContentBonus }}</strong></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 head_text_left">
+                                                <div class="five eighths triple-pad-left mobile one-up-mobile no-padded-mobile">
+                                                    <h2 class="stream_name">{{ tag_body.streamName }}</h2>
+                                                    <div class="max-wd300 pull-left">
+                                                        <div class="top_text_stream">
+                                                            {{ tag_body.ReviewProvidersContentPross |raw }}
+                                                        </div>
+                                                        <div class="top_text_stream">
+                                                            <label>
+                                                                <a role="button" class="btn btn-danger btn-cust-block " target="_blank" href="{{ tag_body.ReviewProvidersContentTopButtonURL }}">
+                                                                    <i class="fa fa-arrow-circle-right"></i>  {{ tag_body.ReviewProvidersContentTopButtonText }} </a>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row row_desc">
+                                            <div class="col-md-12 topDesc">
+                                                <div class="tab_panel_text_desc">
+                                                    <p>{{ tag_body.ReviewProvidersContentIntroduction | raw}}</p>
+                                                </div>
+                                            </div>
+                                            {% if tag_body.ReviewProvidersUdvalgetContent != '' and  tag_body.ReviewProvidersUdvalgetContent != null %}
+                                            <div class="col-md-12 topDesc">
+                                                <div class="tab_panel_text_desc">
+                                                    <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersUdvalgetHeading }}
+                                                        <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersUdvalgetRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                            {% for i in 1.. (5 - tag_body.ReviewProvidersUdvalgetRating) %}
+                                                                {% if (5 - tag_body.ReviewProvidersUdvalgetRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                            {% endfor %}
+                                                        </span>
+                                                    </h3>
+                                                    <p>{{ tag_body.ReviewProvidersUdvalgetContent | raw}}</p>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersErfaringContent != '' and  tag_body.ReviewProvidersErfaringContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersErfaringHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersErfaringRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersErfaringRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersErfaringRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersErfaringContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersSupportContent != '' and  tag_body.ReviewProvidersSupportContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersSupportHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersSupportRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersSupportRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersSupportRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersSupportContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersLivebettingContent != '' and  tag_body.ReviewProvidersLivebettingContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersLivebettingHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersLivebettingRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersLivebettingRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersLivebettingRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersLivebettingContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersLiveStreamingContent != '' and  tag_body.ReviewProvidersLiveStreamingContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersLiveStreamingHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersLiveStreamingRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersLiveStreamingRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersLiveStreamingRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersLiveStreamingContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersProdukterContent != '' and  tag_body.ReviewProvidersProdukterContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersProdukterHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersProdukterRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersProdukterRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersProdukterRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersProdukterContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersTilbagebetalingContent != '' and  tag_body.ReviewProvidersTilbagebetalingContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersTilbagebetalingHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersTilbagebetalingRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersTilbagebetalingRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersTilbagebetalingRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersTilbagebetalingContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersBonusserContent != '' and  tag_body.ReviewProvidersBonusserContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersBonusserHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersBonusserRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersBonusserRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersBonusserRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersBonusserContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersBrugervenlighedContent != '' and  tag_body.ReviewProvidersBrugervenlighedContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersBrugervenlighedHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersBrugervenlighedRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersBrugervenlighedRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersBrugervenlighedRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersBrugervenlighedContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersUdbetalingerContent != '' and  tag_body.ReviewProvidersUdbetalingerContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersUdbetalingerHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersUdbetalingerRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersUdbetalingerRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersUdbetalingerRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersUdbetalingerContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersIndsatspolitikContent != '' and  tag_body.ReviewProvidersIndsatspolitikContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersIndsatspolitikHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersIndsatspolitikRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersIndsatspolitikRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersIndsatspolitikRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersIndsatspolitikContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersKonklusionContent != '' and  tag_body.ReviewProvidersKonklusionContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersKonklusionHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersKonklusionRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersKonklusionRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersKonklusionRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersKonklusionContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            <div class="col-md-12 topDesc text-center">
+                                                    <a role="button" class="btn btn-danger btn-cust-block  btn_dwon" target="_blank" href="{{ tag_body.ReviewProvidersContentBottomButtonURL }}">
+                                                        <i class="fa fa-arrow-circle-right"></i>  {{ tag_body.ReviewProvidersContentBottomButtonText }} </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div role="tabpanel" class="tab-pane" id="node-{{ tag_body.idTabsTemplate }}">
+                                        <div class="row row_top">
+                                            <div class="col-md-5 img_stram">
+                                                <div>
+                                                    <a target="_blank" href="{{tag_body.ReviewProvidersContentTopButtonURL}}">
+                                                        <img class="bordered-mobile" alt="{{ tag_body.streamName }} icon" width="auto" height="auto" src="{{file_url(tag_body.streamIMG)  }} "></a>
+                                                    <p class="align-center gray"><strong>{{ tag_body.ReviewProvidersContentBonus }}</strong></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 head_text_left">
+                                                <div class="five eighths triple-pad-left mobile one-up-mobile no-padded-mobile">
+                                                    <h2 class="stream_name">{{ tag_body.streamName }}</h2>
+                                                    <div class="max-wd300 pull-left">
+                                                        <div class="top_text_stream">
+                                                            {{ tag_body.ReviewProvidersContentPross |raw }}
+                                                            {#<p>
+                                                                <i class="fa fa-check green"></i>
+                                                                Masser af spil på dansk sport
+                                                            </p>
+                                                        </div>
+                                                        <div class="top_text_stream">
+                                                            <p>
+                                                                <i class="fa fa-check green"></i>
+                                                                &nbsp;Gode tilbud til danske kunder
+                                                            </p>
+                                                        </div>
+                                                        <div class="top_text_stream">
+                                                            <p><i class="fa fa-check green"></i>
+                                                                &nbsp;Brugervenligt site</p>#}
+                                                        </div>
+                                                        <div class="top_text_stream">
+                                                            <label>
+                                                                <a role="button" class="btn btn-danger btn-cust-block " target="_blank" href="{{ tag_body.ReviewProvidersContentTopButtonURL }}">
+                                                                    <i class="fa fa-arrow-circle-right"></i>{{ tag_body.ReviewProvidersContentTopButtonText }} </a>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row row_desc">
+                                            <div class="col-md-12 topDesc">
+                                                <div class="tab_panel_text_desc">
+                                                    <p>{{ tag_body.ReviewProvidersContentIntroduction | raw}}</p>
+                                                </div>
+                                            </div>
+                                            {% if tag_body.ReviewProvidersUdvalgetContent != '' and  tag_body.ReviewProvidersUdvalgetContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersUdvalgetHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersUdvalgetRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersUdvalgetRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersUdvalgetRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersUdvalgetContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersErfaringContent != '' and  tag_body.ReviewProvidersErfaringContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersErfaringHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersErfaringRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersErfaringRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersErfaringRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersErfaringContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersSupportContent != '' and  tag_body.ReviewProvidersSupportContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersSupportHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersSupportRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersSupportRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersSupportRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersSupportContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersLivebettingContent != '' and  tag_body.ReviewProvidersLivebettingContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersLivebettingHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersLivebettingRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersLivebettingRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersLivebettingRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersLivebettingContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersLiveStreamingContent != '' and  tag_body.ReviewProvidersLiveStreamingContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersLiveStreamingHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersLiveStreamingRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersLiveStreamingRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersLiveStreamingRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersLiveStreamingContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersProdukterContent != '' and  tag_body.ReviewProvidersProdukterContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersProdukterHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersProdukterRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersProdukterRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersProdukterRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersProdukterContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersTilbagebetalingContent != '' and  tag_body.ReviewProvidersTilbagebetalingContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersTilbagebetalingHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersTilbagebetalingRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersTilbagebetalingRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersTilbagebetalingRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersTilbagebetalingContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersBonusserContent != '' and  tag_body.ReviewProvidersBonusserContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersBonusserHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersBonusserRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersBonusserRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersBonusserRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersBonusserContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersBrugervenlighedContent != '' and  tag_body.ReviewProvidersBrugervenlighedContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersBrugervenlighedHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersBrugervenlighedRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersBrugervenlighedRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersBrugervenlighedRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersBrugervenlighedContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersUdbetalingerContent != '' and  tag_body.ReviewProvidersUdbetalingerContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersUdbetalingerHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersUdbetalingerRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersUdbetalingerRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersUdbetalingerRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersUdbetalingerContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersIndsatspolitikContent != '' and  tag_body.ReviewProvidersIndsatspolitikContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersIndsatspolitikHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersIndsatspolitikRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersIndsatspolitikRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersIndsatspolitikRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersIndsatspolitikContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            {% if tag_body.ReviewProvidersKonklusionContent != '' and  tag_body.ReviewProvidersKonklusionContent != null %}
+                                                <div class="col-md-12 topDesc">
+                                                    <div class="tab_panel_text_desc">
+                                                        <h3 class="half-gap-bottom">{{ tag_body.ReviewProvidersKonklusionHeading }}
+                                                            <span class="strat_left">
+                                                            {% for i in 1.. tag_body.ReviewProvidersKonklusionRating %} <em class="fa fa-star"></em> {% endfor %}
+                                                                {% for i in 1.. (5 - tag_body.ReviewProvidersKonklusionRating) %}
+                                                                    {% if (5 - tag_body.ReviewProvidersKonklusionRating) > 0 %} <em class="fa fa-star-o"></em> {% endif %}
+                                                                {% endfor %}
+                                                        </span>
+                                                        </h3>
+                                                        <p>{{ tag_body.ReviewProvidersKonklusionContent | raw}}</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            <div class="col-md-12 topDesc text-center">
+                                                <label>
+                                                    <a role="button" class="btn btn-danger btn-cust-block " target="_blank" href="{{ tag_body.ReviewProvidersContentBottomButtonURL }}">
+                                                        <i class="fa fa-arrow-circle-right"></i>{{ tag_body.ReviewProvidersContentBottomButtonText }} </a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+</div>

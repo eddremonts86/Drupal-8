@@ -1,0 +1,60 @@
+{% for tag in tags %}
+        {% if tag.bgSport != null and tag.bgSport != '' %}
+<section class="o-frontpage-hero_footbal sport_home_slider" style="background: url({{ file_url(tag) }}); ">
+    {% else %}
+    <section class="o-frontpage-hero_footbal sport_home_slider">
+        {% endif %}
+        {% endfor %}
+
+        <div class="row">
+            {% if is_front == false %}
+                <nav class='o-header__secondary'>
+                    <ul>
+                        {{ tags[4].output | raw }}
+                    </ul>
+                </nav>
+            {% endif %}
+        </div>
+
+
+
+        {% for nodeinfo in tags %}
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-8">
+                        <div class="col-lg-offset-2 col-md-6">
+                            <h1 class='o-sportpage-hero__title'>
+                                {{ "Watch"|t|capitalize }}
+                            </h1></div>
+                        <div class="col-lg-offset-3 col-md-9">
+                            <h1 class='o-sportpage-hero__title '>
+                                <span class="text_active"> {{ "Live Stream" |t }}</span>
+                            </h1></div>
+                        <div class="col-lg-offset-6 col-md-6">
+                            <h1 class='o-sportpage-hero__title'>
+                                <a href="{{ nodeinfo.sportalias }}">{{ nodeinfo.sportname|striptags|capitalize }}</a></h1>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 sport_home">
+                        <div class="three-step-div pad-bottom hide-on-mobile">
+                            <h2 class="no-padding head green"> {{ "skal ses live!" |t|capitalize }} </h2>
+                            <p class="zero">{{ "Follow Your Favorite Team" |t }}</p>
+                            <p class="head green"><i class="fa fa-laptop white fs30"></i> {{ "Live på TV" |t }}</p>
+                            <p class="head green"><i class="fa fa-plane white fs40"></i> {{ "Live på Stadion" |t }}</p>
+                            <p class="head green no-pad-bottom"><i
+                                        class="fa fa-desktop white fs28"></i> {{ "Eller Live Online" |t }}</p>
+                            <p class="zero">{{ "på pc, mobil eller tablet." |t }}</p>
+                            <hr>
+                            <p>{{ "Næste topkamp" |t }}: {{ nodeinfo.eventDate |date("d.M Y") }}<br><strong>{{ "Kl." |t }} {{ nodeinfo.eventDate  |date("H:i") }}: {{ nodeinfo.title}}</strong></p>
+                            <p><a role="button" class="btn green" href="{{ nodeinfo.eventAlias }}"><i class="fa fa-arrow-circle-right"></i> {{ nodeinfo.title }}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <div class="row divisor">
+            <div class="arrow"></div>
+        </div>
+    </section>

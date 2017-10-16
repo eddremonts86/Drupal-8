@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Compact page header implementation
+ *
+ * Available variables:
+ * - attributes: The attributes array.
+ * - title: The title text.
+ * - background_image: The background image.
+ * - p1: Paragraph 1.
+ * - p2: Paragraph 2.
+ * - text: Any shortcode (usually [carrousel]) or HTML text.
+ */
+#}
+
+<div class="page-header page-header--compact col-sm-12" role="heading" style="background-image: url({{ file_url(background_image) }})">
+    <div class="container-inner">
+        <div class="page-header--compact__left">
+            <h1 class="page-header--compact__title">
+                {{ title }}
+            </h1>
+            {% if p1 %}
+                <p class="page-header--compact__paragraph">
+                    {{ p1 }}
+                </p>
+            {% endif %}
+            {% if p2 %}
+                <p class="page-header--compact__paragraph hidden-xs hidden-ms">
+                    {{ p2 }}
+                </p>
+            {% endif %}
+        </div>
+        <div class="page-header--compact__right hidden-xs">
+            {{ text | raw }}
+        </div>
+    </div>
+</div>

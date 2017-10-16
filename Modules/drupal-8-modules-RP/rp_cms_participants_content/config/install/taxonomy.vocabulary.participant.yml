@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: participant
-vid: participant
-description: ''
-hierarchy: 0
-weight: -8

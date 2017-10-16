@@ -1,0 +1,33 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+    - sesport_blocks
+    - system
+  theme:
+    - sesport
+id: livestreamreviewbyname
+theme: sesport
+region: navigation
+weight: 0
+provider: null
+plugin: sesportblocks
+settings:
+  id: sesportblocks
+  label: 'Live stream review(by name)'
+  provider: sesport_blocks
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /live-stream-reviews
+    negate: false
+    context_mapping: {  }

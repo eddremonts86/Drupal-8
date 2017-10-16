@@ -1,0 +1,24 @@
+<section class="footer-about">
+    <div class="container-inner">
+        <div class="footer-about-pages">
+            {% for page in pages %}
+                <div class="footer-about-pages-page">
+                    <i class="glyphicon {{ page.icon }}"></i>
+                    <!--
+                        TODO: once real data implementation works we might need
+                        using url() for href in the link below or maybe just using
+                        link()
+                    -->
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                    {# {{ link(page.title, page.url) }} --> #}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="footer-about-copy_co">
+            <label>{{ copy_co.label }}</label>
+            <a href="{{ copy_co.url }}">
+                <img src="{{ file_url(copy_co.img) }}" />
+            </a>
+        </div>
+    </div>
+</section>

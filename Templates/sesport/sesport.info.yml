@@ -1,0 +1,40 @@
+name: Sesport
+type: theme
+description: Sesport theme
+package: Rebel Penguins Apps
+core: 8.x
+libraries:
+  - sesport/global-styling
+  - sesport/global-scrpts
+
+base theme: bootstrap
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  navigation_footer: 'Navigation (Footer Home)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  dontShow: 'Dont Show This Blocks'
+
+  content: 'Content'
+  content_headsportsecction: 'Head Sport (Sport Pages)'
+  content_topsportmenu: 'Sport Top Menu (Sport Internal Pages)'
+  content_popularkamp: 'Popular Kampe (Sport Pages)'
+  content_kamp: 'General Kampe (Sport Pages)'
+  content_stream: 'Live Stream (Sport Pages)'
+  content_blog: 'Sport Pages Blog'
+  content_homePartner: 'Home Page - Stream Providers List'
+
+  content_generalpages: 'General Secction (Stream List or Reviews)'
+
+  sportlivestream: 'Render Live Steam Sport Page (Live Steam Pages)'
+  gamepages: 'Render Game Pages (Game Pages)'
+
+
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

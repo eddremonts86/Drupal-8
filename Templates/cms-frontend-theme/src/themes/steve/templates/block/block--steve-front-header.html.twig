@@ -1,0 +1,16 @@
+<div class="front-header col-sm-12" role="heading" style="background-image: url({{ image.src }})">
+    <div class="container-inner">
+        <h1 class="title">{{ title }}</h1>
+        <h2 class="subtitle hidden-xs">{{ subtitle }}</h2>
+        <div class="sports">
+            {% for sport in sports %}
+                <a role="button"
+                   class="{{ sport.class }}"
+                   href="{{ sport.url }}">
+                     <i class="glyphicon glyphicon-chevron-right"></i>
+                     <span>{{ sport.label }}</span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

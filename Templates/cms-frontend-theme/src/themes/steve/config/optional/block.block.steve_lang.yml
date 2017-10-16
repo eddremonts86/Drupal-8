@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - steve
+id: steve_lang
+theme: steve
+region: top_bar
+weight: 0
+provider: null
+plugin: block_content
+settings:
+  id: block_content
+  label: 'Site languages block'
+  provider: block_content
+  label_display: '0'
+visibility: {  }

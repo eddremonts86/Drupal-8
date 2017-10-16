@@ -1,0 +1,178 @@
+.stream-providers__list--large {
+    float: left;
+    width: 100%;
+
+    .stream-providers__title {
+        text-align: center;
+    }
+
+    .stream-providers__list__item {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        float: left;
+        width: 100%;
+        @include flex-row;
+
+        @media #{$mobile} {
+            @include flex-column($align: center);
+            padding: 0;
+            width: 95%;
+            margin-left: 2.5%;
+        }
+
+        &__branding {
+            padding: 20px 40px 20px 20px;
+        }
+
+    }
+
+    .stream-providers__list__item__body {
+        flex: 1;
+        border: 0;
+        border-left: 1px solid #ddd;
+
+        @media #{$mobile} {
+            border-left: 0;
+        }
+    }
+
+    .stream-providers__list__item--promoted {
+
+        .stream-providers__list__item__left {
+            @include flex-column;
+        }
+
+        .stream-providers__list__item__right {
+            flex-flow: row nowrap;
+        }
+
+        .stream-providers__list__item__label {
+            padding-left: 10px;
+        }
+
+        .stream-providers__list__item__details {
+            width: 100%;
+            padding-left: 10px;
+        }
+
+        .stream-providers__list__item__body__label {
+            padding-left: 10px;
+
+            @media #{$mobile} {
+                text-align: left;
+            }
+        }
+
+        .stream-providers__list__item__body__steps__step__title {
+            text-align: center;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .stream-providers__list__item__body__steps__step__subtitle {
+            text-align: center;
+        }
+
+        .stream-providers__list__item__body__steps__step__image {
+            width: auto;
+        }
+
+        .stream-providers__list__item__body__steps__separator {
+            top: -25px;
+        }
+
+        .stream-providers__list__item__body__right {
+            flex-flow: row nowrap;
+
+            @media #{$mobile} {
+                margin: 0;
+            }
+        }
+
+        .stream-providers__list__item__body__button {
+            padding: 30px 20px;
+            margin: 50px 0 0 0;
+            font-size: 18px;
+            width: 200px;
+            @include flex-row;
+
+            @media #{$mobile} {
+                margin: 0;
+                width: 100%;
+                padding: 20px 10px;
+                justify-content: center;
+            }
+        }
+
+        .stream-providers__list__item__body__button__icon {
+            margin-right: 8px;
+        }
+
+        .stream-providers__list__item__body__button__sublabel {
+            bottom: 15px;
+            right: 20px;
+
+            @media #{$mobile} {
+                margin: 0;
+                position: absolute;
+                right: 0px;
+                bottom: 10px;
+            }
+        }
+    }
+
+    .stream-providers__list__item--not-promoted {
+
+        .stream-providers__list__item__body,
+        .stream-providers__list__item__body__left,
+        .stream-providers__list__item__body__right,
+        .stream-providers__list__item__body__steps {
+            @include flex-column($align: flex-start);
+        }
+
+        .stream-providers__list__item__body__right {
+            margin: 0;
+        }
+
+        .stream-providers__list__item__body__label,
+        .stream-providers__list__item__details,
+        .stream-providers__list__item__body__steps {
+            padding-left: 10px;
+        }
+
+        .stream-providers__list__item__body__steps__step {
+            padding: 0;
+        }
+
+        .stream-providers__list__item__body__steps__step__title {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .stream-providers__list__item__body__button {
+            padding: 10px;
+            font-size: 14px;
+            margin-left: 10px;
+
+            @media #{$mobile} {
+                width: auto;
+                margin: 0 auto; 
+            }
+        }
+
+    }
+
+}
+
+@each $sport in $sport-names {
+    $sport-branding: map-get($sports, $sport);
+    $primary-color: map-get($sport-branding, 'primary-color');
+    $secondary-color: map-get($sport-branding, 'secondary-color');
+
+    .main-container.#{$sport} {
+        .stream-providers__title {
+            color: $primary-color;
+        }
+    }
+}

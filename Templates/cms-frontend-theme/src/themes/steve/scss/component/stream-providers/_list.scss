@@ -1,0 +1,252 @@
+.stream-providers__list {
+    width: 100%;
+
+    &__item {
+        width: 100%;
+        @include flex-column;
+
+        &__header {
+            width: 100%;
+            position: relative;
+            padding: 10px;
+            @include flex-row($justify: space-between);
+            background: linear-gradient(to bottom,#fff 0,#f8f8f9 50%,#f2f2f3 100%);
+
+            @media #{$mobile} {
+                @include flex-column($align: center);
+            }
+
+            &__branding {
+                @include flex-row($wrap: wrap);
+
+                @media #{$mobile} {
+                    justify-content: center;
+                    margin-bottom: 8px;
+                }
+            }
+
+            &__logo {
+                margin-right: 10px;
+            }
+
+            &__name {
+                font-weight: bold;
+                margin: 0 10px 0 0;
+            }
+
+            &__rating {
+                font-size: 18px;
+                i {
+                    margin-right: -3px;
+                }
+
+                @media #{$mobile} {
+                    margin-top: 4px;
+                }
+            }
+
+            &__details {
+                flex: 1;
+                @include flex-row($align: flex-start, $justify: flex-end);
+
+                @media #{$mobile} {
+                    @include flex-column($align: center);
+                    width: 100%;
+                }
+
+                &__detail {
+                    margin-right: 30px;
+
+                    @media #{$mobile} {
+                        margin: 0 0 6px 0;
+                    }
+
+                    &__icon {
+                        font-weight: bold;
+                    }
+
+                    &__label {
+                        font-weight: bold;
+                        &::after {
+                            content: ':';
+                        }
+                    }
+
+                    &__value {
+
+                    }
+                }
+            }
+        }
+
+        &__body {
+            width: 100%;
+            position: relative;
+            background: white;
+            @include flex-row;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+
+            @media #{$mobile} {
+                @include flex-column($align: center);
+            }
+
+            &__left {
+                @include flex-column;
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+            }
+
+            &__label {
+                font-weight: bold;
+                width: 100%;
+                text-align: left;
+                margin-top: 0;
+
+                @media #{$mobile} {
+                    font-size: 21px;
+                    text-align: center;
+                }
+            }
+
+            &__steps {
+                padding: 10px 30px;
+                @include flex-row;
+
+                @media #{$mobile} {
+                    justify-content: center;
+                    width: 100%;
+                    position: relative;
+                }
+
+                &__step {
+                    flex: 1;
+                    @include flex-column($justify: center);
+                    align-self: flex-start;
+                    padding: 10px;
+
+                    &__title {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+
+                        @media #{$mobile} {
+                            font-size: 10px;
+                        }
+                    }
+
+                    &__image {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    &__subtitle {
+                        margin-top: 10px;
+
+                        @media #{$mobile} {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                &__separator {
+                    @include flex-row;
+                    flex: 0 auto;
+                    width: 60px;
+                    position: relative;
+                    top: -1em;
+
+                    @media #{$mobile} {
+                        display: none !important;
+                    }
+                }
+            }
+
+            &__right {
+                @include flex-column($align: center, $justify: flex-end);
+                align-self: stretch;
+                margin-bottom: 20px;
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+            }
+
+            &__notice {
+                text-align: center;
+                margin-bottom: 8px;
+                width: 75%;
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+            }
+
+            &__button {
+                padding: 40px 50px;
+                position: relative;
+                color: #fff;
+                border-color: #e43725;
+                font-size: 1.5em;
+                background: linear-gradient(to bottom,#fc0101 0,#8c1b1f 100%);
+                text-decoration: none !important;
+                transition: none;
+                box-shadow: 0 0 5px #999;
+                border-radius: 4px;
+
+                @media #{$mobile} {
+                    width: 100%;
+                }
+
+                &:hover,
+                &:active,
+                &:visited {
+                    background: #e74c3c;
+                    color: #fff;
+                }
+
+                &__icon {
+                    color: white;
+                }
+
+                &__label {
+                    font-weight: bold;
+                }
+
+                &__sublabel {
+                    position: absolute;
+                    width: 100%;
+                    text-align: right;
+                    bottom: 30px;
+                    right: 30px;
+                    font-size: 11px;
+
+                    @media #{$mobile} {
+                        position: relative;
+                        text-align: center;
+                        bottom: auto;
+                        right: auto;
+                        float: left;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@each $sport in $sport-names {
+    $sport-branding: map-get($sports, $sport);
+    $primary-color: map-get($sport-branding, 'primary-color');
+    $secondary-color: map-get($sport-branding, 'secondary-color');
+
+    .main-container.#{$sport} {
+        .stream-providers__list {
+            &__item__header__rating > i {
+                color: $primary-color;
+            }
+        }
+    }
+}

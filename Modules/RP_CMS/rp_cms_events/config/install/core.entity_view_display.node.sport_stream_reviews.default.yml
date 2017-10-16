@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sport_stream_reviews.body
+    - field.field.node.sport_stream_reviews.field_sport_review_properties
+    - field.field.node.sport_stream_reviews.field_sport_stream_reviews_sport
+    - node.type.sport_stream_reviews
+  module:
+    - text
+    - user
+id: node.sport_stream_reviews.default
+targetEntityType: node
+bundle: sport_stream_reviews
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sport_review_properties:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_sport_stream_reviews_sport:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

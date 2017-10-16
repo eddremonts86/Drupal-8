@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Carrousel dummy implementation
+ *
+ * Available variables:
+ * - title: The title text.
+ * - subtitle: A subtitle text.
+ * - calendar: Schedule data content table.
+ */
+#}
+
+<div class="calendar">
+    <div class="container-inner">
+        {% if title %}
+            <h2 class="calendar__title">{{ title }}</h2>
+        {% endif %}
+        {% if subtitle %}
+            <h3 class="calendar__subtitle">{{ subtitle }}</h4>
+        {% endif %}
+        <div class="calendar__content">
+            <table>
+                <thead>
+                    <tr>
+                        {% for cell in calendar.header %}
+                        <th class="{{ cell.class }}">{{ cell.label }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                {% for event_day in calendar.body %}
+                <tbody>
+                    <tr class="calendar__content__date">
+                        <td colspan="99">
+                            <b class="capitalize">{{ event_day.date | date('D d.M') }}</b>
+                        </td>
+                    </tr>
+                    {% for event in event_day.events %}
+                    <tr class="calendar__content__row">
+                        <td class="hidden-xs">
+                            {{ event_day.date | date('h:s') }}
+                        </td>
+                        <td>
+                            {{ event.participants }}
+                        </td>
+                        <td class="hidden-xs">
+                            {{ event.tournament }}
+                        </td>
+                        <td>
+                            <div class="calendar__content__row__providers">
+                                <div>
+                                    {% for streamer in event.providers %}
+                                    {% set class = not loop.first ? 'hidden-xs' %}
+                                    <a href="{{ streamer.href }}" class="{{ class }}">
+                                        <img src="{{ file_url(streamer.image) }}" height="34" />
+                                        {% if loop.first %}
+                                        <i class="fa fa-plus hidden-sm hidden-md hidden-lg"></i>
+                                        {% endif %}
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                                <i class="fa fa-caret-right"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</aside>

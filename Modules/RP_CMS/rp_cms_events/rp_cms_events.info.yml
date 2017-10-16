@@ -1,0 +1,16 @@
+name: Events
+description: 'Provides Events content type and related configuration. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - file
+  - image
+  - menu_ui
+  - node
+  - path
+  - rdf
+  - taxonomy
+  - text
+  - user
+package: 'Rebel Penguins CMS - Frontend'

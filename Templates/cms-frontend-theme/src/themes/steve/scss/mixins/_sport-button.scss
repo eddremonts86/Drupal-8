@@ -1,0 +1,49 @@
+@mixin sport-button($sport) {
+    $sport-styles: map_get($sports, $sport);
+    background: map_get($sport-styles, 'gradient');
+    @include flex-row;
+    color: $sport-button-color;
+    font-size: $sport-button-font-size;
+    font-weight: $sport-button-font-weight;
+    border: $sport-button-border;
+    box-shadow: $sport-button-box-shadow;
+    padding: 10px 26.5px;
+    margin-right: 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        background: map_get($sport-styles, 'gradient-hover');
+    }
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    i {
+        color: map_get($sport-styles, 'primary-color');
+        background: $sport-button-icon-background;
+        border-radius: 20px;
+        padding: 4px;
+        margin-right: 4px;
+        top: 0!important;
+        font-size: 20px;
+
+        @media #{$mobile} {
+            & {
+                font-size: $sport-button-font-size-mobile;
+            }
+        }
+    }
+
+    span {
+        white-space: nowrap;
+    }
+
+    @media #{$mobile} {
+        & {
+            font-size: $sport-button-font-size-mobile;
+            padding: 10px;
+            margin-right: 5px;
+        }
+    }
+}

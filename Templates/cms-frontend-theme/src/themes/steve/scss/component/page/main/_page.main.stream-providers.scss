@@ -1,0 +1,252 @@
+.stream-providers {
+
+    .arrow-down {
+        @include arrow(
+            $border-top: map-get($matches-banner-arrow, 'border-top'),
+            $border-right: map-get($matches-banner-arrow, 'border-right'),
+            $border-left: map-get($matches-banner-arrow, 'border-left')
+        );
+    }
+
+    .container-inner > .title {
+        border-bottom: $stream-providers-border;
+        padding-bottom: 15px;
+        margin: 30px 0 24px 0;
+
+        &.mobile {
+            margin: 30px 10px 24px 10px;
+        }
+    }
+
+    .providers-tabs {
+        &.hidden-xs {
+            @include flex-row($align: flex-start);
+        }
+
+        @media #{$mobile} {
+            &.hidden-xs {
+                display: none !important;
+            }
+        }
+
+        header.providers-tabs-header {
+            width: 100%;
+            @include flex-row;
+            margin-bottom: 10px;
+            padding: 0 15px;
+
+            > span {
+                flex: 1;
+                text-align: center;
+                min-width: 33.33%;
+            }
+        }
+
+        a.tab-button {
+            width: 100%;
+            @include flex-row;
+            color: map-get($stream-providers-tabset-header, 'color');
+            background: map-get($stream-providers-tabset-header, 'background');
+            border: map-get($stream-providers-tabset-header, 'border');
+            border-radius: 4px;
+            text-decoration: none;
+            padding: 14px 0;
+
+            &.in,
+            &[aria-expanded="true"],
+            &:hover {
+                color: map-get($stream-providers-tabset-header, 'color-active');
+                background: map-get($stream-providers-tabset-header, 'background-active');
+                border: map-get($stream-providers-tabset-header, 'border-active');
+            }
+
+            > * {
+                flex: 1;
+                min-width: 33.33%;
+
+                > i {
+                    font-size: 16px;
+                }
+            }
+
+            .rating i {
+                color: $stream-providers-stars-color;
+            }
+
+        }
+
+        .tab-links {
+            @include flex-column($align: flex-start);
+            min-width: 300px;
+            flex: 0 auto 300px;
+            margin-right: 20px;
+
+            .nav-tabs {
+                width: 100%;
+                @include flex-column($align: flex-start);
+                border: 0;
+
+                li {
+                    width: 100%;
+                    margin-bottom: 4px;
+
+                    &.active {
+                        a.tab-button {
+                            color: map-get($stream-providers-tabset-header, 'color-active');
+                            background: map-get($stream-providers-tabset-header, 'background-active');
+                            border: map-get($stream-providers-tabset-header, 'border-active');
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            flex: 1;
+
+            header {
+                @include flex-row;
+                margin-bottom: 20px;
+
+                img {
+                    margin-right: 10px;
+                }
+
+                h3 {
+                    margin: 0;
+                }
+            }
+
+        }
+
+        .details-section {
+
+            &.how_to {
+
+                .detail-section-items {
+                    @include flex-row;
+
+                    &.mobile {
+                        @include flex-column;
+
+                        .detail-section-item {
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .detail-section-item {
+                        flex: 1;
+                        @include flex-column;
+
+                        .title {
+                            margin-bottom: 8px;
+                            color: map-get($stream-providers-details, 'item-title-color');
+                            font-weight: map-get($stream-providers-details, 'item-title-font-weight');
+                            font-size: map-get($stream-providers-details, 'item-title-font-size');
+                        }
+
+                        .subtitle {
+                            width: 70%;
+                        }
+
+                        .notice-link {
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        .buttons {
+            @include flex-row($justify: space-between);
+            margin-top: 20px;
+
+            &.mobile {
+                @include flex-column;
+
+                a[role="button"] {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            a[role="button"] {
+                padding: 3.5px 14px;
+                flex: 1;
+                justify-content: center !important;
+                font-size: 14px !important;
+
+                i {
+                    font-size: 12px !important;
+                }
+
+                &.gray {
+                    background: map-get($stream-providers-tabset-header, 'background') !important;
+                    color: map-get($stream-providers-tabset-header, 'color') !important;
+
+                    &:hover {
+                        background: map-get($stream-providers-tabset-header, 'background-reverse') !important;
+                    }
+
+                    i {
+                        color: map-get($stream-providers-buttons, 'gray-icon-color') !important;
+                        background: map-get($stream-providers-tabset-header, 'color') !important;
+                    }
+                }
+            }
+        }
+
+        img.logo {
+            max-width: 70px;
+        }
+
+        .panel {
+            border: 0;
+            margin: 0;
+        }
+        .panel-heading {
+            background: transparent;
+            border: 0;
+            padding: 5px 7.5px !important;
+        }
+        .panel-body {
+            border: 0 !important;
+        }
+
+    }
+
+}
+
+@each $sport in $sport-names {
+    $sport-branding: map-get($sports, $sport);
+    $primary-color: map-get($sport-branding, 'primary-color');
+    $secondary-color: map-get($sport-branding, 'secondary-color');
+
+    .main-container.#{$sport} {
+        .stream-providers {
+            .title {
+                color: $primary-color;
+            }
+
+            .providers-tabs {
+                header.providers-tabs-header {
+                    color: $primary-color;
+                }
+
+                .buttons {
+                    a[role="button"] {
+                        @include sport-button($sport);
+                    }
+                }
+            }
+
+        }
+    }
+}

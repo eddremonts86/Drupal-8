@@ -1,0 +1,41 @@
+.accordion {
+    width: 100%;
+    background: $accordion-background;
+
+    .accordion-panel {
+        width: 100%;
+
+        &.level-1 {
+            background: map-get($accordion-level-1, 'primary-color');
+            color: map-get($accordion-level-1, 'secondary-color');
+        }
+
+        &.level-2 {
+            background: map-get($accordion-level-2, 'primary-color');
+            color: map-get($accordion-level-2, 'secondary-color');
+        }
+
+        &.level-3 {
+            background: map-get($accordion-level-3, 'primary-color');
+            color: map-get($accordion-level-3, 'secondary-color');
+        }
+
+        .accordion-heading {
+
+            .accordion-trigger {
+                @include flex-row;
+                text-decoration: none;
+                padding: 16px 20px;
+                width: 100%;
+                font-family: $font-family-sans-serif;
+            }
+
+        }
+
+        .accordion-body {
+
+        }
+
+    }
+
+}

@@ -1,0 +1,175 @@
+/*
+ * Front page
+ * @see variables/_front.scss
+ */
+
+ .front-header,
+ .front-banner {
+     .sports {
+         margin-top: 30px;
+         @include flex-row($justify: center);
+         @each $sport in $sport-names {
+             a.#{$sport} {
+                 @extend %#{$sport}-button;
+             }
+         }
+     }
+ }
+
+.front-header {
+    min-height: 452px;
+    box-shadow: $front-header-box-shadow;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: $front-header-background-color;
+    background-size: cover;
+
+    @media #{$mobile} {
+        & {
+            min-height: 190px;
+            background-position: left bottom;
+        }
+    }
+
+    .container-inner {
+        @include flex-row($wrap: wrap, $justify: center);
+    }
+
+    .title,
+    .subtitle,
+    .sports {
+        width: 80%;
+        text-align: center;
+
+        @media #{$mobile} {
+            & {
+                width: 90%;
+            }
+        }
+    }
+
+    .title {
+        margin-top: 40px;
+        font-size: $front-header-title-font-size;
+        color: $front-header-title-color;
+        text-shadow: $front-header-title-text-shadow;
+
+        @media #{$mobile} {
+            & {
+                font-size: $front-header-title-font-size-mobile;
+            }
+        }
+    }
+
+    .subtitle {
+        font-size: $front-header-subtitle-font-size;
+        color: $front-header-subtitle-color;
+        text-shadow: $front-header-subtitle-text-shadow;
+    }
+
+}
+
+.front-stream-providers {
+    padding: 20px;
+    background: $front-stream-providers-background;
+    color: $front-stream-providers-color;
+
+    .container-inner {
+        @include flex-column;
+    }
+
+    .title {
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+
+    .list {
+        @include flex-row($wrap: wrap, $justify: center);
+        margin-top: 10px;
+
+        .list-item {
+            margin: 0 25px 25px 0;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.front-banner {
+    padding: 100px 20px 20px 20px;
+
+    .container-inner {
+        @include flex-column;
+        width: 80%;
+        @media #{$mobile} {
+            width: 100%;
+        }
+    }
+
+    .notice {
+        color: $front-banner-notice-color;
+        font-size: $front-banner-notice-font-size;
+        text-align: center;
+    }
+
+    .banner {
+        border-bottom: $front-banner-border;
+        padding: 0 40px 20px 40px;
+        margin-top: 40px;
+        @include flex-row;
+
+        @media #{$mobile} {
+            & {
+                @include flex-column($justify: center);
+            }
+        }
+
+        i {
+            font-size: $front-banner-icon-font-size;
+            color: $front-banner-icon-color;
+            margin-right: 20px;
+
+            @media #{$mobile} {
+                & {
+                    margin-right: 0;
+                }
+            }
+        }
+        .banner-text {
+
+            @media #{$mobile} {
+                & {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+
+            h2 {
+                margin-top: 0;
+            }
+            a {
+                font-size: $front-banner-link-text-size;
+                color: $front-banner-link-color;
+            }
+        }
+    }
+
+    .sports {
+
+        @media #{$mobile} {
+            & {
+                @include flex-column($justify: center);
+                width: 100%;
+            }
+            a {
+                margin: 0 0 20px 0 !important;
+                width: 100% !important;
+                font-size: 25px !important;
+                justify-content: center !important;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+// Machtes banner
+$matches-banner-arrow: (
+    'border-left': 100px solid transparent,
+    'border-right': 100px solid transparent,
+    'border-top': 40px solid #000,
+);
+$matches-banner-font-size: (
+    'title': 38px,
+    'title-mobile': 30px,
+    'subtitle': 24px,
+    'subtitle-mobile': 16px
+);
+$matches-banner-match: (
+    'box-shadow': 0 0 20px 10px #A1A1A1,
+    'border': 1px solid #ddd,
+    'participants-background': lightgrey,
+    'participants-color': #5a5a5a,
+    'team-badges-background': url("../images/ground-small.png") no-repeat center,
+    'versus-color': #5a5a5a,
+    'versus-text-shadow': 1px 1px 2px #fff,
+    'details-date-font-size': 16px
+);

@@ -1,0 +1,15 @@
+.game-pages {
+    .content-body {
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        padding: 40px;
+        text-align: center;
+        float: left;
+        width: 100%;
+
+        @media #{$mobile} {
+            padding: 40px 10px;
+        }
+    }
+}
