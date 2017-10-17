@@ -127,6 +127,70 @@ function rp_cms_steve_integration_theme() {
         ],
         'template' => 'SteveBaseFrontend/SportPage/sporthomefooterplugin',
       ],
+    'sportblogheadplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Blog/sportbloghead',
+      ],
+    'sportblogbodyplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Blog/sportblogbody',
+      ],
+    'sportblogfooterplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Blog/sportblogfooter',
+      ],
+    'eventpagecontentplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Events/eventpagecontentplugin',
+      ],
+    'eventpagefooterplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Events/eventpagefooterplugin',
+      ],
+    'eventpageheadplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Events/eventpageheadplugin',
+      ],
+    'eventpagestreamlistplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/Events/eventpagestreamlistplugin',
+      ],
+
   ];
 }
 

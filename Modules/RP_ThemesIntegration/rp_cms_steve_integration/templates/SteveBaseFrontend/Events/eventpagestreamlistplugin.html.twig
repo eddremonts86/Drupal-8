@@ -1,0 +1,136 @@
+
+<section style=" padding-bottom: 30px;padding-top: 30px;background: #223a00 url(http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ground-image-football.jpg) center top no-repeat;background-size: 100%;width: 100%;" class="">
+    <div class="row">
+        <div class="container GP_stream">
+            {% for eventStream in nodeData.events.Streamers %}
+
+                <div class="col-lg-12">
+                    <div class="panel panel-default panel-primary_ border-panel">
+                        <div class="col-lg-12 border-panel-title">
+                            <div class="col-lg-6 img_name_stream">
+                                <img class="img-circle" width="25px" height="25px"
+                                     src=" {{ file_url(eventStream.streamIMG) }}">
+                                <b class="streamPanelTitle"> {{ eventStream.streamName }} </b>
+                                <span class="rating" data-rating="{{ eventStream.streamRating }}">
+                                        {% for i in 1.. eventStream.streamRating %}
+                                            <em class="fa fa-star"></em>
+                                        {% endfor %}
+                                    {% for i in 1.. (5 - eventStream.streamRating) %}
+                                        {% if (5 - eventStream.streamRating) > 0 %}
+                                            <em class="fa fa-star-o"></em>
+                                        {% endif %}
+                                    {% endfor %}
+                                        </span>
+                            </div>
+                            <div class="col-lg-2 text-center"><b>Kvalitet :</b> {{ eventStream.streamVideoQuality }}
+                            </div>
+                            <div class="col-lg-2 text-center"><b>Afspiller : </b> {{ eventStream.streamVideoSize }}
+                            </div>
+                            <div class="col-lg-2 text-center"><b>Pris : </b>{{ eventStream.streamPrice }} </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-lg-12">
+                                <h3 class="streamPanelTitle">
+                                    {% if eventStream.ProviderPageDetailHeading != '' and  eventStream.ProviderPageDetailHeading != null %}
+                                        {{ eventStream.ProviderPageDetailHeading }}
+                                    {% else %}
+                                        {{ "Sådan ser du live stream fodbold med " |t }} {{ eventStream.streamName }}
+                                    {% endif %}
+                                </h3>
+                            </div>
+                            <div class="col-lg-12">
+
+                                <div class="col-lg-3 text-center">
+                                    <div class="col-lg-12">
+                                        {% if eventStream.ProviderPageDetailContentIcon1Heading != '' and  eventStream.ProviderPageDetailContentIcon1Heading != null %}
+                                            {{ eventStream.ProviderPageDetailContentIcon1Heading }}
+                                        {% else %}
+                                            {{ "1. Go to ITV " |t }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <img class="top-article-image img-thumbnail"
+                                             src="{{ file_url(eventStream.streamIMG) }}"/>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        {% if eventStream.ProviderPageDetailContentIcon1Subheading != '' and  eventStream.ProviderPageDetailContentIcon1Subheading != null %}
+                                            {{ eventStream.ProviderPageDetailContentIcon1Subheading }}
+                                        {% else %}
+                                            {{ "Click here and visit " |t }}{{ eventStream.streamName }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-3 text-center">
+                                    <div class="col-lg-12">
+                                        {% if eventStream.ProviderPageDetailContentIcon2Heading != '' and  eventStream.ProviderPageDetailContentIcon2Heading != null %}
+                                            {{ eventStream.ProviderPageDetailContentIcon2Heading }}
+                                        {% else %}
+                                            {{ "2. Select football " |t }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <img class="top-article-image img-thumbnail"
+                                             src="http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ico-green-2.png"/>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        {% if eventStream.ProviderPageDetailContentIcon2Subheading != '' and  eventStream.ProviderPageDetailContentIcon2Subheading != null %}
+                                            {{ eventStream.ProviderPageDetailContentIcon2Subheading }}
+                                        {% else %}
+                                            {{ "Choose " |t }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+
+                                <div class="col-lg-3 text-center">
+                                    <div class="col-lg-12">
+                                        {% if eventStream.ProviderPageDetailContentIcon3Heading != '' and  eventStream.ProviderPageDetailContentIcon3Heading != null %}
+                                            {{ eventStream.ProviderPageDetailContentIcon3Heading }}
+                                        {% else %}
+                                            {{ "3. Watch Live " |t }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <img class="top-article-image img-thumbnail"
+                                             src="http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ico-green-3.png"/>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        {% if eventStream.ProviderPageDetailContentIcon3Subheading != '' and  eventStream.ProviderPageDetailContentIcon3Subheading != null %}
+                                            {{ eventStream.ProviderPageDetailContentIcon3Subheading }}
+                                        {% else %}
+                                            {{ "Click on your desired game and start watching  " |t }}
+                                        {% endif %}
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 text-center">
+                                    <a role="button" href=" {{ eventStream.ProviderPageDetailButtonAffiliateLink }}"
+                                       class="btn btn-danger btn-lg">
+
+                                        {% if eventStream.ProviderPageDetailButtonHeading != '' and  eventStream.ProviderPageDetailButtonHeading != null %}
+                                            {{ eventStream.ProviderPageDetailButtonHeading }}
+                                        {% else %}
+                                            {{ "Watch match live " |t }}
+                                        {% endif %}
+                                        <br>
+                                        <span> -
+                                            {% if eventStream.ProviderPageDetailButtonSubheading != '' and  eventStream.ProviderPageDetailButtonSubheading != null %}
+                                                {{ eventStream.ProviderPageDetailButtonSubheading }}
+                                            {% else %}
+                                                {{ "with " |t }}{{ eventStream.streamName }}
+                                            {% endif %}
+                                            </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

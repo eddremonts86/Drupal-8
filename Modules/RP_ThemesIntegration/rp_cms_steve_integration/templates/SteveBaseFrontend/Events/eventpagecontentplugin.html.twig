@@ -1,0 +1,18 @@
+<section style="padding-bottom: 30px;padding-top: 30px;background: url(http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/green-cup.png);" class="">
+    <div class="row">
+        <div class="container GP_body">
+            <div class="col-xs-12 text-center">
+                <h1 class="black no-transform"> {{ "Watch" |t }}  {{ nodeData.events.0.eventName }} {{ "live" |t }}</h1>
+                {% if nodeData.events.0.eventbody != '' and  nodeData.events.0.eventbody != null %}
+                    {{ nodeData.events.0.eventbody }}
+                {% else %}
+                    <p>
+                        {{ "Watch this game live right here" |t }} -
+                        <br class="small-tablet-only">
+                        {{ "Start streaming now" |t }} !
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

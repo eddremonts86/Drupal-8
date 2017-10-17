@@ -37,7 +37,6 @@ class HomeBodyPlugin extends BlockBase {
       '#tags' => [],
     ];
   }
-
   public function getCacheTags() {
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
       return Cache::mergeTags(parent::getCacheTags(), array('node:' . $node->id()));

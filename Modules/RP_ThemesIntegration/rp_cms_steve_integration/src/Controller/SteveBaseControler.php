@@ -63,6 +63,19 @@ abstract class SteveBaseControler extends ControllerBase {
     return $node;
   }
 
+  public function getNodeByUrl($toArray=0){
+    $nodes = \Drupal::routeMatch()->getParameter('node');
+    if($toArray == 0){
+      $node = $nodes->toArray();
+      return $node;
+    }
+    else{
+      return $nodes;
+    }
+
+
+  }
+
   /*------------- Images ------------*/
 
   public function getImgUrl($id) {
@@ -77,15 +90,42 @@ abstract class SteveBaseControler extends ControllerBase {
   public function getSchedule($range) {
     $fromDate = strtotime(date('Y-m-d'));
     $sport = $this->getSport();
+    $obj = array(
+      'vid' => 'channels',
+      'field_channel_api_id'=>$_SESSION['channel']
+    );
+    $channel = $this->getTaxonomyByCriterio($obj,0);
+    $channelid = $channel->id();
     $ids = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('promote', 1)
       ->condition('type', 'events')
       ->condition('field_event_sport', $sport['sportDrupalId'])
       ->condition('field_event_date', $fromDate, '>')
+      ->condition('field_event_channels',$channelid , '=')
       ->sort('field_event_date', 'ASC')
       ->sort('field_event_tournament', 'ASC');
     if($range != 0){$ids->range(0, $range);}
+    $all_nodes = $this->getNodes($ids->execute());
+    return $this->getScheduleFormat($all_nodes);
+  }
+
+  public function getSchedulePager($page) {
+    $fromDate = strtotime(date('Y-m-d'));
+    $sport = $this->getSport();
+    $obj = array('vid' => 'channels','field_channel_api_id'=>$_SESSION['channel']);
+    $channel = $this->getTaxonomyByCriterio($obj,0);
+    $channelid = $channel->id();
+    $ids = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('promote', 1)
+      ->condition('type', 'events')
+      ->condition('field_event_sport', $sport['sportDrupalId'])
+      ->condition('field_event_date', $fromDate, '<=')
+      ->condition('field_event_channels',$channelid , '=')
+      ->pager($page)
+      ->sort('field_event_date', 'ASC')
+      ->sort('field_event_tournament', 'ASC');
     $all_nodes = $this->getNodes($ids->execute());
     return $this->getScheduleFormat($all_nodes);
   }
@@ -211,7 +251,7 @@ abstract class SteveBaseControler extends ControllerBase {
 
   /*------------- Sports ------------*/
   public function getSport() {
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $node = $this->getNodeByUrl(1);
     if ($node) {
       $node = $node->toArray();
       $type = $node["type"][0]["target_id"];
@@ -279,9 +319,6 @@ abstract class SteveBaseControler extends ControllerBase {
     $list = $this->getStreamList();
     $listFormat = array();
     foreach ($list as $listF){
-
-
-
       $listFormat[] = array(
         'id' => $listF->id(),
         'streamName' => $listF->name->value,
@@ -296,7 +333,28 @@ abstract class SteveBaseControler extends ControllerBase {
     }
      return $listFormat;
   }
-
+  public function getStreamEventList($eventstreamList){
+    $streamListFormat=[];
+    foreach ($eventstreamList as $eventstream){
+      $obj= array(
+        'vid'=>'stream_provider',
+        'tid'=>  $eventstream["target_id"]
+      );
+      $listF =  $this->getTaxonomyByCriterio($obj,0);
+      $streamListFormat[] = array(
+        'id' => $listF->id(),
+        'streamName' => $listF->name->value,
+        'apiId' => $listF->field_stream_provider_api_id->value,
+        'homePromo' => $listF->field_stream_provider_home_promo->value,
+        'description' => $listF->description->value,
+        'idTabsTemplate'=> $this->getClearUrl($listF->name->value .'_'.$listF->field_stream_provider_api_id->value),
+        /**/
+        'streamRating' => 3,
+        'streamPrice' => '$12',
+      );
+    }
+    return $streamListFormat;
+  }
 
 
 }

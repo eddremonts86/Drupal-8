@@ -1,0 +1,129 @@
+
+<section class="blogGeneralbody">
+    <div class="container">
+        {% for event in tags %}
+            {% if(loop.index == 1) %}
+                <section class="row blog_eventHead">
+                    <div class="col-md-12">
+                        <div class="panel panel-default ">
+                            <div class="panel-body headPanel">
+                                <div class="col-md-5 bloghead">
+                                     <span class="teams">
+                                    {% for Participant in event.participantsList %}
+                                        <img class="img-circle" alt=" {{ Participant.name }}"
+                                             name=" {{ Participant.name }}"
+                                             src="{{ file_url(Participant.logo) }}">
+                                    {% endfor %}
+                                    </span>
+                                </div>
+                                <div class="col-md-7 ">
+                                    <div class="blogheadText">
+                                        <a href="{{ event.eventAlias }}">
+                                            <h2>{{ "WATCH " | t }} {{ event.title }} {{ " LIVE ONLINE" | t }} </h2>
+                                        </a>
+                                        <a href="{{ event.TournamentAlias }}"> {{ event.eventTournamentName }} </a> {{ event.eventDate  | date("D d. M/Y") }}</span>
+                                    </div>
+                                    <div class="eventslist">
+                                        {% for Participant in event.participantsList %}
+                                            <a href="{{ Participant.participantAlias }}">
+                                                <span>{{ Participant.name }}{% if loop.last == false %}{{ "," }}{% endif %} </span>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="eventText">
+                                        <p>
+                                            {{ "Camp" | t }}
+                                            {% for Participant in event.participantsList %}
+                                                <span>{{ Participant.name }}{% if loop.last == false %}{{ "," }}{% endif %} </span>
+                                            {% endfor %}
+                                            will be home for the 2nd leg match in the
+                                            semifinal of the Copa del Rey Villarreal CF
+                                            vs FC Barcelona on Wednesday...
+                                        </p>
+                                    </div>
+                                    <div class="eventButtom">
+                                        <a href="{{ event.eventAlias }}">
+                                            <span class="glyphicon glyphicon-circle-arrow-right"></span> {{ "WATCH LIVE" |t }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="row blogMiddelSec">
+                    <div class="col-md-12">
+                        {{ "SEE PREVIEWS FROM PREVIOUS MATCHES"|t }}
+                    </div>
+                </section>
+
+            {% else %}
+
+                {% if (loop.index == 2 or loop.index == 5 or loop.index == 8  ) %}
+                    <section class="row blog_row">
+                {% endif %}
+                <div class="col-xs-12 col-md-4 ">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="teams">
+                                <div class="vs_logo team_logo_front">
+                                    {% for Participant in event.participantsList %}
+                                        <img class="gap-top team center" alt=" {{ Participant.name }}"
+                                             name="{{ Participant.name }}"
+                                             src="{{ file_url(Participant.logo) }}">
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="body_text">
+                                <div class="pad-top pad-bottom border-bottom">
+                                    <div class="title">
+                                        <a href="{{ event.eventAlias }}">
+                                            <h4>{{ event.title }}</h4>
+                                        </a>
+                                        <span class="icon-calendar half-gap-right">
+                                             <a href="{{ event.TournamentAlias }}"> {{ event.eventTournamentName }} </a> {{ event.eventDate  | date("D d. M/Y") }}</span>
+                                    </div>
+                                    <div class="eventslist">
+                                        {% for Participant in event.participantsList %}
+                                            <a href="{{ Participant.participantAlias }}">
+                                                <span>{{ Participant.name }}{% if loop.last == false %}{{ "," }}{% endif %} </span>
+                                            </a>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="eventText">
+                                        <p>
+                                            {{ "Camp" | t }}
+                                            {% for Participant in event.participantsList %}
+                                                <span>{{ Participant.name }}{% if loop.last == false %}{{ "," }}{% endif %} </span>
+                                            {% endfor %}
+                                            will be home for the 2nd leg match in the
+                                            semifinal of the Copa del Rey Villarreal CF
+                                            vs FC Barcelona on Wednesday...
+                                        </p>
+                                        <p class="link">
+                                            <a href="{{ event.eventAlias }}">{{ "Read more" |t }}!</a>
+                                        </p>
+                                    </div>
+                                    <div class="eventButtom">
+                                        <a href="{{ event.eventAlias }}">
+                                            <span class="glyphicon glyphicon-circle-arrow-right"></span> {{ "WATCH LIVE" |t }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if (loop.index == 4 or loop.index == 7 or loop.index == 10 ) %}
+                    </section>
+                {% endif %}
+
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+

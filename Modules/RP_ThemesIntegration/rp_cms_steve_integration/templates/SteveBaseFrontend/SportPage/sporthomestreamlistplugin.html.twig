@@ -3,16 +3,16 @@
         <main class='frontpage'>
             <div class="container">
                 <div class="col-xs-12 text-center top_marging">
-                    <h3>{{ "Find din live stream udbyder" | t }}</h3>
+                    <h3>{{ "sport_stream_head" | t }}</h3>
                 </div>
                 <div class="col-xs-12 stream_tabs">
                     <div class="tabbable tabs-left">
 
                         <ul class="nav nav-tabs">
                             <li class="text-center tabs_header">
-                                <span class="inline pull-left Udbyder">{{ "Udbyder"|t }}</span>
-                                <span class="inline Kvalitet">{{ "Kvalitet"|t }}</span>
-                                <span class="inline pull-right Pris">{{ "Pris"|t }}</span>
+                                <span class="inline pull-left Udbyder">{{ "sport_stream_Udbyder"|t }}</span>
+                                <span class="inline Kvalitet">{{ "sport_stream_Kvalitet"|t }}</span>
+                                <span class="inline pull-right Pris">{{ "sport_stream_Pris"|t }}</span>
                             </li>
                             {% for stream in tags %}
                                 {% if loop.index == 1 %}
@@ -78,7 +78,7 @@
                                                  class="pull-left  hide-on-small-tablet hide-on-mobile"
                                                  src="{{ file_url(stream.streamIMG) }}">
                                             <h4 class="pull-left w-65"><span
-                                                        class="hide-on-mobile">{{ "Se live stream fodbold hos" | t }}</span> {{ stream.streamName }}
+                                                        class="hide-on-mobile">{{ "sport_stream_livestream_head" | t }}</span> {{ stream.streamName }}
                                             </h4>
                                         </div>
                                         <div class="col-xs-12 tab-pane-body-text">
@@ -88,7 +88,7 @@
                                             <p>{{ stream.FrontPageUdvalgContent | raw }}</p>
                                             <h5 class="">{{ stream.FrontPagePriceHeading }}:</h5>
                                             <p>{{ stream.FrontPagePriceContent | raw }}</p>
-                                            <h5 class="">{{ "Sådan gør du" | t }}:</h5>
+                                            <h5 class="">{{ "sport_stream_livestream_subhead" | t }}:</h5>
                                         </div>
                                         <div class="col-xs-12 tab-pane-body-img">
 
@@ -170,7 +170,7 @@
                                                  class="pull-left  hide-on-small-tablet hide-on-mobile"
                                                  src="{{ file_url(stream.streamIMG) }}">
                                             <h4 class="pull-left w-65"><span
-                                                        class="hide-on-mobile">{{ "Se live stream fodbold hos" | t }}</span> {{ stream.streamName }}
+                                                        class="hide-on-mobile">{{ "sport_stream_livestream_head" | t }}</span> {{ stream.streamName }}
                                             </h4>
                                         </div>
                                         <div class="col-xs-12 tab-pane-body-text">
@@ -180,7 +180,7 @@
                                             <p>{{ stream.FrontPageUdvalgContent | raw }}</p>
                                             <h5 class="">{{ stream.FrontPagePriceHeading }}:</h5>
                                             <p>{{ stream.FrontPagePriceContent | raw }}</p>
-                                            <h5 class="">{{ "Sådan gør du" | t }}:</h5>
+                                            <h5 class="">{{ "sport_stream_livestream_subhead" | t }}:</h5>
                                         </div>
                                         <div class="col-xs-12 tab-pane-body-img">
 
@@ -242,13 +242,11 @@
                                         </div>
                                         <div class="col-xs-12 tab-pane-body-btn">
                                             <div class="pull-left">
-                                                <a target="_blank" role="button" class="grey"
-                                                   href="{{ stream.FrontPageButtonsReviewButton }}">
+                                                <a target="_blank" role="button" class="grey" href="{{ stream.FrontPageButtonsReviewButton }}">
                                                     <i class="fa fa-arrow-circle-right"></i> {{ stream.FrontPageButtonsReviewButton }}
                                                 </a>
 
-                                                <a target="_blank" role="button" class="green"
-                                                   href="{{ stream.FrontPageAffiliateButtonUrl }}">
+                                                <a target="_blank" role="button" class="green"  href="{{ stream.FrontPageAffiliateButtonUrl }}">
                                                     <i class="fa fa-arrow-circle-right"></i> {{ stream.FrontPageAffiliateButtonText }}
                                                 </a>
                                             </div>
