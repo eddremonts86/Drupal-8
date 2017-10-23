@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.events.field_event_channels
     - field.field.node.events.field_event_date
     - field.field.node.events.field_event_participants
-    - field.field.node.events.field_event_sport
     - field.field.node.events.field_event_stream_provider
     - field.field.node.events.field_event_tournament
     - field.field.node.events.field_events_properties
@@ -37,7 +36,7 @@ hidden:
   field_event_channels: true
   field_event_date: true
   field_event_participants: true
-  field_event_sport: true
   field_event_stream_provider: true
   field_event_tournament: true
   field_events_properties: true
+  langcode: true

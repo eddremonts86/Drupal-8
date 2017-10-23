@@ -71,3 +71,4 @@ hidden:
   field_competition_id: true
   field_logo: true
   field_logo_date: true
+  langcode: true

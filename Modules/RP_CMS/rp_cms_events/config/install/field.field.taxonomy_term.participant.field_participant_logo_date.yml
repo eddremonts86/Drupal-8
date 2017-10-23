@@ -11,7 +11,7 @@ bundle: participant
 label: 'Participant Logo date'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 1506330386

@@ -242,7 +242,7 @@ class CreateClientData extends ControllerBase {
       'field_event_date' => strtotime($event['start']),
       'field_event_api_id' => $event['id'],
       'field_event_participants' => $Tags_Team,
-      'field_event_sport' => $sport_tags,
+      'field_events_sport' => $sport_tags,
       'field_events_properties'=> $properties,
       'field_event_stream_provider' => $stream,
       'field_event_tournament' => $tournament->id(),
@@ -495,7 +495,7 @@ class CreateClientData extends ControllerBase {
         }
       }
     }
-    echo ' Creating Tournament Taxonomy -' . $competition . ' - at ' . date("h:i:s") . "\n";
+    echo ' Creating Tournament Taxonomy - ' . $tournamentName . ' - at ' . date("h:i:s") . "\n";
     $tournamentID = $competition[0][0]["id"];
     $tournamentTaxonomy = $getInfoObj->getTaxonomyByAPIID($tournamentID);
     return $tournamentTaxonomy->id();

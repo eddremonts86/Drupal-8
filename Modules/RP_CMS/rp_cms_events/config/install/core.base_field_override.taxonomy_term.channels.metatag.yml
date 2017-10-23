@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.channels
+id: taxonomy_term.channels.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: channels
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

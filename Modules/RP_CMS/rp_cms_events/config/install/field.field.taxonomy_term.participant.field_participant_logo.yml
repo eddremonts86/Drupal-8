@@ -5,7 +5,14 @@ dependencies:
     - field.storage.taxonomy_term.field_participant_logo
     - taxonomy.vocabulary.participant
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: taxonomy_term.participant.field_participant_logo
 field_name: field_participant_logo
 entity_type: taxonomy_term
@@ -13,7 +20,7 @@ bundle: participant
 label: 'Participant Logo'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

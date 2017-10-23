@@ -5,6 +5,7 @@ dependencies:
     - field.field.taxonomy_term.stream_provider.field_stream_provider_api_id
     - field.field.taxonomy_term.stream_provider.field_stream_provider_home_promo
     - field.field.taxonomy_term.stream_provider.field_stream_provider_type_apiid
+    - field.field.taxonomy_term.stream_provider.field_stream_sport_promote
     - field.field.taxonomy_term.stream_provider.field_streamprovider_logo
     - field.field.taxonomy_term.stream_provider.field_streamprovider_logo_date
     - image.style.thumbnail
@@ -49,6 +50,15 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_stream_sport_promote:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_streamprovider_logo:
     type: image_image
     weight: 1
@@ -62,6 +72,13 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield

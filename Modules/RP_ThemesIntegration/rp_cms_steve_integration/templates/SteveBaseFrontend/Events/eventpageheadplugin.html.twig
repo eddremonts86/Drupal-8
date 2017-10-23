@@ -8,73 +8,73 @@
             </nav>
         {% endif %}
     </div>
-    {% for nodeData in tags[1] %}
+    {% for nodeData in tags %}
         <div class="row">
             <div class="container GP_head">
                 <div class="col-md-8 text-center">
-                    {% for eventParticipants in nodeData.events.Participants %}
-                        {% if nodeData.events.Participants|length > loop.index %}
+                    {% for eventParticipants in nodeData.Participants %}
+
                             <div class="col-xs-12">
-                                <h3 class='o-sportpage-hero__title'>{{ eventParticipants.participantName }}
+                                <h3 class='o-sportpage-hero__title'>  <a href="{{ eventParticipants.participantAlias }}"> {{ eventParticipants.name }}</a>
                                     <br>
-                                    <small class="" style="color: #699908!important;">{{ "vs" |t }}</small>
+                                    {% if nodeData.Participants|length > loop.index %}
+                                    <small class="" style="color: #699908!important;">
+                                        {{ "vs" |t }}
+                                    </small>
+                                    {% endif %}
                                 </h3>
                             </div>
-                        {% else %}
-                            <div class="col-xs-12"><h3
-                                        class='o-sportpage-hero__title'>{{ eventParticipants.participantName }}</h3></div>
-                        {% endif %}
                     {% endfor %}
                     <div class="col-md-12">
-                        <p class='o-sportpage-hero__title'
-                           style="color: #699908!important;"> {% for tag in tags[0] %}{{ tag|striptags }} {{ "Live Stream" |t }}{% endfor %}</p>
+                        <p class='o-sportpage-hero__title' style="color: #699908!important;">
+                                {{ nodeData.sport.sportName|striptags }} {{ "Live Stream" |t }}
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 sport_home">
                     <div class="three-step-div pad-bottom hide-on-mobile">
                         <div class="col-md-12 text-center">
                             <h2 class="no-padding head green">
-                                {% if nodeData.events.Streamers.0.ProviderPageDetailHeading != '' and  nodeData.events.Streamers.0.ProviderPageDetailHeading != null %}
-                                    {{ nodeData.events.Streamers.0.ProviderPageDetailHeading }}
+                                {% if nodeData.Streamers.ProviderPageDetailHeading != '' and  nodeData.Streamers.ProviderPageDetailHeading != null %}
+                                    {{ nodeData.Streamers.ProviderPageDetailHeading }}
                                 {% else %}
-                                    {{ "Watch football live stream" |t }}
+                                    {{ "Watch" |t }} {{ nodeData.sport.sportName|striptags }}  {{ "live stream" |t }}
                                 {% endif %}
                             </h2>
-                            {% for eventParticipants in nodeData.events.Participants %}
+                            {% for eventParticipants in nodeData.Participants %}
                                 <div class="col-md-6 text-center">
-                                    <div>{{ eventParticipants.participantName }}</div>
-                                    <img class="gap-top" width="70" height="auto"
-                                         src="{{ file_url(eventParticipants.participantIdLogo) }}"
-                                         alt="{{ eventParticipants.participantName }}">
+                                    <div>{{ eventParticipants.name }}</div>
+                                   <a href="{{ eventParticipants.participantAlias }}"> <img class="gap-top" width="70" height="auto" src="{{ file_url(eventParticipants.logo) }}" alt="{{ eventParticipants.name }}"></a>
                                 </div>
                             {% endfor %}
                         </div>
                         <div style="border-bottom: 1px solid #353535;padding: 10px 0" class="col-md-12 text-center">
-                            <span class="icon-calendar half-gap-right"> </span>{{ nodeData.events.0.eventDate   | date("d.M Y") }}
-                            <span class="icon-time gap-left half-gap-right"></span>{{ " at " |t }}{{ nodeData.events.0.eventDate | date("H : i") }}
+                            <span class="icon-calendar half-gap-right"> </span>{{ nodeData.eventDate   | date("d.M Y") }}
+                            <span class="icon-time gap-left half-gap-right"></span>{{ " at " |t }}{{ nodeData.eventDate | date("H : i") }}
                         </div>
+
+                        {% for Stream in nodeData.Streamers %}
                         <div style="border-bottom: 1px solid #353535;padding: 10px 0" class="col-md-12 text-left">
                             <ol class="fs16 unstyled banner-list">
                                 <li class=""><img alt="ico-1-40-D"
                                                   src="http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ico-1-40-D.png"/>
-                                    {% if nodeData.events.Streamers.0.ProviderPageDetailContentIcon1Heading != '' and  nodeData.events.Streamers.0.ProviderPageDetailContentIcon1Heading != null %}
-                                        {{ nodeData.events.Streamers.0.ProviderPageDetailContentIcon1Heading }}
+                                    {% if Stream.ProviderPageDetailContentIcon1Heading != '' and  Stream.ProviderPageDetailContentIcon1Heading != null %}
+                                        {{ Stream.ProviderPageDetailContentIcon1Heading }}
                                     {% else %}
-                                        {{ "Go to" |t }} {{ nodeData.events.Streamers.0.streamName }}
+                                        {{ "Go to" |t }} {{ Stream.streamName }}
                                     {% endif %}
                                 </li>
                                 <li class=""><img alt="ico-2-40-D"
                                                   src="http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ico-2-40-D.png"/>
-                                    {% if nodeData.events.Streamers.0.ProviderPageDetailContentIcon2Heading != '' and  nodeData.events.Streamers.0.ProviderPageDetailContentIcon2Heading != null %}
-                                        {{ nodeData.events.Streamers.0.ProviderPageDetailContentIcon2Heading }}
+                                    {% if Stream.ProviderPageDetailContentIcon2Heading != '' and  Stream.ProviderPageDetailContentIcon2Heading != null %}
+                                        {{ Stream.ProviderPageDetailContentIcon2Heading }}
                                     {% else %}
                                         {{ "Pay for access" |t }}
                                     {% endif %}
                                 </li>
-                                <li class=""><img alt="ico-3-40-D"
-                                                  src="http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ico-3-40-d.png"/>
-                                    {% if nodeData.events.Streamers.0.ProviderPageDetailContentIcon3Heading != '' and  nodeData.events.Streamers.0.ProviderPageDetailContentIcon3Heading != null %}
-                                        {{ nodeData.events.Streamers.0.ProviderPageDetailContentIcon3Heading }}
+                                <li class=""><img alt="ico-3-40-D" src="http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ico-3-40-d.png"/>
+                                    {% if Stream.ProviderPageDetailContentIcon3Heading != '' and  Stream.ProviderPageDetailContentIcon3Heading != null %}
+                                        {{ Stream.ProviderPageDetailContentIcon3Heading }}
                                     {% else %}
                                         {{ "Watch live" |t }}
                                     {% endif %}
@@ -83,22 +83,23 @@
                         </div>
                         <div style="padding: 10px 0" class="col-md-12 text-center">
                             <p>
-                                <a role="button" class="btn btn-lg green" href="{{ nodeData.events.Streamers.0.FrontPageAffiliateButtonUrl }}">
+                                <a role="button" class="btn btn-lg green" rel="nofollow" href="{{ Stream.endLink }}">
                                     <i class="fa fa-arrow-circle-right"></i>
-                                    {% if nodeData.events.Streamers.0.FrontPageAffiliateButtonText != '' and  nodeData.events.Streamers.0.FrontPageAffiliateButtonText != null %}
-                                        {{ nodeData.events.Streamers.0.FrontPageAffiliateButtonText }}
+                                    {% if Stream.FrontPageAffiliateButtonText != '' and  Stream.FrontPageAffiliateButtonText != null %}
+                                        {{ Stream.FrontPageAffiliateButtonText }}
                                     {% else %}
-                                        {{ "Watch live at " |t }} {{ nodeData.events.Streamers.0.streamName }}
+                                        {{ "Watch live at " |t }} {{ Stream.streamName }}
                                     {% endif %}
                                 </a>
                                 <br>
                                 <span>
-                        {% if nodeData.events.Streamers.0.ProviderPageDetailContentNote != '' and  nodeData.events.Streamers.0.ProviderPageDetailContentNote != null %}
-                            {{ nodeData.events.Streamers.0.ProviderPageDetailContentNote }}
+                        {% if Stream.ProviderPageDetailContentNote != '' and  Stream.ProviderPageDetailContentNote != null %}
+                            {{ Stream.ProviderPageDetailContentNote }}
                         {% endif %}
                         </span>
                             </p>
                         </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

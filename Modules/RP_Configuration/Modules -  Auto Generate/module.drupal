@@ -9,7 +9,13 @@ drupal generate:module  \
 --composer  \
 --twigtemplate
 
+drupal generate:controller  \
+--module="rp_cms_steve_integration"  \
+--class="SteveBaseControler"  \
+--routes='"title":"SteveBaseControler", "name":"rp_cms_steve_integration.__construct", "method":"__construct", "path":"/rp_cms_steve_integration/SteveBaseControler/construct"'  \
+--test
 
+/*--------------------------------------------------------------------------------------------------------------------*/
 
 drupal generate:plugin:block  \
 --module="rp_cms_steve_integration"  \
@@ -19,10 +25,9 @@ drupal generate:plugin:block  \
 --theme-region="siteflagmenu"  \
 --inputs='"name":"Site Flag Menu","description":"Site Flag Menu","type":"text_format","label":"InputText","options":"","maxlength":"","size":"","default_value":"","weight":"0","fieldset":""'
 
-
-
-drupal generate:controller  \
+drupal generate:plugin:block  \
 --module="rp_cms_steve_integration"  \
---class="SteveBaseControler"  \
---routes='"title":"SteveBaseControler", "name":"rp_cms_steve_integration.__construct", "method":"__construct", "path":"/rp_cms_steve_integration/SteveBaseControler/construct"'  \
---test
+--class="SportLiveStreamCarruselPlugin"  \
+--label="Sport Live Stream Page Top"  \
+--plugin-id="sportlivestreamcarruselplugin"  \
+--theme-region="siteflagmenu"  \

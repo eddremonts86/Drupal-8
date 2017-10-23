@@ -25,8 +25,15 @@ class EventPageStreamListPlugin extends BlockBase {
       '#theme' => 'eventpagestreamlistplugin',
       '#titulo' => 'Mi titulo sesportblocks',
       '#descripcion' => 'Mi descripción sesportblocks',
-      '#tags' => [],
+      '#tags' => $this->getInfo(),
     ];
+  }
+
+  public function getInfo(){
+    $objGet = new SteveFrontendControler();
+    $data = $objGet->getEventStream();
+    return $data ;
+
   }
   public function getCacheTags() {
     if ($node = \Drupal::routeMatch()->getParameter('node')) {

@@ -1,0 +1,128 @@
+<section class="o-sport-program sport_home_slider">
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <h3 class="live_list_head">Se udvalget af live streams udbydere</h3>
+        </div>
+
+        {% for stream in tags.1.node %}
+            {% if loop.index == 1%}
+                <div class="col-md-12 top">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-md-3">
+ <img class="absolute strip-right" width="auto" height="auto" alt="green-strip-right"
+                                      src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/green-strip-right.png">
+
+                                <div class="three twelfth align-center double-pad-top-desktop">
+                                    <a class="provider-tv reDir" target="_blank" id="reDir"
+                                       style="censor:pointer;">
+                                        <img width="161" height="213" alt="{{ stream.streamName }} icon"
+                                             src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/streamproviders-new/161x203/StreamProviderLogo_1_161x203_5461f231c4698816398b4d9c.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-9 border_line_left">
+                                <h3 class="half-gap-bottom">{{"Se live fodbold med" | t}} {{ stream.streamName }}</h3>
+                                <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageQualityHeading }}:</strong>{{ stream.FrontPageQualityContent | raw}}</p>
+                                <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageUdvalgHeading }}:</strong> {{ stream.FrontPageUdvalgContent | raw}}</p>
+                                <p class="provider-price-div fs13"><strong>{{ stream.FrontPagePriceHeading }}:</strong> {{ stream.FrontPagePriceContent | raw}}</p>
+                                <div class="pad_top text-center">
+                                    <div class="row">
+
+                                        <div class="col-md-3">
+                                            <img class="arrow_live_stream inside" alt="Pil" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/line-arw.png">
+                                            <p class="fs10m gap-bottom gray"><strong>{{ stream.FrontPageIcons1Heading }}</strong></p>
+                                            <a target="_blank" id="reDir" class="null reDir" style="censor:pointer;">
+                                                <img class="half-gap-bottom" src="{{ file_url(stream.streamIMG)}}" width="92" height="70" alt="{{ stream.streamName }} icon">
+                                            </a>
+                                            <p class="fs11 hide-on-mobile gray">
+                                                <span class="green-color">{{ stream.FrontPageIcons1Subheading |raw}}</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <img class="arrow_live_stream inside" alt="Pil"
+                                                 src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/line-arw.png">
+                                            <p class="fs10m gap-bottom gray"><strong>{{ stream.FrontPageIcons2Heading }}</strong></p>
+                                            <a target="_blank" id="reDir" class="null reDir"  style="censor:pointer;">
+                                                <img class="half-gap-bottom" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/ico-green-2.png" width="92" height="70" alt="Opret en konto og Stream fodbold live"></a>
+                                            <p class="fs11 hide-on-mobile gray">{{ stream.FrontPageIcons2Subheading |raw}}</p>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <img class="arrow_live_stream" alt="Pil" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/line-arw.png">
+                                            <p class="fs10m gap-bottom gray"><strong>{{ stream.FrontPageIcons3Heading }}</strong></p>
+                                            <a target="_blank" id="reDir" class="null reDir"  style="censor:pointer;">
+                                                <img class="half-gap-bottom" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/ico-green-3.png" width="92" height="70" alt="Livestream fodbold med Sesport">
+                                            </a>
+                                            <p class="fs11 hide-on-mobile gray">{{ stream.FrontPageIcons3Subheading |raw}}<br>
+                                                <small class="fs8 note gray-color">{{ stream.FrontPageIcons3note |raw}}</small>
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <a class="btn btn-danger-custom" role="button" target="_blank" href="{{stream.FrontPageAffiliateButtonUrl}}" style="censor:pointer;" id="reDir"  >
+                                                <em class="icon-chevron-sign-right relative" style="top:17px;"></em>
+                                                <span class="relative fs18" style="top: 18px;">
+                                                    {% if stream.FrontPageAffiliateButtonText != '' and stream.FrontPageAffiliateButtonText != null %}
+                                                        {{stream.FrontPageAffiliateButtonText}}
+                                                    {% else %}
+                                                        {{ "Se live fodbold" | t }}
+                                                    {% endif %}
+                                                </span>
+                                                <p class="fs11 zero relative  align-center-mobile" style="top: 12px;text-align:right;padding-right:10px;">- {{"med"|t}} {{ stream.streamName }}</p>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 disclaimer_text">
+                    <p class="zero" style="font-size: 10px !important; color: #c2c2c2 !important;">
+                        {{ stream.DisclaimerContentLiveStreamPage |raw }}
+                    </p>
+                </div>
+            {% else %}
+                <div class="col-md-12 margin_top margin_bottom">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+                            <div class="col-md-3">
+                                <div class="three twelfth align-center double-pad-top-desktop">
+                                    <a class="provider-tv reDir" target="_blank" id="reDir"
+                                       style="censor:pointer;">
+                                        <img width="161" height="213" alt="{{ stream.streamName }} icon" src="{{ file_url(stream.streamIMG)}}" >
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 text-left border_line_left">
+                                <h3 class="half-gap-bottom">{{"Se live fodbold med" | t}} {{ stream.streamName }}</h3>
+                                <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageQualityHeading }}:</strong>{{ stream.FrontPageQualityContent | raw}}</p>
+                                <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageUdvalgHeading }}:</strong> {{ stream.FrontPageUdvalgContent | raw}}</p>
+                                <p class="provider-price-div fs13"><strong>{{ stream.FrontPagePriceHeading }}:</strong> {{ stream.FrontPagePriceContent | raw}}</p>
+
+
+                                <p class="sedan"><b>{{ "Sådan kommer du i gang"|t }} :</b></p>
+                                <ol class="fs13">
+                                    <li>{{ stream.FrontPageIcons1Heading }}</li>
+                                    <li>{{ stream.FrontPageIcons2Heading }}</li>
+                                    <li>{{ stream.FrontPageIcons3Heading }}</li>
+                                </ol>
+                                <a class="btn btn-danger-custom btn-auto" role="button" target="_blank"style="censor:pointer;" href="{{stream.FrontPageAffiliateButtonUrl}}">
+                                    {{ "Se live fodbold hos"|t }} {{ stream.streamName }}
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</section>

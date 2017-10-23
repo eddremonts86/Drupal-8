@@ -2,7 +2,7 @@
 <section style=" padding-bottom: 30px;padding-top: 30px;background: #223a00 url(http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ground-image-football.jpg) center top no-repeat;background-size: 100%;width: 100%;" class="">
     <div class="row">
         <div class="container GP_stream">
-            {% for eventStream in nodeData.events.Streamers %}
+            {% for eventStream in tags.events.Streamers %}
 
                 <div class="col-lg-12">
                     <div class="panel panel-default panel-primary_ border-panel">
@@ -49,8 +49,7 @@
                                         {% endif %}
                                     </div>
                                     <div class="col-lg-12">
-                                        <img class="top-article-image img-thumbnail"
-                                             src="{{ file_url(eventStream.streamIMG) }}"/>
+                                        <img class="top-article-image img-thumbnail" width="80" height="102" src="{{ file_url(eventStream.streamIMG) }}"/>
                                     </div>
                                     <div class="col-lg-12">
                                         {% if eventStream.ProviderPageDetailContentIcon1Subheading != '' and  eventStream.ProviderPageDetailContentIcon1Subheading != null %}
@@ -67,7 +66,7 @@
                                         {% if eventStream.ProviderPageDetailContentIcon2Heading != '' and  eventStream.ProviderPageDetailContentIcon2Heading != null %}
                                             {{ eventStream.ProviderPageDetailContentIcon2Heading }}
                                         {% else %}
-                                            {{ "2. Select football " |t }}
+                                            {{ "2. Select" |t }} {{ tags.events.sport.name }}
                                         {% endif %}
                                     </div>
                                     <div class="col-lg-12">
@@ -106,7 +105,7 @@
                                 </div>
 
                                 <div class="col-lg-3 text-center">
-                                    <a role="button" href=" {{ eventStream.ProviderPageDetailButtonAffiliateLink }}"
+                                    <a role="button" href=" {{ eventStream.endLink }}"
                                        class="btn btn-danger btn-lg">
 
                                         {% if eventStream.ProviderPageDetailButtonHeading != '' and  eventStream.ProviderPageDetailButtonHeading != null %}

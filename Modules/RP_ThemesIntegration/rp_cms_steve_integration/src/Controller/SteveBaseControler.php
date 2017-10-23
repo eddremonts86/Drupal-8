@@ -45,6 +45,7 @@ abstract class SteveBaseControler extends ControllerBase {
       return reset($taxonomy);
     }
   }
+
   public function getTaxonomyAlias($id) {
     $url = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $id])->toString();
     return $url;
@@ -52,10 +53,11 @@ abstract class SteveBaseControler extends ControllerBase {
 
   /*------------- Nodes ------------*/
 
-  public function getNodeAlias($id){
+  public function getNodeAlias($id) {
     $url = Url::fromRoute('entity.node.canonical', ['node' => $id])->toString();
     return $url;
   }
+
   public function getNodeByCriterio($obj) {
     $node = \Drupal::entityTypeManager()
       ->getStorage('node')
@@ -63,14 +65,20 @@ abstract class SteveBaseControler extends ControllerBase {
     return $node;
   }
 
-  public function getNodeByUrl($toArray=0){
+  public function getNodeByUrl($toArray = 0) {
     $nodes = \Drupal::routeMatch()->getParameter('node');
-    if($toArray == 0){
-      $node = $nodes->toArray();
-      return $node;
+    if (!isset($nodes) or $nodes == NULL) {
+      return TRUE;
     }
-    else{
-      return $nodes;
+    else {
+      if ($toArray == 0) {
+        $node = $nodes->toArray();
+        return $node;
+      }
+      else {
+        return $nodes;
+      }
+
     }
 
 
@@ -90,22 +98,24 @@ abstract class SteveBaseControler extends ControllerBase {
   public function getSchedule($range) {
     $fromDate = strtotime(date('Y-m-d'));
     $sport = $this->getSport();
-    $obj = array(
+    $obj = [
       'vid' => 'channels',
-      'field_channel_api_id'=>$_SESSION['channel']
-    );
-    $channel = $this->getTaxonomyByCriterio($obj,0);
+      'field_channel_api_id' => $_SESSION['channel'],
+    ];
+    $channel = $this->getTaxonomyByCriterio($obj, 0);
     $channelid = $channel->id();
     $ids = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('promote', 1)
       ->condition('type', 'events')
-      ->condition('field_event_sport', $sport['sportDrupalId'])
+      ->condition('field_events_sport', $sport['sportDrupalId'])
       ->condition('field_event_date', $fromDate, '>')
-      ->condition('field_event_channels',$channelid , '=')
+      ->condition('field_event_channels', $channelid, '=')
       ->sort('field_event_date', 'ASC')
       ->sort('field_event_tournament', 'ASC');
-    if($range != 0){$ids->range(0, $range);}
+    if ($range != 0) {
+      $ids->range(0, $range);
+    }
     $all_nodes = $this->getNodes($ids->execute());
     return $this->getScheduleFormat($all_nodes);
   }
@@ -113,16 +123,19 @@ abstract class SteveBaseControler extends ControllerBase {
   public function getSchedulePager($page) {
     $fromDate = strtotime(date('Y-m-d'));
     $sport = $this->getSport();
-    $obj = array('vid' => 'channels','field_channel_api_id'=>$_SESSION['channel']);
-    $channel = $this->getTaxonomyByCriterio($obj,0);
+    $obj = [
+      'vid' => 'channels',
+      'field_channel_api_id' => $_SESSION['channel'],
+    ];
+    $channel = $this->getTaxonomyByCriterio($obj, 0);
     $channelid = $channel->id();
     $ids = \Drupal::entityQuery('node')
       ->condition('status', 1)
       ->condition('promote', 1)
       ->condition('type', 'events')
-      ->condition('field_event_sport', $sport['sportDrupalId'])
+      ->condition('field_events_sport', $sport['sportDrupalId'])
       ->condition('field_event_date', $fromDate, '<=')
-      ->condition('field_event_channels',$channelid , '=')
+      ->condition('field_event_channels', $channelid, '=')
       ->pager($page)
       ->sort('field_event_date', 'ASC')
       ->sort('field_event_tournament', 'ASC');
@@ -133,26 +146,29 @@ abstract class SteveBaseControler extends ControllerBase {
   public function getScheduleFormat($nodeList) {
     $newNodeList = [];
     foreach ($nodeList as $simpleNode) {
-      $nid =  $simpleNode['nid'][0]['value'] ;
+      $nid = $simpleNode['nid'][0]['value'];
       $nodeAlias = $this->getNodeAlias($nid);
-      $uuid =  $simpleNode['uuid'][0]['value'] ;
-      $vid =  $simpleNode['vid'][0]['value'] ;
-      $langCode =  $simpleNode['langcode'][0]['value'] ;
-      $status =  $simpleNode['status'][0]['value'] ;
-      $title =  $simpleNode['title'][0]['value'] ;
-      $properties =  $simpleNode['field_events_properties'][0]['value'] ;
-      $nidAPI =  $simpleNode['field_event_api_id'][0]['value'] ;
-      $date =  $simpleNode['field_event_date'][0]['value'] ;
-      $sportId =  $simpleNode['field_event_sport'][0]['target_id'] ;
-      $tournamentId =  $simpleNode['field_event_tournament'][0]['target_id'] ;
-      $tournament =  $this->getTaxonomyByCriterio(['vid'=>'sport','tid'=> $tournamentId],0);
+      $uuid = $simpleNode['uuid'][0]['value'];
+      $vid = $simpleNode['vid'][0]['value'];
+      $langCode = $simpleNode['langcode'][0]['value'];
+      $status = $simpleNode['status'][0]['value'];
+      $title = $simpleNode['title'][0]['value'];
+      $properties = $simpleNode['field_events_properties'][0]['value'];
+      $nidAPI = $simpleNode['field_event_api_id'][0]['value'];
+      $date = $simpleNode['field_event_date'][0]['value'];
+      $sportId = $simpleNode['field_events_sport'][0]['target_id'];
+      $tournamentId = $simpleNode['field_event_tournament'][0]['target_id'];
+      $tournament = $this->getTaxonomyByCriterio([
+        'vid' => 'sport',
+        'tid' => $tournamentId,
+      ], 0);
       $tournamentLogo = $this->getImgUrl($tournament->field_logo->target_id);
-      $participantsList =  $simpleNode['field_event_participants'] ;
+      $participantsList = $simpleNode['field_event_participants'];
       $participantsListformat = $this->getParticipant($participantsList);
 
       $sportName = $this->getSport();
 
-      $newNodeList[] =array(
+      $newNodeList[] = [
         'nodeId' => $nid,
         'uuid' => $uuid,
         'vid' => $vid,
@@ -167,34 +183,42 @@ abstract class SteveBaseControler extends ControllerBase {
         'sportname' => $sportName['sportName'],
         'sportBG' => $sportName['sportBackground'],
         'sportalias' => $this->getTaxonomyAlias($sportId),
-        'eventTournamentID' =>$tournamentId,
-        'TournamentAlias' =>$this->getTaxonomyAlias($tournamentId),
-        'eventTournamentAPIID'=>$tournament->field_api_id->value,
+        'eventTournamentID' => $tournamentId,
+        'TournamentAlias' => $this->getTaxonomyAlias($tournamentId),
+        'eventTournamentAPIID' => $tournament->field_api_id->value,
         'eventTournamentName' => $tournament->name->value,
         'eventTournamentLogo' => $tournamentLogo,
         'participantsList' => $participantsListformat,
-      ) ;
+      ];
     }
 
     return $newNodeList;
 
   }
 
-  public function getParticipant($participantsList){
-    $participantsListFormat=[];
-    foreach ($participantsList as $participants){
-      $tournamentContent =  $this->getTaxonomyByCriterio(['vid'=>'participant','tid'=>  $participants["target_id"]],0);
-      $name = $tournamentContent->name->value;
-      $idAPI = $tournamentContent->field_participant_api_id->value;
-      $logo = $tournamentContent->field_participant_logo->target_id;
-      $participantsListFormat[] = array(
-        'idAPI' => $idAPI,
-        'logo'=> $this->getImgUrl($logo),
-        'name' => $name,
-        'participantAlias' =>$this->getTaxonomyAlias($idAPI),
-      );
-    }
+  public function getParticipant($participantsList) {
+    $participantsListFormat = [];
+    foreach ($participantsList as $participants) {
+      if($participants["target_id"]){
+        $tournamentContent = $this->getTaxonomyByCriterio([
+          'vid' => 'participant',
+          'tid' => $participants["target_id"],
+        ], 0);
+
+        $name = $tournamentContent->name->value;
+        $id = $tournamentContent->tid->value;
+        $idAPI = $tournamentContent->field_participant_api_id->value;
+        $logo = $tournamentContent->field_participant_logo->target_id;
+        $participantsListFormat[] = [
+          'idAPI' => $idAPI,
+          'logo' => $this->getImgUrl($logo),
+          'name' => $name,
+          'participantAlias' => $this->getTaxonomyAlias($id),
+        ];
+      }
+      }
     return $participantsListFormat;
+
   }
 
   public function getNodes($ids) {
@@ -225,8 +249,8 @@ abstract class SteveBaseControler extends ControllerBase {
         $tree['AllEvents'][$date]['alltournament'][$league]['events'] = [];
         $tree['AllEvents'][$date]['alltournament'][$league]['tournament'] = $league;
         $tree['AllEvents'][$date]['alltournament'][$league]['tournament_id'] = $tournament_id;
-        $tree['AllEvents'][$date]['alltournament'][$league]['tournamentIMG'] = $url ;
-        $tree['AllEvents'][$date]['alltournament'][$league]['eventTournamentIDAcoordion'] = $this->getClearUrl($date.$league.$tournament_id);
+        $tree['AllEvents'][$date]['alltournament'][$league]['tournamentIMG'] = $url;
+        $tree['AllEvents'][$date]['alltournament'][$league]['eventTournamentIDAcoordion'] = $this->getClearUrl($date . $league . $tournament_id);
         array_push($tree['AllEvents'][$date]['alltournament'][$league]['events'], $event);
       }
       else {
@@ -234,7 +258,7 @@ abstract class SteveBaseControler extends ControllerBase {
           if (!(@$tree['AllEvents'][$date]['alltournament'][$league]) and (@$tree['AllEvents'][$date][$league]['tournament_id']) != $tournament_id) {
             $tree['AllEvents'][$date]['alltournament'][$league]['tournament'] = $league;
             $tree['AllEvents'][$date]['alltournament'][$league]['tournament_id'] = $tournament_id;
-            $tree['AllEvents'][$date]['alltournament'][$league]['eventTournamentIDAcoordion'] = $this->getClearUrl($date.$league.$tournament_id);
+            $tree['AllEvents'][$date]['alltournament'][$league]['eventTournamentIDAcoordion'] = $this->getClearUrl($date . $league . $tournament_id);
             $tree['AllEvents'][$date]['alltournament'][$league]['tournamentIMG'] = $url;
             $tree['AllEvents'][$date]['alltournament'][$league]['events'] = [];
             array_push($tree['AllEvents'][$date]['alltournament'][$league]['events'], $event);
@@ -251,9 +275,9 @@ abstract class SteveBaseControler extends ControllerBase {
 
   /*------------- Sports ------------*/
   public function getSport() {
-    $node = $this->getNodeByUrl(1);
-    if ($node) {
-      $node = $node->toArray();
+    $nodeObj = \Drupal::routeMatch()->getParameter('node');
+    if (isset($nodeObj) and $nodeObj != NULL) {
+      $node = $nodeObj->toArray();
       $type = $node["type"][0]["target_id"];
       $sportTaxonomyId = $node['field_' . $type . '_sport'][0]["target_id"];
       $data = ['tid' => $sportTaxonomyId, 'vid' => 'sport'];
@@ -267,9 +291,12 @@ abstract class SteveBaseControler extends ControllerBase {
       ];
       return $sportObjFormnat;
     }
+    return true;
   }
+
   public function getClearUrl($s) {
     $s = trim($s, "\t\n\r\0\x0B");
+
     //--- Latin ---//
     $s = str_replace('ü', 'u', $s);
     $s = str_replace('Á', 'A', $s);
@@ -282,6 +309,7 @@ abstract class SteveBaseControler extends ControllerBase {
     $s = str_replace('Ó', 'O', $s);
     $s = str_replace('Ú', 'U', $s);
     $s = str_replace('ú', 'u', $s);
+
     //--- Nordick ---//
     $s = str_replace('ø', 'o', $s);
     $s = str_replace('Ø', 'O', $s);
@@ -289,8 +317,8 @@ abstract class SteveBaseControler extends ControllerBase {
     $s = str_replace('æ', 'e', $s);
     $s = str_replace('Å', 'A', $s);
     $s = str_replace('å', 'a', $s);
-    //--- Others ---//
 
+    //--- Others ---//
     $s = str_replace(' - ', '-vs-', $s);
     $s = str_replace(' ', '_', $s);
     $s = str_replace('.', '_', $s);
@@ -299,6 +327,7 @@ abstract class SteveBaseControler extends ControllerBase {
     $s = str_replace(',', '_', $s);
     $s = str_replace(';', '_', $s);
     $s = str_replace('/', '_', $s);
+
     $s = strtolower($s);
     $s = trim($s, "\t\n\r\0\x0B");
     return $s;
@@ -306,55 +335,80 @@ abstract class SteveBaseControler extends ControllerBase {
 
 
   /*------------- Stream ------------*/
-  public function getStreamList(){
+  public function getStreamList() {
     $sport = $this->getSport();
-    $obj=array(
+    if($sport != true){
+    $obj = [
       'vid' => 'stream_provider',
-      'field_stream_sport_promote' => $sport['sportDrupalId']
-    );
-    $list = $this->getTaxonomyByCriterio($obj,1);
-    return $list;
+      'field_stream_sport_promote' => $sport['sportDrupalId'],
+    ];
+    $list = $this->getTaxonomyByCriterio($obj, 1);
+    return $list;}
+    else return array();
   }
-  public function getStreamListFormat(){
+
+  public function getStreamListFormat() {
     $list = $this->getStreamList();
-    $listFormat = array();
-    foreach ($list as $listF){
-      $listFormat[] = array(
+    $listFormat = [];
+    foreach ($list as $listF) {
+      $listFormat[] = [
         'id' => $listF->id(),
         'streamName' => $listF->name->value,
         'apiId' => $listF->field_stream_provider_api_id->value,
         'homePromo' => $listF->field_stream_provider_home_promo->value,
         'description' => $listF->description->value,
-        'idTabsTemplate'=> $this->getClearUrl($listF->name->value .'_'.$listF->field_stream_provider_api_id->value),
-       /**/
-        'streamRating' => 3,
-        'streamPrice' => '$12',
-      );
-    }
-     return $listFormat;
-  }
-  public function getStreamEventList($eventstreamList){
-    $streamListFormat=[];
-    foreach ($eventstreamList as $eventstream){
-      $obj= array(
-        'vid'=>'stream_provider',
-        'tid'=>  $eventstream["target_id"]
-      );
-      $listF =  $this->getTaxonomyByCriterio($obj,0);
-      $streamListFormat[] = array(
-        'id' => $listF->id(),
-        'streamName' => $listF->name->value,
-        'apiId' => $listF->field_stream_provider_api_id->value,
-        'homePromo' => $listF->field_stream_provider_home_promo->value,
-        'description' => $listF->description->value,
-        'idTabsTemplate'=> $this->getClearUrl($listF->name->value .'_'.$listF->field_stream_provider_api_id->value),
+        'idTabsTemplate' => $this->getClearUrl($listF->name->value . '_' . $listF->field_stream_provider_api_id->value),
         /**/
         'streamRating' => 3,
         'streamPrice' => '$12',
-      );
+      ];
+    }
+    return $listFormat;
+  }
+
+  public function getStreamEventList($eventstreamList) {
+    $streamListFormat = [];
+    foreach ($eventstreamList as $eventstream) {
+      if($eventstream["target_id"]){
+      $obj = ['vid' => 'stream_provider','tid' => $eventstream["target_id"],];
+      $listF = $this->getTaxonomyByCriterio($obj, 0);
+      $streamIMG = @$listF->field_streamprovider_logo->target_id;
+      $streamIMGAlt = @$listF->field_streamprovider_logo->target_id;
+      if (isset($streamIMG) and $streamIMG != '' and $streamIMG != NULL) {
+        $streamIMG = $this->getImgUrl($streamIMG);
+      }
+      else {
+        $streamIMG = 'https://images-na.ssl-images-amazon.com/images/I/61I7WFEiORL.png';
+      }
+      $streamListFormat[] = [
+        'id' => $listF->id(),
+        'streamName' => $listF->name->value,
+        'apiId' => $listF->field_stream_provider_api_id->value,
+        'homePromo' => $listF->field_stream_provider_home_promo->value,
+        'description' => $listF->description->value,
+        'idTabsTemplate' => $this->getClearUrl($listF->name->value . '_' . $listF->field_stream_provider_api_id->value),
+        /**/
+        'streamRating' => 3,
+        'streamPrice' => '$12',
+        'streamVideoQuality' => 'good',
+        'streamVideoSize' => 'Big',
+        'endLink' => 'http://google.com',
+        'streamIMG' => $streamIMG,
+        'streamIMGAlt' => $streamIMGAlt,
+
+      ];
+    }
     }
     return $streamListFormat;
   }
 
+
+  /*------------------Tools--------------------------*/
+  public function getPHP_Var_Dump($data) {
+    echo "<div class='container' style='background: rgba(201, 201, 201, 0.55);color: #212121;padding: 20px;font-size: 15px;border-radius: 10px;height: auto;width: auto;'> <pre>";
+    var_dump($data);
+    echo "</pre></div>";
+    exit();
+  }
 
 }

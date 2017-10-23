@@ -68,7 +68,12 @@ class UpdateClienetData extends ControllerBase {
    // $creatorObj = new CreateClientData();
     $getInfoObj = new RepoGeneralGetInfo();
     $node = Node::load($node_id);
-    $sport = $getInfoObj->getTaxonomyByID($node->field_event_sport->target_id);
+
+    $obj=array(
+      'vid'=>'sport',
+      'tid'=>$node->field_events_sport->target_id
+    );
+    $sport = $getInfoObj->getTaxonomyByCriterioMultiple($obj, 0);
     $alias = '/' . $getInfoObj->getClearUrl(reset($sport)["name"]["x-default"]) . '/' . $region . '/' . $getInfoObj->getClearUrl($event['name']);
     $ifAlias = $getInfoObj->getAlias('/node/'.$node_id, $alias);
     $alias = ['alias' => $alias];

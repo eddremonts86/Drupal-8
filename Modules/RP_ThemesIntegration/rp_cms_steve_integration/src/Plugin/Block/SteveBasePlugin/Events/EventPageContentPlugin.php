@@ -25,8 +25,16 @@ class EventPageContentPlugin extends BlockBase {
       '#theme' => 'eventpagecontentplugin',
       '#titulo' => 'Mi titulo sesportblocks',
       '#descripcion' => 'Mi descripción sesportblocks',
-      '#tags' => [],
+      '#tags' => $this->getInfo(),
     ];
+  }
+
+  public function getInfo(){
+    $objGet = new SteveFrontendControler();
+    $data = $objGet->getEventcontent();
+    //$objGet->getPHP_Var_Dump($data);
+    return $data ;
+
   }
   public function getCacheTags() {
     if ($node = \Drupal::routeMatch()->getParameter('node')) {

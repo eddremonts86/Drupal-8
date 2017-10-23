@@ -3,9 +3,11 @@ description: 'Provides Events content type and related configuration. '
 type: module
 core: 8.x
 dependencies:
+  - content_translation
   - field
   - file
   - image
+  - language
   - menu_ui
   - node
   - path

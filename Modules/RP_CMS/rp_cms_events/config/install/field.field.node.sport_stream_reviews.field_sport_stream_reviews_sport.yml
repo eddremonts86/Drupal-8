@@ -12,7 +12,7 @@ bundle: sport_stream_reviews
 label: 'Sport Taxonomy'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

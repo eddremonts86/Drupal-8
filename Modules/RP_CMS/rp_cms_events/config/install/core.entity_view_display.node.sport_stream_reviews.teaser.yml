@@ -29,3 +29,4 @@ content:
 hidden:
   field_sport_review_properties: true
   field_sport_stream_reviews_sport: true
+  langcode: true

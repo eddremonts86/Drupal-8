@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sport
+id: taxonomy_term.sport.metatag
+field_name: metatag
+entity_type: taxonomy_term
+bundle: sport
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map
