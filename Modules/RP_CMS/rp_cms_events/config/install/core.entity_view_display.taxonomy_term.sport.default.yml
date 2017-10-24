@@ -10,10 +10,120 @@ dependencies:
     - field.field.taxonomy_term.sport.field_logo
     - field.field.taxonomy_term.sport.field_logo_date
     - field.field.taxonomy_term.sport.field_sport_api_id
+    - field.field.taxonomy_term.sport.panelizer
     - taxonomy.vocabulary.sport
   module:
     - image
+    - panelizer
     - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: custom_panel
+    displays:
+      default:
+        blocks:
+          8ded8bf4-7340-46ba-aca5-5d92a4d40a30:
+            id: 'entity_field:taxonomy_term:description'
+            label: Description
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 1
+            uuid: 8ded8bf4-7340-46ba-aca5-5d92a4d40a30
+          463acbad-c4ff-498c-917d-c4b2aca86e10:
+            id: 'entity_field:taxonomy_term:field_background'
+            label: Background
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: image
+              settings:
+                image_style: ''
+                image_link: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: 463acbad-c4ff-498c-917d-c4b2aca86e10
+          b357a118-d638-4b55-9ccb-7d64896489b2:
+            id: 'entity_field:taxonomy_term:field_content'
+            label: Content
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 2
+            uuid: b357a118-d638-4b55-9ccb-7d64896489b2
+        id: panels_variant
+        label: Default
+        uuid: 33497d2c-0351-45c3-826b-bb6e5fa734d9
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[term:name]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
+      custom_panel:
+        blocks:
+          81a60de4-f958-481a-b7e6-d26107838333:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: top
+            weight: 0
+            uuid: 81a60de4-f958-481a-b7e6-d26107838333
+            context_mapping: {  }
+          109757e8-5bcd-4084-b4db-bfe76d7e9fa8:
+            id: 'system_menu_block:main'
+            label: 'Main navigation'
+            provider: system
+            label_display: '0'
+            level: 1
+            depth: 0
+            region: first
+            weight: 0
+            uuid: 109757e8-5bcd-4084-b4db-bfe76d7e9fa8
+            context_mapping: {  }
+        id: panels_variant
+        uuid: f40c60c5-5048-4589-9c78-61a932927c64
+        label: 'Custom Panel'
+        weight: 0
+        layout: layout_threecol_25_50_25
+        layout_settings: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'taxonomy_term:sport:default:custom_panel'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
 id: taxonomy_term.sport.default
 targetEntityType: taxonomy_term
 bundle: sport
@@ -22,28 +132,12 @@ content:
   description:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_api_id:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_api_parent:
-    weight: 6
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_background:
-    weight: 7
+    weight: 0
     label: above
     settings:
       image_style: ''
@@ -52,23 +146,19 @@ content:
     type: image
     region: content
   field_content:
-    weight: 4
+    weight: 2
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_sport_api_id:
-    weight: 5
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
 hidden:
+  field_api_id: true
+  field_api_parent: true
   field_competition_id: true
   field_logo: true
   field_logo_date: true
+  field_sport_api_id: true
   langcode: true
+  panelizer: true

@@ -1,0 +1,33 @@
+langcode: eo
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: eventosnode_
+label: 'Eventosnode '
+type: 'canonical_entities:node'
+pattern: '[node:field_event_tournament]/[node:title]/[node:field_event_date:value]'
+selection_criteria:
+  9638380c-3cb7-4720-b4fa-4a2645080335:
+    id: node_type
+    bundles:
+      events: events
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9638380c-3cb7-4720-b4fa-4a2645080335
+  3cd947ad-551e-41dc-a8a2-542c4c7797b3:
+    id: language
+    langcodes:
+      en: en
+      eo: eo
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 3cd947ad-551e-41dc-a8a2-542c4c7797b3
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

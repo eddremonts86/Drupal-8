@@ -30,8 +30,8 @@ class SportLiveStreamListPlugin extends BlockBase {
 
   public function getInfo(){
     $objGet = new SteveFrontendControler();
-    $data = $objGet->getEventHead();
-    //$objGet->getPHP_Var_Dump($data);
+    $data = $objGet->getStreamListFormat();
+   // $objGet->getPHP_Var_Dump($data);
     return $data ;
 
   }

@@ -30,7 +30,7 @@ class SportLiveStreamCarruselPlugin extends BlockBase {
 
   public function getInfo() {
     $objGet = new SteveFrontendControler();
-    $data = $objGet->getEventHead();
+    $data = $objGet->getLiveStreamEvents(3);
     //$objGet->getPHP_Var_Dump($data);
     return $data;
 

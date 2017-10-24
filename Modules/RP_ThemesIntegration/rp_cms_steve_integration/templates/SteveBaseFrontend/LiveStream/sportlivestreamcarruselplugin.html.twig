@@ -3,28 +3,22 @@
         <div class="row">
             <div class="col-xs-12 col-md-8 ">
                 <div class="two thirds pad-left pad-right">
-                    <h1 class="head_text grey"> Live stream fodbold | Fodbold i TV | Live stream providere </h1>
-                    <p class=" ">
-                        Vi har samlet de største udbydere af live fodbold, som viser kampe fra de store
-                        internationale og europæiske ligaer, landskampe og meget mere...
-                    </p>
-                    <p> Udbyderne har forskellige rettigheder til ligaerne. Se hvilke ligaer de forskellige udbydere
-                        viser kampe fra nedenfor.
-                    </p>
+                    <h1 class="head_text grey"> {{ "sport_livestream_carrusel_head"|t|raw }}</h1>
+                    <p class=" "> {{ "sport_livestream_carrusel_sudhead" |t|raw}}</p>
 
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 grounds">
                 <div class="text-center">
-                    <p class="udvalgte" >Udvalgte kampe</p>
+                    <p class="udvalgte" >{{ "sport_livestream_carrusel_list_head"|t|raw }}</p>
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only"></span>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only"></span>
                     </a>
 
                 </div>
@@ -32,24 +26,26 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
 
-                        {% for nodeData in tags.1.Events.events %}
+                        {% for nodeData in tags %}
                             {% if loop.index == 1 %}
                                 <div class="item active text-center">
-                                    <p class="team_date">
-                                        {{ nodeData.eventName }}<br>
-                                        {{ nodeData.eventDate |date("d. M Y")}} kl. {{ nodeData.eventDate |date("H:i")}}
+                                    <p class="team_date"> <a href="{{nodeData.eventAlias }}">
+                                        {{ nodeData.title }}<br> {{ nodeData.eventDate |date("d. M Y")}} kl. {{ nodeData.eventDate |date("H:i")}}
+                                        </a>
                                     </p>
-                                    <img class="pull-left  img_left"    src="{{ file_url(nodeData.eventParticipant.participant.0.participantIdLogo) }}"  alt="...">
-                                    <img class="pull-right img_right"   src="{{ file_url(nodeData.eventParticipant.participant.1.participantIdLogo) }}"  alt="...">
+                                    {% for participant in nodeData.participantsList %}
+                                    <a href="{{participant.participantAlias }}"> <img class="pull-left  img_left"    src="{{ file_url(participant.logo) }}"  alt="{{participant.name }}"></a>
+                                    {% endfor %}
                                 </div>
                             {% else %}
                                 <div class="item text-center">
-                                    <p class="team_date">
-                                        {{ nodeData.eventName }}<br>
-                                        {{ nodeData.eventDate |date("d. M Y")}} kl. {{ nodeData.eventDate |date("H:i")}}
+                                    <p class="team_date"><a href="{{nodeData.eventAlias }}">
+                                        {{ nodeData.title }}<br>
+                                            {{ nodeData.eventDate |date("d. M Y")}} kl. {{ nodeData.eventDate |date("H:i")}}</a>
                                     </p>
-                                    <img class="pull-left  img_left"    src="{{ file_url(nodeData.eventParticipant.participant.0.participantIdLogo) }}"  alt="...">
-                                    <img class="pull-right img_right"   src="{{ file_url(nodeData.eventParticipant.participant.1.participantIdLogo) }}"  alt="...">
+                                    {% for participant in nodeData.participantsList %}
+                                        <a href="{{participant.participantAlias }}"> <img class="pull-left  img_left"    src="{{ file_url(participant.logo) }}"  alt="{{participant.name }}"></a>
+                                    {% endfor %}
                                 </div>
                             {% endif %}
                         {% endfor %}

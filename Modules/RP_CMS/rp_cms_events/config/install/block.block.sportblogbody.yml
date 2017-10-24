@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - stevethemebase
+id: sportblogbody
+theme: stevethemebase
+region: none
+weight: -13
+provider: null
+plugin: sportblogbodyplugin
+settings:
+  id: sportblogbodyplugin
+  label: 'Sport Blog Body'
+  provider: rp_cms_steve_integration
+  label_display: '0'
+visibility: {  }

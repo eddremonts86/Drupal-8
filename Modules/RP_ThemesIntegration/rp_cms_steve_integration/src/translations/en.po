@@ -1,0 +1,187 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lingohub 1.0.1\n"
+"Report-Msgid-Bugs-To: support@lingohub.com \n"
+"Last-Translator: edd remonts <evi@rebelpenguin.dk>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "sport_showcase_head_titulo_1"
+msgstr "Watch"
+
+msgid "sport_showcase_head_titulo_2"
+msgstr "Live Stream"
+
+msgid "sport_showcase_head_header"
+msgstr "Watch Live Online!"
+
+msgid "Sport_showcase_head_header"
+msgstr "Watch Live Online!"
+
+msgid "sport_showcase_head_subheader"
+msgstr "Follow Your Favorite Team"
+
+msgid "sport_showcase_head_line_1"
+msgstr "Live on TV"
+
+msgid "sport_showcase_head_line_2"
+msgstr "Live at Stadium"
+
+msgid "sport_showcase_head_line_3"
+msgstr "Watch Online"
+
+msgid "sport_showcase_head_subline_3"
+msgstr "on PC, Mobile and Tablet."
+
+msgid "sport_showcase_nextmatch"
+msgstr "Next top match"
+
+msgid "sport_popularmatch_head"
+msgstr "Most Popular Upcoming Matches"
+
+msgid "sport_popularmatch_subhead"
+msgstr "Make us your ultimate resource for all that is live football - match previews, when, where and how to watch the latest big matches and even a travel guide."
+
+msgid "sport_popular_match_intro"
+msgstr "Watch Live"
+
+msgid "sport_popular_match_end"
+msgstr "Follow showdown live here"
+
+msgid "sport_popular_match_subintro"
+msgstr "Read the entire article here "
+
+msgid "sport_popular_match_button"
+msgstr "Watch Live Online"
+
+msgid "sport_schedule_head"
+msgstr "SCHEDULE"
+
+msgid "matches"
+msgstr "matches"
+
+msgid "match"
+msgstr "match"
+
+msgid "sport_schedule_button"
+msgstr "Watch Live"
+
+msgid "sport_stream_head"
+msgstr "Sponsored Content - Live Streaming Providers"
+
+msgid "sport_stream_livestream_head"
+msgstr "Watch Live "
+
+msgid "sport_stream_livestream_subhead"
+msgstr "Getting Started"
+
+msgid "sport_stream_Udbyder"
+msgstr "Provider"
+
+msgid "sport_stream_Kvalitet"
+msgstr "Quality"
+
+msgid "sport_stream_Pris"
+msgstr "Price"
+
+msgid "d."
+msgstr "D"
+
+msgid "kl"
+msgstr "cl"
+
+msgid "sport_blog_head_header"
+msgstr "Articles & Previews"
+
+msgid "sport_blog_head_subheader"
+msgstr "Read pre-match analysis of this week's matches"
+
+msgid "sport_livestream_carrusel_head"
+msgstr "Live stream fodbold | Fodbold i TV | Live stream providere "
+
+msgid "sport_livestream_carrusel_sudhead"
+msgstr "Vi har samlet de største udbydere af live fodbold, som viser kampe fra de storeinternationale og europæiske ligaer, landskampe og meget mere... <br> Udbyderne har forskellige rettigheder til ligaerne. Se hvilke ligaer de forskellige udbydere viser kampe fra nedenfor."
+
+
+msgid "sport_livestream_carrusel_list_head"
+msgstr "Udvalgte kampe"
+
+msgid "sport_livestream_stream_list_head"
+msgstr "Se udvalget af live streams udbydere"
+
+
+msgid "Se_live"
+msgstr "Se live"
+
+msgid "med"
+msgstr "med"
+
+msgid "hos"
+msgstr "hos"
+
+msgid "sport_livestream_schedule_head"
+msgstr "Se fodbold live online"
+
+msgid "sport_livestream_schedule_sudhead"
+msgstr "Brug oversigten og find ud af, hvor du kan se kampene live online."
+
+msgid "sport_livestream_schedule_table_tid"
+msgstr "Tid"
+
+msgid "sport_livestream_schedule_table_kamp"
+msgstr "Kamp"
+
+msgid "sport_livestream_schedule_table_liga"
+msgstr "Liga"
+
+msgid "sport_livestream_schedule_table_kanal"
+msgstr "Kanal"
+
+msgid "sport_livestream_schedule_table_button"
+msgstr "Vis flere dage frem"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

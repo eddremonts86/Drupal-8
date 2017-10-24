@@ -30,7 +30,7 @@ class SportLiveStreamScheduleFooterPlugin extends BlockBase {
 
   public function getInfo(){
     $objGet = new SteveFrontendControler();
-    $data = $objGet->getEventHead();
+    $data = $objGet->getSchedulePlusTree(50);
     //$objGet->getPHP_Var_Dump($data);
     return $data ;
 

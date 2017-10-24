@@ -1,17 +1,17 @@
 <section class="o-sport-calendar">
     <div class="container text-center">
         <div class="col-xs-12">
-            <h1>{{ "Se fodbold live online" | t }} </h1>
-            <h2>{{ "Brug oversigten og find ud af, hvor du kan se kampene live online." | t }} </h2>
+            <h1>{{ "sport_livestream_schedule_head" | t }} </h1>
+            <h2>{{ "sport_livestream_schedule_sudhead" | t }} </h2>
         </div>
         <div class="col-xs-12 text-left">
             <table class="table table-hover">
                 <thead>
                 <tr class="success">
-                    <th>{{ "Tid" | t}}</th>
-                    <th>{{ "Kamp"| t}}</th>
-                    <th>{{ "Liga"| t}}</th>
-                    <th>{{ "Kanal"| t}}</th>
+                    <th>{{ "sport_livestream_schedule_table_tid" | t}}</th>
+                    <th>{{ "sport_livestream_schedule_table_kamp"| t}}</th>
+                    <th>{{ "sport_livestream_schedule_table_liga"| t}}</th>
+                    <th>{{ "sport_livestream_schedule_table_kanal"| t}}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,7 +28,7 @@
                                         {% if loop.index < 2 %}
                                             <tr class="active">
                                                 <td scope="row">{{ event.eventDate | date("H:i ") }}</td>
-                                                <td> {{ event.eventName }}</td>
+                                                <td> {{ event.title }}</td>
                                                 <td>{{ tournament.tournament }}</td>
                                                 <td class="img_row">
                                                     {% for eventStreams in event.eventStreams %}
@@ -45,13 +45,13 @@
                                         {% else %}
                                             <tr class="active hidden">
                                                 <td scope="row">{{ event.eventDate | date("H:i ") }}</td>
-                                                <td> {{ event.eventName }}</td>
+                                                <td> {{ event.title }}</td>
                                                 <td>{{ tournament.tournament }}</td>
                                                 <td class="img_row">
                                                     {% for eventStreams in event.eventStreams %}
                                                         <a id="reDir" class="null reDir">
                                                             <img class="imgLiveStreamProviderList"
-                                                                 alt="{{ eventStreams.streamName }} "
+                                                                 alt="{{ eventStreams.streamIMGAlt }} "
                                                                  src="{{ file_url(eventStreams.streamIMG) }}">
                                                         </a>
                                                     {% endfor %}
@@ -69,7 +69,7 @@
                                     {% for event in events %}
                                         <tr class="active hidden">
                                             <td scope="row">{{ event.eventDate | date("H:i ") }}</td>
-                                            <td> {{ event.eventName }}</td>
+                                            <td> {{ event.title }}</td>
                                             <td>{{ tournament.tournament }}</td>
                                             <td class="img_row">
                                                 {% for eventStreams in event.eventStreams %}
@@ -92,7 +92,7 @@
 
                 <tr class="tr_btn">
                     <td colspan="4">
-                        <a class="btn btn-danger-custom btn-table-gren">Vis flere dage frem</a>
+                        <a class="btn btn-danger-custom btn-table-gren"> {{ "sport_livestream_schedule_table_button" |t }}</a>
                     </td>
                 </tr>
 

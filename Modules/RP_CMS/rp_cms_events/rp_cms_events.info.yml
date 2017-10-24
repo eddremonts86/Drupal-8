@@ -3,6 +3,7 @@ description: 'Provides Events content type and related configuration. '
 type: module
 core: 8.x
 dependencies:
+  - block
   - content_translation
   - field
   - file
@@ -10,9 +11,13 @@ dependencies:
   - language
   - menu_ui
   - node
+  - panelizer
   - path
+  - pathauto
   - rdf
+  - rp_cms_steve_integration
   - taxonomy
   - text
   - user
+  - views
 package: 'Rebel Penguins CMS - Frontend'

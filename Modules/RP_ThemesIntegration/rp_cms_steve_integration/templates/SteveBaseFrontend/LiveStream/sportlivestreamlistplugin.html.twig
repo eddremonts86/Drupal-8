@@ -1,28 +1,24 @@
 <section class="o-sport-program sport_home_slider">
     <div class="container">
         <div class="col-md-12 text-center">
-            <h3 class="live_list_head">Se udvalget af live streams udbydere</h3>
+            <h3 class="live_list_head">{{ "sport_livestream_stream_list_head" | t |raw }}</h3>
         </div>
-
-        {% for stream in tags.1.node %}
+        {% for stream in tags%}
             {% if loop.index == 1%}
                 <div class="col-md-12 top">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="col-md-3">
- <img class="absolute strip-right" width="auto" height="auto" alt="green-strip-right"
-                                      src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/green-strip-right.png">
+                            <img class="absolute strip-right" width="auto" height="auto" alt="green-strip-right" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/green-strip-right.png">
 
                                 <div class="three twelfth align-center double-pad-top-desktop">
-                                    <a class="provider-tv reDir" target="_blank" id="reDir"
-                                       style="censor:pointer;">
-                                        <img width="161" height="213" alt="{{ stream.streamName }} icon"
-                                             src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/streamproviders-new/161x203/StreamProviderLogo_1_161x203_5461f231c4698816398b4d9c.png">
+                                    <a class="provider-tv reDir" target="_blank" id="reDir" style="censor:pointer;">
+                                        <img width="161" height="213" alt="{{ stream.streamName }} icon" src="{{ stream.streamIMG }}">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-9 border_line_left">
-                                <h3 class="half-gap-bottom">{{"Se live fodbold med" | t}} {{ stream.streamName }}</h3>
+                                <h3 class="half-gap-bottom">{{"Se_live" | t}} {{stream.sport.sportName |t}} {{"med" | t}} {{ stream.streamName }}</h3>
                                 <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageQualityHeading }}:</strong>{{ stream.FrontPageQualityContent | raw}}</p>
                                 <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageUdvalgHeading }}:</strong> {{ stream.FrontPageUdvalgContent | raw}}</p>
                                 <p class="provider-price-div fs13"><strong>{{ stream.FrontPagePriceHeading }}:</strong> {{ stream.FrontPagePriceContent | raw}}</p>
@@ -61,13 +57,13 @@
                                         </div>
 
                                         <div class="col-md-3">
-                                            <a class="btn btn-danger-custom" role="button" target="_blank" href="{{stream.FrontPageAffiliateButtonUrl}}" style="censor:pointer;" id="reDir"  >
+                                            <a class="btn btn-danger-custom" role="button" target="_blank" href="{{stream.endLink}}" style="censor:pointer;" id="reDir"  >
                                                 <em class="icon-chevron-sign-right relative" style="top:17px;"></em>
                                                 <span class="relative fs18" style="top: 18px;">
                                                     {% if stream.FrontPageAffiliateButtonText != '' and stream.FrontPageAffiliateButtonText != null %}
                                                         {{stream.FrontPageAffiliateButtonText}}
                                                     {% else %}
-                                                        {{ "Se live fodbold" | t }}
+                                                        {{"Se_live" | t}} {{stream.sport.sportName |t}}
                                                     {% endif %}
                                                 </span>
                                                 <p class="fs11 zero relative  align-center-mobile" style="top: 12px;text-align:right;padding-right:10px;">- {{"med"|t}} {{ stream.streamName }}</p>
@@ -100,20 +96,20 @@
                             </div>
 
                             <div class="col-md-9 text-left border_line_left">
-                                <h3 class="half-gap-bottom">{{"Se live fodbold med" | t}} {{ stream.streamName }}</h3>
+                                <h3 class="half-gap-bottom">{{"Se_live" | t}} {{stream.sport.sportName |t}} {{"med" | t}} {{ stream.streamName }}</h3>
                                 <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageQualityHeading }}:</strong>{{ stream.FrontPageQualityContent | raw}}</p>
                                 <p class="provider-quality-div fs13 zero"><strong>{{ stream.FrontPageUdvalgHeading }}:</strong> {{ stream.FrontPageUdvalgContent | raw}}</p>
                                 <p class="provider-price-div fs13"><strong>{{ stream.FrontPagePriceHeading }}:</strong> {{ stream.FrontPagePriceContent | raw}}</p>
 
 
-                                <p class="sedan"><b>{{ "Sådan kommer du i gang"|t }} :</b></p>
+                                <p class="sedan"><b>{{ stream.FrontPageIcons1Heading }} :</b></p>
                                 <ol class="fs13">
                                     <li>{{ stream.FrontPageIcons1Heading }}</li>
                                     <li>{{ stream.FrontPageIcons2Heading }}</li>
                                     <li>{{ stream.FrontPageIcons3Heading }}</li>
                                 </ol>
                                 <a class="btn btn-danger-custom btn-auto" role="button" target="_blank"style="censor:pointer;" href="{{stream.FrontPageAffiliateButtonUrl}}">
-                                    {{ "Se live fodbold hos"|t }} {{ stream.streamName }}
+                                    {{"Se_live" | t}} {{stream.sport.sportName |t}}  {{ "hos"|t }} {{ stream.streamName }}
                                 </a>
                             </div>
 

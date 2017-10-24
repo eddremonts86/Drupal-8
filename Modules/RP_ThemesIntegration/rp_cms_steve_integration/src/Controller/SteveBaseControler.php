@@ -47,7 +47,8 @@ abstract class SteveBaseControler extends ControllerBase {
   }
 
   public function getTaxonomyAlias($id) {
-    $url = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $id])->toString();
+    $url = Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $id])
+      ->toString();
     return $url;
   }
 
@@ -120,6 +121,32 @@ abstract class SteveBaseControler extends ControllerBase {
     return $this->getScheduleFormat($all_nodes);
   }
 
+  public function getScheduleLiveStreamEvents($range) {
+    $fromDate = strtotime(date('Y-m-d'));
+    $sport = $this->getSport();
+    $obj = [
+      'vid' => 'channels',
+      'field_channel_api_id' => $_SESSION['channel'],
+    ];
+    $channel = $this->getTaxonomyByCriterio($obj, 0);
+    $channelid = $channel->id();
+    $ids = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('promote', 1)
+      ->condition('type', 'events')
+      ->condition('field_events_sport', $sport['sportDrupalId'])
+      ->condition('field_event_date', $fromDate, '>')
+      ->condition('field_event_channels', $channelid, '=')
+      ->condition('field_event_promotetolivestream', $channelid, '=')
+      ->sort('field_event_date', 'ASC')
+      ->sort('field_event_tournament', 'ASC');
+    if ($range != 0) {
+      $ids->range(0, $range);
+    }
+    $all_nodes = $this->getNodes($ids->execute());
+    return $this->getScheduleFormat($all_nodes);
+  }
+
   public function getSchedulePager($page) {
     $fromDate = strtotime(date('Y-m-d'));
     $sport = $this->getSport();
@@ -165,7 +192,7 @@ abstract class SteveBaseControler extends ControllerBase {
       $tournamentLogo = $this->getImgUrl($tournament->field_logo->target_id);
       $participantsList = $simpleNode['field_event_participants'];
       $participantsListformat = $this->getParticipant($participantsList);
-
+      $eventStreams = $this->getStreamEventList($simpleNode['field_event_stream_provider']);
       $sportName = $this->getSport();
 
       $newNodeList[] = [
@@ -184,6 +211,7 @@ abstract class SteveBaseControler extends ControllerBase {
         'sportBG' => $sportName['sportBackground'],
         'sportalias' => $this->getTaxonomyAlias($sportId),
         'eventTournamentID' => $tournamentId,
+        'eventStreams' => $eventStreams,
         'TournamentAlias' => $this->getTaxonomyAlias($tournamentId),
         'eventTournamentAPIID' => $tournament->field_api_id->value,
         'eventTournamentName' => $tournament->name->value,
@@ -199,7 +227,7 @@ abstract class SteveBaseControler extends ControllerBase {
   public function getParticipant($participantsList) {
     $participantsListFormat = [];
     foreach ($participantsList as $participants) {
-      if($participants["target_id"]){
+      if ($participants["target_id"]) {
         $tournamentContent = $this->getTaxonomyByCriterio([
           'vid' => 'participant',
           'tid' => $participants["target_id"],
@@ -216,7 +244,7 @@ abstract class SteveBaseControler extends ControllerBase {
           'participantAlias' => $this->getTaxonomyAlias($id),
         ];
       }
-      }
+    }
     return $participantsListFormat;
 
   }
@@ -291,7 +319,7 @@ abstract class SteveBaseControler extends ControllerBase {
       ];
       return $sportObjFormnat;
     }
-    return true;
+    return [];
   }
 
   public function getClearUrl($s) {
@@ -337,41 +365,36 @@ abstract class SteveBaseControler extends ControllerBase {
   /*------------- Stream ------------*/
   public function getStreamList() {
     $sport = $this->getSport();
-    if($sport != true){
-    $obj = [
-      'vid' => 'stream_provider',
-      'field_stream_sport_promote' => $sport['sportDrupalId'],
-    ];
-    $list = $this->getTaxonomyByCriterio($obj, 1);
-    return $list;}
-    else return array();
+    if (!empty($sport)) {
+      $obj = [
+        'vid' => 'stream_provider',
+        'field_stream_sport_promote' => $sport['sportDrupalId'],
+      ];
+      $list = $this->getTaxonomyByCriterio($obj, 1);
+      return $list;
+    }
+    else {
+      return [];
+    }
   }
 
-  public function getStreamListFormat() {
-    $list = $this->getStreamList();
+  public function getStreamListFormat($eventstreamList = []) {
+    if (empty($eventstreamList)) {
+      $list = $this->getStreamList();
+    }
+    else {
+      foreach ($eventstreamList as $eventstream) {
+        if ($eventstream["target_id"]) {
+          $obj = [
+            'vid' => 'stream_provider',
+            'tid' => $eventstream["target_id"],
+          ];
+          $list [] = $this->getTaxonomyByCriterio($obj, 0);
+        }
+      }
+    }
     $listFormat = [];
     foreach ($list as $listF) {
-      $listFormat[] = [
-        'id' => $listF->id(),
-        'streamName' => $listF->name->value,
-        'apiId' => $listF->field_stream_provider_api_id->value,
-        'homePromo' => $listF->field_stream_provider_home_promo->value,
-        'description' => $listF->description->value,
-        'idTabsTemplate' => $this->getClearUrl($listF->name->value . '_' . $listF->field_stream_provider_api_id->value),
-        /**/
-        'streamRating' => 3,
-        'streamPrice' => '$12',
-      ];
-    }
-    return $listFormat;
-  }
-
-  public function getStreamEventList($eventstreamList) {
-    $streamListFormat = [];
-    foreach ($eventstreamList as $eventstream) {
-      if($eventstream["target_id"]){
-      $obj = ['vid' => 'stream_provider','tid' => $eventstream["target_id"],];
-      $listF = $this->getTaxonomyByCriterio($obj, 0);
       $streamIMG = @$listF->field_streamprovider_logo->target_id;
       $streamIMGAlt = @$listF->field_streamprovider_logo->target_id;
       if (isset($streamIMG) and $streamIMG != '' and $streamIMG != NULL) {
@@ -379,8 +402,9 @@ abstract class SteveBaseControler extends ControllerBase {
       }
       else {
         $streamIMG = 'https://images-na.ssl-images-amazon.com/images/I/61I7WFEiORL.png';
+        $streamIMGAlt = $listF->name->value;
       }
-      $streamListFormat[] = [
+      $listFormat[] = [
         'id' => $listF->id(),
         'streamName' => $listF->name->value,
         'apiId' => $listF->field_stream_provider_api_id->value,
@@ -395,11 +419,51 @@ abstract class SteveBaseControler extends ControllerBase {
         'endLink' => 'http://google.com',
         'streamIMG' => $streamIMG,
         'streamIMGAlt' => $streamIMGAlt,
-
+        'sport' => $this->getSport()
       ];
     }
-    }
+    return $listFormat;
+
+  }
+
+  public function getStreamEventList($eventstreamList) {
+    $streamListFormat = $this->getStreamListFormat($eventstreamList);
     return $streamListFormat;
+    /*  foreach ($eventstreamList as $eventstream) {
+        if ($eventstream["target_id"]) {
+          $obj = [
+            'vid' => 'stream_provider',
+            'tid' => $eventstream["target_id"],
+          ];
+          $listF = $this->getTaxonomyByCriterio($obj, 0);
+          $streamIMG = @$listF->field_streamprovider_logo->target_id;
+          $streamIMGAlt = @$listF->field_streamprovider_logo->target_id;
+          if (isset($streamIMG) and $streamIMG != '' and $streamIMG != NULL) {
+            $streamIMG = $this->getImgUrl($streamIMG);
+          }
+          else {
+            $streamIMG = 'https://images-na.ssl-images-amazon.com/images/I/61I7WFEiORL.png';
+          }
+          $streamListFormat[] = [
+            'id' => $listF->id(),
+            'streamName' => $listF->name->value,
+            'apiId' => $listF->field_stream_provider_api_id->value,
+            'homePromo' => $listF->field_stream_provider_home_promo->value,
+            'description' => $listF->description->value,
+            'idTabsTemplate' => $this->getClearUrl($listF->name->value . '_' . $listF->field_stream_provider_api_id->value),
+            /**
+            'streamRating' => 3,
+            'streamPrice' => '$12',
+            'streamVideoQuality' => 'good',
+            'streamVideoSize' => 'Big',
+            'endLink' => 'http://google.com',
+            'streamIMG' => $streamIMG,
+            'streamIMGAlt' => $streamIMGAlt,
+
+          ];
+        }
+      }
+      return $streamListFormat;*/
   }
 
 

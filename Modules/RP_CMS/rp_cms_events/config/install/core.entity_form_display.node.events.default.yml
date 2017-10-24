@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.events.field_event_channels
     - field.field.node.events.field_event_date
     - field.field.node.events.field_event_participants
+    - field.field.node.events.field_event_promotetolivestream
     - field.field.node.events.field_event_stream_provider
     - field.field.node.events.field_event_tournament
     - field.field.node.events.field_events_properties
@@ -60,6 +61,15 @@ content:
     region: content
   field_event_participants:
     weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_event_promotetolivestream:
+    weight: 123
     settings:
       match_operator: CONTAINS
       size: 60

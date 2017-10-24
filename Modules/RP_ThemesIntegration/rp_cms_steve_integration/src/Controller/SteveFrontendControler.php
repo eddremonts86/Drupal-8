@@ -97,4 +97,12 @@ class SteveFrontendControler extends SteveBaseControler {
     return $eventArray;
   }
 
+  public function getLiveStreamEvents($range){
+
+      return $this->getScheduleLiveStreamEvents($range);
+
+  }
+
+
+
 }

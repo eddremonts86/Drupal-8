@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - stevethemebase
+id: eventpagecontent
+theme: stevethemebase
+region: none
+weight: -17
+provider: null
+plugin: eventpagecontentplugin
+settings:
+  id: eventpagecontentplugin
+  label: 'Event Page Content'
+  provider: rp_cms_steve_integration
+  label_display: '0'
+visibility: {  }
