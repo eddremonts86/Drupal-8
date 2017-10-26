@@ -8,9 +8,11 @@ use Drupal\Core\Controller\ControllerBase;
 
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
-
 use Drupal\rp_api\RPAPIClient;
 use Drupal\rp_repo\Controller\RepoGeneralGetInfo;
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\Core\Cache\CacheableMetadata;
 
 /**
  * Class UpdateClienetData.
@@ -65,19 +67,19 @@ class UpdateClienetData extends ControllerBase {
   }
 
   public function updateEvents($event, $node_id, $region) {
-   // $creatorObj = new CreateClientData();
+    // $creatorObj = new CreateClientData();
     $getInfoObj = new RepoGeneralGetInfo();
     $node = Node::load($node_id);
 
-    $obj=array(
-      'vid'=>'sport',
-      'tid'=>$node->field_events_sport->target_id
-    );
+    $obj = [
+      'vid' => 'sport',
+      'tid' => $node->field_events_sport->target_id,
+    ];
     $sport = $getInfoObj->getTaxonomyByCriterioMultiple($obj, 0);
     $alias = '/' . $getInfoObj->getClearUrl(reset($sport)["name"]["x-default"]) . '/' . $region . '/' . $getInfoObj->getClearUrl($event['name']);
-    $ifAlias = $getInfoObj->getAlias('/node/'.$node_id, $alias);
+    $ifAlias = $getInfoObj->getAlias('/node/' . $node_id, $alias);
     $alias = ['alias' => $alias];
-    if(empty($ifAlias) or !$ifAlias) {
+    if (empty($ifAlias) or !$ifAlias) {
       $node->path = $alias;
       $node->field_game_date = strtotime($event['start']);
       $node->save();
@@ -127,7 +129,39 @@ class UpdateClienetData extends ControllerBase {
   public function updateMetaByChanel() {
   }
 
-  public function UpdateClienetData() {
+  public function UpdateClientData() {
   }
 
+  public function updateMainMenu() {
+
+    $menu_link = \Drupal::entityTypeManager()
+      ->getStorage('menu_link_content')
+      ->loadByProperties(['menu_name' => 'main', 'parent' => 'null']);
+    foreach ($menu_link as $sport) {
+      if ($sport->description->value != 'home') {
+        $fromDate = strtotime(date('Y-m-d'));
+        $ids = \Drupal::entityQuery('node')
+          ->condition('status', 1)
+          ->condition('promote', 1)
+          ->condition('type', 'events')
+          ->condition('field_events_sport', $sport->description->value)
+          ->condition('field_event_date', $fromDate, '>')
+          ->range(0, 1);
+        $event = count($ids->execute());
+        if ($event == 0 or !isset($event)) {
+          $sport->enabled->value = 0;
+          $sport->save();
+          var_dump($sport->title->value . " don't have future events");
+        }
+        else {
+          if ($sport->enabled->value == 0) {
+            $sport->enabled->value = 1;
+            $sport->save();
+            var_dump($sport->title->value . " have future events");
+          }
+        }
+      }
+    }
+    return TRUE;
+  }
 }

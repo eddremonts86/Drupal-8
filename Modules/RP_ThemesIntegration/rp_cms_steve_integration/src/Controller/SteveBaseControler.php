@@ -419,7 +419,7 @@ abstract class SteveBaseControler extends ControllerBase {
         'endLink' => 'http://google.com',
         'streamIMG' => $streamIMG,
         'streamIMGAlt' => $streamIMGAlt,
-        'sport' => $this->getSport()
+        'sport' => $this->getSport(),
       ];
     }
     return $listFormat;
@@ -468,9 +468,21 @@ abstract class SteveBaseControler extends ControllerBase {
 
 
   /*------------------Tools--------------------------*/
-  public function getPHP_Var_Dump($data) {
+  public function getPHP_Var_Dump($data, $type = 0) {
     echo "<div class='container' style='background: rgba(201, 201, 201, 0.55);color: #212121;padding: 20px;font-size: 15px;border-radius: 10px;height: auto;width: auto;'> <pre>";
-    var_dump($data);
+
+    if ($type == 0) {
+      var_dump($data);
+    }
+    else {
+      if ($type == 1) {
+        $data = count($data);
+        var_dump($data);
+      }
+      else {
+        var_dump($data);
+      }
+    }
     echo "</pre></div>";
     exit();
   }

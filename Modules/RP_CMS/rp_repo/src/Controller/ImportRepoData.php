@@ -17,13 +17,6 @@ use Drupal\taxonomy\Entity\Term;
  */
 class ImportRepoData extends ControllerBase
 {
-
-    /**
-     * Importrepodata.
-     *
-     * @return string
-     *   Return Hello string.
-     */
     public function importRepoData()
     {
         $rpClient = RepoService::getClient();

@@ -5,6 +5,9 @@
 </section>
 
 <main>
+    <section>
+        {{ render_block('sitesportsubmenu') }}
+    </section>
     {% if page.content %}
         {{ page.content }}
     {% endif %}

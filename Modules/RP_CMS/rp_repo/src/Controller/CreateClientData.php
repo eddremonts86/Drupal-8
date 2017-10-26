@@ -571,8 +571,9 @@ class CreateClientData extends ControllerBase {
       $gs = MenuLinkContent::create([
         'title' => $sport,
         'link' => ['uri' => 'internal:/node/' . $nodeId],
-        'description' => $getIgetInfoObj->getClearUrl($sport),
+        'description' => $sport_tags,
         'menu_name' => $menu_name,
+        'parent' => 'null',
         'expanded' => TRUE,
       ])->save();
 

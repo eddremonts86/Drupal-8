@@ -46,6 +46,15 @@ function rp_cms_steve_integration_theme() {
         ],
         'template' => 'SteveBaseFrontend/GeneralSite/sitefooterplugin',
       ],
+    'sitesubmenuplugin' =>
+      [
+        'variables' => [
+          'titulo' => 'Udbydere af Live Stream',
+          'descripcion' => 'Læs om de forskellige udbydere af live stream på det danske marked.',
+          'tags' => [],
+        ],
+        'template' => 'SteveBaseFrontend/GeneralSite/sitesubmenuplugin',
+      ],
     'homebodyplugin' =>
       [
         'variables' => [

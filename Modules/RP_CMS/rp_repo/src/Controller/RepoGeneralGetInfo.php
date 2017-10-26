@@ -27,10 +27,6 @@ class RepoGeneralGetInfo extends ControllerBase {
     $data = RPCmsSiteInfoHelper::getSiteInfoCombos();
     $date = date($date);
     $site = $site_api_id;
-
-    /*$sportList = [1, 2, 5, 10, 4];
-      'sport' => $sportList,*/
-
     if ($site_api_id or $date) {
       foreach ($data as $siteInfo) {
         $paramList [] = [
@@ -237,25 +233,21 @@ class RepoGeneralGetInfo extends ControllerBase {
 
   public function getImg($url, $alias) {
     $data = file_get_contents($url);
+
     if (isset($data)) {
       $file = file_save_data($data, "public://" . $alias . ".png", FILE_EXISTS_REPLACE);
-      $data_img = [
-        'target_id' => $file->id(),
-        'alt' => $this->getClearUrl($alias),
-        'title' => $this->getClearUrl($alias),
-      ];
     }
     else {
-      $url = "http://client.br/themes/custom/steve/images/footer-legal.jpg";
+      $url = "http://steve.rebelpenguin.dk:10080/media/participants/default.png";
       $data = file_get_contents($url);
       $file = file_save_data($data, "public://" . $alias . ".png", FILE_EXISTS_REPLACE);
-      $data_img = [
-        'target_id' => $file->id(),
-        'alt' => $this->getClearUrl($alias),
-        'title' => $this->getClearUrl($alias),
-      ];
     }
 
+    $data_img = [
+      'target_id' => $file->id(),
+      'alt' => $this->getClearUrl($alias),
+      'title' => $this->getClearUrl($alias),
+    ];
     return $data_img;
   }
 

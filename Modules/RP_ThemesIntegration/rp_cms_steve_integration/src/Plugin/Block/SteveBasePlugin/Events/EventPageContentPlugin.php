@@ -32,7 +32,6 @@ class EventPageContentPlugin extends BlockBase {
   public function getInfo(){
     $objGet = new SteveFrontendControler();
     $data = $objGet->getEventcontent();
-    //$objGet->getPHP_Var_Dump($data);
     return $data ;
 
   }
