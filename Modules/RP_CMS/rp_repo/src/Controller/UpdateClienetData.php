@@ -67,10 +67,9 @@ class UpdateClienetData extends ControllerBase {
   }
 
   public function updateEvents($event, $node_id, $region) {
-    // $creatorObj = new CreateClientData();
+
     $getInfoObj = new RepoGeneralGetInfo();
     $node = Node::load($node_id);
-
     $obj = [
       'vid' => 'sport',
       'tid' => $node->field_events_sport->target_id,
@@ -164,4 +163,8 @@ class UpdateClienetData extends ControllerBase {
     }
     return TRUE;
   }
+
+public function UpdateClienetData(){
+      return true;
+}
 }

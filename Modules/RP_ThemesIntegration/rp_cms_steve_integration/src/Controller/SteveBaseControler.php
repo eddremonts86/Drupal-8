@@ -17,19 +17,19 @@ abstract class SteveBaseControler extends ControllerBase {
 
   /**
    * __construct.
+   * Change $_SESSION["channel"]
+   * Default Channel - Organic - No 3
    *
-   * @return string
-   *   Return Hello string.
    */
   public function __construct() {
     if (!isset($_SESSION["channel"]) or $_SESSION["channel"] == NULL) {
-      //Default Channel - Organic
       $_SESSION["channel"] = '3';
     }
     if ($_GET["channel"] != $_SESSION["channel"] and isset($_GET["channel"])) {
       session_start();
       $_SESSION["channel"] = $_GET['channel'];
     }
+
   }
 
   /*------------- Taxonomy ------------*/

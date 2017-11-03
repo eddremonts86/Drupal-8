@@ -30,9 +30,7 @@
         _pass=root
         _port=3316
 
-
  ## Instalation
-
     composer create-project drupal/drupal $_site
     cd $_site
     composer require drupal/console:~1.0

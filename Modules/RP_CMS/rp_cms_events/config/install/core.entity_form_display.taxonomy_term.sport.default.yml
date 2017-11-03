@@ -10,12 +10,67 @@ dependencies:
     - field.field.taxonomy_term.sport.field_logo
     - field.field.taxonomy_term.sport.field_logo_date
     - field.field.taxonomy_term.sport.field_sport_api_id
+    - field.field.taxonomy_term.sport.panelizer
     - image.style.thumbnail
     - taxonomy.vocabulary.sport
   module:
+    - field_group
     - image
+    - panelizer
     - path
     - text
+third_party_settings:
+  field_group:
+    group_general:
+      children:
+        - group_drupal_api
+        - group_steve_data
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: General
+    group_drupal_api:
+      children:
+        - name
+        - description
+        - field_content
+        - langcode
+        - path
+        - translation
+        - panelizer
+      parent_name: group_general
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Drupal API'
+    group_steve_data:
+      children:
+        - field_logo
+        - field_logo_date
+        - field_api_id
+        - field_competition_id
+        - field_sport_api_id
+        - field_api_parent
+        - field_background
+      parent_name: group_general
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Steve Data'
 id: taxonomy_term.sport.default
 targetEntityType: taxonomy_term
 bundle: sport
@@ -23,14 +78,14 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 1
+    weight: 2
     region: content
     settings:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
   field_api_id:
-    weight: 3
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -38,7 +93,7 @@ content:
     type: string_textfield
     region: content
   field_api_parent:
-    weight: 11
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -47,7 +102,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_background:
-    weight: 12
+    weight: 14
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -56,14 +111,14 @@ content:
     region: content
   field_competition_id:
     type: string_textfield
-    weight: 7
+    weight: 11
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_content:
-    weight: 6
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -85,7 +140,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_sport_api_id:
-    weight: 10
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -95,22 +150,33 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 4
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  panelizer:
+    type: panelizer
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

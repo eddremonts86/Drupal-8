@@ -1,4 +1,4 @@
-name: RP CMS - Events
+name: 'RP CMS - Events'
 description: 'Provides Events content type and related configuration. '
 type: module
 core: 8.x
@@ -6,28 +6,29 @@ package: 'Rebel Penguins CMS - Frontend'
 autor: 'Eduardo Valdes Inerarte'
 dependencies:
   - block
+  - config_translation
   - content_translation
+  - devel
+  - features
   - field
+  - field_group
   - file
   - image
   - language
+  - locale
   - menu_ui
-  - node
   - metatag
+  - node
+  - panelizer
   - path
   - pathauto
   - rdf
+  - restui
+  - rp_cms_steve_integration
   - taxonomy
   - text
-  - user
-  - restui
-  - views
-  - features
-  - devel
-  - field_group
   - token
-  - config_translation
-  - content_translation
-  - locale
-  - language
-
+  - tour
+  - user
+  - views
+  - views_ui

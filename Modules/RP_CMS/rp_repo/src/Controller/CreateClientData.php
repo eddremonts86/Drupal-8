@@ -72,7 +72,7 @@ class CreateClientData extends ControllerBase {
           'summary' => '',
           'format ' => 'full_html',
         ],
-        'path' => $alias /*['alias' => '/'.$region.'/'.$getIgetInfoObj->getClearUrl($sportName) . '/' . $getIgetInfoObj->getClearUrl($url)]*/,
+        'path' => $alias,
       ];
       $id = $this->createNodeGeneric($createStreamPages);
       echo ' Creating Sport Intern Pages - ' . $name . ' - at ' . date("h:i:s") . "\n";
@@ -81,7 +81,7 @@ class CreateClientData extends ControllerBase {
 
   }
 
-  public function createSportInternBlogs($sportTags, $sportName, $name, $id, $url, $sportApiId, $type,$region) {
+  public function createSportInternBlog($sportTags, $sportName, $name, $id, $url, $sportApiId, $type,$region) {
     $getInfoObj = new RepoGeneralGetInfo();
     if ($type) {
       $getInfoObj = new RepoGeneralGetInfo();
@@ -112,10 +112,8 @@ class CreateClientData extends ControllerBase {
     $rpClient = RPAPIClient::getClient();
     foreach ($streams as $stream) {
       $actualStream = $getInfoObj->getTaxonomyByCriterio($stream['id'], 'field_stream_provider_api_id');
-
-        if(empty($actualStream)){
+      if(empty($actualStream)){
           $streamObj = $rpClient->getStreamprovidersbyID(['id' => $stream['id']]);
-          //$streamType = $rpClient->getStreamproviderTypesbyID(['id' => $streamObj['type']]);
           $streamType = $streamObj['type'];
           $requestType = array('field_stream_provider_type_apiid' => $streamType['id'],'name' => $streamType['name']);
           $taxonomyStreamType = $getInfoObj->getTaxonomyByCriterioMultiple($requestType);
@@ -153,7 +151,7 @@ class CreateClientData extends ControllerBase {
             $tags_array [] = ['target_id' => $taxonomystreamId];
           }
         }
-        else{
+      else{
            $tags_array [] = ['target_id' => $actualStream->id()];
         }
     }
@@ -368,7 +366,6 @@ class CreateClientData extends ControllerBase {
 
 
   public function createGenericTaxonomy($obj) {
-    $getInfoObj = new RepoGeneralGetInfo();
     $term = Term::create($obj);
     $term->save();
     $term = reset($term);
@@ -523,12 +520,7 @@ class CreateClientData extends ControllerBase {
   }
 
   public function createVocabulary() {
-    $vocabularys = [
-      'sport',
-      'stream_provider',
-      'participant',
-      'tournament',
-    ];
+    $vocabularys = ['sport','stream_provider','participant','tournament'];
     foreach ($vocabularys as $vocal) {
       $vocabulary = \Drupal\taxonomy\Entity\Vocabulary::create([
         'vid' => $vocal,
@@ -568,38 +560,40 @@ class CreateClientData extends ControllerBase {
       ->getStorage('menu_link_content')
       ->loadByProperties(['menu_name' => $menu_name, 'title' => $sport]);
     if (empty($menu_link)) {
-      $gs = MenuLinkContent::create([
-        'title' => $sport,
-        'link' => ['uri' => 'internal:/node/' . $nodeId],
-        'description' => $sport_tags,
-        'menu_name' => $menu_name,
-        'parent' => 'null',
-        'expanded' => TRUE,
-      ])->save();
+
+        $gs = MenuLinkContent::create([
+          'title' => $sport,
+          'link' => ['uri' => 'internal:/node/' . $nodeId],
+          'description' => $sport_tags,
+          'menu_name' => $menu_name,
+          'parent' => 'null',
+          'expanded' => TRUE,
+        ])->save();
 
 
-      $menu_link_SportObj = \Drupal::entityTypeManager()
-        ->getStorage('menu_link_content')
-        ->loadByProperties(['menu_name' => $menu_name, 'title' => $sport,]);
-      $uuid = reset($menu_link_SportObj)->uuid->value;
-      if ($uuid) {
-        $menuID = 'main';
-        $forside = $sport . ' Forside';
-        $this->createGenericItemMenu($menuID, $forside, $nodeId, $uuid, -99);
+        $menu_link_SportObj = \Drupal::entityTypeManager()
+          ->getStorage('menu_link_content')
+          ->loadByProperties(['menu_name' => $menu_name, 'title' => $sport,]);
 
-        $LiveStream = 'Live Stream ' . $sport;
-        $url = 'Live Stream ' . $sport;
-        $id = 'liveStream';
-        $LiveStream_id = $this->createSportInternPages($sport_tags, $sport, $LiveStream, $id, $url, $sport_id, 'sport_stream_reviews',$region);
-        $this->createGenericItemMenu($menuID, $LiveStream, $LiveStream_id, $uuid, -98);
+        $uuid = reset($menu_link_SportObj)->uuid->value;
+          if ($uuid) {
+            $menuID = 'main';
+            $forside = $sport . ' Forside';
+            $this->createGenericItemMenu($menuID, $forside, $nodeId, $uuid, -99);
 
-        $Blog = 'Blog ' . $sport;
-        $url = 'Blog';
-        $id = 'blog';
-        $Blog_id = $this->createSportInternblogs($sport_tags, $sport, $Blog, $id, $url, $sport_id, 'sport_blogs',$region);
-        $this->createGenericItemMenu($menuID, $Blog, $Blog_id, $uuid, -97);
-      }
-      echo " Creating menuitem $sport on Menu $menu_name" . ' - at ' . date("h:i:s") . "\n";
+            $LiveStream = 'Live Stream ' . $sport;
+            $url = 'Live Stream ' . $sport;
+            $id = 'liveStream';
+            $LiveStream_id = $this->createSportInternPages($sport_tags, $sport, $LiveStream, $id, $url, $sport_id, 'sport_stream_reviews',$region);
+            $this->createGenericItemMenu($menuID, $LiveStream, $LiveStream_id, $uuid, -98);
+
+            $Blog = 'Blog ' . $sport;
+            $url = 'Blog';
+            $id = 'blog';
+            $Blog_id = $this->createSportInternBlog($sport_tags, $sport, $Blog, $id, $url, $sport_id, 'sport_blogs',$region);
+            $this->createGenericItemMenu($menuID, $Blog, $Blog_id, $uuid, -97);
+          }
+          echo " Creating menuitem $sport on Menu $menu_name" . ' - at ' . date("h:i:s") . "\n";
     }
     return TRUE;
   }

@@ -30,7 +30,6 @@
         _port=3316
 
  ## Instalation
-
     composer create-project drupal/drupal $_site
     cd $_site
     composer require drupal/console:~1.0
@@ -54,6 +53,5 @@
     drush rpapii participants --query="sport=4"
     drush rpapii participants --query="sport=1&competition=7"
     drush rpapii games --query="site=4&region=GB-ENG&lang=en_GB&start=2017-09-20"
-
     echo " Wi are done !!! Enjoy your new site. "
     exit

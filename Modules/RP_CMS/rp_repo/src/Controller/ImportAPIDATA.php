@@ -33,11 +33,9 @@ class ImportAPIDATA extends ControllerBase {
   public function importApiData($date = '', $days = 0 ) {
     $creatorObj = new CreateClientData();
     $getInfoObj = new RepoGeneralGetInfo();
-
-    if($date != '' and $days == 0  ){var_dump($date); $parametersList = $getInfoObj->getConfig($date,1);}
-    elseif ($days != 0 ){var_dump($days); $parametersList = $getInfoObj->getConfig($date = 'Y-m-d', $days);}
+    if($date != '' and $days == 0  ){$parametersList = $getInfoObj->getConfig($date,1);}
+    elseif ($days != 0 ){$parametersList = $getInfoObj->getConfig($date = 'Y-m-d', $days);}
     else {$parametersList = $getInfoObj->getConfig();}
-
     /*Creating Channels on Content Type  "Cannels"*/
     $creatorObj->createChannelsPages();
     foreach ($parametersList as $parameters) {
@@ -77,12 +75,13 @@ class ImportAPIDATA extends ControllerBase {
         $streamProvider = $event['streamprovider'];
         $eventMeta = $event['meta'];
         $Tags_Team = '';
-        if (isset($sportApiId)) { $sportTags = $creatorObj->createSportPages($sportDrupalId, $sportApiId, $region); }
-        if (isset($streamProvider)) { $stream = $creatorObj->createStreamPages($streamProvider, $sportTags);}
-        if (isset($competition)) { $creatorObj->createTournamentPages($competition, $sportTags, $sportApiId);}
-        if (isset($participants)) { $Tags_Team = $creatorObj->createParticipantPages($participants, $sportTags);}
-        if (isset($eventMeta)) { $ChannelByNode = $getInfoObj->getIdChannelByNode($eventMeta);}
-        $creatorObj->createGamePage($sportTags, $event, $stream, '', $Tags_Team, $ChannelByNode, $region);
+
+        var_dump("1");if (isset($sportApiId)) { $sportTags = $creatorObj->createSportPages($sportDrupalId, $sportApiId, $region); }
+        var_dump("2");if (isset($streamProvider)) { $stream = $creatorObj->createStreamPages($streamProvider, $sportTags);}
+        var_dump("3");if (isset($competition)) { $creatorObj->createTournamentPages($competition, $sportTags, $sportApiId);}
+        var_dump("4");if (isset($participants)) { $Tags_Team = $creatorObj->createParticipantPages($participants, $sportTags);}
+        var_dump("5");if (isset($eventMeta)) { $ChannelByNode = $getInfoObj->getIdChannelByNode($eventMeta);}
+        var_dump("6");$creatorObj->createGamePage($sportTags, $event, $stream, '', $Tags_Team, $ChannelByNode, $region);
       }
       else {
         $node_id = reset($node)->id();

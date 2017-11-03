@@ -47,20 +47,6 @@ class RepoGeneralGetInfo extends ControllerBase {
 
   }
 
-  public function getRepoData($url) {
-    $client = new Client();
-    $response = $client->request('GET', $url);
-    $data = json_decode($response->getBody()->getContents());
-    return $data;
-  }
-
-  public function getSiteByID($siteID) {
-    $site = \Drupal::entityTypeManager()
-      ->getStorage('site')
-      ->loadByProperties(['field_site_api_id' => $siteID]);
-    return $site;
-  }
-
   public function getTaxonomy($name) {
     $taxonomy = \Drupal::entityTypeManager()
       ->getStorage('taxonomy_term')
@@ -75,17 +61,27 @@ class RepoGeneralGetInfo extends ControllerBase {
     return reset($taxonomy);
   }
 
-  public function getTaxonomyByAPIID($id) {
+  public function getTaxonomyByAPIID($apiId) {
     $taxonomy = \Drupal::entityTypeManager()
       ->getStorage('taxonomy_term')
-      ->loadByProperties(['field_api_id' => $id]);
+      ->loadByProperties(['field_api_id' => $apiId]);
     return reset($taxonomy);
   }
 
-  public function getTaxonomyByCriterio($id, $feald) {
+  public function getTaxonomyByParticipantAPIID($id) {
     $taxonomy = \Drupal::entityTypeManager()
       ->getStorage('taxonomy_term')
-      ->loadByProperties([$feald => $id]);
+      ->loadByProperties(['field_participant_api_id' => $id]);
+    return reset($taxonomy);
+  }
+
+  public function getTaxonomyByCriterio($fieldData, $field) {
+    var_dump($fieldData);
+    var_dump($field);
+
+    $taxonomy = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->loadByProperties([$field => $fieldData]);
     return reset($taxonomy);
   }
 
@@ -99,102 +95,11 @@ class RepoGeneralGetInfo extends ControllerBase {
 
   }
 
-  public function getTaxonomyByParticipantAPIID($id) {
-    $taxonomy = \Drupal::entityTypeManager()
-      ->getStorage('taxonomy_term')
-      ->loadByProperties(['field_participant_api_id' => $id]);
-    return reset($taxonomy);
-  }
-
-  public function getNode($name, $type, $opc) {
+  public function getNode($fieldData, $type, $field) {
     $id_node = \Drupal::entityTypeManager()
       ->getStorage('node')
-      ->loadByProperties(['type' => $type, $opc => $name]);
+      ->loadByProperties(['type' => $type, $field => $fieldData]);
     return $id_node;
-  }
-
-  public function getDefaultText($part1, $part2) {
-    /* $data = "
- <h2>Se $part1 vs $part2 online. </h2>
-
-   <p>Fodbold skal ses, høres og mærkes. Med streaming får du alle friheder
-   til at se yndlingskampen på lige præcis din måde.<br>
-   Du er ikke bundet af din fladskærm i stuen, men kan nu følge favoritholdet
-   på din tablet, computer eller telefon lige nøjagtigt, hvor du vil. Se kampene
-   i sommerhuset, i bussen eller på en fortovscafé med en iskold øl i hånden.<br>
-   Du bestemmer helt selv og med et kæmpe udvalg af kampe er der altid en
-   begivenhed til lige netop dig.</p>
-
- <h3>Sådan streamer du fodbold</h3>
-
-   <p>Læs vores guide til streaming og find den udbyder, der passer dig bedst.
-   Vi anbefaler kun lovlig streaming i den bedste kvalitet, og der er nok at
-   vælge imellem.<br>
-   Vil du gerne se kampe og samtidig åbne en spillekonto? Foretrækker du bare
-   et kæmpe udvalg af kampe? Eller vil du følge en bestemt liga eller et bestemt
-   hold? Mulighederne er mange, og vi hjælper dig til at træffe det bedste valg
-   til dit behov.</p>";*/
-    $data = "";
-    return $data;
-  }
-
-  public function getDefaultTeam($part) {
-    /*  $data = "
-<h1><b>$part</b></h1>
-
-  <p>Fodbold skal ses, høres og mærkes. Med streaming får du alle friheder
-  til at se yndlingskampen på lige præcis din måde.<br>
-  Du er ikke bundet af din fladskærm i stuen, men kan nu følge favoritholdet
-  på din tablet, computer eller telefon lige nøjagtigt, hvor du vil. Se kampene
-  i sommerhuset, i bussen eller på en fortovscafé med en iskold øl i hånden.<br>
-  Du bestemmer helt selv og med et kæmpe udvalg af kampe er der altid en
-  begivenhed til lige netop dig.</p>
-
-<h3>Sådan streamer du fodbold</h3>
-
-  <p>Læs vores guide til streaming og find den udbyder, der passer dig bedst.
-  Vi anbefaler kun lovlig streaming i den bedste kvalitet, og der er nok at
-  vælge imellem.<br>
-  Vil du gerne se kampe og samtidig åbne en spillekonto? Foretrækker du bare
-  et kæmpe udvalg af kampe? Eller vil du følge en bestemt liga eller et bestemt
-  hold? Mulighederne er mange, og vi hjælper dig til at træffe det bedste valg
-  til dit behov.</p>";*/
-    $data = "";
-    return $data;
-  }
-
-  public function getDefaultSportPage($sport) {
-    /*$data = "[page-header type='main' title='Se::Live Stream::'.$sport.'' background_image='themes/custom/steve/images/fodbold-desktop-banner.jpg']
-             [match-ad type='page_header_main' title=''.$sport.' skal ses live!' subtitle='Følg dit yndlingshold' modes_1_title='live på TV' modes_1_icon_class='glyphicon-home' modes_2_title='live på stadion' modes_2_icon_class='glyphicon-plane' modes_3_title='eller live online' modes_3_subtitle='på pc, mobil eller tablet.' modes_3_icon_class='glyphicon-play-circle']
-             [/match-ad]
-             [/page-header]
-             [matches-banner count='3' title='De mest populære kampe til DIG' subtitle='Vi giver dig den bedste '.$sport.' i verden, de fedeste optakter og muligheden for at se live stream '.$sport.' i den højeste kvalitet. Hver dag bliver en '.$sport.'-fest!' background_image='themes/custom/steve/images/bg-matches-banner.png']
-             [/matches-banner]
-             [schedule title='Kampprogram' background_image='themes/custom/steve/images/ground-image-football.jpg']
-             [/schedule]
-             [stream-providers title='Find din live stream udbyder']
-             [/stream-providers]";
-    $data = "
-  [page-header type='main' title='Se::Live Stream::$sport' background_image='themes/custom/steve/images/fodbold-desktop-banner.jpg']
-  [match-ad type='page_header_main' title='$sport skal ses live!'subtitle='Følg dit yndlingshold' modes_1_title='live på TV' modes_1_icon_class='glyphicon-home' modes_2_title='live på stadion' modes_2_icon_class='glyphicon-plane' modes_3_title='eller live online' modes_3_subtitle='på pc, mobil eller tablet.' modes_3_icon_class='glyphicon-play-circle'][/match-ad][/page-header]
-  [matches-banner count='3' title='De mest populære kampe til DIG' subtitle='Vi giver dig den bedste $sport i verden, de fedeste optakter og muligheden for at se live stream $sport i den højeste kvalitet. Hver dag bliver en fodbold-fest!' background_image='themes/custom/steve/images/bg-matches-banner.png'][/matches-banner]
-  [schedule title='Kampprogram' background_image='themes/custom/steve/images/ground-image-football.jpg'][/schedule]
-  [stream-providers title='Find din live stream udbyder'][/stream-providers]";*/
-    $data = '';
-    return $data;
-  }
-
-  public function getDefaultSportInternalPage($id, $name, $sport_name) {
-    $data = [
-      2 => "
-               [page-header type='compact' background_image='themes/custom/steve/images/content_bg_generic.png' title='Live stream $sport_name | $sport_name i TV | Live stream providere' p1='Vi har samlet de største udbydere af live $sport_name, som viser kampe fra de store internationale og europæiske ligaer, landskampe og meget mere...' p2='Udbyderne har forskellige rettigheder til ligaerne. Se hvilke ligaer de forskellige udbydere viser kampe fra nedenfor.']
-               [carousel type='matches' count='3' background_image='themes/custom/steve/images/ground-small.png' title='Udvalgte kampe'][/carousel]
-               [/page-header]
-               [stream-providers type='list' size='large' title='Find din live stream udbyder' background_image='themes/custom/steve/images/ground-image-football.jpg'][/stream-providers]",
-      3 => "Blog Contents",
-      4 => "",
-    ];
-    return $data [4];
   }
 
   public function getIdChannelByNode($nodList) {
@@ -204,15 +109,6 @@ class RepoGeneralGetInfo extends ControllerBase {
       $tags_array [] = ['target_id' => $ischanel->id()];
     }
     return $tags_array;
-  }
-
-  public function getDataApi($url) {
-    $base = 'http://steve.rebelpenguin.dk:10080/api/';
-    $format = '/?format=json';
-    $client = \Drupal::httpClient();
-    $comp = $client->request('GET', $base . $url . $format);
-    $response = json_decode($comp->getBody()->getContents());
-    return $response;
   }
 
   public function getTaxonomyParent($competition) {
@@ -315,6 +211,47 @@ class RepoGeneralGetInfo extends ControllerBase {
     $data = $query_selct->execute()->fetchAll();
     return $data;
   }
+
+/*----------------------------------------------------------------*/
+  public function getRepoData($url) {
+    $client = new Client();
+    $response = $client->request('GET', $url);
+    $data = json_decode($response->getBody()->getContents());
+    return $data;
+  }
+
+  public function getSiteByID($siteID) {
+    $site = \Drupal::entityTypeManager()
+      ->getStorage('site')
+      ->loadByProperties(['field_site_api_id' => $siteID]);
+    return $site;
+  }
+
+  public function getDataApi($url) {
+    $base = 'http://steve.rebelpenguin.dk:10080/api/';
+    $format = '/?format=json';
+    $client = \Drupal::httpClient();
+    $comp = $client->request('GET', $base . $url . $format);
+    $response = json_decode($comp->getBody()->getContents());
+    return $response;
+  }
+
+  public function getDefaultText($part1, $part2) {
+    return "";
+  }
+
+  public function getDefaultTeam($part) {
+    return "";
+  }
+
+  public function getDefaultSportPage($sport) {
+    return "";
+  }
+
+  public function getDefaultSportInternalPage($id, $name, $sport_name) {
+    return "";
+  }
+
 
 
 }
