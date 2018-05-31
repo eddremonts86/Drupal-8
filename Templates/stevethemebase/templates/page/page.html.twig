@@ -8,6 +8,11 @@
     <section>
         {{ render_block('sitesportsubmenu') }}
     </section>
+
+    <section>
+        {{ render_block('custombreadcrumbsblock') }}
+    </section>
+
     {% if page.content %}
         {{ page.content }}
     {% endif %}

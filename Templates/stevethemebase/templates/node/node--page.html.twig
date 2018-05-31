@@ -1,19 +1,23 @@
-<section class="container general_pages">
+{% set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+] %}
+<section class="container general_articles">
     <article{{ attributes.addClass(classes) }}>
         <header>
             {{ title_prefix }}
-            {% if not page %}
-                <h1{{ title_attributes.addClass('node__title') }}>
-                    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-                </h1>
-            {% endif %}
+            <h1{{ title_attributes.addClass('node__title') }}>{{ label }}</h1>
             {{ title_suffix }}
+
             {% if display_submitted %}
                 <div class="node__meta">
                     {{ author_picture }}
-                    <span{{ author_attributes }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        </span>
+                    <span> {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}</span>
                     {{ metadata }}
                 </div>
             {% endif %}
@@ -23,5 +27,6 @@
         </div>
     </article>
 </section>
+
 
 

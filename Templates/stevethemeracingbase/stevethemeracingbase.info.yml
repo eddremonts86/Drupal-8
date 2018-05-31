@@ -1,0 +1,14 @@
+name: SteveThemeRacingBase
+type: theme
+base theme: bootstrap
+description: Theme base of all Steve Drupal project
+package: Rebel Penguins CMS - Frontend
+core: 8.x
+
+libraries:
+  - stevethemebase/global-scrpts
+  - stevethemebase/global-styling
+
+regions:
+  content: 'Content'
+  none: 'None'

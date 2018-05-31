@@ -26,10 +26,27 @@
  */
 #}
 
-    <div{{ attributes }}>
-        {{ title_prefix }}
-        <h1><a href="{{ url }}">{{ name }}</a></h1>
-        {{ title_suffix }}
-        {{ content }}
-    </div>
+<section class="taxonomyEvent">
+	
+	<section>
+		{{ render_block('participantpagehead') }}
+	</section>
 
+	<div class="container ParticipantBody">
+		<div class="row">
+			<div class="col-md-8">
+				{{ render_block('participantpagebody') }}
+			</div>
+			<div class="col-md-4">
+				{{ render_block('participantpagelist') }}
+                {{ render_block('participantpageschedule') }}
+			</div>
+		</div>
+		{#<div class="row">
+			<div class="col-md-8">
+				{{ render_block('participantpageschedule') }}
+			</div>
+		</div>#}
+	</div>
+
+</section>

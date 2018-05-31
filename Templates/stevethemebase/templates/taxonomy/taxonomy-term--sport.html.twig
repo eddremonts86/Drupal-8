@@ -26,10 +26,28 @@
  */
 #}
 
-    <div{{ attributes }}>
-        {{ title_prefix }}
-        <h1><a href="{{ url }}">{{ name }}</a></h1>
-        {{ title_suffix }}
-        {{ content }}
-    </div>
+<section class="taxonomyEvent">
+	
+	<section>
+		{{ render_block('sportsandtournamentspagehead') }}
+	</section>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				{{ render_block('sportsandtournamentspagebody') }}
+			</div>
+			<div class="col-md-4">
+				{{ render_block('sportsandtournamentspagelist') }}
+				{{ render_block('sportsandtournamentspageschedule') }}
+			</div>
+		</div>
+		{#<div class="row">
+			<div class="col-md-12">
+				#}{#{{ render_block('sportsandtournamentspageschedule') }} #}{#
+		</div>#}
+	</div>
+
+</section>
+
 

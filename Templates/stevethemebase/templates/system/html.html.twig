@@ -52,17 +52,25 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token|raw }}"></css-placeholder>
     <js-placeholder token="{{ placeholder_token|raw }}"></js-placeholder>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </head>
-<body{{ attributes.addClass(body_classes) }}>
-<a href="#main-content" class="visually-hidden focusable skip-link"> {{ 'Skip to main content'|t }}</a>
-    {{ page.siteflagmenu }}
-    {{ page.siteundermenubar }}
+<body{{ attributes.addClass(body_classes) }} id="stevetemebase">
+    {{ page_top }}
+    {% if page.siteflagmenu %}
+        {{ page.siteflagmenu }}
+    {% endif %}
+
+    {% if page.siteundermenubar %}
+        {{ page.siteundermenubar }}
+    {% endif %}
+
     {{ page }}
-    {{ page.footer }}
-<js-bottom-placeholder token="{{ placeholder_token|raw }}"/>
+
+    {% if page.footer %}
+        {{ page.footer }}
+    {% endif %}
+
+    {{ page_bottom }}
+    {{ include ('modal.html.twig' , {myModal : 'myModal',  myModalLabel : 'myModalLabel', title : 'pop_up_age_policy_title', body : 'pop_up_age_policy_text'}) }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
 </body>
 </html>

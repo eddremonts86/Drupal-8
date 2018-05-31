@@ -1,16 +1,15 @@
-global-steve-styling:
+global-styling:
    css:
       base:
-        src/css/live/reset.min.css: {}
         src/css/live/font-awesome.min.css: {}
         src/css/live/tabsTypes.min.css: {}
         src/css/live/style.min.css: {}
-   js:
-      src/js/live/jscript.min.js: {}
-   dependencies:
-      - core/jquery
-      - core/jquery.once
+
 global-styling-homepage:
    css:
       base:
         src/css/live/homepage.min.css: {}
+
+global-scrpts:
+  js:
+    src/js/live/jscript.min.js: {}
