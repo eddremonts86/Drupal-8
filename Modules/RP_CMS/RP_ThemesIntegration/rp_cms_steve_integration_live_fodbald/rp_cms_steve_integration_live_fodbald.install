@@ -1,0 +1,44 @@
+<?php
+use Drupal\block\Entity\Block;
+
+function rp_cms_steve_integration_live_fodbald_install() {
+	$blocks = [];
+	$blocks = \Drupal::entityTypeManager()
+		->getStorage('block')
+		->loadByProperties(['theme' => 'live_fodbald', 'region' => 'content']);
+	
+	if($blocks){
+		foreach(array_keys($blocks) as $block){
+			$block = Block::load($block);
+			if($block->getPluginId() != 'system_main_block'){
+				$block->setRegion('none');
+				$block->save();
+			}
+		}
+	}
+}
+
+function rp_cms_steve_integration_live_fodbald_schema() {
+  $schema['live_fodbold_team_list'] = array(
+    'description' => 'The base table shows relations between teams and leagues.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'ID',
+        'type' => 'serial',
+		'unsigned' => TRUE,
+		'not null' => TRUE,
+      ),
+      'ttid' => array(
+        'description' => 'Team Term ID.',
+        'type' => 'int',
+      ),
+      'ltid' => array(
+        'description' => 'League Teram ID',
+        'type' => 'int',
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+	  
+  return $schema;
+}

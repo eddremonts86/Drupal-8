@@ -1,0 +1,27 @@
+# Participant Info routing definition
+participant_info.settings_tab:
+  route_name: participant_info.settings
+  title: 'Settings'
+  base_route: participant_info.settings
+
+entity.participant_info.canonical:
+  route_name: entity.participant_info.canonical
+  base_route: entity.participant_info.canonical
+  title: 'View'
+
+entity.participant_info.edit_form:
+  route_name: entity.participant_info.edit_form
+  base_route: entity.participant_info.canonical
+  title: 'Edit'
+
+entity.participant_info.version_history:
+  route_name: entity.participant_info.version_history
+  base_route: entity.participant_info.canonical
+  title: 'Revisions'
+
+entity.participant_info.delete_form:
+  route_name:  entity.participant_info.delete_form
+  base_route:  entity.participant_info.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,23 @@
+uuid: 09d8dc9f-fa14-4e1b-927f-a47a6fc4ca75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_sport_front
+    - taxonomy.vocabulary.sport
+id: taxonomy_term.sport.field_sport_front
+field_name: field_sport_front
+entity_type: taxonomy_term
+bundle: sport
+label: 'Sport Promote To Frontpage'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

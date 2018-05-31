@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_game_info
+    - rp_region
+id: game_info.field_game_info_region
+field_name: field_game_info_region
+entity_type: game_info
+type: entity_reference
+settings:
+  target_type: region
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

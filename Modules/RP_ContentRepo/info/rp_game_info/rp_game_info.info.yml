@@ -1,0 +1,7 @@
+name: RP Game Info
+type: module
+description: RP Game Info Entity
+core: 8.x
+package: RP
+dependencies:
+  - rp_game

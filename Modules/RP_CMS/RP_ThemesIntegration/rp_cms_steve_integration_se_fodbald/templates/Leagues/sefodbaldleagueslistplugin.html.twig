@@ -1,0 +1,29 @@
+<section class="LeaguesListPlugin Block">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12 col-sm-12 col-xs-12">
+				<div class="panel panel-default ListBlock">
+					<div class="panel-heading">
+						<h2 class="panel-title">{{ "se_fodbald_leagues_list_title"|t }}</h2>
+					</div>
+					<div class="panel-body">
+						{% if tags %}
+							<ul>
+								{% for league in tags %}
+		                            <li>
+										<a href="{{ league.link }}">
+											{% if league.img %}
+												<img src="{{ file_url(league.img) }}">
+											{% endif %}
+											{{ league.name }}
+										</a>
+									</li>
+								{% endfor %}
+	                        </ul>
+                        {% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

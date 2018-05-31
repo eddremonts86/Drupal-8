@@ -1,0 +1,137 @@
+.LeagueSchedule{
+	padding: 0 10px;
+	margin: 0 0 10px 0;
+	border-radius: 10px;
+	border: 1px solid #333;
+	background: #230B23;
+	
+	.ScheduleList{
+		margin: 0 0 .5em 0;
+		.panel-heading{
+			margin: 0;
+			padding: 5px 0;
+			background: none;
+			h4{
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+		.panel-body{
+			ul{
+				&.Events{
+					li{
+						a{
+							span{
+								&.date{
+									width: 20%;
+								}
+								&.team{
+									width: 40%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+
+.SchedulePage{
+	background: #333532;
+    padding: 10px;
+    width: 100%;
+    h3{
+	    &.DayTitle{
+		    text-transform: capitalize;
+			font-weight: bold;
+			display: block;
+			color: #fff;
+			text-align: center;
+			margin: 0;
+			font-family: 'Gudea', sans-serif;
+			line-height: 1.1;
+			font-size: 13px;
+	    }
+    }
+    
+    .panel-group{
+	    margin: 0;
+    }    
+    
+    .ProgramControls{
+	    display: flex;
+	    justify-content: space-between;
+	    padding: 20px 0;
+		width: 100%;
+		flex-direction: row-reverse;
+		span{
+			a{
+				color: #FFF !important;
+				text-decoration: none !important;
+				text-transform: uppercase;
+				font-weight: 100;
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+    }
+}
+
+.HomeSchedule{
+	.DaySelectContainer{
+		#DaySelect{
+			padding: 0.3em 1em;
+		    width: 100%;
+		    border: none;
+		    border-radius: 5px 5px 0 0 !important;
+		    background: #230B23 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAHCAYAAAA4R3wZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNJREFUeNpi+P////z/pIP5DCBAomaIJhggUjOqJiI1Y9dEQDN+TTg0E6cJTTNOTQABBgCOdNnhclY13AAAAABJRU5ErkJggg==") no-repeat 99% 50%;
+		    color: #fff;
+		    outline: none;
+		    box-shadow: none;
+		    margin: 0 0 -2px 0;
+		    -webkit-appearance: none;
+		    -moz-appearance: none;
+		    appearance: none;
+		    text-transform: uppercase;
+		}
+	}
+	.panel-group{
+		background: #230B23;
+		border-radius: 5px 5px 0 0;
+		border: 1px solid #333;
+		margin: 0 0 10px 0;
+		padding: 0 10px;
+		display: none;
+		
+		h3{
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0.3em 0.5em;
+			width: 100%;
+			border: none;
+			color: #fff;
+			text-transform: uppercase;
+			font-family: 'Gudea', sans-serif;
+			font-size: 14px;
+			line-height: 1.42857143;
+			font-weight: lighter;	
+		}
+		
+		.panel{
+			&.LeagueEvents{
+				margin: 0 0 .5em 0;
+			}
+		}
+		
+		&.active{
+			display: block;
+			
+			h3{
+				display: none;	
+			}
+					
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{% if tags %}
+	<section class="HomeBreabcrumbsPlugin BreadcrumbsBlock Block">
+		<div class="container">
+			<div class="row">
+				<div class="col col-sm-12 col-xs-12 col-md-12">
+					<ul>
+						{% for link in tags %}
+							{% if link.type == 'link' %}
+								<li><a href="{{ link.urk }}">{{ link.text }}</a></li>
+							{% else  %}
+								<li class="delimiter">></li>
+							{% endif %}
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

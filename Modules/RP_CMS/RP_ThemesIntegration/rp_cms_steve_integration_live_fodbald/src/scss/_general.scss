@@ -1,0 +1,154 @@
+/*GENERAL*/
+body{
+	font-family: 'Varela Round',sans-serif;
+	font-weight: 100;
+	line-height: 1.42857143;
+	font-size: 14px;
+	-moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+.container-fluid,
+.container{
+	max-width: $content-max-width;
+	padding: 4em 0;
+	margin: 0 auto;
+	width: 100%;
+}
+.col{
+	padding: 0;
+}
+.row{
+	margin: 0;
+}
+p{
+	color: #81888e;
+    word-spacing: 1px;
+    line-height: 1.5;
+    font-size: .99em;
+    margin: .8em 0;
+}
+h1{
+	font-size: 1.8em;
+	margin: .67em 0;
+	color: #fff;
+	font-weight: 700;
+	font-family: Abel,sans-serif;
+}
+h2{
+	text-transform: uppercase;
+	margin: .83em 0;
+	font-size: 15px;
+	color: $color-heavy-metal-2;
+	&:after{
+		border: 2px solid $color-highland;
+		width: 45px;
+		content: '';
+		display: block;
+		margin: 20px 0;
+	}
+}
+h3{
+	text-transform: uppercase;
+	font-size: .94em;
+	margin: 1em 0 0;
+}
+h4{
+    font-size: 1em;
+    margin: 1.33em 0;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #333;
+}
+h5{
+
+}
+h6{
+
+}
+
+a{
+	color: rgba(44, 113, 129, 1);
+	font-size: 14px;
+	transition: all .5s;
+	&:focus,
+	&:hover{
+		color: rgba(68,152,171,1);
+		text-decoration: none;
+	}
+}
+strong,
+b{
+	font-weight: 700;
+}
+.pagination{
+	li{
+		a{
+			border-radius: 0;
+			padding: 6px 12px;
+		}
+	}
+}
+a{
+	&.btn{
+		border: none;
+		background: #F2B521;
+		box-shadow: 0 1.5px 0 0 rgba(242, 181, 33, 0.55);
+		padding: 1em 2em 1em 1em;
+		color: #fff;
+		line-height: 1;
+		margin: 1em 0;
+		font-weight: 700;
+		position: relative;
+		text-transform: uppercase;
+
+		&:focus,
+		&:hover{
+			background: #e19211;
+			color: #fff;
+		}
+		&.arrow{
+			&:after{
+				margin-top: -7px;
+				position: absolute;
+				right: 5px;
+				display: inline-block;
+				font: normal normal normal 14px/1 FontAwesome;
+				font-size: inherit;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				top: 50%;
+				content: "\f061";
+				margin-right: 2px;
+			}
+		}
+	}
+}
+
+#block-fodbaldpopupplugin{
+	.contextual{
+		display: none;
+	}
+}
+
+
+@include tablet{
+	.container{
+		width: 750px;
+	}
+}
+
+@include mobile{
+	.container{
+		width: 100%;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	
+	a{
+		&.btn{
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+}

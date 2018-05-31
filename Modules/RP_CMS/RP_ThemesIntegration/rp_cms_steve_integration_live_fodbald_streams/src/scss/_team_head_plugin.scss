@@ -1,0 +1,43 @@
+.TeamHeadPlugin{
+	@include smalldesktop{
+		.container{
+			max-width: none !important;
+			
+			.row{
+				flex-direction: column;
+				
+				.vs-block{
+					width: 100%;
+					padding: 20px 0 0 0 !important;
+					
+					.vs-block-team{
+						min-width: 180px;
+						padding: 0 20px;
+						flex-direction: column !important;
+						.vs-block-team-name{
+							font-size: 15px !important;
+							padding: 20px 0 0 0 !important;
+						}
+					}
+				}
+				.showcase{
+					width: 100%;
+					max-width: none !important;
+					margin: 0px !important;
+				}
+				.vs-block-info{
+					.vs-block-vs{
+						padding: 0 !important;
+						margin: 30px 0 !important;;
+						span{
+							font-size: 25px !important;
+						}
+					}
+					.vs-block-date{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

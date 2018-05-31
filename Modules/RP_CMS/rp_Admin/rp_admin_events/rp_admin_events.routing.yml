@@ -1,0 +1,26 @@
+
+rp_admin_events.eventsList:
+  path: '/admin/rp/events'
+  defaults:
+    _form: '\Drupal\rp_admin_events\Form\eventsList'
+    _title: 'eventsList'
+  requirements:
+    _access: 'TRUE'
+  
+
+rp_admin_events.eventlist:
+  path: '/admin/rp/event/{id}/{name}'
+  defaults:
+    _form: '\Drupal\rp_admin_events\Form\eventList'
+    _title: 'eventList'
+  requirements:
+    _access: 'TRUE'
+  
+
+rp_admin_events.eventedit:
+  path: '/admin/rp/event/{id}/edit'
+  defaults:
+    _form: '\Drupal\rp_admin_events\Form\eventedit'
+    _title: 'eventedit'
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,21 @@
+uuid: 92952cd1-af26-4162-ae2e-e07e26ed934e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_participant_front_title
+    - taxonomy.vocabulary.participant
+  module:
+    - text
+id: taxonomy_term.participant.field_participant_front_title
+field_name: field_participant_front_title
+entity_type: taxonomy_term
+bundle: participant
+label: 'Participant Front Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

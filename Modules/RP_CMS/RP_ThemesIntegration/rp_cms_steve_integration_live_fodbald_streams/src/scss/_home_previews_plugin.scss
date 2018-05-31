@@ -1,0 +1,19 @@
+.HomePreviewsPlugin{
+    background: url(../images/plants-bg1.jpg) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+	>.container{
+		padding: 0;
+	}
+	
+	@include tablet{
+		>.container{
+			padding: 25px 0;
+		}
+	}
+	@include mobile{
+		>.container{
+			padding: 25px 1em;
+		}
+	}
+}

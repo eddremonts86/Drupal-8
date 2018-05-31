@@ -1,0 +1,13 @@
+<h1 class='o-frontpage-hero__title'>
+	{{ "hero_title_homeheadplugin" | t }}
+</h1>
+<h2 class='o-frontpage-hero__subtitle'>
+	{{ "hero_subtitle_homeheadplugin" | t }}
+</h2>
+<div class="container">
+	{{ render_block('colormainmenublock') }}
+	<div class="langSwitcher">
+		<a>{{ 'Language'|t }} <i class="fa fa-caret-down" aria-hidden="true"></i> </a>
+		{{ render_block('languageswitcher') }}
+	</div>
+</div>

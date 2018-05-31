@@ -1,0 +1,7 @@
+name: RP Stream Provider Info
+type: module
+description: RP Stream Provider Info
+core: 8.x
+package: RP
+dependencies:
+  - rp_stream_provider

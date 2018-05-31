@@ -1,0 +1,68 @@
+.o-frontpage-hero {
+	ul {
+		margin: 0;
+		text-align: center; 
+		
+		li {
+			text-align: center;
+			margin: 0 1em;
+			float: none;
+			display: inline-block;
+			margin-bottom: 20px;
+			
+			a {
+				margin: 0;
+			    font-size: 28px;
+			    min-width: 185px;
+
+			    @media (max-width: 768px) {
+				    font-size: 15px;
+			    }
+			}
+		}
+	}
+
+	@include mobile{
+		ul{
+			&.menu{
+				li{
+					margin: 0 3px 10px 3px;
+					a{
+						padding: 9px 12px;
+					}
+				}
+			}
+		}
+	}
+
+	.langSwitcher{
+		padding: 0;
+		width: 120px;
+		margin: 0 auto;
+
+		> a{
+			background: #353535;
+			padding: 6px 15px;
+			font-size: 16px;
+			font-weight: 600;
+			color: white;
+			border-radius: 4px;
+			width: 100%;
+			display: block;
+			border: 1px solid #000;
+		}
+
+		.block-language{
+			top: 42px;
+
+			.links{
+				li{
+					a{
+						font-size: 16px; 
+						color: $color-white;
+					}
+				}
+			}
+		}
+	}
+}

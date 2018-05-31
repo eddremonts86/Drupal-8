@@ -1,0 +1,20 @@
+uuid: 78ccde37-55f4-4c30-b40a-4bd6f43cce43
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldmatchprovidersplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldmatchprovidersplugin
+settings:
+  id: fodbaldmatchprovidersplugin
+  label: 'Fodbald Match Providers Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

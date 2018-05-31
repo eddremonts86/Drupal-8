@@ -1,0 +1,126 @@
+<section class="ProviderPageBody">
+	<div class="container">
+		<div class="row">
+			<div>
+				<a target="_blank" href="">
+					<img alt="logo" width="auto" height="auto" src="{{ file_url(tags.logo) }}">
+				</a>
+			</div>
+			<div>
+				<h2>{{ tags.name }}</h2>
+				<div> 
+					<p><i class="fa fa-check" aria-hidden="true"></i></i>{{ tags.ProviderFeatures1 }}</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i></i>{{ tags.ProviderFeatures2 }}</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i></i>{{ tags.ProviderFeatures3 }}</p>                                
+					<a role="button" class="btn arrow red" target="_blank" href="">
+						{{ tags.gotoButton }}
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="text">
+				<h4>{{ tags.Provider1Heading }}
+					<span class="rating" data-rating="{{ tags.Provider1Stars }}">
+						{% for i in 1.. tags.Provider1Stars %}
+							<em class="fa fa-star"></em>
+						{% endfor %}
+						{% for i in 1.. (5 - tags.Provider1Stars) %}
+							{% if (5 - tags.Provider1Stars) > 0 %}
+								<em class="fa fa-star-o"></em>
+							{% endif %}
+						{% endfor %}
+					</span>
+				</h4>
+				<p>{{ tags.Provider1Content }}</p>
+			</div>
+			<div class="text">
+				<h4>{{ tags.Provider2Heading }}
+					<span class="rating" data-rating="{{ tags.Provider2Stars }}">
+						{% for i in 1.. tags.Provider2Stars %}
+							<em class="fa fa-star"></em>
+						{% endfor %}
+						{% for i in 1.. (5 - tags.Provider2Stars) %}
+							{% if (5 - tags.Provider2Stars) > 0 %}
+								<em class="fa fa-star-o"></em>
+							{% endif %}
+						{% endfor %}
+					</span>
+				</h4>
+				<p>{{ tags.Provider2Content }}</p>
+			</div>
+			<div class="text">
+				<h4>{{ tags.Provider3Heading }}
+					<span class="rating" data-rating="{{ tags.Provider3Stars }}">
+						{% for i in 1.. tags.Provider3Stars %}
+							<em class="fa fa-star"></em>
+						{% endfor %}
+						{% for i in 1.. (5 - tags.Provider3Stars) %}
+							{% if (5 - tags.Provider3Stars) > 0 %}
+								<em class="fa fa-star-o"></em>
+							{% endif %}
+						{% endfor %}
+					</span>
+				</h4>
+				<p>{{ tags.Provider3Content }}</p>
+
+				<p>{{ tags.Provider3Content_1 }}</p>
+			</div>
+			<div class="text">
+				<h4>{{ tags.Provider4Heading }}
+					<span class="rating" data-rating="{{ tags.Provider4Stars }}">
+						{% for i in 1.. tags.Provider4Stars %}
+							<em class="fa fa-star"></em>
+						{% endfor %}
+						{% for i in 1.. (5 - tags.Provider4Stars) %}
+							{% if (5 - tags.Provider4Stars) > 0 %}
+								<em class="fa fa-star-o"></em>
+							{% endif %}
+						{% endfor %}
+					</span>
+				</h4>
+				<p>{{ tags.Provider4Content }}</p>
+			</div>
+			<div class="text">
+				<h4>{{ tags.Provider5Heading }}
+					<span class="rating" data-rating="{{ tags.Provider5Stars }}">
+						{% for i in 1.. tags.Provider5Stars %}
+							<em class="fa fa-star"></em>
+						{% endfor %}
+						{% for i in 1.. (5 - tags.Provider5Stars) %}
+							{% if (5 - tags.Provider5Stars) > 0 %}
+								<em class="fa fa-star-o"></em>
+							{% endif %}
+						{% endfor %}
+					</span>
+				</h4>
+				<p>{{ tags.Provider5Content }}</p>
+			</div>
+			<div class="text">
+				<h4>{{ tags.Provider6Heading }}
+					<span class="rating" data-rating="{{ tags.Provider6Stars }}">
+						{% for i in 1.. tags.Provider6Stars %}
+							<em class="fa fa-star"></em>
+						{% endfor %}
+						{% for i in 1.. (5 - tags.Provider6Stars) %}
+							{% if (5 - tags.Provider6Stars) > 0 %}
+								<em class="fa fa-star-o"></em>
+							{% endif %}
+						{% endfor %}
+					</span>
+				</h4>
+				<p>{{ tags.Provider6Content }}</p>
+
+				<p><em>{{ tags.ProviderSponsored }}</em></p>
+			</div>
+
+		</div>
+		<div class="row">
+			<a class="btn arrow red" role="button" href="" target="_blank">
+				{{ tags.gotoButton }}
+			</a>
+		</div>
+
+	</div>
+</section>

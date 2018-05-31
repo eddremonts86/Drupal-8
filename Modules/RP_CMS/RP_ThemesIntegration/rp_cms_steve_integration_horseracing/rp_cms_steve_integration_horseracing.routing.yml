@@ -1,0 +1,55 @@
+rp_cms_steve_integration_horseracing.horse_home:
+  path: '/horsehome'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseHomePage'
+    _title: 'Horse Home'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_horseracing.horse_watch_live:
+  path: '/horsewatchlive'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseWatchLivePage'
+    _title: 'Horse Watch Live'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_horseracing.horse_race_courses:
+  path: '/horseracecourses'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseRaceCoursesPage'
+    _title: 'Horse Race Courses'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_horseracing.horse_race_course:
+  path: '/horseracecourse'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseRaceCoursePage'
+    _title: 'Horse Race Course'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_horseracing.horse_reviews:
+  path: '/horsereviews'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseReviewsPage'
+    _title: 'Horse Reviews'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_horseracing.horse_review:
+  path: '/horsereview'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseReviewPage'
+    _title: 'Horse Review'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_horseracing.horse_blog:
+  path: '/horseblog'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_horseracing\Controller\HorseRacingController::horseBlogPage'
+    _title: 'Horse Blog'
+  requirements:
+    _permission: 'access content'

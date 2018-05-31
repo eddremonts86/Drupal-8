@@ -1,0 +1,18 @@
+<section class="ProviderPageHead">
+	<div class="container">
+		<div class="row">
+			<h1>{{ "stream_provider_page_head" | t }}</h1>
+			<h2>{{ "stream_provider_page_subhead" | t }}</h2>
+		</div>
+		<div class="row">
+			<ul class="providerTabs">
+				{% if tags %}
+					{% for tab in tags %}
+						<li><a href="{{tab.url}}" {{ tab.active ? 'class="active"' : '' }}>{{tab.name}}</a></li>
+					{% endfor %}
+				{% endif %}
+			</ul>
+		</div>
+		
+	</div>
+</section>

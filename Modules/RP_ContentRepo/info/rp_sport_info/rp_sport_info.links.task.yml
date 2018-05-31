@@ -1,0 +1,27 @@
+# Sport info routing definition
+sport_info.settings_tab:
+  route_name: sport_info.settings
+  title: 'Settings'
+  base_route: sport_info.settings
+
+entity.sport_info.canonical:
+  route_name: entity.sport_info.canonical
+  base_route: entity.sport_info.canonical
+  title: 'View'
+
+entity.sport_info.edit_form:
+  route_name: entity.sport_info.edit_form
+  base_route: entity.sport_info.canonical
+  title: 'Edit'
+
+entity.sport_info.version_history:
+  route_name: entity.sport_info.version_history
+  base_route: entity.sport_info.canonical
+  title: 'Revisions'
+
+entity.sport_info.delete_form:
+  route_name:  entity.sport_info.delete_form
+  base_route:  entity.sport_info.canonical
+  title: Delete
+  weight: 10
+

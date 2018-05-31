@@ -1,0 +1,20 @@
+uuid: 31fbf3cd-f6e3-4698-9d25-28fac1a8db41
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldprogramheadplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldprogramheadplugin
+settings:
+  id: sefodbaldprogramheadplugin
+  label: 'Se Fodbald Program Head Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

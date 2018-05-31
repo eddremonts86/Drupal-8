@@ -1,0 +1,41 @@
+.EventBlock{
+	width: 100%;
+	.EventTeams{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.TeamHolder{
+			display: flex;
+			flex-direction: column;
+			.TeamLogo{
+				height: 35px;
+				width: 35px;
+				border-radius: 100%;
+				background: $color-white;
+				padding: 6px;
+				text-align: center;
+				display: block;
+				img{
+					overflow: hidden;
+					filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .9));
+					-webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .9));
+					min-height: 23px;
+					min-width: 23px;
+				}
+			}
+			.TeamName{
+				display: block;
+				text-align: center;
+				white-space: pre;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+		}
+	}
+	.EventDate{
+		font-size: 26px;
+		line-height: 26px;
+		margin-top: 5px;
+		text-align: center;
+	}
+}

@@ -1,0 +1,123 @@
+.Tabs{
+	.col{
+		&:nth-child(1){
+			padding: 0 3% 0 0;
+			.TabsMenu{
+				margin: 0 0 1em 0;
+				border: none;
+				border-radius: 0;
+
+				&:last-child{
+					margin: 0;
+				}
+				.panel-heading{
+					.panel-title{
+						line-height: 20px;
+					}
+				}
+				.panel-body{
+					.nav-tabs{
+						border: none;
+
+						li{
+							float: none;
+							margin: 0;
+							border-top: 1px dotted #5e5656;
+
+							&.active{
+								a{
+									&:after{	
+										content: ' ';
+										border-color: transparent transparent transparent #444;
+										border-style: solid;
+										border-width: 14px;
+										position: absolute;
+										top: -5px;
+										right: -40px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.TabsContent{
+			h3{
+				margin-top: 0;
+				&:after{
+					content: " ";
+					border: 1px solid #444;
+					display: block;
+					width: 30px;
+					margin: 10px 0;
+				}
+			}
+			p{
+				b{
+					color: $color-tundora;
+					font-weight: 400;
+				}
+				a{
+					i{
+						margin: 2px;
+					}
+				}
+			}
+			span{
+				i{
+					font-size: 10px;
+				}
+			}
+			.sponsoredLogo{
+				position: relative;
+				margin-left: -10px;
+				margin-top: -9px;
+				margin-bottom: 16px;
+
+				img{
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0;
+					height: auto;
+					width: auto;
+
+					&:nth-child(2){
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						border: none;
+
+					}
+				}
+
+			}
+		}
+	}
+	@include tablet{
+		>.col{
+			padding: 0 !important;
+			.TabsMenu{
+				.panel-body{
+					.nav-tabs{
+						li{
+							&.active{
+								a{
+									color: rgba(44,113,129,1) !important;
+									&:after{
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.TabsContent{
+				h3{
+					margin: 1em 0 0;
+				}
+			}
+		}	
+	}
+}

@@ -1,0 +1,59 @@
+<section class="ProgramMatchListPlugin">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12 ProgramBlock Full">
+				{% for day in tags.schedule %}
+					<div class="ProgramHeader">
+						<h3 class="title">{{ day.format }}</h3>
+						<ul class="dates">
+							{% for day in tags.pager.days %}
+								<li {{ day.active ? attributes.addClass('active') }}><a href="{{ day.link }}">{{ day.format | raw }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="ProgramList">
+						<div class="panel-group" role="tablist">
+							{% for league in day.leagues %}			
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											{% if league.image %}
+												<img src="{{ file_url(league.image) }}">
+											{% endif %}
+											{{ league.name }}
+										</h4>
+									</div>
+									<div class="panel-body">
+										<ul class="Matches">
+											{% for match in league.list %}
+												<li>
+													<a href="{{ match.link }}">
+														<span class="date">{{ match.date }}</span>
+														{% if match.teams %}
+															{% for team in match.teams %}
+																<span class="team">
+																	{{ team.name }}
+																	{% if team.image %}
+																		<img src="{{ file_url(team.image) }}">
+																	{% endif %}
+																</span>
+															{% endfor %}
+														{% endif %}
+													</a>
+												</li>						
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							{% endfor %}	
+						</div>
+					</div>
+				{% endfor %}
+			</div>	
+			<div class="col col-md-12 pagination">
+				<span class="prev"><a href="{{ tags.pager.prev }}">{{ "live_fodbald_schedule_prev" | t}}</a></span>
+				<span class="next"><a href="{{ tags.pager.next }}">{{ "live_fodbald_schedule_next" | t}}</a></span>
+			</div>
+		</div>
+	</div>
+</section>

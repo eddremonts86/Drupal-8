@@ -1,0 +1,20 @@
+uuid: ca078a03-4689-4035-a2d4-bcb742bd814f
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldmatchcontentplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldmatchcontentplugin
+settings:
+  id: sefodbaldmatchcontentplugin
+  label: 'Se Fodbald Match Content Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

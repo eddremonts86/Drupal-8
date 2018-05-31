@@ -1,0 +1,14 @@
+
+# Region menu items definition
+entity.region.collection:
+  title: 'Region list'
+  route_name: entity.region.collection
+  description: 'List Region entities'
+  parent: rp_base.controller_entity_content
+  weight: 100
+
+region.admin.structure.settings:
+  title: Region settings
+  description: 'Configure Region entities'
+  route_name: region.settings
+  parent: rp_base.controller_entity_settings

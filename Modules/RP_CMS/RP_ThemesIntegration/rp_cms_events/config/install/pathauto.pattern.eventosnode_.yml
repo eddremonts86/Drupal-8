@@ -1,0 +1,38 @@
+langcode: eo
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: eventosnode_
+label: 'Nodes CT'
+type: 'canonical_entities:node'
+pattern: '[node:langcode]/[node:field_event_tournament]/[node:title]'
+selection_criteria:
+  7ad6ba12-baff-42a7-a6f9-b8b35157aff7:
+    id: node_type
+    bundles:
+      article: article
+      events: events
+      page: page
+      sport: sport
+      sport_blogs: sport_blogs
+      sport_stream_reviews: sport_stream_reviews
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7ad6ba12-baff-42a7-a6f9-b8b35157aff7
+  704492d1-7d02-44eb-9c5d-4d87f723d12c:
+    id: language
+    langcodes:
+      en: en
+      ie: ie
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 704492d1-7d02-44eb-9c5d-4d87f723d12c
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

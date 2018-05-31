@@ -1,0 +1,64 @@
+<section class="HomeMatchesPlugin">
+	<div class="container">
+		<div class="row">
+			{% if tags %}
+				{% set active = null %}
+				<div class="col col-sm-12 col-xs-12 col-md-12 HomeSchedule">
+					<div class="DaySelectContainer">
+						<select id="DaySelect">
+							{% for key, day in tags.controls %}
+							
+								{% if active is null %}
+									{% set active = key %}
+								{% endif %}
+								
+								<option value="{{ key }}" {{ active == key ? 'selected="selected"'}}>{{ day }}</option>
+							{% endfor %}
+						</select>
+					</div>
+					{% for key, day in tags.schedule %}
+						<div class="panel-group {{ active == key ? 'active' }}" day="{{ key }}"> 
+							<h3>{{ day.format }}</h3>
+							{% for league in day.leagues %}
+								<div class="panel panel-default ScheduleList">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											{% if league.image %}
+												<img src="{{ file_url(league.image) }}">
+											{% endif %}
+											{{ league.name }}
+										</h4>
+									</div>
+									<div class="panel-body">
+										<ul class="Events">
+											{% for match in league.events %}
+												<li>
+													<a href="{{ match.link }}">
+														<span class="date">{{ match.date|date('H:i') }}</span>
+														{% if match.teams %}
+															{% for team in match.teams %}
+																<span class="team">
+																	{{ team.name }}
+																	{% if team.image %}
+																		<img src="{{ file_url(team.image) }}">
+																	{% endif %}
+																</span>
+															{% endfor %}
+														{% endif %}
+														{% if match.preview %}
+															<span class="preview">{{ "fodbodld_streams_schedule_preview"|t }}</span>
+ 														{% endif %}
+													</a>
+												</li>						
+											{% endfor %}
+										</ul>
+									</div>				
+								</div>
+							{% endfor %}
+						</div>
+					{% endfor %}
+				</div>	
+			{% endif %}
+		</div>
+	</div>
+</section>

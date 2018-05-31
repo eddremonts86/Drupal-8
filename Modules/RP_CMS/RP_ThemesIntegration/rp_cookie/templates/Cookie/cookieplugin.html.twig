@@ -1,0 +1,9 @@
+{% if data.show %}
+	<div class="CookiesPlugin" duration="{{ data.duration }}">
+		<p>{{ "cookie_text"|t }}</p>
+		{% if data.link %}
+			<a href="{{ data.link }}" class="CookiesReadMore">{{ "cookie_read_more"|t }}</a>
+		{% endif %}
+		<a href="#" class="closeWindow">{{ "cookie_button"|t }}</a>
+	</div>
+{% endif %}

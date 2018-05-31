@@ -1,0 +1,20 @@
+uuid: e5960fe8-a1c6-4ee1-b3e8-de8d5404c8c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamsteamsheadplugin
+theme: live_fodbald_streams
+region: none
+weight: 100
+provider: null
+plugin: fodbaldstreamsteamsheadplugin
+settings:
+  id: fodbaldstreamsteamsheadplugin
+  label: 'Fodbald Streams Teams Head Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

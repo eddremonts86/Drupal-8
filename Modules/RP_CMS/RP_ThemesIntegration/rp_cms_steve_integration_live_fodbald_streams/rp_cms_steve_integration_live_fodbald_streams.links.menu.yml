@@ -1,0 +1,23 @@
+rp_cms_steve_integration_live_fodbald_streams.home:
+  title: 'Home'
+  route_name: <front>
+  menu_name: fodbaldstreamsmenu
+  weight: 1
+
+rp_cms_steve_integration_live_fodbald_streams.program:
+  title: 'Program'
+  route_name: rp_cms_steve_integration_live_fodbald_streams.fodbald_streams_program
+  menu_name: fodbaldstreamsmenu
+  weight: 2
+
+rp_cms_steve_integration_live_fodbald_streams.leagues:
+  title: 'Leagues'
+  route_name: rp_cms_steve_integration_live_fodbald_streams.fodbald_streams_leagues
+  menu_name: fodbaldstreamsmenu
+  weight: 3
+
+rp_cms_steve_integration_live_fodbald_streams.teams:
+  title: 'Teams'
+  route_name: rp_cms_steve_integration_live_fodbald_streams.fodbald_streams_teams
+  menu_name: fodbaldstreamsmenu
+  weight: 4

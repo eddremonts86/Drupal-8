@@ -1,0 +1,88 @@
+#block-cookieplugin .contextual{
+	display: none;
+}
+
+.CookiesPlugin{	
+	bottom: 0;
+    right: 0;
+    width: 300px;
+    padding: 25px;
+    height: auto;
+    background: #212221;
+    position: fixed;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Helvetica,Calibri,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 1001;
+    opacity: .99;
+}
+
+.CookiesPlugin p{
+	color: #fff;
+	margin: 0;
+}
+
+.CookiesPlugin a.CookiesReadMore{
+	color: rgb(255, 255, 255);
+    background: transparent;
+    border: 0;
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+    padding-left: 0;
+	line-height: 1.5;
+	padding: 4px 16px 4px 0;
+	font-weight: 700;
+	text-decoration: none !important;
+}
+
+.CookiesPlugin a.closeWindow{
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	padding: 4px 16px;
+    background-color: rgb(74, 214, 237);
+    border-color: transparent;
+	color: #fff !important;
+	transition: background-color .25s ease-out;
+	text-decoration: none !important;
+}
+
+.CookiesPlugin a.closeWindow:hover{
+	background-color: rgb(112, 252, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .CookiesPlugin {
+  	bottom: 0;
+    right: 0;
+    width: 100%;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    height: auto;
+    background: #212221;
+    position: fixed;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Helvetica,Calibri,Arial,sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+    z-index: 1001;
+    opacity: .99;
+    -moz-opacity: 0.99;
+    filter: alpha(opacity=99);
+    margin: 0px;
+  }
+  .CookiesPlugin a.CookiesReadMore{
+	color: rgb(255, 255, 255);
+    background: transparent;
+    border: 0;
+    display: block;
+    text-align: left;
+    margin-bottom: 0px;
+    padding-left: 0;
+  }
+}

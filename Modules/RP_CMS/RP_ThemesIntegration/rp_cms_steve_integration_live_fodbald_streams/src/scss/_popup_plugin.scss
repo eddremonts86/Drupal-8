@@ -1,0 +1,75 @@
+#block-fodbaldstreamspopupplugin{
+	.contextual{
+		display: none;
+	}	
+}
+
+.PopupPlugin{
+	.popupContainer{
+		position: fixed;
+		z-index: 9999999;
+		width: 100%;
+		height: 100%;
+		display: none;
+		top: 0;
+		right: 0;
+		justify-content: center;
+		align-items: center;
+		.popupInner{
+			color: #fff;
+			width: 350px;
+			font-size: 14px;
+			line-height: 1.4;
+			border: 1px solid #000;
+			padding: 20px;
+			background: rgba(0, 0, 0, .85);
+			border-radius: 10px;
+			font-size: 11px;
+			
+			h4{
+				margin-bottom: 5px;
+				font-weight: 700;
+			}	
+			
+			p{
+    			font-size: 11px;
+    			color: rgba(255, 255, 255, 0.85);
+			}
+			
+			>a{
+			    transition: color .25s;
+			    margin: 10px 0 0 0;
+			    padding: 2px 4px;
+			    border: 1px solid #fff;
+			    background: none;
+			    display: inline-block;
+			    color: #fff !important;
+			    text-decoration: none !important;
+			    font-size: 10px;
+				font-weight: 400;
+				line-height: 1.42857143;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				border-radius: 4px;
+				touch-action: manipulation;
+				cursor: pointer;
+			}
+		}
+		&.agepolicy{
+			.popupInner{}
+		}
+		
+		
+		&.Open{
+			display: flex;
+		}
+	}
+	@include mobile{
+		.popupContainer{
+			.popupInner{
+				width: 300px;
+			}
+		}
+	}
+}

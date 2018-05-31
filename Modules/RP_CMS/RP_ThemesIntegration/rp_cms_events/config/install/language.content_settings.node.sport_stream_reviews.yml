@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sport_stream_reviews
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.sport_stream_reviews
+target_entity_type_id: node
+target_bundle: sport_stream_reviews
+default_langcode: site_default
+language_alterable: true

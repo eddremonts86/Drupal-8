@@ -1,0 +1,71 @@
+<section class="HomeHeadPlugin ContentHeader Block">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-8 col-sm-8 col-xs-12 HomeTitle">
+				<h1>{{ "se_fodbald_home_title"|t }}</h1>
+				<div class="arrow">
+					<img src="modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_se_fodbald/src/images/banner-arrow.png">
+				</div>	
+			</div>
+			{% if tags %}
+				{% set fLeague = null %}
+				{% set fLeagueName = null %}
+				{% set fMatch = null %}
+				{% set fMatchName = null %}
+				<div class="col col-md-4 col-sm-4 col-xs-12 SelectMatch">
+					<h5>{{ "se_fodbald_select_match_title"|t }}</h5>
+					
+					
+					<div class="league">
+						<div class="CustomSelect">
+							<select class="select-league">
+								{% for day in tags %}
+									{% for key, league in day.leagues %}
+									
+										{% set LeagueID = 'L' ~ key %}
+										
+										{% if fLeague is null %}
+											{% set fLeague = LeagueID %}
+											{% set fLeagueName = league.name %}
+										{% endif %}
+										
+										
+										<option value="{{ LeagueID }}" {{ fLeague == LeagueID ? 'selected="selected"'}}>{{ league.name }}</option>
+									{% endfor %}
+								{% endfor %}
+							</select>
+							<span>{{ fLeagueName }}</span>
+						</div>
+					</div>
+					
+					<div class="match">
+						<div class="CustomSelect">
+							<select class="select-match">
+								{% for day in tags %}
+									{% for key, league in day.leagues %}
+									
+										{% set LeagueID = 'L' ~ key %}
+										
+										{% for match in league.events %}
+										
+											{% set selected = 0 %}
+											{% if LeagueID == fLeague and fMatch is null %}
+												{% set fMatch = match.link %}
+												{% set fMatchName = match.name %}
+												{% set selected = 1 %}
+											{% endif %}
+											<option value="{{ match.link }}" {{ selected ? 'selected="selected"'}} id="{{ LeagueID }}" {{ fLeague != LeagueID ? 'style="display: none;"'}}>{{ match.name }}</option>
+										{% endfor %}
+									{% endfor %}
+								{% endfor %}
+							</select>
+							<span>{{ fMatchName }}</span>
+						</div>
+					</div>
+					
+					<a href="{{ fMatch }}" class="btn right-arrow">{{ "se_fodbald_select_match_button"|t }}</a>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</section>

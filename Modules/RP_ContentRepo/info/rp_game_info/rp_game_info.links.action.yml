@@ -1,0 +1,8 @@
+entity.game_info.add_form:
+  route_name: entity.game_info.add_form
+  title: 'Add Game info'
+  appears_on:
+    - entity.game_info.collection
+  options:
+    query:
+      destination: '/admin/rp/entity-content/game'

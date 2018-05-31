@@ -1,0 +1,27 @@
+# Site info routing definition
+site_info.settings_tab:
+  route_name: site_info.settings
+  title: 'Settings'
+  base_route: site_info.settings
+
+entity.site_info.canonical:
+  route_name: entity.site_info.canonical
+  base_route: entity.site_info.canonical
+  title: 'View'
+
+entity.site_info.edit_form:
+  route_name: entity.site_info.edit_form
+  base_route: entity.site_info.canonical
+  title: 'Edit'
+
+entity.site_info.version_history:
+  route_name: entity.site_info.version_history
+  base_route: entity.site_info.canonical
+  title: 'Revisions'
+
+entity.site_info.delete_form:
+  route_name:  entity.site_info.delete_form
+  base_route:  entity.site_info.canonical
+  title: Delete
+  weight: 10
+

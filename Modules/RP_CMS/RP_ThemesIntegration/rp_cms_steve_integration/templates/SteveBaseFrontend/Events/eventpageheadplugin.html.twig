@@ -1,0 +1,120 @@
+{% if background %}
+    <section class="o-frontpage-hero_footbal sport_home_slider" style="background: url({{ file_url(background) }}); ">
+{% else %}        
+    <section class="o-frontpage-hero_footbal sport_home_slider">
+{% endif %}
+    <div class="row">
+        {% if is_front == false %}
+            <nav class='o-header__secondary'>
+                <ul>
+                    {{ tags[3].output | raw }}
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
+    {% for nodeData in tags %}
+        <div class="row">
+            <div class="container GP_head">
+                <div class="col-md-8 text-center">
+                    {% for eventParticipants in nodeData.Participants %}
+
+                            <div class="col-xs-12">
+                                <h3 class='o-sportpage-hero__title'>  <a href="{{ eventParticipants.participantAlias }}"> {{ eventParticipants.name }}</a>
+                                    <br>
+                                    {% if nodeData.Participants|length > loop.index %}
+                                    <small class="" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}>
+                                        {{ "vs" |t }}
+                                    </small>
+                                    {% endif %}
+                                </h3>
+                            </div>
+                    {% endfor %}
+                    <div class="col-md-12">
+                        <p class='o-sportpage-hero__title' {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}>
+                            {{ nodeData.sport.sportName|striptags }} {{ "sport_showcase_head_titulo_2" |t }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 sport_home">
+                    <div class="hide-on-mobile">
+                        <div class="col-md-12 text-center">
+                            <h2 class="head">
+                                {% if nodeData.Streamers.ProviderPageDetailHeading != '' and  nodeData.Streamers.ProviderPageDetailHeading != null %}
+                                    {{ nodeData.Streamers.ProviderPageDetailHeading }}
+                                {% else %}
+                                    {{ "sport_showcase_head_titulo_1" |t }} {{ nodeData.sport.sportName|striptags }}  {{ "event_page_head_plugin_live_stream" |t }}
+                                {% endif %}
+                            </h2>
+                            {% for eventParticipants in nodeData.Participants %}
+                                <div class="col-md-6 text-center">
+                                    <div {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}>{{ eventParticipants.name }}</div>
+                                   <a href="{{ eventParticipants.participantAlias }}"> <img class="gap-top" width="70" height="auto" src="{{ file_url(eventParticipants.logo) }}" alt="{{ eventParticipants.name }}"></a>
+                                   {% if loop.first %}
+                                        <h4 {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}>{{ "vs" |t }}</h4>
+                                   {% endif %}
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-12 text-center green-mobile" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}>
+                            <span class="icon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>{{ nodeData.eventDate   | date("d.M Y") }}
+                            <span class="icon-time"><i class="fa fa-clock-o" aria-hidden="true"></i></span>{{ " at " |t }}{{ nodeData.eventDate | date("H : i") }}
+                        </div>
+
+                        {% for Stream in nodeData.Streamers %}
+                        <div class="col-md-12 text-left">
+                            <ol class="fs16 unstyled banner-list">
+                                <li class=""><img alt="step1" src="/themes/custom/stevethemebase/src/images/step1_LV.png" {{ colors ? attributes.setAttribute('style', 'background: ' ~ colors.main) : ''}} />
+                                    {% if Stream.ProviderPageDetailContentIcon1Heading != '' and  Stream.ProviderPageDetailContentIcon1Heading != null %}
+                                        {{ Stream.ProviderPageDetailContentIcon1Heading }}
+                                    {% else %}
+                                        {{ "event_page_head_plugin_go_to" |t }} {{ Stream.streamName }}
+                                    {% endif %}
+                                </li>
+                                <li class=""><img alt="step2" src="/themes/custom/stevethemebase/src/images/step2_LV.png" {{ colors ? attributes.setAttribute('style', 'background: ' ~ colors.main) : ''}} />
+                                    {% if Stream.ProviderPageDetailContentIcon2Heading != '' and  Stream.ProviderPageDetailContentIcon2Heading != null %}
+                                        {{ Stream.ProviderPageDetailContentIcon2Heading }}
+                                    {% else %}
+                                        {{ "event_page_head_plugin_access" |t }}
+                                    {% endif %}
+                                </li>
+                                <li class=""><img alt="step3" src="/themes/custom/stevethemebase/src/images/step3_LV.png" {{ colors ? attributes.setAttribute('style', 'background: ' ~ colors.main) : ''}} />
+                                    {% if Stream.ProviderPageDetailContentIcon3Heading != '' and  Stream.ProviderPageDetailContentIcon3Heading != null %}
+                                        {{ Stream.ProviderPageDetailContentIcon3Heading }}
+                                    {% else %}
+                                        {{ "event_page_head_plugin_live" |t }}
+                                    {% endif %}
+                                </li>
+                            </ol>
+                        </div>
+                        {% if nodeData.eventDate > date().timestamp %}
+                            <div class="col-md-12 countdown">
+                                <p>
+                                    <strong>{{ "event_page_head_plugin_counter"|t }}</strong>
+                                    <span id="counter" startdate="{{ nodeData.eventDate | date("Y/m/d H:i:s") }}">{{ nodeData.eventDate | date("H:i:s") }}</span>
+                                </p>
+                            </div>
+                        {% endif %}
+                        <div class="col-md-12 text-center">
+                            <p>
+                                <a role="button" class="btn arrow" rel="nofollow" href="{{ Stream.endLink }}" {{ colors ? attributes.setAttribute('style', 'background: linear-gradient(to bottom, ' ~ colors.button_gradient_light ~ ' 0, ' ~ colors.button_gradient_dark ~ ' 100%)')}}>
+                                    {% if Stream.FrontPageAffiliateButtonText != '' and  Stream.FrontPageAffiliateButtonText != null %}
+                                        {{ Stream.FrontPageAffiliateButtonText }}
+                                    {% else %}
+                                        {{ "event_page_head_plugin_live_watch" |t }} {{ Stream.streamName }}
+                                    {% endif %}
+                                </a>
+                                <br>
+                                <span>
+                        {% if Stream.ProviderPageDetailContentNote != '' and  Stream.ProviderPageDetailContentNote != null %}
+                            {{ Stream.ProviderPageDetailContentNote }}
+                        {% endif %}
+                        </span>
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</section>

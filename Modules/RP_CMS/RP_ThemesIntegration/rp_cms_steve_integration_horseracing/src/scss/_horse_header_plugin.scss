@@ -1,0 +1,162 @@
+header.siteHeader{
+	background: #f5f1ef;
+	padding: 4px 0 5px;
+	.container{
+		padding: 0;
+		.row{
+			.navbar{
+				background: none;
+				border: none;
+				margin: 0;
+				.container-fluid{
+					padding: 0;
+					height: 51px;
+
+					.navbar-header{
+						height: 100%;
+
+						.navbar-brand{
+							margin: 0;
+							padding: 0;
+							img{
+								height: 47px;
+								width: auto;
+								display: block;
+							}
+						}
+					}
+					#navbar{
+						padding: 0;
+
+						.navbar-nav{
+							padding-left: 54px;
+							height: 100%;
+							li{
+								height: 100%;
+								padding: 11px 30px 10px 20px;
+								&:last-child{
+										padding-left: 13px;
+								}
+								a{
+									line-height: 30px;
+									font-weight: 400;
+									font-size: 20px;
+									color: #103040;
+									text-transform: uppercase;
+									font-family: "Bebas";
+									padding: 0;
+									opacity: .8;
+									letter-spacing: 0.5px;
+									position: relative;
+								}
+								&.active{
+									a{
+										color: #103040;
+										background: none;
+										opacity: 1;
+										&:after{
+											background: #103040;
+											height: 1px;
+											width: 100%;
+											position: absolute;
+											bottom: 0;
+											right: 0;
+											content: '';
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	header.siteHeader{
+		.container{
+			padding: 0;
+			.navbar{
+				background: none;
+				border: none;
+				margin: 0;
+				.container-fluid{
+					padding: 0;
+					height: auto;
+					.row{
+						.navbar-header{
+							height: 50px;
+							width: 100%;
+							margin: 0 0 3px 0;
+							padding: 0 10px;
+
+							.navbar-toggle{
+								display: block;
+								border: none !important;
+								background: none !important;
+								margin: 9px 0;
+								padding: 9px 0;
+
+								.icon-bar{
+									background: #103040;
+									width: 14px;
+								}
+								.icon-bar+.icon-bar {
+									margin-top: 3px;
+								}
+							}
+						}
+						#navbar{
+							float: none;
+							clear: both;
+							margin: 0;
+
+							&.collapse{
+								display: none!important;
+								&.in{
+									display: block !important;
+								}
+							}
+
+							.navbar-nav{
+								width: 100%;
+								height: auto;
+								padding: 0;
+								margin: 0;
+
+								li{
+									height: auto;
+									width: 100%;
+									padding: 0 !important;
+									a{
+										border-top: 1px solid #c6c6c6;
+										display: block;
+										width: 100%;
+										padding: 0 0 0 10px;
+									}
+
+									&.active{
+										a{
+											border-bottom: 1px solid #103040;
+											&:after{
+												display: none;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mobile{
+	header.siteHeader{
+		padding: 0 0 2px 0;
+	}
+}

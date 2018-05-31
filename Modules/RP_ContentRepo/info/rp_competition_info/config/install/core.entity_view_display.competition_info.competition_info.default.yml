@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.competition_info.competition_info.field_competition_info_body
+    - field.field.competition_info.competition_info.field_competition_info_language
+    - field.field.competition_info.competition_info.field_competition_info_region
+    - field.field.competition_info.competition_info.field_competition_info_site
+  module:
+    - rp_competition_info
+    - text
+    - user
+id: competition_info.competition_info.default
+targetEntityType: competition_info
+bundle: competition_info
+mode: default
+content:
+  field_competition_info_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_competition_info_language:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_competition_info_region:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_competition_info_site:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

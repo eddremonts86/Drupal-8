@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sport_stream_reviews
+id: node.sport_stream_reviews.metatag
+field_name: metatag
+entity_type: node
+bundle: sport_stream_reviews
+label: Metatags
+description: 'The metatags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

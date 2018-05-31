@@ -1,0 +1,20 @@
+uuid: 88f62552-ea30-41aa-a683-016266a36b4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldmatchheadplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldmatchheadplugin
+settings:
+  id: sefodbaldmatchheadplugin
+  label: 'Se Fodbald Match Head Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

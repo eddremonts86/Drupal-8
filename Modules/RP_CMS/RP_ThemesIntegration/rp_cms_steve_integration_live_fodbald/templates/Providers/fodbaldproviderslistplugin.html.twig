@@ -1,0 +1,52 @@
+<section class="ProvidersListPlugin">
+	<div class="container">
+		<div class="row">		
+			<div class="col col-md-12">
+				<p>{{'live_fodbald_providers_text' | t}}</p>
+			</div>
+			
+			{% if tags %}
+				{% for provider in tags %}
+					<div class="col col-md-12 ProviderBlock">
+						<div class="row">
+							<div class="col col-md-4">
+								{% if provider.sponsored %}
+									<div class="sponsoredLogo">
+										<img src="modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/img1.png">
+										<img src="modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/img2.png">
+									</div>
+								{% endif %}
+								<div class="Logos">
+									<a href="#">
+										<img src="{{ provider.image_1 }}">
+										<img src="{{ provider.image_2 }}">
+									</a>
+									<span>{{ "live_fodbald_provider_disclaimer" | t}}</span>
+									<a href="#">{{ "live_fodbald_provider_popup" | t}}</a>
+								</div>
+							</div>
+							<div class="col col-md-8">
+								<div class="row">
+									<div class="col col-md-6">
+										<h3>{{ provider.name }}</h3>
+										<p><strong>{{"live_fodbald_provider_view" | t}}</strong>{{provider.review}}</p>
+										<p><strong>{{"live_fodbald_provider_quality" | t}}</strong>{{provider.quality}}</p>
+										<p><strong>{{"live_fodbald_provider_price" | t}}</strong>{{provider.price}}</p>
+									</div>
+									<div class="col col-md-5">
+										<ul class="steps">
+											<li><a href="{{provider.step_link_1}}">{{"live_fodbald_provider_step_1" | t}}{{ provider.name }}</a></li>
+											<li><a href="{{provider.step_link_2}}">{{"live_fodbald_provider_step_2" | t}}</a></li>
+											<li><a href="{{provider.step_link_3}}">{{"live_fodbald_provider_step_3" | t}}</a></li>
+										</ul>
+										<a class="btn arrow" href="{{ provider.link }}">{{"live_fodbald_provider_link" | t}}{{ provider.name }}</a>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+</section>

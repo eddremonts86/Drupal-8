@@ -1,0 +1,54 @@
+section.WatchLiveContentPlugin{
+	.container{
+		padding: 5% 0 3% 0;
+		.contentBlock{
+			.col-md-8{
+				border-bottom: none;
+				.line{
+					padding: 0 0 10px 0;
+				}
+			}
+		}
+	} 
+}
+
+@include tablet{
+	section.WatchLiveContentPlugin{
+		.container{
+			padding: 5% 15px 3%;
+			.contentBlock{
+				.col-md-8{
+					p{
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}	
+
+@include mobile{
+	section.WatchLiveContentPlugin{
+		.contentBlock{
+			.col-md-4,
+			.col-md-8{
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.contentBlockHead{
+				padding: 20px 0;
+				border: none;
+			}
+		}
+	} 
+}
+
+
+
+
+
+
+
+
+

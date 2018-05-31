@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_locales
+    - taxonomy.vocabulary.sport
+id: taxonomy_term.sport.field_locales
+field_name: field_locales
+entity_type: taxonomy_term
+bundle: sport
+label: locales
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

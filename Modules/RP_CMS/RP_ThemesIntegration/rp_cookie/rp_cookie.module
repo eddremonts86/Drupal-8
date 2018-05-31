@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_cookie.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function rp_cookie_theme()
+{
+    return [
+        'cookieplugin' => [
+            'variables' => [
+                'data' => []
+            ],
+            'template' => 'Cookie/cookieplugin'
+        ],
+    ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function rp_cookie_page_attachments(array &$page)
+{	
+	$page['#attached']['library'][] = 'rp_cookie/CookieGeneral';
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function rp_cookie_preprocess_block(&$vars){
+    $blocks = ['cookieplugin'];
+
+    foreach ($blocks as $block) {
+        if($vars['elements']['#plugin_id'] == $block){
+            $vars['#cache']['max-age'] = 0;
+        }
+    }
+}
+
+/**
+ * Implements hook_page_bottom().
+ */
+function rp_cookie_page_bottom(&$variables){
+	if(!\Drupal::service('router.admin_context')->isAdminRoute()){
+		$block = \Drupal\block\Entity\Block::load('cookieplugin');
+		$variables['cookieplugin'] = \Drupal::entityTypeManager()
+		  ->getViewBuilder('block')
+		  ->view($block);
+	}
+}

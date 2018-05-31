@@ -1,0 +1,10 @@
+uuid: f01f23dd-d64f-4bd8-bc30-c900fa6402b9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: x2g7_4_WrRsUrK0QFuLDpAi043MVI5odITnAkdsuBdw
+id: fodbaldstreamsmenu
+label: 'Fodbald Streams Menu'
+description: ''
+locked: false

@@ -1,0 +1,20 @@
+uuid: 9d29e6bb-6214-4d5a-ae72-9c3a80a81fc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldhomefeaturesplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldhomefeaturesplugin
+settings:
+  id: fodbaldhomefeaturesplugin
+  label: 'Fodbald Home Features Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

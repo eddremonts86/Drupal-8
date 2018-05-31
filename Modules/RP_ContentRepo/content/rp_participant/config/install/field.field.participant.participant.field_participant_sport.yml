@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.participant.field_participant_sport
+  module:
+    - rp_participant
+id: participant.participant.field_participant_sport
+field_name: field_participant_sport
+entity_type: participant
+bundle: participant
+label: Sport
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:sport'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,33 @@
+add competition entities:
+  title: 'Create new Competition entities'
+
+administer competition entities:
+  title: 'Administer Competition entities'
+  description: 'Allow to access the administration form to configure Competition entities.'
+  restrict access: true
+
+delete competition entities:
+  title: 'Delete Competition entities'
+
+edit competition entities:
+  title: 'Edit Competition entities'
+
+access competition overview:
+  title: 'Access the Competition overview page'
+
+view published competition entities:
+  title: 'View published Competition entities'
+
+view unpublished competition entities:
+  title: 'View unpublished Competition entities'
+
+view all competition revisions:
+  title: 'View all Competition revisions'
+
+revert all competition revisions:
+  title: 'Revert all Competition revisions'
+  description: 'Role requires permission <em>view Competition revisions</em> and <em>edit rights</em> for competition entities in question or <em>administer competition entities</em>.'
+
+delete all competition revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Competition revisions</em> and <em>delete rights</em> for competition entities in question or <em>administer competition entities</em>.'

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_jsonld_struct
+    - node.type.sport_stream_reviews
+    - taxonomy.vocabulary.jsonld_
+id: node.sport_stream_reviews.field_jsonld_struct
+field_name: field_jsonld_struct
+entity_type: node
+bundle: sport_stream_reviews
+label: 'JsonLd Struct'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      jsonld_: jsonld_
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

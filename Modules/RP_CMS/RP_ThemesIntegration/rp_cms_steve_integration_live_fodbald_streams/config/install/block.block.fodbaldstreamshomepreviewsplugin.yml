@@ -1,0 +1,20 @@
+uuid: d3c7dc3c-6ba7-4e60-af7b-6eff7e87543e
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamshomepreviewsplugin
+theme: live_fodbald_streams
+region: none
+weight: 0
+provider: null
+plugin: fodbaldstreamshomepreviewsplugin
+settings:
+  id: fodbaldstreamshomepreviewsplugin
+  label: 'Fodbald Streams Home Previews Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

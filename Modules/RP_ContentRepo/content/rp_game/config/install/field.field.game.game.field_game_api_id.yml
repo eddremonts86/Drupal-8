@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_game_api_id
+  module:
+    - rp_game
+id: game.game.field_game_api_id
+field_name: field_game_api_id
+entity_type: game
+bundle: game
+label: 'API ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 2e5418df-fc91-4bba-b28a-116808cd7966
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldprogrammatchlistplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldprogrammatchlistplugin
+settings:
+  id: fodbaldprogrammatchlistplugin
+  label: 'Fodbald Program Match List Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_translation
+    - rp_site_info
+third_party_settings:
+  content_translation:
+    enabled: false
+id: site_info.site_info
+target_entity_type_id: site_info
+target_bundle: site_info
+default_langcode: current_interface
+language_alterable: false

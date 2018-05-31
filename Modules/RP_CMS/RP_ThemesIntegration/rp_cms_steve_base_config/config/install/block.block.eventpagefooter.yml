@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - stevethemebase
+id: eventpagefooter
+theme: stevethemebase
+region: none
+weight: -18
+provider: null
+plugin: eventpagefooterplugin
+settings:
+  id: eventpagefooterplugin
+  label: 'Event Page Footer'
+  provider: rp_cms_steve_integration
+  label_display: '0'
+visibility: {  }

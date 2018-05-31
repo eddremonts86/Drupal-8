@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_channel.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_channel_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_channel module.
+    case 'help.page.rp_channel':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RP Channel Entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}

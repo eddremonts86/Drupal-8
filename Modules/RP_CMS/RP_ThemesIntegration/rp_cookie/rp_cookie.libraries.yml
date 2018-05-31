@@ -1,0 +1,10 @@
+CookieGeneral:
+  version: 1.x
+  js:
+    src/js/cookieblock.js: {}
+  css:
+    theme:
+      src/css/cookieblock.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

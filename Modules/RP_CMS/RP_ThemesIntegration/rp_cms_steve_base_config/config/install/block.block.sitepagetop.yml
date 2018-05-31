@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - bartik
+id: sitepagetop
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: siteflagmenuplugin
+settings:
+  id: siteflagmenuplugin
+  label: 'Site Page Top'
+  provider: rp_cms_steve_integration
+  label_display: visible
+visibility: {  }

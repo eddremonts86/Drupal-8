@@ -1,0 +1,8 @@
+entity.stream_provider_info.add_form:
+  route_name: entity.stream_provider_info.add_form
+  title: 'Add Stream Provider Info'
+  appears_on:
+    - entity.stream_provider_info.collection
+  options:
+    query:
+      destination: '/admin/rp/entity-content/stream_provider'

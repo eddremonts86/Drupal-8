@@ -1,0 +1,20 @@
+uuid: 3b4f301c-6cc4-401c-ae0a-02706f8f76ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamsteamslistplugin
+theme: live_fodbald_streams
+region: none
+weight: 100
+provider: null
+plugin: fodbaldstreamsteamslistplugin
+settings:
+  id: fodbaldstreamsteamslistplugin
+  label: 'Fodbald Streams Teams List Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

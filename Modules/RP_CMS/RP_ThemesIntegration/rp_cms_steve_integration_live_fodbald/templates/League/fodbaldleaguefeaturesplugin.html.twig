@@ -1,0 +1,26 @@
+<section class="LeagueFeaturesPlugin ParalaxBlock">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2>{{ "live_fodbald_league_description"|t}} {{ tags.name }}</h2>
+			</div>
+		</div>
+		<div class="row animation">
+			<div class="col col-md-12 wp2">
+				{% if tags.image %}
+					<div class="icon nobg">
+						<img src="{{ file_url(tags.image) }}">
+					</div>
+				{% endif %}
+				<h3>{{ tags.name }}</h3>
+				{{ tags.description }}
+				<div class="action">
+					<a href="#" class="btn arrow">
+						{{ "live_fodbald_league_feature_button"| t}}
+					</a>
+					<span>{{ "live_fodbald_league_feature_disclaimer" | t}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>	

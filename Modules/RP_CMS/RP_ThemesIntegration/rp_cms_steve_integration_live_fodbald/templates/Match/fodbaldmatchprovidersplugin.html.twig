@@ -1,0 +1,86 @@
+<section class="MatchProvidersPlugin">
+	<div class="container">
+		<div class="row ProviderTabs">
+			{% if tags %}
+				{% set event = tags|first %}
+				<div class="col col-md-12">
+					<ul class="nav nav-tabs" role="tablist">
+					{% for provider in event.matchProviders %}
+						{% set TabID = 'T' ~ provider.id %}
+						<li role="presentation" {{ loop.index == 1 ? attributes.addClass('active')}}>
+							<a href="#{{ TabID }}" aria-controls="{{ TabID }}" role="tab" data-toggle="tab">{{ provider.streamName }}</a>
+						</li>
+					{% endfor %}
+					</ul>
+				</div>
+				<div class="col col-md-12">
+					<div class="tab-content">
+						{% for provider in event.matchProviders %}
+							{% set TabID = 'T' ~ provider.id %}
+							<div role="tabpanel" id="{{ TabID }}" class="tab-pane clearfix {{loop.index == 1 ? 'active' }}">
+								{% if provider.sponsor %}
+									<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/anouncement.png" class="sponsored">
+								{% endif %}
+								<h3>{{ "live_fodbald_providers_see" | t }} {{ tags.matchName }} {{ provider.streamName }}</h3>
+								<p>{{ "live_fodbald_provider_tab_subhead_text" | t}}</p>
+								<p>{{ "live_fodbald_provider_tab_subhead_2_text" | t}}</p>
+								<div class="ProviderHolder">
+									<div class="ProviderImage">
+										{% if provider.streamIMG %}
+											<a href="{{ provider.FrontPageAffiliateButtonUrl }}">
+												<img src="{{ file_url(provider.streamIMG) }}">
+											</a>
+										{% endif %}
+									</div>
+									<div class="ProviderSteps">
+										<ul>
+											<li><a href="#">{{ "live_fodbald_provider_tab_step_1" | t }}</a></li>
+											<li><a href="#">{{ "live_fodbald_provider_tab_step_2" | t }}</a></li>
+											<li><a href="#">{{ "live_fodbald_provider_tab_step_3" | t }}<span>{{ "live_fodbald_provider_tab_step_disclaimer" | t}}</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="actions">
+									<a href="{{ provider.FrontPageAffiliateButtonUrl }}" class="btn arrow">{{ provider.FrontPageAffiliateButtonText }}</a>
+									<p>{{ "live_fodbald_provider_disclaimer" | t }}</p>
+									<span>{{ "live_fodbald_provider_warning" | t }}</span>
+									<a href="#popup-test" class="popUp">{{ "live_fodbald_provider_popup" | t }}</a>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+		{% if article %}
+			<div class="row MatchProvidersArticle">
+				<div class="col col-md-12">
+					<div class="sponsoredLogo">
+						<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/img1.png">
+						<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/img2.png">
+					</div>
+					<div class="writer">
+						<i class="fa fa-quote-left"></i>
+						{% if article.userImage %}
+							<img src="{{ article.userImage }}">
+						{% else %}
+							<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/profile_default.png">
+						{% endif %}
+						<p>–   <a href="{{ article.userLink }}">{{ article.userName }}</a>
+							<span>{{ article.date|date('d. M Y \\k\\l H:i')}} </span>
+						</p>
+					</div>
+	
+					<h2>{{ article.name }}</h2>	
+					{{ article.description | raw }}
+					
+					<div class="actions">
+						<a href="#" class="btn arrow">{{ "live_fodbold_match_article_button" | t}}</a>
+						<p>{{ "live_fodbold_match_article_disclaimer" | t}}</p>
+						<a href="#" class="popUp">{{ "live_fodbold_match_article_popup" | t}}</a>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+</section>

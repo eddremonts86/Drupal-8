@@ -1,0 +1,78 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.game_info.game_info.field_game_info_body
+    - field.field.game_info.game_info.field_game_info_game
+    - field.field.game_info.game_info.field_game_info_image
+    - field.field.game_info.game_info.field_game_info_language
+    - field.field.game_info.game_info.field_game_info_region
+    - field.field.game_info.game_info.field_game_info_site
+    - image.style.thumbnail
+  module:
+    - image
+    - rp_game_info
+    - text
+id: game_info.game_info.default
+targetEntityType: game_info
+bundle: game_info
+mode: default
+content:
+  field_game_info_body:
+    weight: 30
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_game_info_game:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_info_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_game_info_language:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_info_region:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_game_info_site:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

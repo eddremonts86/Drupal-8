@@ -1,0 +1,379 @@
+/*****************GENERAL*****************/
+html{
+	height: 100%;
+}
+body{
+	font-family: "Geogrotesque";
+	font-size: 15px;
+	line-height: 15.5px;
+	margin: 0 !important;
+    padding: 0 0 139px;
+    background: #fff;
+    color: #fff;
+    min-height: 100%;
+    position: relative;
+}
+.container {
+    padding: 40px 0;
+    max-width: 1000px;
+    width: 100%;
+}
+.row{
+	margin: auto;
+}
+.col{
+	padding: 0;
+}
+a{
+	font-family: "Geogrotesque Medium";
+	text-decoration: none;
+	color: #489ac1;
+	transition: color .25s;
+	font-size: 14px;
+	line-height: 18px;
+}
+a:hover,
+a:focus{
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	color: #fff;
+    font-family: "Bebas";
+    margin: 0;
+}
+h1{
+	font-size: 50px;
+	line-height: 56px;
+	color: #4a788f;
+	margin: 0;
+}
+h2{
+	font-size: 26px;
+	font-family: "Faraco";
+    line-height: 36px;
+}
+h3{
+	font-size: 28px;
+    line-height: 28px;
+    letter-spacing: .5px;
+}
+h4{
+	padding: 10px 20px;
+	text-transform: uppercase;
+	line-height: 20px;
+	font-size: 18px;
+	letter-spacing: .5px;
+}
+h5{
+	font-family: "Geogrotesque SemiBold";
+	font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+p{
+	color: #103040;
+	font-size: 15px;
+	font-family: "Geogrotesque";
+	line-height: 1.5;
+}
+strong{
+	color: #000;
+	font-weight: 900;
+	font-family: "Geogrotesque Medium";
+}
+ul{
+	margin: 0;
+    padding: 0;
+}
+ul li{
+	font-size: 15px;
+	line-height: 1.5;
+	font-family: "Geogrotesque";
+	color: #103040;
+    list-style: inside;
+}
+div.line{
+	padding: 0 0 20px 0;
+	display: inline-block;
+}
+div.heading{
+	display: inline-block;
+	h5{
+		border-bottom: 2px solid #f59749;
+		margin: 0 0 5px 0;
+		padding: 0 0 5px 0;
+		font-family: "Geogrotesque SemiBold";
+		color: #103040;
+		display: inline-block;
+		font-weight: 900;
+	}
+}
+.popUp{
+	background: rgba(0, 0, 0, .85);
+	border-radius: 10px;
+	color: grey;
+	font-size: 11px;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -115px;
+	overflow: hidden;
+	padding: 20px !important;
+	position: fixed;
+	top: 50%;
+	width: 350px;
+	z-index: 999999;
+	display: none;
+	h2{
+		color: white !important;
+		transform: none !important;
+		font-size: 15px !important;
+	}
+	p{
+		color: white;
+	}
+}
+.btn{
+	text-align: center;
+	color: #fff;
+	padding: 5px;
+	border: none !important;
+	outline: none !important;
+	background: #F2740C;
+	border-radius: 0;
+	text-transform: uppercase;
+	line-height: 35px;
+	font-size: 28px;
+	letter-spacing: 0.2px;
+	font-family: "Bebas";
+	position: relative;
+
+	&:hover,
+	&:focus{
+		color: #fff;
+		box-shadow: none;
+	}
+	&.arrow{
+		padding-right: 45px;
+		&:after{
+			background: url(../images/arrow.png) no-repeat;
+			width: 30px;
+			content: "\00a0" !important;
+			margin-left: 5px;
+			position: absolute;
+			right: 5px;
+			background-position: right center !important;
+			top: auto;
+		}
+	}
+	&.odds{
+		padding-left: 30px;
+		&:after{
+			background: url(../images/odds.png) no-repeat;
+			width: 20px;
+			content: "\00a0" !important;
+			position: absolute;
+			left: 5px;
+			background-position: center !important;
+			top: auto;
+		}
+	}
+	&.stream{
+		padding-left: 30px;
+		&:after{
+			background: url(../images/play1.png) no-repeat;
+			width: 20px;
+			content: "\00a0" !important;
+			position: absolute;
+			left: 5px;
+			background-position: center !important;
+			top: auto;
+		}	
+	}
+	&.play{
+		padding-left: 30px;
+		&:after{
+			background: url(../images/play.png) no-repeat;
+			width: 20px;
+			content: "\00a0" !important;
+			position: absolute;
+			left: 5px;
+			background-position: center !important;
+			top: 0;
+			height: 100%;
+		}
+	}
+}
+
+@include tablet{
+	.container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	a,p{
+		font-size: 14px;
+	}
+	h1{
+		font-size: 40px;
+		line-height: 45px;
+	}
+	h2{
+		font-size: 22px;
+		line-height: 25px;
+	}
+	h3{
+		font-size: 25px;
+		line-height: 25px;
+	}
+	h5{
+		font-size: 16px;
+		line-height: 25px;
+	}
+}
+
+@include mobile{
+	p{
+		line-height: 15px;
+	}
+	body{
+		padding: 0;
+	}
+}
+
+/**
+* Blocks
+**/
+
+/*************PAGE HEADING*****************/
+.contentBlock{
+	.col-md-4{
+		padding: 0 30px 0 0;
+		.contentBlockHead{
+			border: 7px solid #103040;
+			padding: 20px;
+		}
+	}
+	.col-md-8{
+		padding: 10px 0;
+		border-top: 7px solid #103040;
+		border-bottom: 7px solid #103040;
+
+	}
+	&.top{
+		.col-md-8{
+			border-bottom: none;
+		}
+	}
+}
+
+/*************PAGE HEADING*****************/
+.pageHeading{
+	display: flex;
+	.main-heading,
+	.sub-heading{
+		font-family: "Bebas";
+		letter-spacing: 0.2px;
+		margin: 0;
+		padding: 0 23px;
+		color: #fff;
+		display: inline-block;
+	}
+	.main-heading{
+		line-height: 100px;
+		margin: -30px 0 0 0;
+		background: #f28b0c;
+		font-size: 50px;
+		position: relative;
+		z-index: 1;
+	}
+	.sub-heading{
+		background: #f2740c;
+		font-size: 20px;
+		line-height: 70px;
+	}
+}
+
+@include tablet{
+	.pageHeading{
+		.main-heading{
+			font-size: 40px;
+		}
+	}
+}
+
+/*************TRACK OVERVIEW**************/
+section.TrackOverview{
+	> .container{
+		padding: 7% 0;
+		> .row{
+			.col-md-4{
+				padding: 0;
+
+				.content{
+					min-height: 306px;
+					padding: 10px 0;
+					h5{
+						border-color: #294857;
+						margin-bottom: 5px;
+						padding: 0;
+					}
+				}
+
+				&.head{
+					padding: 0 15px;
+					.content{
+						border-bottom: 2px solid #f2740c;
+						padding-top: 0;
+
+						h1{
+							line-height: 50px;
+							width: 100%;
+							text-align: center;
+							color: #103040;
+						}
+					}
+				}
+
+				&:first-child{
+					padding: 0 15px 0 0;
+					.content{
+						border-bottom: 7px solid #f2740c;
+					}
+				}
+			}
+
+			.col-md-12{
+				.btn{
+					float: right;
+					font-size: 14px;
+					line-height: 18px;
+					font-family: "Geogrotesque Medium";
+					padding: 5px 5px 5px 30px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+@include mobile{
+	.TrackOverview{
+		.container{
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+			.col-md-4{
+				width: 100%;
+				padding: 0 !important;
+				&.head{
+					.content{
+						text-align: center;	
+					}
+				}
+			}
+			.col-md-12{
+				.btn{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

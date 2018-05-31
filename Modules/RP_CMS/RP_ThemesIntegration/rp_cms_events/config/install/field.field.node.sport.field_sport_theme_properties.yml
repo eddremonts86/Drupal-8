@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sport_theme_properties
+    - node.type.sport
+id: node.sport.field_sport_theme_properties
+field_name: field_sport_theme_properties
+entity_type: node
+bundle: sport
+label: 'Sport Theme Properties'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

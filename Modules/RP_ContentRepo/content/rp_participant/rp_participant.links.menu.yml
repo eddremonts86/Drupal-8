@@ -1,0 +1,14 @@
+
+# Participant menu items definition
+entity.participant.collection:
+  title: 'Participant list'
+  route_name: entity.participant.collection
+  description: 'List Participant entities'
+  parent: rp_base.controller_entity_content
+  weight: 100
+
+participant.admin.structure.settings:
+  title: Participant settings
+  description: 'Configure Participant entities'
+  route_name: participant.settings
+  parent: rp_base.controller_entity_settings

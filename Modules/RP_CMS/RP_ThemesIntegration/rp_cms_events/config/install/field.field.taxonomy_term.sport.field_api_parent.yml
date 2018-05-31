@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_api_parent
+    - taxonomy.vocabulary.sport
+id: taxonomy_term.sport.field_api_parent
+field_name: field_api_parent
+entity_type: taxonomy_term
+bundle: sport
+label: 'API Parent'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sport: sport
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

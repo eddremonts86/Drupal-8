@@ -1,0 +1,20 @@
+uuid: 913627eb-4c62-482e-b51a-1c191965c015
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamsprogramheadplugin
+theme: live_fodbald_streams
+region: none
+weight: 100
+provider: null
+plugin: fodbaldstreamsprogramheadplugin
+settings:
+  id: fodbaldstreamsprogramheadplugin
+  label: 'Fodbald Streams Program Head Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

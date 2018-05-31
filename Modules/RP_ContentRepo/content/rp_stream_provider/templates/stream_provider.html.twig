@@ -1,0 +1,22 @@
+{#
+/**
+ * @file stream_provider.html.twig
+ * Default theme implementation to present Stream Provider data.
+ *
+ * This template is used when viewing Stream Provider pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_stream_provider()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('stream_provider') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

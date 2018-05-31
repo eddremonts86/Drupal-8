@@ -1,0 +1,5 @@
+name: RP Base
+type: module
+description: RP Basic configs
+core: 8.x
+package: RP

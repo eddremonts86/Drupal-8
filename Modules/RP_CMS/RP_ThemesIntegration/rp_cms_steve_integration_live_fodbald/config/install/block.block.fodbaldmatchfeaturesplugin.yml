@@ -1,0 +1,20 @@
+uuid: 040bda55-6339-40ff-9194-38f302740340
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldmatchfeaturesplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldmatchfeaturesplugin
+settings:
+  id: fodbaldmatchfeaturesplugin
+  label: 'Fodbald Match Features Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

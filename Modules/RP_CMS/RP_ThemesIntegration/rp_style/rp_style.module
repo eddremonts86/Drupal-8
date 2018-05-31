@@ -1,0 +1,20 @@
+<?php
+
+function rp_style_theme()
+{
+	return [
+		'styleguidepage' =>
+		[
+			'variables' => [
+				'tags' => [],
+			],
+			'template' => 'styleguidepage',
+		],
+	];
+}
+function rp_style_page_attachments(array &$page)
+{
+    if(\Drupal::request()->getRequestUri() == '/style'){
+        $page['#attached']['library'][] = 'rp_style/styleGuide';
+    }
+}

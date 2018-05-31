@@ -1,0 +1,16 @@
+section.HomeHeadPlugin{
+	padding: 5em 0;
+	
+	@include tablet{
+		.container{
+			width: 750px;
+		}	
+	}
+	@include mobile{
+		.container{
+			padding: 0 1em;
+			width: 100%;
+		}
+	}
+	
+}

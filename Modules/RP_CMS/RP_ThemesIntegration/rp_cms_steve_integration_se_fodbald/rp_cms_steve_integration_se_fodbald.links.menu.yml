@@ -1,0 +1,23 @@
+rp_cms_steve_integration_se_fodbald.home:
+  title: 'Home'
+  route_name: <front>
+  menu_name: sefodbaldmenu
+  weight: 1
+
+rp_cms_steve_integration_se_fodbald.providers:
+  title: 'Stream Providers'
+  route_name: rp_cms_steve_integration_se_fodbald.se_fodbald_providers
+  menu_name: sefodbaldmenu
+  weight: 2
+
+rp_cms_steve_integration_se_fodbald.program:
+  title: 'Program'
+  route_name: rp_cms_steve_integration_se_fodbald.se_fodbald_program
+  menu_name: sefodbaldmenu
+  weight: 3
+
+rp_cms_steve_integration_se_fodbald.league:
+  title: 'Leagues'
+  route_name: rp_cms_steve_integration_se_fodbald.se_fodbald_leagues
+  menu_name: sefodbaldmenu
+  weight: 4

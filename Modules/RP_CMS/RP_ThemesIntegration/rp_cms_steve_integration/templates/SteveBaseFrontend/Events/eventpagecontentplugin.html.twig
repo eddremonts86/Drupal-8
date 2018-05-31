@@ -1,0 +1,29 @@
+{% for nodeData in tags %}
+	{% if nodeData.eventbody != '' and  nodeData.eventbody != null %}
+		<section style="padding-bottom: 30px;padding-top: 30px;" class="event-data-no-image">
+		    <div class="row">
+		        <div class="container GP_body">
+		            <div class="col-xs-12">
+		                <h1 class="black no-transform  text-center"> {{ "sport_showcase_head_titulo_1" |t }}  {{ nodeData.eventName }} {{ "event_page_content_plugin_live" |t }}</h1>
+	                    {{ nodeData.eventbody | raw}}
+		            </div>
+		        </div>
+		    </div>
+		</section>
+	{% else %}
+		<section style="padding-bottom: 30px;padding-top: 30px;" class="event-data-image">
+		    <div class="row">
+		        <div class="container GP_body">
+		            <div class="col-xs-12">
+		                <h1 class="black no-transform  text-center"> {{ "sport_showcase_head_titulo_1" |t }}  {{ nodeData.eventName }} {{ "event_page_content_plugin_live" |t }}</h1>
+                        <p class="text-center">
+                            {{ "event_page_content_plugin_text_center_head" |t }} -
+                            <br class="small-tablet-only">
+                            {{ "event_page_content_plugin_text_center_subhead" |t }} !
+                        </p>
+		            </div>
+		        </div>
+		    </div>
+		</section>
+	{% endif %}
+{% endfor %}

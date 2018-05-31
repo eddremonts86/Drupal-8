@@ -1,0 +1,74 @@
+ .PreviewBlock{   
+	margin: 50px 30px;
+    background: #ffffff;
+    padding: 25px;
+    text-align: center;
+    min-height: 350px;
+    height: auto;
+    border-radius: 5px;
+    >.teams{
+	    display: flex;
+	    justify-content: space-around;
+	    
+	    .teamlogo{
+			height: 100px;
+			width: 100px;
+			line-height: 120px;
+			max-width: 100%;
+			background: rgba(255, 255, 255, 1);
+			border-radius: 50%;
+			-o-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border: 10px solid #b7820e;
+			display: inline-block;
+			color: #EAE3E3;
+			font-size: 75px;
+			text-align: center;
+			padding: 10px;
+			vertical-align: middle;
+			position: relative;
+			overflow: hidden;
+		    img{
+				width: 100%;
+				height: auto;
+				display: block; 
+		    }
+	    }
+    }
+    h2{
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.1;
+		color: #333;
+		margin-top: 1em;
+	    &:after{
+		    margin: 20px auto;
+		    
+	    }
+    }
+    p{
+	    &.eventtext{
+		    overflow: hidden;
+			text-overflow: ellipsis;
+			max-height: 145px;
+	    }
+    }
+    
+    a{
+	    &.eventlink{
+		    span{
+				font-weight: bold;
+				color: #281a27;
+		    }
+		    i{
+			    margin: 2px;
+			    color: #281a27 !important;
+		    }
+	    }
+    }
+    
+    @include tablet{
+		margin: 25px 0;
+    }
+}

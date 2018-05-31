@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Match advertisement implementation
+ *
+ * Available variables:
+ * - title: The title text.
+ * - subtitle: The subtitle text.
+ * - text: Any shortcode or HTML text.
+ */
+#}
+
+<aside class="match-ad">
+    <h2>{{ title }}</h2>
+    {% if subtitle %}
+        <h3>{{ subtitle }}</h3>
+    {% endif %}
+</aside>

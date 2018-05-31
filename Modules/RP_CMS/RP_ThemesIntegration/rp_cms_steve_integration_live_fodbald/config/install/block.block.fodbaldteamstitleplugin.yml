@@ -1,0 +1,20 @@
+uuid: 16c6e247-c3a4-4a6a-86c3-98141df7ecd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldteamstitleplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldteamstitleplugin
+settings:
+  id: fodbaldteamstitleplugin
+  label: 'Fodbald Teams Title Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

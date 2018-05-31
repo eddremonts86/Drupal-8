@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.participant.field_participant_logo_modified
+  module:
+    - rp_participant
+id: participant.participant.field_participant_logo_modified
+field_name: field_participant_logo_modified
+entity_type: participant
+bundle: participant
+label: 'Logo Modified'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

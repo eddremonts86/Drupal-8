@@ -1,0 +1,15 @@
+SeFodbaldGeneral:
+  version: 1.x
+  js:
+    src/js/bootstrap.min.js: {}
+    src/js/jquery.bxslider.js: {}
+    src/js/jquery.paginate.js: {}
+    src/js/main.js: {}
+  css:
+    theme:
+      src/css/bootstrap.min.css: {}
+      src/css/font-awesome.min.css: {}
+      src/css/general_layout.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

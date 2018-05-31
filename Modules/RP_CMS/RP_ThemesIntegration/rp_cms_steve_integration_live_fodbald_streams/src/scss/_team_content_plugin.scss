@@ -1,0 +1,55 @@
+.TeamContentPlugin{
+	.TeamContentContainer{
+		max-width: none;
+		margin: 0;
+		padding: 0;
+		background: url(../images/plants-bg1.jpg) no-repeat center center;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    padding: 10px 0 3em 0;
+	    width: 100%;
+		>.row{
+			background: rgba(255,255,255,1);
+		    padding: 2em;
+		    border-radius: 5px;
+		    min-height: 380px;
+		    position: relative;
+			max-width: 1050px;
+			margin: 0 auto;
+			
+			>.TeamContent{
+				padding: 0 15px 0 0;
+				h1{
+					text-align: center;
+					font-weight: bold;
+					color: #281a27;
+				}	
+			}
+			
+			.TeamEvents{
+				padding: 2em 2em 2em calc(2em + 15px);
+			}
+	    }
+	}
+	@include tablet{
+		.TeamContentContainer{
+			>.row{
+				width: 750px;
+				.TeamContent{
+					padding: 0;
+				}
+				.TeamEvents{
+					padding: 2em;
+				}
+			}
+		}
+	}
+	@include mobile{
+		.TeamContentContainer{
+			padding: 1em 1em 3em 1em;
+			>.row{
+				width: 100%;	
+			}
+		}
+	}
+}

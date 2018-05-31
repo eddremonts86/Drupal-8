@@ -1,0 +1,161 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sport.body
+    - field.field.node.sport.field_jsonld_struct
+    - field.field.node.sport.field_sport_sport
+    - field.field.node.sport.field_sport_theme_properties
+    - field.field.node.sport.panelizer
+    - node.type.sport
+  module:
+    - field_layout
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          d51b5a16-f6cd-4d04-b217-63394a4bc428:
+            id: sportblogheadplugin
+            label: 'Sport Blog Head'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: content
+            weight: -1
+            uuid: d51b5a16-f6cd-4d04-b217-63394a4bc428
+            context_mapping: {  }
+          136ac483-60b3-49aa-9e42-ef197588f644:
+            id: sportblogbodyplugin
+            label: 'Sport Blog Body'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: content
+            weight: 0
+            uuid: 136ac483-60b3-49aa-9e42-ef197588f644
+            context_mapping: {  }
+          729b7dcf-32be-4580-bbce-5cec1f15aa75:
+            id: sportblogfooterplugin
+            label: 'Sport Blog Footer'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: content
+            weight: 1
+            uuid: 729b7dcf-32be-4580-bbce-5cec1f15aa75
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 8653fa09-8b26-48c1-b5a3-2756a6ca093b
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: null
+        storage_type: panelizer_default
+        storage_id: 'node:sport:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+      ppc:
+        blocks:
+          049f61b0-e83a-4502-9f43-58ddb9027441:
+            id: sporthomefooterplugin
+            label: 'Sport Page footer'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: bottom
+            weight: -2
+            uuid: 049f61b0-e83a-4502-9f43-58ddb9027441
+            context_mapping: {  }
+          d91ccca1-6b45-4d95-9449-4452f63b0fd8:
+            id: sporthomepopularmatchplugin
+            label: 'Sport Page popular match'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: first
+            weight: -2
+            uuid: d91ccca1-6b45-4d95-9449-4452f63b0fd8
+            context_mapping: {  }
+          d64a7e1e-ec5e-432c-8377-9c00f52c475f:
+            id: sporthomestreamlistplugin
+            label: 'Sport Page streamlist'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: first
+            weight: -1
+            uuid: d64a7e1e-ec5e-432c-8377-9c00f52c475f
+            context_mapping: {  }
+          554dbcf0-7044-4ff3-ae00-a9e453e1f93f:
+            id: sporthomeheadplugin
+            label: 'Sport Page Top'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: top
+            weight: -2
+            uuid: 554dbcf0-7044-4ff3-ae00-a9e453e1f93f
+            context_mapping: {  }
+          a29ff4e9-93c2-4476-a475-896a89b12827:
+            id: sporthomescheduleplugin
+            label: 'Sport Page schedule'
+            provider: rp_cms_steve_integration
+            label_display: '0'
+            region: second
+            weight: -9
+            uuid: a29ff4e9-93c2-4476-a475-896a89b12827
+            context_mapping: {  }
+        id: panels_variant
+        uuid: c6f4f266-3ab4-49bb-8d00-339686cce355
+        label: PPC
+        weight: 0
+        layout: layout_twocol
+        layout_settings: {  }
+        page_title: null
+        storage_type: panelizer_default
+        storage_id: 'node:sport:default:ppc'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.sport.default
+targetEntityType: node
+bundle: sport
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sport_sport:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sport_theme_properties:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_jsonld_struct: true
+  langcode: true
+  panelizer: true

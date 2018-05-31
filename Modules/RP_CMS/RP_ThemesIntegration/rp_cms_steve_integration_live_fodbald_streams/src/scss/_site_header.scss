@@ -1,0 +1,233 @@
+header.SiteHeader{
+	position: relative;
+	background-color: $color-haiti;
+	height: 73px;
+	.HeaderContainer{
+		background-color: $color-haiti;
+		left: 0;
+		top: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 15;
+		>.container{
+			padding: 0;
+			width: 100%;
+			>.row{
+				nav.navbar{
+					margin: 0;
+					background: none;
+					border: none;
+	
+					.container-fluid{
+						padding: 0;
+						
+						.navbar-header{
+							margin: 0;
+							padding: 0 0 0 15px;
+							.navbar-brand{
+								height: auto;
+								margin: 0;
+								padding: 0;
+								font-size: 14px;
+								img{
+									width: 100%;
+									margin: 1.29em 0;
+								}
+							}
+						}
+						.navbar-collapse{
+							float: right;
+							padding: 0;
+							margin: 0;
+							.navbar-nav{
+								li{
+									position: relative;
+									
+									a{
+										cursor: pointer;
+										font-size: 15px;
+										line-height: 1.42857143;
+										padding: 1.75em .8em;
+										color: rgba(255,255,255,.6);
+										-moz-transition: all .5s ease;
+										-webkit-transition: all .5s ease;
+										-o-transition: all .5s ease;
+										background: none;
+										position: relative;
+										&:focus,
+										&:hover{
+											color: rgba(255,255,255,1) !important;
+										}
+									}
+									>ul{
+										&.menu{
+											left: 0;
+											max-height: 500px;
+											overflow-y: auto;
+											position: absolute;
+											background-color: rgba(41, 13, 43, 0.8);
+											width: 200px;
+											display: none;
+											z-index: 10;
+											margin: 0;
+											padding: 0;
+											list-style: none;
+											li{
+												a{
+													line-height: 15px;
+													font-size: 15px;
+													display: block;
+													padding: 10px 20px;
+												}
+											}
+											&::-webkit-scrollbar-thumb{
+												background-color: #fff;
+												border: 1px solid #290D2B;
+											}
+											&::-webkit-scrollbar {
+											    width: 0.6em;
+											}
+											&::-webkit-scrollbar-track {
+											    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1);
+											}
+										}
+									}
+									&:hover{
+										>ul{
+											&.menu{
+												display: block;
+											}
+										}
+									}
+									&.active{
+										>a{
+											color: rgba(255,255,255,1);
+											font-weight: 700;
+											&:before{
+												border-color: #fff transparent transparent;
+												border-style: solid;
+												border-width: 7px;
+												position: absolute;
+												top: 0;
+												left: 50%;
+												margin-left: -5px;
+												content: '';
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.Fixed{
+			z-index: 99;
+			position: fixed;
+			-webkit-animation-duration: .3s;
+			animation-duration: .3s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			>.container{
+				>.row{
+					nav.navbar{
+						min-height: unset;
+						.container-fluid{
+							.navbar-header{
+								.navbar-brand{
+									img{
+										width: 200px;
+										margin: .5em 0;
+									}
+								}
+							}
+							.navbar-collapse{
+								.navbar-nav{
+									li{
+										a{
+											padding: 1.1em 0 1.1em 1.1em;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}	
+		}
+	}
+	@include tablet{
+		.HeaderContainer{
+			>.container{
+				width: 100%;
+				padding: 0 10px;
+				.navbar-header{
+					padding: 0 !important;
+				}
+			}
+		}
+	}
+	@include mobile{
+		.HeaderContainer{
+			>.container{
+				>.row{
+					nav.navbar{
+						.navbar-header{
+							padding: 0 1em !important;
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							&:after,
+							&:before{
+								display: none;
+							}
+							.navbar-toggle{				
+							    border: none;
+							    background: none;
+							    outline: none;
+							    padding: 0;
+							    margin: 0;
+							    .icon-bar{
+								    border-radius: 1px;
+									height: 3px;
+								    width: 25px;
+								    background: #fff;
+								    &+.icon-bar{
+									    margin-top: 5px;
+								    }
+							    }
+							}
+						}
+						.navbar-collapse{
+							float: none !important;
+						    width: 100%;
+						    border: none;
+						    box-shadow: none;
+	    					.navbar-nav{
+		    					margin: 0;
+		    					li{
+			    					border-bottom: 1px dotted rgba(255,255,255,.2);
+			    					a{
+				    					&:before{
+					    					display: none;
+				    					}
+			    					}
+			    					
+			    					&:last-child{
+				    					border: none;
+			    					}
+			    					
+			    					ul{
+										position: relative !important;
+										width: 100% !important;
+			    					}
+		    					}
+	    					}
+						}
+					}
+				}
+			}
+		}
+	}
+}

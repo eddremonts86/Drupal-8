@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.jsonld_
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.jsonld_
+target_entity_type_id: taxonomy_term
+target_bundle: jsonld_
+default_langcode: zxx
+language_alterable: false

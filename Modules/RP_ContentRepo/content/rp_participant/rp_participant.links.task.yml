@@ -1,0 +1,27 @@
+# Participant routing definition
+participant.settings_tab:
+  route_name: participant.settings
+  title: 'Settings'
+  base_route: participant.settings
+
+entity.participant.canonical:
+  route_name: entity.participant.canonical
+  base_route: entity.participant.canonical
+  title: 'View'
+
+entity.participant.edit_form:
+  route_name: entity.participant.edit_form
+  base_route: entity.participant.canonical
+  title: 'Edit'
+
+entity.participant.version_history:
+  route_name: entity.participant.version_history
+  base_route: entity.participant.canonical
+  title: 'Revisions'
+
+entity.participant.delete_form:
+  route_name:  entity.participant.delete_form
+  base_route:  entity.participant.canonical
+  title: Delete
+  weight: 10
+

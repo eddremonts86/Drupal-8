@@ -1,0 +1,25 @@
+steveModuleLibraries:
+  version: 1.x
+  js:
+    # src/js/jquery_v1.12.4.js: {}
+    src/js/bootstrap.min.js: {}
+    src/js/steveBasejs.js: {}
+    src/js/jquery.countdown.min.js: {}
+  css:
+    theme:
+      src/css/reset.min.css: {}
+      src/css/bootstrap.min.css: {}
+      src/css/steveBase_layout.css: {}
+      src/css/steveBase.css: {}
+      src/css/general_layout.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+steveModuleLibrariesGeneral:
+  version: 1.x
+  js:
+    src/js/js.cookie.js: {}
+  css:
+    theme:
+      src/css/steve_administration.css: {}

@@ -1,0 +1,37 @@
+section.RaceCourseHeadPlugin{
+	.container{
+		.row{
+			.col-md-12{
+				h1{
+					bottom: 55px;
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	section.RaceCourseHeadPlugin{
+		.container{
+			padding: 0;
+			.showcase{
+				padding-top: 20px;
+				padding-bottom: 0;
+				.sponsored{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_game_stream_providers
+  module:
+    - rp_game
+id: game.game.field_game_stream_providers
+field_name: field_game_stream_providers
+entity_type: game
+bundle: game
+label: 'Stream providers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:stream_provider'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

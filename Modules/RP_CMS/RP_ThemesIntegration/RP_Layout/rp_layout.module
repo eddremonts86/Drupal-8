@@ -1,0 +1,29 @@
+<?php
+use \Drupal\panels\Plugin\DisplayVariant\PanelsDisplayVariant;
+use \Drupal\rp_cms_steve_integration\Controller\SteveFrontendControler;
+
+function rp_layout_panels_build_alter(array &$build, PanelsDisplayVariant $panels_display) {
+	if($panels_display->getStorageType() == 'panelizer_default'){
+
+		$ControllerObject = new SteveFrontendControler();
+		$node = $ControllerObject->getNodeByUrl(1);
+
+		$panelizer = \Drupal::service('panelizer');
+		$PanelsDisplays = $panelizer->getDefaultPanelsDisplays('node', $node->type->target_id, 'full');
+
+		if($channelId = $_SESSION["channel"]){
+			$obj = [
+				'vid' => 'channels',
+				'field_channel_api_id' => $channelId,
+			];
+			$channel = $ControllerObject->getTaxonomyByCriterio($obj, 0);
+			if($channel){
+				foreach ($PanelsDisplays as $displayName => $display) {
+					if($displayName == mb_strtolower($channel->name->value)){
+						$build = $display->getBuilder()->build($display);
+					}
+				}
+			}
+		}
+	}
+}

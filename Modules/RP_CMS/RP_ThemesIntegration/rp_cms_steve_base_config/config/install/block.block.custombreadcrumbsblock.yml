@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - stevethemebase
+id: custombreadcrumbsblock
+theme: stevethemebase
+region: none
+weight: -7
+provider: null
+plugin: custombreadcrumbsplugin
+settings:
+  id: custombreadcrumbsplugin
+  label: 'Custom Breadcrumbs Block'
+  provider: rp_cms_steve_integration
+  label_display: '0'
+visibility: {  }

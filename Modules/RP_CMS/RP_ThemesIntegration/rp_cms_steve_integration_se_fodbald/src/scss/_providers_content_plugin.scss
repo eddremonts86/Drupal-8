@@ -1,0 +1,49 @@
+section.ProvidersContentPlugin{
+	>.container{
+		>.row{
+			&.ProviderIntro{
+				padding: 0 0 40px 0;
+				.col{
+					h1{
+						color: $color-ebony-clay-2;
+						font-size: 24px;
+						font-weight: 400;
+						margin: 0;
+						line-height: 1.1;
+					}
+					
+					&:last-child{
+						display: flex;
+						justify-content: flex-end;
+					}
+				}
+			}
+			&.ProviderText{
+				padding: 25px 15px 15px 15px;
+				margin: 10px 0 0 0;
+				border-top: 1px solid $color-alto;
+				.col{
+					ul{ 
+						width: 75%;
+						margin-left: 15px;
+    				}
+    			}
+			}
+		}	
+	}
+	@include mobile{
+		>.container{
+			>.row{
+				&.ProviderIntro{
+					padding: 0 0 21px 0;
+					
+					.col{
+						&:last-child{
+							justify-content: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}

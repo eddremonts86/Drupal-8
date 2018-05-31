@@ -1,0 +1,8 @@
+name: RP Sport Info
+type: module
+description: RP Sport Info Content
+core: 8.x
+package: RP
+
+dependencies:
+  - rp_sport

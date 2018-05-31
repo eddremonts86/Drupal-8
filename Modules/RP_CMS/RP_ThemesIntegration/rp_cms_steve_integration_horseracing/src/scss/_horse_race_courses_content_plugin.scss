@@ -1,0 +1,42 @@
+section.RaceCoursesContentPlugin{
+	.container{
+		padding: 0 10px;
+		.row{
+			&:nth-child(2){
+				padding: 45.5px 0;
+				h1{
+					font-size: 50px;
+					line-height: 56px;
+					font-family: "Bebas";
+					color: #4a788F;
+				}
+				
+				p{
+					font-family: "Geogrotesque";
+					font-size: 15px;
+					color: #103040;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	section.RaceCoursesContentPlugin{
+		.container{
+			.row{
+				&:nth-child(2){
+					h1{
+						font-size: 40px;
+						line-height: 45px;
+					}
+					p{
+						font-size: 14px;
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}

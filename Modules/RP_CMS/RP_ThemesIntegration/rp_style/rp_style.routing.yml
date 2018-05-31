@@ -1,0 +1,7 @@
+rp_style.style:
+  path: '/style'
+  defaults:
+    _controller: '\Drupal\rp_style\Controller\RPStyleController::stylePage'
+    _title: 'Style Guide'
+  requirements:
+    _permission: 'access content'

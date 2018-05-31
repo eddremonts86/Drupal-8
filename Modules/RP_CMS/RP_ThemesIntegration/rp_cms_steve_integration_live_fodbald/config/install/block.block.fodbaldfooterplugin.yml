@@ -1,0 +1,20 @@
+uuid: 71c90c6f-dfa2-4760-8187-c6c411dc29fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldfooterplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldfooterplugin
+settings:
+  id: fodbaldfooterplugin
+  label: 'Fodbald Footer Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

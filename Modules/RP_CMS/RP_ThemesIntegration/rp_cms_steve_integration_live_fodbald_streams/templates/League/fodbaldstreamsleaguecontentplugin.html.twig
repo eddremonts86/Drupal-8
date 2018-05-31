@@ -1,0 +1,85 @@
+<section class="LeagueContentPlugin">
+	<div class="container">
+		{% if schedule %}
+			<div class="row">
+				<div class="col col-md-12 col-sm-12 col-xs-12 LeagueSchedule">
+					<div class="panel panel-default ScheduleList">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								{% if tags.image %}
+									<img src="{{ file_url(tags.image) }}">
+								{% endif %}
+								{{ tags.name }}
+							</h4>
+						</div>
+						<div class="panel-body">
+							<ul class="Events">
+								{% for match in schedule %}
+									<li>
+										<a href="{{ match.link }}">
+											<span class="date">{{ match.date|date('d-m-Y') }}&nbsp;&nbsp;&nbsp;{{ match.date|date('H:i') }}</span>
+											{% if match.teams %}
+												{% for team in match.teams %}
+													<span class="team">
+														{{ team.name }}
+														{% if team.image %}
+															<img src="{{ file_url(team.image) }}">
+														{% endif %}
+													</span>
+												{% endfor %}
+											{% endif %}
+										</a>
+									</li>		
+								{% endfor %}
+							</ul>
+						</div>
+					</div> 
+				</div>
+			</div>
+		{% endif %}
+		<div class="row">
+			<div class="col col-md-8 col-sm-12 col-xs-12 LeagueContent">
+				<h2>{{ tags.name }}</h2>
+				{{ tags.description|raw }}
+			</div>
+			{% if teams %}
+				<div class="col col-md-4 col-sm-12 col-xs-12 LeagueTeams">
+					<div class="panel panel-default LeagueTeamsList">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								{{ tags.name }} {{ "fodbald_streams_league_teams_title"|t }}
+							</h4>
+						</div>
+						<div class="panel-body">
+							<ul>
+								{% for league in teams %}
+									{% for team in league.list %}
+										<li>
+											<a href="{{ team.link }}">
+												{{ team.name }}
+											</a>
+										</li>
+									{% endfor %}		
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+		<div class="row">
+			<div class="col col-md-12 col-sm-12 col-xs-12 ProviderLinkBlock">
+				<div class="ProviderLinkContent">
+					<h2>
+						{{ "fodbald_streams_provider_links_head"|t }}
+						<span>{{ "fodbald_streams_provider_links_subhead"|t }}</span>
+					</h2>
+					<a href="#" class="btn">{{ "fodbald_streams_provider_links_button"|t }}</a>
+				</div>
+				<p class="disclaimer">{{ "fodbald_streams_provider_links_disclaimer"|t }}</p>
+				<p class="warning">{{ "fodbald_streams_provider_links_warning"|t }}</p>
+				<a class="popup" href="#popup1">{{ "fodbald_streams_provider_links_popup"|t }}</a>
+			</div>
+		</div>		
+	</div>
+</section>	

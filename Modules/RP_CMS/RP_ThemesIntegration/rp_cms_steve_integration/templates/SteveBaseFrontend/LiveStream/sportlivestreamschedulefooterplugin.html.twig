@@ -1,0 +1,127 @@
+{% set goto = FALSE %}
+
+<section class="o-sport-calendar">
+    <div class="container text-center">
+        <div class="col-xs-12">
+            <h1>{{ "sport_livestream_schedule_head" | t }} </h1>
+            <h2>{{ "sport_livestream_schedule_sudhead" | t }} </h2>
+        </div>
+        <div class="col-xs-12 text-left">
+            <table class="table table-hover">
+                <thead>
+                <tr class="success">
+                    <th {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.schedule_background_2) : ''}} >{{ "sport_livestream_schedule_table_tid" | t}}</th>
+                    <th {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.schedule_background_2) : ''}} >{{ "sport_livestream_schedule_table_kamp"| t}}</th>
+                    <th {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.schedule_background_2) : ''}} >{{ "sport_livestream_schedule_table_liga"| t}}</th>
+                    <th {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.schedule_background_2) : ''}} >{{ "sport_livestream_schedule_table_kanal"| t}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if tags.AllEvents %}
+                    {% for AllEvents in tags %}
+                        {% for eventDate in AllEvents %}
+                            <tr class="active_plus">
+                                <td colspan="4">{{ eventDate.date |date("D d. M") }}</td>
+                            </tr>
+                            {% if loop.index < 2 %}
+                                {% for tournament in eventDate.alltournament %}
+                                    {% for events in tournament %}
+                                        {% for event in events %}
+                                            {% for eventStreams in event.eventStreams %}
+                                                {% if eventStreams.id == '1783' %}
+                                                    {% set goto = TRUE %}
+                                                {% endif %}
+                                            {% endfor  %}
+
+                                            {% if loop.index < 2 %}
+                                                <tr class="active" goto="{{ goto ? event.fullEventUrl : FALSE }}">
+                                                    <td scope="row">{{ event.eventDate | date("H:i ") }}</td>
+                                                    <td> {{ event.title }}</td>
+                                                    <td>{{ tournament.tournament }}</td>
+                                                    <td class="img_row">
+                                                        {% for eventStreams in event.eventStreams %}
+                                                            {% if loop.index <= 3  %}
+                                                            <a id="reDir" class="null reDir">
+                                                              {% if eventStreams.streamIMG != '' and eventStreams.streamIMG != '/'%}
+                                                                <img class="imgLiveStreamProviderList" alt="{{ eventStreams.streamIMGAlt }} " src="{{ file_url(eventStreams.streamIMG) }}">
+                                                              {% else %}
+                                                                <img class="imgLiveStreamProviderList"  {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }}
+                                                                     alt="{{ eventStreams.streamIMGAlt }}" src="/themes/custom/stevethemebase/src/images/step3.png" icon>
+                                                              {% endif %}
+                                                            </a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <i class="mobile-only icon-plus half-gap-top"></i>
+                                                        <i class="icon-caret-right pull-right half-gap-top"></i>
+                                                    </td>
+                                                </tr>
+                                            {% else %}
+                                                <tr class="active hidden" goto="{{ goto ? event.fullEventUrl : FALSE }}">
+                                                    <td scope="row">{{ event.eventDate | date("H:i ") }}</td>
+                                                    <td> {{ event.title }}</td>
+                                                    <td>{{ tournament.tournament }}</td>
+                                                    <td class="img_row">
+                                                        {% for eventStreams in event.eventStreams %}
+                                                            {% if loop.index <= 3  %}
+                                                                <a id="reDir" class="null reDir">
+                                                                  {% if eventStreams.streamIMG != '' and eventStreams.streamIMG != '/'%}
+                                                                    <img class="imgLiveStreamProviderList" alt="{{ eventStreams.streamIMGAlt }} " src="{{ file_url(eventStreams.streamIMG) }}">
+                                                                  {% else %}
+                                                                    <img class="imgLiveStreamProviderList"  {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }}
+                                                                         alt="{{ eventStreams.streamIMGAlt }}" src="/themes/custom/stevethemebase/src/images/step3.png" icon>
+                                                                  {% endif %}
+                                                            </a>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <i class="mobile-only icon-plus half-gap-top"></i>
+                                                        <i class="icon-caret-right pull-right half-gap-top"></i>
+                                                    </td>
+                                                </tr>
+                                            {% endif %}
+                                            {% set goto = FALSE %}
+                                        {% endfor %}
+                                    {% endfor %}
+                                {% endfor %}
+                            {% else %}
+                                {% for tournament in eventDate.alltournament %}
+                                    {% for events in tournament %}
+                                        {% for event in events %}
+                                            <tr class="active hidden">
+                                                <td scope="row">{{ event.eventDate | date("H:i ") }}</td>
+                                                <td> {{ event.title }}</td>
+                                                <td>{{ tournament.tournament }}</td>
+                                                <td class="img_row">
+                                                    {% for eventStreams in event.eventStreams %}
+                                                        {% if loop.index <= 3  %}
+                                                        <a id="reDir" class="null reDir">
+                                                          {% if eventStreams.streamIMG != '' and eventStreams.streamIMG != '/' %}
+                                                            <img class="imgLiveStreamProviderList" alt="{{ eventStreams.streamIMGAlt }} " src="{{ file_url(eventStreams.streamIMG) }}">
+                                                          {% else %}
+                                                            <img class="imgLiveStreamProviderList"  {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }}
+                                                                 alt="{{ eventStreams.streamIMGAlt }}" src="/themes/custom/stevethemebase/src/images/step3.png" icon>
+                                                          {% endif %}
+                                                        </a>
+                                                            {% endif %}
+                                                    {% endfor %}
+                                                    <i class="mobile-only icon-plus half-gap-top"></i>
+                                                    <i class="icon-caret-right pull-right half-gap-top"></i>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <tr class="tr_btn">
+                    <td colspan="4">
+                        <a class="btn" {{ colors ? attributes.setAttribute('style', 'background: linear-gradient(to bottom, ' ~ colors.button_gradient_light ~ ' 0, ' ~ colors.button_gradient_dark ~ ' 100%)')}}> {{ "sport_livestream_schedule_table_button" |t }}</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

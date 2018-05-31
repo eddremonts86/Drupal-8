@@ -1,0 +1,257 @@
+.o-sport-calendar {
+  background: #d3d3d3;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  .container{
+    padding: 0;
+  }
+  .col-xs-12{
+	  padding: 0;
+  }
+  
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: black;
+  }
+  h2 {
+    font-weight: 400;
+    font-family: $font-sans;
+    font-size: 24px;
+  }
+  table {
+    border-collapse: unset !important;
+    border-spacing: unset !important;
+    table-layout: fixed;
+
+    > thead:first-child {
+      > tr:first-child > {
+        th {
+          width: 25%;
+          background-color: #aac56c;
+          &:first-child {
+            padding-left: 50px;
+          }
+        }
+
+      }
+    }
+    &.table {
+      border: 1px solid $color-black;
+      thead {
+        tr {
+          &.success {
+            font-size: 16px;
+            border-top: 0px solid #ddd;
+            color: $color-white;
+            font-weight: 900;
+          }
+          th {
+            background-color: #aac56c;
+            color: $color-white;
+            font-size: 1em;
+            font-weight: 700;
+            padding: 10px;
+            white-space: normal;
+            word-wrap: break-word;
+            text-align: left;
+            border-top: 0px solid #ddd !important;
+            &:first-child {
+              padding-left: 50px;
+            }
+          }
+
+        }
+      }
+      tbody {
+        tr {
+          font-size: 17px;
+
+          &.active_plus {
+            background: #d3d3d3;
+            border-top: 0px solid #ddd;
+            > td {
+              background: transparent;
+              font-weight: 900;
+            }
+          }
+          &.active {
+            background: #f2f2f2;
+            cursor: pointer;
+            > td {
+              background: transparent;
+            }
+            &:nth-child(odd) {
+              background: #fcfcfc;
+            }
+            &:hover{
+              background: $color-selver-1;
+            }
+          }
+          &.tr_btn{
+            td{
+              background: #d3d3d3 !important;
+            }
+          }
+          td {
+            width: 25%;
+            padding-left: 50px;
+            padding: 10px;
+            background: #fcfcfc;
+            color: $color-zambezi;
+            white-space: normal;
+            word-wrap: break-word;
+            text-align: left;
+            border-top: 0px solid #ddd;
+            &:first-child {
+              padding-left: 50px;
+            }
+            &.img_row {
+              text-align: left;
+              position: relative;
+              padding-right: 18px;
+
+              img.imgLiveStreamProviderList{
+                margin: 0 10px 5px 0;
+              }
+              i.icon-caret-right:after{
+                position: absolute;
+                right: 10px;
+                top: calc(50% - 15px);
+                content: "\f0da"; 
+                font-family: FontAwesome;
+                font-weight: 400;
+                font-size: 22px;
+                font-style: normal;
+                text-decoration: inherit;
+                -webkit-font-smoothing: antialiased;
+              }
+              i.icon-plus{
+                display: none;
+                &:after{
+                  content: "\f067";
+                  font-family: FontAwesome;
+                  font-weight: 400;
+                  font-size: 22px;
+                  font-style: normal;
+                  text-decoration: inherit;
+                  -webkit-font-smoothing: antialiased;
+                }
+              }
+            }
+            > a {
+              &.btn {
+                margin: 0 0 0 -20px;
+                font-family: $font-sans;
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .table {
+    margin: 15px 0;
+    > thead {
+      > tr {
+        > th {
+          vertical-align: bottom;
+          border-bottom: 0px solid #ddd;
+        }
+      }
+    }
+  }
+  @include tablet{
+    .table{
+      tbody{
+        tr{        
+          &.active{
+            td{
+              &.img_row{
+                >a{
+                  display: none;
+                  &:nth-child(1),
+                  &:nth-child(2){
+                    display: inline-block;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include mobile{
+    .container{
+      padding: 0 10px;
+      h2{
+        font-size: 18px;
+        margin: 0 0 10px 0;
+      }
+      .table{
+        thead{
+          tr{
+            th{
+              &:nth-child(2){
+                width: 62% !important;
+              }
+              &:nth-child(4){
+                width: 40% !important;
+              }
+              &:nth-child(1),
+              &:nth-child(3){
+                display: none;
+              }
+            }
+          }
+        }
+        tbody{
+          tr{
+            &.active_plus{
+              td{
+                padding: 10px;
+              }
+            }
+            &.tr_btn{
+              td{
+                padding: 10px;
+                a{
+                  margin: 0;
+                }
+              }
+            }
+            &.active{
+              td{
+                width: 100% !important;
+                &:nth-child(1),
+                &:nth-child(3){
+                  display: none;
+                }
+                &.img_row{
+                  >a{
+                    display: none;
+                    &:nth-child(1){
+                      display: inline-block;
+                      vertical-align: middle;
+                    }
+                  }
+                  .mobile-only{
+                    display: inline-block;
+                    vertical-align: middle;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

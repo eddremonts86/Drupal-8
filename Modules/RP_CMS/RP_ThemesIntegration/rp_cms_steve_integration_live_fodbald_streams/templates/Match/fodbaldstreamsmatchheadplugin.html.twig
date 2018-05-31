@@ -1,0 +1,75 @@
+<section class="MatchHeadPlugin ContentHeader">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-10 vs-block">
+				{% if tags %}
+					{% set event = tags|first %}
+					<a href="{{ event.link }}" class="vs-block-inner">
+						{% if event.teams.left %}
+							<div class="vs-block-team team-left">
+								{% if event.teams.left.image %}
+									<div class="vs-block-team-image">
+										<img src="{{ file_url(event.teams.left.image) }}" alt="{{ event.teams.left.name }}">
+									</div>
+								{% endif %}
+								<span class="vs-block-team-name">{{ event.teams.left.name }}</span>			
+							</div>
+						{% endif %}
+						<div class="vs-block-info">
+							<p class="vs-block-vs"><span>{{"fodbald_streams_head_vs" | t}}</span></p>
+							<p class="vs-block-date">{{event.date|date("d. M Y") }}</p>
+							<p class="vs-block-time">{{event.date|date("H:i") }}</p>
+						</div>
+						{% if event.teams.right %}
+							<div class="vs-block-team team-right">
+								{% if event.teams.right.image %}
+									<div class="vs-block-team-image">
+										<img src="{{ file_url(event.teams.right.image) }}" alt="{{ event.teams.right.name }}">
+									</div>
+								{% endif %}
+								<span class="vs-block-team-name">{{ event.teams.right.name }}</span>
+							</div>
+						{% endif %}
+					</a>
+				{% endif %}
+			</div>
+			<div class="col col-md-2 showcase promo">
+				<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/anouncement.png" alt="anouncement" class="showacase-promo">
+				<div class="showcase-inner">
+					<div class="showcase-head">
+						{{ "fodbald_streams_showcase_head" | t }}
+						<span class="showcase-subhead">
+							{{ "fodbald_streams_showcase_subhead" | t }}
+						</span>
+					</div>
+					<ul class="showcase-steps">
+						<li class="showcase-step">
+							<span class="showcase-step-1"></span>
+							{{ "fodbald_streams_showcase_step_1" | t }}
+						</li>
+						<li class="showcase-step">
+							<span class="showcase-step-2"></span>
+							{{ "fodbald_streams_showcase_step_2" | t }}
+						</li>
+						<li class="showcase-step">
+							<span class="showcase-step-3"></span>
+							{{ "fodbald_streams_showcase_step_3" | t }}
+						</li>
+					</ul>
+					<a href="" class="btn">
+						{{ "fodbald_streams_showcase_button" | t}}
+					</a>
+					<p class="warning">
+						{{ "fodbald_streams_showcase_warning"|t }}
+					</p>
+					<p class="disclaimer">
+						{{ "fodbald_streams_showcase_disclaimer" | t}}
+					</p>
+					<a href="#popup1" class="popup">
+						{{ "fodbald_streams_showcase_popup" | t}}
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

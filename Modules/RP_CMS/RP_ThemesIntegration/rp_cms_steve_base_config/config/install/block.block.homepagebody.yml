@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - stevethemebase
+id: homepagebody
+theme: stevethemebase
+region: homebody
+weight: -19
+provider: null
+plugin: homebodyplugin
+settings:
+  id: homebodyplugin
+  label: 'Home Page body'
+  provider: rp_cms_steve_integration
+  label_display: '0'
+visibility: {  }

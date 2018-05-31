@@ -1,0 +1,56 @@
+schemas:
+  bootstrap: 8000
+  stevethemebase: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://www.steve.cu/themes/contrib/bootstrap/favicon.ico'
+  use_default: 1
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+cdn_provider: ''
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  navigation_footer: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  sidebar_left: ''
+  sidebar_right: ''
+  footer: ''
+  content: ''
+  siteflagmenu: ''
+  siteundermenubar: ''
+  generalpageshead: ''
+  generalpagesbody: ''
+  generalpagesfooter: ''
+  homehead: ''
+  homepartner: ''
+  homebody: ''
+  homefooter: ''
+  sporthomehead: ''
+  sporthomepopularmatch: ''
+  sporthomeschedule: ''
+  sporthomestreamlist: ''
+  sporthomefooter: ''
+  sportlivestreamhead: ''
+  sportlivestreamlist: ''
+  sportlivestreamfooter: ''
+  sportbloghead: ''
+  sportblogbody: ''
+  sportblogfooter: ''
+  eventpagehead: ''
+  eventpagecontent: ''
+  eventpagestreamlist: ''
+  eventpagefooter: ''
+  none: ''
+table_responsive: '-1'
+table: ''

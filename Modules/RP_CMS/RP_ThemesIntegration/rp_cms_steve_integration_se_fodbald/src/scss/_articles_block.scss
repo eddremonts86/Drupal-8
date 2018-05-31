@@ -1,0 +1,88 @@
+.ArticlesBlock{
+	padding: 0 40px 0 0;
+	margin: 20px 0 0 0;
+	.BlockContent{
+		.ArticlesList{
+			margin: 0;
+			border-top: 1px solid $color-mercury;
+			padding: 18px 0 0 0;
+			list-style: none;
+			li{
+				display: list-item;
+				opacity: 1;
+				margin: 2px 0;
+				
+				a{
+					display: inline-block;
+					max-width: 100%;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					color: $color-jungle-green;
+					font-family: Gudea,sans-serif;
+					white-space: nowrap;
+					
+					i{
+						line-height: 1.5;
+					    padding-right: 0;
+					    display: inline-block
+					}
+					
+					span{
+						color: $color-gray;
+						font-size: 13px;
+						position: relative;
+						top: -1px;
+					}
+					
+					&:focus,
+					&:hover{
+						text-decoration: none;
+						color: $color-forest-green;
+					}
+				}
+			}
+		}
+		nav{
+			&.paginate-pagination{
+				>ul{
+					margin: 20px 0;
+					padding: 0;
+					list-style: none;
+					text-align: center;
+					li{
+						display: inline-block;
+						margin: 0 4px;
+						
+		    			a{
+			    			color: $color-gray;
+			    			text-decoration: none;
+			    			
+			    			&.prev,
+			    			&.next{
+				    			text-decoration: none;
+			    			}
+			    			
+			    			&:hover,
+				    		&:focus{
+					    		text-decoration: none;
+				    		}
+			    			
+			    			&.active{
+				    			text-decoration: underline !important;
+			    			}
+		    			}
+					}
+				}
+			}
+		}
+	}
+	
+	@include mobile{
+		.BlockContent{
+			.ArticlesList{
+				border: none;
+				padding: 0;
+			}
+		}	
+	}
+}

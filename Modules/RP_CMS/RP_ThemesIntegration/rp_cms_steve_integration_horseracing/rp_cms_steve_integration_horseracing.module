@@ -1,0 +1,286 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_cms_steve_integration.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function rp_cms_steve_integration_horseracing_theme()
+{
+    return [
+        //PAGES
+        'horsehomepage' => [
+            'template' => 'Pages/horsehomepage'
+        ],
+        'horsewatchlivepage' => [
+            'template' => 'Pages/horsewatchlivepage'
+        ],
+        'horseracecoursespage' => [
+            'template' => 'Pages/horseracecoursespage'
+        ],
+        'horseracecoursepage' => [
+            'template' => 'Pages/horseracecoursepage'
+        ],
+        'horsereviewspage' => [
+            'template' => 'Pages/horsereviewspage'
+        ],
+        'horsereviewpage' => [
+            'template' => 'Pages/horsereviewpage'
+        ],
+        'horseblogpage' => [
+            'template' => 'Pages/horseblogpage'
+        ],
+        //GENERAL
+        'horseheaderplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Site/horseheaderplugin'
+        ],
+        'horsefooterplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Site/horsefooterplugin'
+        ],
+        //HOME PAGE 
+        'horsehomeheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/horsehomeheadplugin'
+        ],
+        'horsehomecontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/horsehomecontentplugin'
+        ],
+        'horsehomeblogplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/horsehomeblogplugin'
+        ],
+        'horsehomeprovidertabsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/horsehomeprovidertabsplugin'
+        ],
+        //WATCHLIVE PAGE
+        'horsewatchliveheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'WatchLive/horsewatchliveheadplugin'
+        ],
+        'horsewatchlivecontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'WatchLive/horsewatchlivecontentplugin'
+        ],
+        'horsewatchliveproviderlistplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'WatchLive/horsewatchliveproviderlistplugin'
+        ],
+        //RACECOURSES PAGE
+        'horseracecoursesheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourses/horseracecoursesheadplugin' 
+        ],
+        'horseracecoursescontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourses/horseracecoursescontentplugin' 
+        ],
+        'horseracecourseslistplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourses/horseracecourseslistplugin' 
+        ],
+        //REVIEWS PAGE
+        'horsereviewsheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Reviews/horsereviewsheadplugin'
+        ],
+        'horsereviewsprovidertabsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Reviews/horsereviewsprovidertabsplugin'
+        ],
+        //REVIEW PAGE
+        'horsereviewheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Review/horsereviewheadplugin'
+        ],
+        'horsereviewprovidertabsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Review/horsereviewprovidertabsplugin'
+        ],
+        'horsereviewcontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Review/horsereviewcontentplugin'
+        ],
+        //BLOG PAGE
+        'horseblogheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Blog/horseblogheadplugin'
+        ],
+        'horseblogcontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Blog/horseblogcontentplugin'
+        ],
+        'horseblogoverviewplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Blog/horseblogoverviewplugin'
+        ],
+        //RACECOURSE PAGE
+        'horseracecourseheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourse/horseracecourseheadplugin'
+        ],
+        'horseracecourseoverviewplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourse/horseracecourseoverviewplugin'
+        ],
+        'horseracecourseguidplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourse/horseracecourseguidplugin'
+        ],
+        'horseracecourseproviderlistplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourse/horseracecourseproviderlistplugin'
+        ],
+        'horseracecourseproviderlistsecondaryplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourse/horseracecourseproviderlistsecondaryplugin'
+        ],
+        'horseracecourseequalizerplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'RaceCourse/horseracecourseequalizerplugin'
+        ]
+    ];
+}
+
+function rp_cms_steve_integration_horseracing_page_attachments(array &$page)
+{
+    $route = \Drupal::routeMatch();
+    $routeName = $route->getRouteName();
+    $RouteList = [
+        'rp_cms_steve_integration_horseracing.horse_home', 
+        'rp_cms_steve_integration_horseracing.horse_watch_live',
+        'rp_cms_steve_integration_horseracing.horse_race_courses',
+        'rp_cms_steve_integration_horseracing.horse_race_course',
+        'rp_cms_steve_integration_horseracing.horse_reviews',
+        'rp_cms_steve_integration_horseracing.horse_review',
+        'rp_cms_steve_integration_horseracing.horse_blog'
+    ];
+
+    foreach ($RouteList as $Page){
+        if($Page == $routeName){
+            $page['#attached']['library'][] = 'rp_cms_steve_integration_horseracing/HorseRacingGeneral';
+            break;
+        }
+    }
+}
+
+function rp_cms_steve_integration_horseracing_preprocess_block(&$vars){
+    $blocks = [];
+
+    foreach ($blocks as $block) {
+        if($vars['elements']['#plugin_id'] == $block){
+            $vars['#cache']['max-age'] = 0;
+        }
+    }
+
+}

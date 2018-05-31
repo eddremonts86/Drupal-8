@@ -1,0 +1,48 @@
+.PreviewsListPlugin{
+	.row{
+		padding: 0 3% 0 0;
+		&.pager{
+			margin-top: -100px;
+		}
+	}
+}
+
+#block-fodbaldpreviewslistplugin{
+	>nav{
+		&.pager-nav{
+			max-width: 1050px;
+		    padding: 0 3% 4em 0;
+		    margin: -150px auto 0 auto;
+		    width: 100%;
+		    
+		    ul{
+			   width: 83.333333333%; 
+			    display: flex;
+			    justify-content: center;
+			    align-items: center;	   
+		    }
+		}
+	}
+	
+	@include tablet{
+		max-width: unset;
+		>nav{
+			&.pager-nav{
+				ul{
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+	@include mobile{
+		>nav{
+			&.pager-nav{
+				ul{
+					padding: 0 1em;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
