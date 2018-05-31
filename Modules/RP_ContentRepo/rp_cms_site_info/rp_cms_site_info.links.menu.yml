@@ -1,8 +1,0 @@
-
-# CMS Site Info menu items definition
-entity.cms_site_info.collection:
-  title: 'CMS Site Info'
-  route_name: entity.cms_site_info.collection
-  description: 'List CMS Site Info (bundles)'
-  parent: rp_base.controller_entity_settings
-  weight: 99

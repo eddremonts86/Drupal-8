@@ -1,8 +1,0 @@
-name: 'RP Shortcode'
-type: module
-description: 'Implements shortcode filters for RebelPenguin themes'
-core: 8.x
-package: 'RP'
-
-dependencies:
-  - shortcode

@@ -1,5 +1,0 @@
-bundle: rp_cms
-excluded:
-  - rdf.mapping.node.page
-  - field.storage.node.panelizer
-required: true

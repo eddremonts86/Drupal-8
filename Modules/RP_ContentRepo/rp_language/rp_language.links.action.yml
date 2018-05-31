@@ -1,5 +1,0 @@
-entity.language_content.add_form:
-  route_name: entity.language_content.add_form
-  title: 'Add Language content'
-  appears_on:
-    - entity.language_content.collection

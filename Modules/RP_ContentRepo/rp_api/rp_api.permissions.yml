@@ -1,4 +1,0 @@
-administer rp_api configuration:
-  title: Administer rp_api configuration
-  description: Optional description.
-  restrict access: true

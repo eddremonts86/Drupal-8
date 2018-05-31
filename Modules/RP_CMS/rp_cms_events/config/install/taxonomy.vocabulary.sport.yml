@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Sports and Tournamets'
-vid: sport
-description: 'Sports and Tournamets list'
-hierarchy: 0
-weight: -10

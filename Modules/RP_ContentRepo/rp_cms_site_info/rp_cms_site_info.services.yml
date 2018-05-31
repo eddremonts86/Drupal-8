@@ -1,5 +1,0 @@
-services:
-  rp_site_info.twig.extension:
-    class: Drupal\rp_cms_site_info\TwigExtension\RPSiteInfoTwigExtension
-    tags:
-      - { name: twig.extension }

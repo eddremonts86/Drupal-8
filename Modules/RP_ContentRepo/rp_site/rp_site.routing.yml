@@ -1,8 +1,0 @@
-
-rp_site.default_controller_test:
-  path: '/admin/rp_site/test'
-  defaults:
-    _controller: '\Drupal\rp_site\Controller\DefaultController::test'
-    _title: 'test'
-  requirements:
-    _permission: 'access content'
