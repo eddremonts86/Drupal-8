@@ -1,0 +1,4 @@
+rp_base:
+  css:
+    theme:
+      css/rp_base.css: {}

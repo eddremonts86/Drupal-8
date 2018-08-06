@@ -1,0 +1,14 @@
+{
+  "name": "drupal/rp_participant_info",
+  "type": "drupal-module",
+  "description": "RP participant info",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_participant_info",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_participant_info",
+    "source": "http://cgit.drupalcode.org/rp_participant_info"
+  },
+  "require": { }
+}

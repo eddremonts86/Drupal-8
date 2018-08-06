@@ -1,0 +1,51 @@
+<?php
+
+
+/**
+ * @file
+ * Contains rebelpenguin_endponts_client.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rebel_endpoints_help($route_name, RouteMatchInterface $route_match) {
+  global $base_url;
+  switch ($route_name) {
+    // Main module help for the rebelpenguin_endponts_client module.
+    case 'help.page.rebel_endpoints':
+      $output = '';
+      $output .= '<h1>' . t('About Rebel endpoints server') . '</h1>';
+      $output .= '<p>' . t('My Awesome Module.') . '</p>';
+      $output .= '<h2>' . t('Endpoints List.').'</h2>';
+      $output .= '<ul>';
+      $output .= '<li>' . t( 'Get all nodes : ').'<b>'.$base_url.'/rpendp/getallnodes.json</b></li>';
+      $output .= '<li>' . t( 'Get nodeby id : ').'<b>'.$base_url.'/rpendp/getnodebyid.json</b></li>';
+      $output .= '<li>' . t( 'Get Nodes by type : ').'<b>'.$base_url.'/rpendp/getNodesbytype.json</b></li>';
+      $output .= '<li>' . t( 'Get rules : ').'<b>'.$base_url.'/getrules.json</b></li>';
+      $output .= '<li>' . t( 'Get rules by id : ').'<b>'.$base_url.'/rpendp/getrulesbyid.json</b></li>';
+      $output .= '<li>' . t( 'Get last Revision : ').'<b>'.$base_url.'/rpendp/getlastRevision.json</b></li>';
+      $output .= '<li>' . t( 'Get all revision by id : ').'<b>'.$base_url.'/rpendp/getallrevisionbyid.json</b></li>';
+      $output .= '<li>' . t( 'Get revision by site : ').'<b>'.$base_url.'/rpendp/getrevisionbysite.json</b></li>';
+      $output .= '<li>' . t( 'Get taxonomy : ').'<b>'.$base_url.'/rpendp/gettaxonomy.json</b></li>';
+      $output .= '<li>' . t( 'Get content type : ').'<b>'.$base_url.'/rpendp/getctype.json</b></li>';
+      $output .= '<li>' . t( 'Get user : ').'<b>'.$base_url.'/rpendp/getuser.json</b></li>';
+      $output .= '</ul>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rebel_endpoints_theme() {
+  return [
+    'rebel_endpoints' => [
+      'template' => 'rebel_endpoints',
+      'render element' => 'children',
+    ],
+  ];
+}

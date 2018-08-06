@@ -1,0 +1,20 @@
+uuid: 251a9d5c-3b0b-4bfc-90f4-29bbeb0dd9f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldleagueslistplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldleagueslistplugin
+settings:
+  id: sefodbaldleagueslistplugin
+  label: 'Se Fodbald Leagues List Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

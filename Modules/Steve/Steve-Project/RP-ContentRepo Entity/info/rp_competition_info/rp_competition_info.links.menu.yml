@@ -1,0 +1,14 @@
+
+# Competition Info menu items definition
+#entity.competition_info.collection:
+#  title: 'Competition Info list'
+#  route_name: entity.competition_info.collection
+#  description: 'List Competition Info entities'
+#  parent: system.admin_structure
+#  weight: 100
+
+competition_info.admin.structure.settings:
+  title: Competition Info settings
+  description: 'Configure Competition Info entities'
+  route_name: competition_info.settings
+  parent: rp_base.controller_entity_settings

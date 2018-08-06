@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_competition_info.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_competition_info_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_competition_info module.
+    case 'help.page.rp_competition_info':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RP Competition Info') . '</p>';
+      return $output;
+
+    default:
+  }
+}

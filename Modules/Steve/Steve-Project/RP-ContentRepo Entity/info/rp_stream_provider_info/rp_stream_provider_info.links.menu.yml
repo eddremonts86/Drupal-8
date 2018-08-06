@@ -1,0 +1,14 @@
+
+# Stream Provider Info menu items definition
+#entity.stream_provider_info.collection:
+#  title: 'Stream Provider Info list'
+#  route_name: entity.stream_provider_info.collection
+#  description: 'List Stream Provider Info entities'
+#  parent: system.admin_structure
+#  weight: 100
+
+stream_provider_info.admin.structure.settings:
+  title: Stream Provider Info settings
+  description: 'Configure Stream Provider Info entities'
+  route_name: stream_provider_info.settings
+  parent: rp_base.controller_entity_settings

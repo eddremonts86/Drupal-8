@@ -1,0 +1,5 @@
+services:
+  rp_user_api.reposervice:
+    class: Drupal\rp_user_api\Controller\UserRepoService
+    arguments: []
+

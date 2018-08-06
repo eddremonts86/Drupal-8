@@ -1,0 +1,20 @@
+uuid: ea7bd75f-141e-4ab8-8b6f-1e3d54962ea4
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldproviderslistplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldproviderslistplugin
+settings:
+  id: fodbaldproviderslistplugin
+  label: 'Fodbald Providers List Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

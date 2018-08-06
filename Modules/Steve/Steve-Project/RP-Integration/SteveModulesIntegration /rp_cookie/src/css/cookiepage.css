@@ -1,0 +1,54 @@
+.slider.slider-horizontal {
+    width: 100%;
+}
+
+.panel_body_padding {
+    padding: 40px;
+}
+
+.def_conf {
+    display: flow-root;
+}
+
+.full_conf {
+    display: flow-root;
+
+}
+
+#cookies_optional > h4, #cookies_requiered > h4 {
+    color: #003172;
+    font-weight: 900;
+}
+
+.cookies_form {
+    margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+    #cookies_content {
+        margin-top: 50px;
+    }
+    #cookies_labels{
+        width: 80%;
+        padding-left: 12%;
+    }
+}
+
+@media (min-width: 1024px) {
+    div.panel-body.panel_body_padding {
+        padding: 30px 25px;
+    }
+
+    #cookies_labels {
+        width: 25%;
+    }
+
+    #cookies_content {
+        border-left: 1px dashed #003172;
+        padding-left: 15px;
+        min-height: 238px;
+        width: 70%;
+
+    }
+}
+

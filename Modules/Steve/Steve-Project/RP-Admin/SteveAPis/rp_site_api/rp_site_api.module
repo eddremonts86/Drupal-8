@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_site_api.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_site_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_site_api module.
+    case 'help.page.rp_site_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_site_api_theme() {
+  return [
+    'rp_site_api' => [
+      'render element' => 'children',
+    ],
+  ];
+}

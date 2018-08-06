@@ -1,0 +1,74 @@
+rp_cms_steve_integration_live_fodbald.fodbald_home:
+  path: '/fodbaldhome'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldHomePage'
+    _title: 'Fodbald Home'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_program:
+  path: '/fodbaldprogram'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldProgramPage'
+    _title: 'Fodbald Program'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_providers:
+  path: '/fodbaldproviders'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldProvidersPage'
+    _title: 'Fodbald Providers'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_leagues:
+  path: '/fodbaldleagues'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldLeaguesPage'
+    _title: 'Fodbald Leagues'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_teams:
+  path: '/fodbaldteams'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldTeamsPage'
+    _title: 'Fodbald Teams'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_previews:
+  path: '/fodbaldpreviews'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldPreviewsPage'
+    _title: 'Fodbald Previews'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_match:
+  path: '/fodbaldmatch'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldMatchPage'
+    _title: 'Fodbald Match'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_league:
+  path: '/fodbaldleague'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldleaguepage'
+    _title: 'Fodbald League'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald.fodbald_team:
+  path: '/fodbaldteam'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald\Controller\LiveFodbaldController::fodbaldteampage'
+    _title: 'Fodbald Team'
+  requirements:
+    _permission: 'access content'
+
+
+

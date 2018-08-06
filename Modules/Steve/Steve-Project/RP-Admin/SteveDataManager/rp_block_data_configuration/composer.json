@@ -1,0 +1,14 @@
+{
+  "name": "drupal/rp_block_data_configuration",
+  "type": "drupal-module",
+  "description": "Configuration of our modules",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_block_data_configuration",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_block_data_configuration",
+    "source": "http://cgit.drupalcode.org/rp_block_data_configuration"
+  },
+  "require": { }
+}

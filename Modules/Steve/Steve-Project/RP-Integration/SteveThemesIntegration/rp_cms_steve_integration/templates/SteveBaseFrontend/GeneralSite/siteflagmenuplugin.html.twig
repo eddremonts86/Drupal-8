@@ -1,0 +1,32 @@
+<header class='o-header'>
+    <nav class='o-header__languages'>
+        <ul>
+            {% for language in languages %}
+                <li>
+                    {% if language.active %}
+                        <a href="{{ language.link }}" class="is-active">
+                    {% else %}
+                        <a href="{{ language.link }}">
+                    {% endif %}
+                        <div class="c-flag" style="background: url('{{ language.flag }}');background-size: cover;">
+                        </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <div class='o-header__main'>
+        <a href='/' class='o-header__main__logo'></a>
+        <div class="menu_top">
+            {{ render_block('colormainmenublock') }}
+        </div>
+        {% if  enable_block('languageswitcher') %}
+        <div class="langSwitcher" {{ colors.main ? attributes.setAttribute('style', 'color: ' ~ colors.main ~ ';')}} >
+            <a>{{ 'Language'|t }} <i class="fa fa-caret-down" aria-hidden="true"></i> </a>
+            {{ render_block('languageswitcher') }}
+        </div>
+        {% endif %}
+    </div>
+
+</header>

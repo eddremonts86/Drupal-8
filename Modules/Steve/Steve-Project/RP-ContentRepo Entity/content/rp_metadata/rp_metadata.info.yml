@@ -1,0 +1,7 @@
+name: RP Metadata
+type: module
+description: RP Metadata Fields
+core: 8.x
+package: RP
+dependencies:
+  - rp_base

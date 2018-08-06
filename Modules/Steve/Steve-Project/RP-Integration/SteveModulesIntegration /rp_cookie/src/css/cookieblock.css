@@ -1,0 +1,46 @@
+.cc-color-override-1961755968.cc-window {
+    bottom: 0em;
+    right: 0em;
+    width: 300px;
+    padding: 25px;
+    height: auto;
+    background: #212221;
+    position: fixed;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: Helvetica, Calibri, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    z-index: 1001;
+    opacity: .99;
+    -moz-opacity: 0.99;
+    filter: alpha(opacity=99);
+}
+
+#cookieconsent\3a desc > a:nth-child(2) {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .cc-color-override-1961755968.cc-window {
+        bottom: 0em;
+        right: 0em;
+        width: 100%;
+        padding-left: 25px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        height: auto;
+        background: #212221;
+        position: fixed;
+        overflow: hidden;
+        box-sizing: border-box;
+        font-family: Helvetica, Calibri, Arial, sans-serif;
+        font-size: 11px;
+        line-height: 1.5em;
+        z-index: 1001;
+        opacity: .99;
+        -moz-opacity: 0.99;
+        filter: alpha(opacity=99);
+        margin: 0px;
+    }
+}

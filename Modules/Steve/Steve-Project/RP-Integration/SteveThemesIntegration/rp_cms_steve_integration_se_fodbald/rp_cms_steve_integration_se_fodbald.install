@@ -1,0 +1,86 @@
+<?php
+	
+use Drupal\taxonomy\Entity\Term;
+use Drupal\block\Entity\Block;
+use Drupal\Core\StreamWrapper\PublicStream;
+use Drupal\file\Entity\File;
+
+
+function rp_cms_steve_integration_se_fodbald_install() {
+	
+	$file_path = file_unmanaged_copy(drupal_get_path('module', 'rp_cms_steve_integration_se_fodbald') . '/src/images/18+.jpg', PublicStream::basePath());
+	$file = File::create(['uri' => file_build_uri(array_reverse(explode('/', $file_path))[0]), 'status' => FILE_STATUS_PERMANENT]);
+	$file->save();
+
+	$terms = [
+		[
+			'name' => 'Persondata Politik',
+			'vid' => 'se_fodbold_footer_menu',
+			'field_se_fodbald_menu_link' => ['uri' => 'internal:/'],
+			'weight' => 1
+		],
+		[
+			'name' => 'Alderspolitik',
+			'vid' => 'se_fodbold_footer_menu',
+			'field_se_fodbald_menu_popup' => 1,
+			'field_se_fodbald_menu_popup_id' => ['value' => '#popup1'],	
+			'weight' => 2
+		],
+		[
+			'name' => 'Spillemyndighederne',
+			'vid' => 'se_fodbold_footer_menu',
+			'field_se_fodbald_menu_link' => ['uri' => 'internal:/'],
+			'field_se_fodbald_menu_classes' => ['value' => 'lock'],
+			'weight' => 3
+		],
+		[
+			'name' => 'Alderspolitik',
+			'field_se_fodbald_menu_popup' => 1,
+			'field_se_fodbald_menu_popup_id' => ['value' => '#popup18'],
+			'vid' => 'se_fodbold_footer_menu',
+			'field_se_fodbald_menu_classes' => ['value' => 'bold'],
+			'field_se_fodbald_menu_image' => ['target_id' => $file->id()],
+			'weight' => 4
+		]
+	];
+	
+	$taxonomies = [
+		'se_fodbold_footer_menu' => [
+			'fields' => [
+				'field_se_fodbald_menu_classes',
+				'field_se_fodbald_menu_image',
+				'field_se_fodbald_menu_link',
+				'field_se_fodbald_menu_popup',
+				'field_se_fodbald_menu_popup_id'
+			]
+		]
+	];
+	
+	foreach($terms as $term){
+		Term::create($term)->save();
+	}
+	
+	$blocks = [];
+	$blocks = \Drupal::entityTypeManager()
+		->getStorage('block')
+		->loadByProperties(['theme' => 'se_fodbald', 'region' => 'content']);
+	
+	if($blocks){
+		foreach(array_keys($blocks) as $block){
+			$block = Block::load($block);
+			if($block->getPluginId() != 'system_main_block'){
+				$block->setRegion('none');
+				$block->save();
+			}
+		}
+	}
+	
+	foreach($taxonomies as $taxonomy => $fields){
+		$TaxonomyFormDisplay = entity_get_form_display('taxonomy_term', $taxonomy, 'default');
+		foreach($fields['fields'] as $field){
+			$TaxonomyFormDisplay->setComponent($field, array('region' => 'content'));
+		}
+		$TaxonomyFormDisplay->save();	
+	}
+}
+

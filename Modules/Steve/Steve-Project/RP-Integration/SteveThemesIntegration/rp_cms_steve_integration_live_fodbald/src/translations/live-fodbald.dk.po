@@ -1,0 +1,329 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lingohub 1.0.1\n"
+"Report-Msgid-Bugs-To: support@lingohub.com \n"
+"Last-Translator: edd remonts <evi@rebelpenguin.dk>\n"
+"Language: dk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "live_fodbald_providers_text"
+msgstr "Vi har samlet de største udbydere af live fodbold, som viser kampe fra de store internationale og europæsiske ligaer, landskampe og meget mere..."
+
+msgid "live_fodbald_footer_addr"
+msgstr "ADDRESSE"
+
+msgid "live_fodbald_footer_email"
+msgstr "EMAIL"
+
+msgid "live_fodbald_footer_text_title"
+msgstr "SE FODBOLD LIVE: SE FODBOLD FRA DE BEDSTE LIGAER PÅ LIVE STREAM"
+
+msgid "live_fodbald_footer_text_1"
+msgstr "Vi har samlet de bedste udbydere af live streams, så du kan se den bedste fodbold live. Derudover vil der løbende komme optakter til de største kampe fra både nationale og internationale ligaer. Uanset om du er til Superligaen, Champions League, Bundesligaen eller La Liga, så har du muligheden for at se dit yndlingshold spille live."
+
+msgid "live_fodbald_footer_text_2"
+msgstr "Du finder altid et stort udbud af fodboldkampe på siden, og vores udbydere har altid gode streams klar, så du altid kan se den bedste fodbold live. Du skal blot besøge vores side med udbydere, og finde den, der passer dig bedst. Derefter har du adgang til tusindevis af fodboldkampe hver dag, og du kan finde oversigten over kampene i vores kampprogram."
+
+msgid "live_fodbald_footer_text_3"
+msgstr "Vi har også lavet dybdegående artikler om de enkelte klubber og ligaer, så du kan blive klogere på fodbold. Når de store slutrunder som f.eks. EM, VM og Africa Cup of Nations går i gang, kan du finde specielle optakter til disse, og det samme gælder pokalturneringer som DBU-Pokalen og Copa del Rey. Det er alt sammen lavet til dig, så du er bedre rustet før du ser dit favorithold på live stream."
+
+msgid "live_fodbald_footer_text_4"
+msgstr "Med Live-fodbold har du altid muligheden for at se det bedste fodbold live fra din computer eller tablet, og dermed kan du følge med, uanset om du ligger på sofaen eller sidder i toget. God kamp!"
+
+msgid "live_fodbald_footer_addr_text"
+msgstr "Nannasgade 28, 2200 København N"
+
+msgid "live_fodbald_footer_addr"
+msgstr "Watch Live Online!"
+
+msgid "live_fodbald_footer_rights"
+msgstr "© 2017 Live Fodbold. All rights reserved."
+
+msgid "live_fodbald_footer_18plus"
+msgstr "Alderspolitik"
+
+msgid "live_fodbald_footer_politics"
+msgstr "Persondata politik"
+
+msgid "live_fodbald_footer_about"
+msgstr "Om Os"
+
+msgid "live_fodbald_footer_faq"
+msgstr "FAQ"
+
+msgid "live_fodbald_footer_sitemap"
+msgstr "Sitemap"
+
+msgid "live_fodbald_footer_gambling"
+msgstr "Spillemyndigheden"
+
+msgid "live_fodbald_footer_developed_by"
+msgstr "Designed & Developed by"
+
+msgid "live_fodbald_menu_home"
+msgstr "Forside"
+
+msgid "live_fodbald_menu_program"
+msgstr "Kampprogram"
+
+msgid "live_fodbald_menu_providers"
+msgstr "Udbydere"
+
+msgid "live_fodbald_menu_leagues"
+msgstr "Fodboldligaer"
+
+msgid "live_fodbald_menu_teams"
+msgstr "Fodboldhold"
+
+msgid "live_fodbald_menu_reviews"
+msgstr "Optakter"
+
+msgid "live_fodbald_home_feature_title"
+msgstr "<b>LIVE STREAMING</b> PÅ NETTET"
+
+msgid "live_fodbald_home_feature_b1_title"
+msgstr "HVEM ER VI"
+
+msgid "live_fodbald_home_feature_b2_title"
+msgstr "HVAD GØR VI"
+
+msgid "live_fodbald_home_feature_b3_title"
+msgstr "HVORDAN GØR VI"
+
+msgid "live_fodbald_home_feature_b1_text"
+msgstr "Hos live-fodbold.dk vil vi give dig den bedste oplevelse med live streaming online. Vi har fundet frem til de bedste providere, så du kan koncentrere dig om det, det hele handler om nemlig fodbolden. Rigtig god fornøjelse!"
+
+msgid "live_fodbald_home_feature_b2_text"
+msgstr "Med nogle af nettets bedste optakter sørger vi for, at du er klædt godt på, når du skal se dine yndlinghold. Hos os er alt 100 % lovligt, og vi står inde for hvert ord, vi skriver. Du skal bare vælge din provider og lade dig underholde."
+
+msgid "live_fodbald_home_feature_b3_text"
+msgstr "Alt arbejdet er gjort for dig, så du skal blot læne dig tilbage og nyde udbuddet. Vi har testet de forskellige streamingtjenester, så du skal bare klikke dig igennem vores anmeldelser. Dernæst vælger du din udbyder, og vupti, så er du i gang. Lettere kan det ikke være!"
+
+msgid "live_fodbald_home_title"
+msgstr "LIVE FODBOLD ONLINE | LIVE STREAM FODBOLD"
+
+msgid "live_fodbald_home_matches_title"
+msgstr "<b>Optakter</b>"
+
+msgid "live_fodbald_home_matches_program_title"
+msgstr "KAMPPROGRAM"
+
+msgid "live_fodbald_home_head_title"
+msgstr "SE LIVE FODBOLD FRA ALLE DE STORE LIGAER, LOVLIGT OG I GOD KVALITET!"
+
+msgid "live_fodbald_home_head_button"
+msgstr "Se Fodbold live"
+
+msgid "live_fodbald_home_head_matches_text"
+msgstr "STREAM LIVE FODBOLD"
+
+msgid "live_fodbald_home_matches_program_button"
+msgstr "Se kampprogram"
+
+msgid "live_fodbald_teams_title"
+msgstr "<b>FODBOLDHOLD</b> LIVE STREAM KAMPENE"
+
+msgid "live_fodbald_teams_title"
+msgstr "OVERSIGT OVER HOLD"
+
+msgid "live_fodbald_leagues_title"
+msgstr "OVERSIGT OVER HOLD"
+
+msgid "live_fodbald_leagues_list_title"
+msgstr "<b>FODBOLDLIGAER</b> - LIVE STREAM KAMPENE"
+
+msgid "live_fodbald_provider_view"
+msgstr "Udvalg"
+
+msgid "live_fodbald_provider_quality"
+msgstr "Kvalitet"
+
+msgid "live_fodbald_provider_price"
+msgstr "Pris"
+
+msgid "live_fodbald_provider_disclaimer"
+msgstr "*Du skal have penge på din konto for at bruge servicen."
+
+msgid "live_fodbald_provider_popup"
+msgstr "*Regler og vilkår"
+
+msgid "live_fodbald_provider_warning"
+msgstr "Fkke mulig med dansk IP-adresse"
+
+msgid "live_fodbald_provider_link"
+msgstr "Gå til"
+
+msgid "live_fodbald_provider_step_1"
+msgstr "1. Gå til"
+
+msgid "live_fodbald_provider_step_2"
+msgstr "2. Opret konto"
+
+msgid "live_fodbald_provider_step_3"
+msgstr "3. Se live fodbold"
+
+msgid "live_fodbald_head_vs"
+msgstr "Vs"
+
+msgid "live_fodbald_showcase_head"
+msgstr "Sådan ser du fodbold live stream"
+
+msgid "live_fodbald_showcase_subhead"
+msgstr "Følg trinene nedenfor"
+
+msgid "live_fodbald_showcase_step_1"
+msgstr "Klik på knappen"
+
+msgid "live_fodbald_showcase_step_2"
+msgstr "Opret din konto"
+
+msgid "live_fodbald_showcase_step_3"
+msgstr "Gå til streaming sektionen"
+
+msgid "live_fodbald_showcase_button"
+msgstr "Se Fodbold hos bet365"
+
+msgid "live_fodbald_showcase_disclaimer"
+msgstr "For at anvende tjenesten Live Billeder skal du logge ind og have midler på din konto eller have placeret et væddemål indenfor de sidste 24 timer."
+
+msgid "live_fodbald_showcase_popup"
+msgstr "Regler og vilkår"
+
+msgid "live_fodbald_schedule_next"
+msgstr "NÆSTE"
+
+msgid "live_fodbald_schedule_prev"
+msgstr "FORRIGE"
+
+msgid "live_fodbald_schedule_block_title"
+msgstr "KAMPPROGRAM"
+
+msgid "live_fodbald_schedule_page_title"
+msgstr "KAMPPROGRAM"
+
+msgid "live_fodbald_match_teams_title"
+msgstr "BESKRIVELSE AF HOLD"
+
+msgid "live_fodbald_match_team_link_1"
+msgstr "Læs mere om"
+
+msgid "live_fodbald_match_team_link_2"
+msgstr "her"
+
+msgid "live_fodbald_match_page_title"
+msgstr "LIVE STREAM"
+
+msgid "live_fodbald_providers_see"
+msgstr "SE"
+
+msgid "live_fodbald_provider_tab_subhead_2_text"
+msgstr "Se, hvordan du ser fodbold live stream. Du kan se live streaming fra alle de spændende ligaer samt turneringer! Følg blot guiden nedenfor, og vælg kampen, du ønsker at se!"
+
+msgid "live_fodbald_match_see"
+msgstr "SE"
+
+msgid "live_fodbald_provider_tab_subhead_text"
+msgstr "Se live fodbold online hos bet365!"
+
+msgid "live_fodbald_provider_tab_step_1"
+msgstr "1. Klik på linket nedenfor"
+
+msgid "live_fodbald_provider_tab_step_2"
+msgstr "2. Opret en konto og log ind"
+
+msgid "live_fodbald_provider_tab_step_3"
+msgstr "3. Vælg live streaming og se kampen"
+
+msgid "live_fodbald_provider_tab_step_disclaimer"
+msgstr "*Du skal have penge på din konto for at bruge servicen."
+
+msgid "live_fodbald_team_description"
+msgstr "<b>BESKRIVELSE</b> AF"
+
+msgid "live_fodbald_league_description"
+msgstr "<b>BESKRIVELSE</b> AF"
+
+msgid "live_fodbald_league_feature_button"
+msgstr "SE FODBOLD HOS BET365"
+
+msgid "live_fodbald_league_feature_disclaimer"
+msgstr "For at anvende tjenesten Live Billeder skal du logge ind og have midler på<br>din konto eller have placeret et væddemål indenfor de sidste 24 timer. <a href="#">Regler og vilkår</a>"
+
+msgid "live_fodbald_league_tv_title"
+msgstr "Kampprogram -"
+
+msgid "live_fodbald_home_tabs_title"
+msgstr "Previews af ligaer og hold"
+
+msgid "live_fodbald_tabs_team_title"
+msgstr "HOLD"
+
+msgid "live_fodbald_tabs_league_title"
+msgstr "LIGAER"
+
+msgid "live_fodbald_home_tabs_button"
+msgstr "Gå til Bet365"
+
+msgid "live_fodbald_home_tabs_disclaimer"
+msgstr "*Du skal have penge på din konto for at bruge den service."
+
+msgid "live_fodbald_home_tabs_popup"
+msgstr "Regler & Vilkår"
+
+msgid "live_fodbald_home_tabs_read_more"
+msgstr "Læs mere "
+
+msgid "live_fodbald_article_read_more"
+msgstr "Læs mere"
+
+msgid "live_fodbold_match_article_button"
+msgstr "SE FODBOLD HOS BET365"
+
+msgid "live_fodbold_match_article_disclaimer"
+msgstr "For at anvende tjenesten Live Billeder skal du logge ind og have midler på din konto eller have placeret et væddemål indenfor de sidste 24 timer. "
+
+msgid "live_fodbold_match_article_popup"
+msgstr "Regler og vilkå"
+
+msgid "live_fodbald_popup_1_head"
+msgstr "Alders politik"
+
+msgid "live_fodbald_popup_1_text"
+msgstr "<p><strong>Alle</strong> sportsbooks der henvises til på live-fodbold.dk har licens til at udbyde spil i Danmark. Det kræves, at man skal være mindst 18 år gammel for at spille på disse.</p><p>Det er ulovligt for mindreårige at gamble i Danmark.</p><p>Vi anbefaler, at man kun gambler moderat og for sjov.</p><p>live-fodbold.dk støtter ansvarlig gambling.</p><p>For more info besøg <a href="#">Center For Ludomani</a></p>"
+
+msgid "fodbald_cookies_text"
+msgstr "Dette website bruger cookies, for at sikre at du får den bedste oplevelse på website"
+
+msgid "fodbald_cookies_read_more"
+msgstr "Læs mere"
+
+msgid "fodbald_cookies_button"
+msgstr "OK"
+
+msgid "fodbald_ad_block_head"
+msgstr "Vigtig meddelelse"
+
+msgid "fodbald_ad_block_subhead_1"
+msgstr "Kære bruger"
+
+msgid "fodbald_ad_block_subhead_2"
+msgstr "Sådan gor du"
+
+msgid "fodbald_ad_block_text_1"
+msgstr "Du har installeret en adblocker og blockerer dermed vigtige elementer, som Superbold eksponerer. For at kunne modtage alle vores bonuskoder, beder vi dig derfor venligst om at deaktivere din adblocker på superbold.dk"
+
+msgid "fodbald_ad_block_text_2"
+msgstr "For at deaktivere din adblocker p_ superbold.dk kr_ver det blot, at du klikker p_ adblock-ikonet i din browser, godkender dom_net superbold.dk og opdaterer siden. Derved f_r du adgang til alle bonuskoder og andet inhold"
+
+msgid "live_fodbald_teams_list_title"
+msgstr "<strong>Fodboldhold</strong> Live stream  kampene"
+
+msgid "live_fodbald_schedule_page_title"
+msgstr "Live kampe"
+
+msgid "live_fodbald_schedule_page_title_today"
+msgstr "i dag"
+

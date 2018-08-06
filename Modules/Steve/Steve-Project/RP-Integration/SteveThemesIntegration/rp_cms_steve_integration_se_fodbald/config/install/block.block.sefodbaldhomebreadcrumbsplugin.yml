@@ -1,0 +1,20 @@
+uuid: 97bc48a4-3bce-4c76-b8fa-745d16b04d63
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldhomebreadcrumbsplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldhomebreadcrumbsplugin
+settings:
+  id: sefodbaldhomebreadcrumbsplugin
+  label: 'Se Fodbald Home Breadcrumbs Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

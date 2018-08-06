@@ -1,0 +1,17 @@
+<div class="menuwrap">
+	<ul class="menu">
+		{% for link in tags.links %}
+		<li {{ tags.active ? attributes.setAttribute('style', 'color: ' ~ tags.active ~ ';')}}>
+			<a href="{{ link.url }}" class="btn arrow {{ link.active ? 'active' : '' }}" {{ link.colors ? attributes.setAttribute('style', 'background: linear-gradient(to bottom, ' ~ link.colors.gradient_light ~ ' 0, ' ~ link.colors.gradient_dark ~ ' 100%);')}}>
+				{{ link.title }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	{% if is_front == false %}
+	    <div class="burger">
+	    	<i class="fa fa-list" aria-hidden="true"></i>
+	    </div>
+	{% endif %}
+</div>

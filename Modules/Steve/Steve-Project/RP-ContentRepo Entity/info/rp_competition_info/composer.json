@@ -1,0 +1,14 @@
+{
+  "name": "drupal/rp_competition_info",
+  "type": "drupal-module",
+  "description": "RP Competition Info",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_competition_info",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_competition_info",
+    "source": "http://cgit.drupalcode.org/rp_competition_info"
+  },
+  "require": { }
+}

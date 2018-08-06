@@ -1,0 +1,61 @@
+<section class="ProgramMatchListPlugin">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12 ProgramBlock Full">
+				<div class="ProgramHeader">
+					<h3 class="title">
+						{{ 'live_fodbald_schedule_page_title'|t }} {{ tags.date == 'now'|date(tags.format) ? 'live_fodbald_schedule_page_title_today'|t : tags.date|date('d-m') }}
+					</h3>
+					<ul class="dates">
+						{% for link in tags.pager.days %}
+							<li {{ link.active ? attributes.addClass('active') }}><a href="{{ link.link }}">{{ link.format | raw }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="ProgramList">
+					<div class="panel-group" role="tablist">
+						{% for day in tags.AllEvents %}
+							{% for name, tournament in day.alltournament %}		
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											{% if tournament.tournamentIMG %}
+												<img src="{{ file_url(tournament.tournamentIMG) }}">
+											{% endif %}
+											{{ name }}
+										</h4>
+									</div>
+									<div class="panel-body">
+										<ul class="Matches">
+											{% for event in tournament.events %}
+												<li>
+													<a href="{{ event.LiveFodbaldAlias }}">
+														<span class="date">{{ event.eventDate|date('H:i') }}</span>
+														{% if event.participantsList %}
+															{% for team in event.participantsList %}
+																<span class="team">
+																	{{ team.name }}
+																	{% if team.logo %}
+																		<img src="{{ file_url(team.logo) }}">
+																	{% endif %}
+																</span>
+															{% endfor %}
+														{% endif %}
+													</a>
+												</li>						
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							{% endfor %}
+						{% endfor %}	
+					</div>
+				</div>	
+			</div>	
+			<div class="col col-md-12 pagination">
+				<span class="prev"><a href="{{ tags.pager.prev }}">{{ "live_fodbald_schedule_prev" | t}}</a></span>
+				<span class="next"><a href="{{ tags.pager.next }}">{{ "live_fodbald_schedule_next" | t}}</a></span>
+			</div>
+		</div>
+	</div>
+</section>

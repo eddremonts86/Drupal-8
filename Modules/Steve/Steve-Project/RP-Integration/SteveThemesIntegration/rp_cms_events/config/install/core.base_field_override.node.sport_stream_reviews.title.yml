@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sport_stream_reviews
+id: node.sport_stream_reviews.title
+field_name: title
+entity_type: node
+bundle: sport_stream_reviews
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

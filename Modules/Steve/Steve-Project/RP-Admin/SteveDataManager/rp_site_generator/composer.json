@@ -1,0 +1,14 @@
+{
+  "name": "drupal/rp_site_generator",
+  "type": "drupal-module",
+  "description": "My Awesome Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_site_generator",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_site_generator",
+    "source": "http://cgit.drupalcode.org/rp_site_generator"
+  },
+  "require": { }
+}

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site_info.field_site_info_site
+  module:
+    - rp_site_info
+id: site_info.site_info.field_site_info_site
+field_name: field_site_info_site
+entity_type: site_info
+bundle: site_info
+label: Site
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:site'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,368 @@
+.blogGeneralbody {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  .blog_row {
+    margin: 25px 0;
+    > div {
+      padding-right: 0px;
+      padding-left: 10px;
+      
+      @include mobile {
+	  	padding-left: 0px;
+	  }
+            
+      .panel-default {
+        border-color: transparent;
+        background: none;
+        .panel-heading {
+          color: #333;
+          background-color: rgba(236, 13, 13, 0) !important;
+          border-color: rgba(221, 221, 221, 0);
+          background: url("../images/ground-small.png") center bottom no-repeat;
+          background-size: contain;
+          height: 125px;
+          > .teams {
+            img {
+              width: 70px;
+              height: 70px;
+              &:first-child {
+                float: left;
+                margin-left: 29px;
+              }
+              &:last-child {
+                float: right;
+                margin-right: 29px;
+              }
+            }
+          }
+        }
+        .panel-body {
+          background: $color-white;
+          min-height: 360px;
+          position: relative;
+          height: auto;
+          padding: 15px 15px 30px 15px;
+
+          .eventname {
+            border-bottom: 5px solid $color-sushi;
+            margin: 0 -15px;
+            padding-bottom: 5px;
+            a > h4 {
+              font-weight: 400;
+              font-size: 19px;
+              margin: 3px 15px;
+            }
+            > span {
+              font-family: 'Open Sans', sans-serif, arial;
+              color: $color-emperor;
+              font-size: 13px;
+              margin: 0 15px;
+              > a {
+                color: $color-black;
+              }
+            }
+          }
+          .eventslist {
+            font-family: 'Open Sans', sans-serif, arial;
+            color: $color-emperor;
+            font-size: 13px;
+            background: $color-sushi;
+            width: auto;
+            margin-left: -15px;
+            padding: 0px 15px 3px 6px !important;
+            height: auto;
+            text-transform: uppercase;
+            font-size: 13px;
+            min-width: 90%;
+            display: inline-block;
+            > a {
+              color: $color-white;
+            }
+          }
+          .eventText {
+            padding-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #111;
+            .link {
+              padding-top: 10px;
+              > a {
+                margin-bottom: 30px;
+                transition: color .25s;
+                color: $color-sushi;
+                text-decoration: none;
+              }
+            }
+          }
+          .eventButtom {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 5px;
+            background: $color-sushi;
+            &:hover {
+              background: #516b16;
+              transition: color .25s;
+              text-decoration: none;
+            }
+            > a {
+              color: $color-white;
+              font-weight: 800;
+            }
+          }
+
+        }
+      }
+    }
+  }
+  .blogMiddelSec {
+    margin: 60px 30px;
+    background: #516b16;
+    text-transform: uppercase;
+    font-weight: 400 !important;
+    font-family: 'Bree Serif', serif;
+    color: $color-white;
+    font-size: 1.5em;
+    padding: 6px 0;
+  }
+  .blog_eventHead {
+    margin: 0 15px;
+    .headPanel {
+      padding: 15px 0 0 0;
+      min-height: 190px;
+      .bloghead {
+        color: #333;
+        background-color: rgba(236, 13, 13, 0) !important;
+        border-color: rgba(221, 221, 221, 0);
+        background: url("../images/ground-small.png") center bottom no-repeat;
+        background-size: contain;
+        min-height: 140px;
+        height: auto;
+        .teams {
+          img {
+            width: 70px;
+            height: 70px;
+            &:first-child {
+              float: left;
+              margin-left: 29px;
+            }
+            &:last-child {
+              float: right;
+              margin-right: 29px;
+            }
+          }
+        }
+      }
+      > .col-md-7{
+        padding: 0 15px 30px 15px;
+      }
+
+      .blogheadText {
+        text-transform: uppercase;
+        border-bottom: 5px solid $color-sushi;
+        margin-right: -16px;
+        padding-bottom: 10px;
+        > a {
+          color: #696969;
+          > h2 {
+            color: #111;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0 0 3px 0;
+          }
+
+        }
+      }
+      .eventslist {
+        font-family: 'Open Sans', sans-serif, arial;
+        color: $color-emperor;
+        font-size: 13px;
+        background: $color-sushi;
+        width: auto;
+        padding: 0px 15px 3px 6px !important;
+        height: auto;
+        text-transform: uppercase;
+        font-size: 13px;
+        display: inline-block;
+        > a {
+          color: $color-white;
+          font-size: 15px;
+        }
+      }
+      .eventText {
+        padding-top: 15px;
+        margin-bottom: 30px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #111;
+        .link {
+          padding-top: 10px;
+          > a {
+            margin-bottom: 30px;
+            transition: color .25s;
+            color: $color-sushi;
+            text-decoration: none;
+          }
+        }
+      }
+      .eventButtom {
+        margin-top: 15px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 5px;
+        background: $color-sushi;
+
+        @include mobile{
+          right: 0;
+        }
+        &:hover {
+          background: #516b16;
+          transition: color .25s;
+          text-decoration: none;
+        }
+        > a {
+          color: $color-white;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+  @include tablet{
+    .blog_eventHead{
+      .col-md-12{
+        .panel{
+          .panel-body{
+            padding: 15px 0 0 0;
+            .bloghead{
+              .teams{
+                display: flex;
+                justify-content: space-around;
+              }
+            }
+          }
+        }
+      }
+    }
+    .blog_row{
+      .col-md-4{
+        .panel{
+          .panel-heading{
+            .teams{
+              .vs_logo{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                img{
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blogGeneralbody {
+	@include desktop {
+		.col-md-4 {
+			width: 33.33333333%;
+			
+			.panel-body {
+				min-height: 290px;
+			}
+		}
+		
+		
+		.blog_eventHead {
+			.headPanel {
+				.col-md-7 {
+					min-height: 200px;
+				}
+			}
+		}
+	}
+	
+	@include mobile {
+
+		min-height: 260px;
+		
+		.blog_row {
+			.col-md-4 {
+				margin-bottom: 15px;
+			}
+		}
+		
+		.blog_eventHead {
+			.headPanel {
+				.col-md-7 {
+					min-height: 240px;
+				}
+			}
+		}
+		
+		.panel-default {
+			.panel-body {
+				min-height: 300px !important;
+			}
+		}
+	}
+
+	background: url(../images/green-cup.png);
+	padding-bottom: 0;
+		
+	.eventButtom {
+		a {
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	.title {
+		a {
+      color: #000 !important;
+			> h4 {
+          color: #000 !important;
+			    font-weight: 400;
+			    font-size: 16px;
+			    line-height: 18px;
+			}
+		}
+		
+		span {
+			color: $color-emperor;
+			display: block;
+			margin-bottom: 10px;
+			    
+			a {
+				color: $color-emperor;
+			}
+		}
+	}
+}
+
+#block-sportblogbody{
+  .pager-nav{
+    &:last-child{
+      display: none;
+    }
+  }
+}
+
+@include tablet{
+  #block-sportblogbody{
+    .pager-nav{
+      display: none;
+      
+      &:last-child{
+        display: block;
+      }
+    }
+  }
+}

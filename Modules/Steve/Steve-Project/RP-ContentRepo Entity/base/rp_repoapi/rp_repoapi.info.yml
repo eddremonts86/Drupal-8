@@ -1,0 +1,7 @@
+name: RP RepoAPI
+type: module
+description: RP Repo API Connexions to RP Repo API
+core: 8.x
+package: RP
+dependencies:
+  - rp_api

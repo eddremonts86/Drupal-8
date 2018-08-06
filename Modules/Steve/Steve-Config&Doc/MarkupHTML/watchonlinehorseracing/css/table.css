@@ -1,0 +1,431 @@
+@media only screen and (max-width: 1024px){
+	.container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	a,p{
+		font-size: 14px;
+	}
+	h1{
+		font-size: 40px;
+		line-height: 45px;
+	}
+	h2{
+		font-size: 22px;
+		line-height: 25px;
+	}
+	h3{
+		font-size: 25px;
+		line-height: 25px;
+	}
+	h5{
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.pageHeading .main-heading{
+		font-size: 40px;
+	}
+	.providerTabs .nav-tabs li{
+		padding: 0 15px 0 5px;
+	}
+	.providerTabs .nav-tabs a{
+		margin: 0;
+	}
+	.providerTabs .nav-tabs .price,
+	.providerTabs .nav-tabs .name{
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.providerTabs .nav-tabs .stars{
+		font-size: 15px;
+		line-height: 15px; 
+	}
+	.providerTabs .tab-content .tab-pane .col-md-7{
+		padding: 0;
+	}
+	.providerTabs .col-md-7 p,
+	.providerTabs .col-md-7	h5{
+		display: none;
+	}
+	.providerTabs .col-md-7  .btn{
+		float: left;
+		padding: 0 10px;
+		font-size: 16px; 
+		line-height: 25px;
+	}
+	.providerTabs .tab-content {
+		padding: 0 0 0 20px;
+	}
+	.providerTabs .col-md-7  .btn:after{
+		display: none;
+	}
+	.providerTabs .tab-content strong{
+		font-size: 16px;
+	}
+	.providerTabs .tab-content p{
+		margin: 0 0 15px 0;
+	}
+	.StreamProvider .ProviderLinks > .container{
+		padding: 0;
+	}
+	.StreamProvider .ProviderLinks > .container > .row{
+		flex-direction: column;
+	}
+	.StreamProvider .ProviderLinks > .container > .row > div .line,
+	.StreamProvider .ProviderLinks > .container > .row > div{
+		width: 100%;
+	}
+	.StreamProvider .ProviderLinks > .container > .row > .col-md-4.arrow h2{
+		display: none;
+	}
+	.StreamProvider .ProviderLinks > .container > .row > .col-md-4.arrow img.arrow{
+		display: none;
+	}
+	.StreamProvider .ProviderLinks > .container > .row > div .btn{
+		width: 100%;
+	}
+	.StreamProvider .ProviderHeading{
+		padding: 0 0 10px 0;
+		flex-wrap: wrap;
+	}
+	.StreamProvider .ProviderHeading .title span{
+		font-size: 28px;
+	}
+	.StreamProvider .ProviderHeading .title h1{
+		font-size: 36px;
+		line-height: 39px;
+	}
+	.StreamProvider .ProviderHeading.sponsored{
+		align-items: center;
+	}
+	section.ReviewsProviders .providerTabs{
+		padding-bottom: 2%;
+	}
+	/*****************HEADER******************/
+	header.siteHeader .container{
+		padding: 0;
+	}
+	header.siteHeader .navbar{
+		background: none;
+		border: none;
+		margin: 0;
+	}
+	header.siteHeader .navbar .container-fluid{
+		padding: 0;
+		height: auto;
+	}
+	header.siteHeader .navbar .navbar-header{
+		height: 50px;
+		width: 100%;
+		margin: 0 0 3px 0;
+		padding: 0 10px;
+	}
+	header.siteHeader .navbar .navbar-header .navbar-toggle{
+		display: block;
+		border: none !important;
+		background: none !important;
+		margin: 9px 0;
+		padding: 9px 0;
+	}
+	header.siteHeader .navbar.navbar-toggle .icon-bar+.icon-bar {
+		margin-top: 3px;
+	}
+	header.siteHeader .navbar .navbar-toggle .icon-bar{
+		background: #103040;
+		width: 14px;
+	}
+	header.siteHeader .navbar .navbar-nav{
+		width: 100%;
+		height: auto;
+		padding: 0;
+		margin: 0;
+	}
+	header.siteHeader #navbar{
+		float: none;
+		clear: both;
+		margin: 0;
+	}
+	header.siteHeader .navbar .navbar-nav li{
+		height: auto;
+		width: 100%;
+		padding: 0 !important;
+	}
+	header.siteHeader .navbar .navbar-nav li a{
+		border-top: 1px solid #c6c6c6;
+		display: block;
+		width: 100%;
+		padding: 0 0 0 10px;
+	}
+	header.siteHeader .navbar .navbar-nav li.active a{
+		border-bottom: 1px solid #103040;
+	}
+	header.siteHeader .navbar .navbar-nav li.active a:after{
+		display: none;
+	}
+   	header.siteHeader  .navbar-collapse.collapse {
+        display: none!important;
+    }
+    header.siteHeader .collapse.in{
+        display: block !important;
+    }
+    /***********FOOOTER************************/
+    footer.siteFooter .navbar .container-fluid .navbar-nav{
+    	margin: 0 !important;
+    	padding-left: 20px;
+    }
+	/**************CONTENT HEADER*************/
+	section.ContentHeader{
+		min-height: 152px;
+	}
+	section.ContentHeader.full{
+		max-height: 353px;
+		height: 353px;
+    	padding-top: 152px;
+	}
+	section.ContentHeader .col-md-12 h1{
+		display: none;
+	}
+	section.ContentHeader .showcase{
+		padding-top: 8px;
+		width: 100%;
+		top: 100%;
+	}
+	section.ContentHeader .showcase .sponsored{
+		position: unset;
+		transform: none;
+		font-size: 15px;
+	}
+	section.ContentHeader .showcase .steps{
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+	section.ContentHeader .showcase .steps li{
+		padding: 0 0 9px 62px;
+		background-position: 0 0 !important; 
+	}
+	section.ContentHeader .showcase .next{
+		text-align: right;
+		margin: 0 0 5px 0;
+	}
+	section.ContentHeader .showcase a.btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	section.ContentHeader .showcase a.btn span{
+		margin: 0;
+	}
+	/*HOME PAGE*/
+	content.frontPage section.Home .container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	content.frontPage section.Home .container .row{
+		padding: 7% 0;
+	}
+	content.frontPage section.HomeBlog .container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	content.frontPage section.HomeBlog .contentBlock .contentBlockHead h1{
+		font-size: 40px;
+		line-height: 45px;
+	}
+	content.frontPage section.HomeBlog .contentBlock .col-md-4 h5{
+		font-size: 22px;
+		line-height: 25px;
+		font-weight: 400;
+	}
+	content.frontPage section.HomeBlog .contentBlock{
+		padding: 70px 0 5% 0;
+	}
+	content.frontPage section.HomeProviders .providerTabs{
+		padding-bottom: 2%;
+	}
+	content.frontPage section.HomeProviders .container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	content.frontPage section.HomeProviders .ProviderLinks > .container{
+		padding: 0;
+	}
+	/*RACE COURSES PAGE*/
+	content.racecoursesPage section.Racecourses .container .row:nth-child(2) h1{
+		font-size: 40px;
+		line-height: 45px;
+	}
+	content.racecoursesPage section.Racecourses .container .row:nth-child(2) p{
+		font-size: 14px;
+		line-height: 1.5;
+	}
+	content.racecoursesPage section.Tracklist .row.tab p{
+		font-size: 15px;
+    	line-height: 17px;
+    }
+    content.racecoursesPage section.Tracklist .courseCard{
+    	display: none;
+    }
+    content.racecoursesPage section.Tracklist .row:nth-child(2) .courseCard:nth-child(1),
+    content.racecoursesPage section.Tracklist .row:nth-child(2) .courseCard:nth-child(2){
+    	display: block;
+    }
+    content.racecoursesPage section.Tracklist .row.opener{
+    	display: block;
+    }
+    /*REVIEWS PAGE*/
+    content.reviewsPage  section.ReviewsProviders > .container{
+    	padding-left: 30px;
+    	padding-right: 30px;
+    }
+    /*REVIEW PAGE*/
+    content.reviewPage section.ReviewContent > .container,
+    content.reviewPage section.ReviewsProviders > .container{
+    	padding-left: 30px;
+    	padding-right: 30px;
+    }
+    /*BLOG PAGE*/
+    content.blogPage section.Blog > .container{
+    	padding-left: 30px;
+    	padding-right: 30px;
+    }
+ 	content.blogPage section.Blog .contentBlock .col-md-4 .contentBlockHead{
+    	padding: 0;
+    }
+    content.blogPage section.TrackOverview  > .container{
+    	padding-left: 30px;
+    	padding-right: 30px;
+    }
+    /*RACE COURSE PAGE*/
+    content.racecoursePage section.Racecourse > .container,
+    content.racecoursePage section.Guide > .container,
+    content.racecoursePage section.TrackOverview > .container,
+    content.racecoursePage .container{
+    	padding-right: 30px;
+    	padding-left: 30px;
+    }
+    content.racecoursePage section.Racecourse > .container{
+    	padding-top: 50px;
+    }
+    content.racecoursePage section.Racecourse > .container .placeholder{
+    	padding: 5px;
+    }
+    content.racecoursePage section.Racecourse > .container .placeholder h1{
+    	width: 100%;
+    	border-bottom: 7px solid #103040;
+    	text-align: center;
+    	font-size: 50px;
+    	line-height: 56px;
+    }
+    content.racecoursePage section.Racecourse > .container h4{
+    	font-size: 15px;
+    	line-height: 17px;
+    }
+    content.racecoursePage section.ContentHeader .container{
+    	padding: 0;
+    }
+    content.racecoursePage section.Guide .col-md-6 .line{
+    	display: flex;
+    }
+    content.racecoursePage section.Guide .col-md-6 .ico{
+    	width: 17%;
+    	display: block;
+    }
+    content.racecoursePage section.Guide .col-md-6 .ico img{
+    	max-width: 100%;
+    }
+    content.racecoursePage section.Guide .col-md-6 .text{
+    	width: 83%;
+    }
+    content.racecoursePage section.Guide .col-md-6 .text img{
+    	display: none;
+    }
+    content.racecoursePage .StreamProvider .ProviderLinks{
+    	padding-top: 10px;
+    }
+    content.racecoursePage .StreamProvider .ProviderLinks .btn{
+    	margin: 40px 0 0 0;
+    }
+    content.racecoursePage .StreamProvider .step-images > .row{
+    	justify-content: space-between;
+    	align-items: center;
+    }
+    content.racecoursePage .StreamProvider .step-images .col-md-4 span{
+    	font-size: 13px;
+    }
+    content.racecoursePage .ContentHeader .showcase{
+    	padding-top: 20px;
+    	padding-bottom: 0;
+    }
+    content.racecoursePage .ContentHeader .showcase .sponsored{
+    	display: none;
+    }
+
+    /*WATCH LIVE PAGE*/
+    content.watchLivePage section > .container{
+    	padding: 5% 15px 0 15px;
+    }
+    content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row{
+    	flex-direction: row;
+    }
+    content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > .col-md-4.arrow .line{
+    	padding: 0;
+    }
+    content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > div .btn{
+    	width: auto;
+    }
+    content.watchLivePage section .StreamProvider .ProviderContent p{
+    	line-height: 18px;
+    }
+    content.watchLivePage section .StreamProvider .ProviderContent h6{	
+    	line-height: 17px;
+    }
+    content.watchLivePage section .StreamProvider .col-md-6.step-images .col-md-4{
+    	min-height: 150px; 
+    }
+    content.watchLivePage section .StreamProvider .col-md-6.step-images .col-md-4 .stepImage{
+    	width: 100px;
+    	height: 100px;
+    }
+    content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > .col-md-4{
+    	width: 33.33333333%;
+    }
+    content.watchLivePage section .StreamProvider .col-md-6.step-images{
+    	width: 66.66666667%;
+    }
+    content.watchLivePage section .StreamProvider .col-md-6.step-images > .row{
+    	justify-content: space-between;
+    }
+    content.watchLivePage section .contentBlock .col-md-8 p{
+    	line-height: 1.5;
+    }
+    content.watchLivePage section .StreamProvider .col-md-6.step-images > .row:before,
+    content.watchLivePage section .StreamProvider .col-md-6.step-images > .row:after{
+    	display: none;
+    }
+    /*FAQ PAGE*/
+    content.faqPage section.faq .container{
+    	padding-left: 20px;
+    	padding-right: 20px;
+    }
+    /*CONTENT PAGE*/
+    content.contactPage section.Contact .container{
+    	padding-left: 20px;
+    	padding-right: 20px;
+    }
+    /*SITEMAP PAGE*/
+    content.sitemapPage section.Sitemap .container{
+    	padding: 10px 20px;
+    }
+    /*PRIVACY POLICY PAGE*/
+    content.privacyPolicyPage section.Privacypolicy .container{
+    	padding-left: 20px;
+    	padding-right: 20px; 
+    }
+    /*UNDERAGE POLICY PAGE */
+    content.underagePolicyPage section.Underagepolicy .container{
+    	padding-left: 20px;
+    	padding-right: 20px; 	
+    }
+}

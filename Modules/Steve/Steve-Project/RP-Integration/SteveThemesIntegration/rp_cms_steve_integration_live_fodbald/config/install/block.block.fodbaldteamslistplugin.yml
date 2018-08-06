@@ -1,0 +1,20 @@
+uuid: 24a85a26-5f7b-489e-8d84-6d2d86bf71a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldteamslistplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldteamslistplugin
+settings:
+  id: fodbaldteamslistplugin
+  label: 'Fodbald Teams List Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,59 @@
+<section class="ProgramMatchListPlugin">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12 SchedulePage">
+				{% for day in tags.AllEvents %}
+					<h3 class="DayTitle">
+						{{ 'fodbald_streams_schedule_page_title'|t }} {{ day.date|date('U') == "now"|date('U') ? 'fodbald_streams_schedule_page_title_today'|t : day.date|date('d-m') }}
+					</h3>
+					<div class="panel-group">
+						{% for name, tournament in day.alltournament %}
+							<div class="panel panel-default ScheduleList">
+								<div class="panel-heading">
+									<h4 class="panel-title">
+										{% if tournament.tournamentIMG %}
+											<img src="{{ file_url(tournament.tournamentIMG) }}">
+										{% endif %}
+										{{ name }}
+									</h4>
+								</div>
+								<div class="panel-body">
+									<ul class="Events">
+										{% for event in tournament.events %}
+											<li>
+												<a href="{{ event.eventAlias }}">
+													<span class="date">{{ event.eventDate|date('H:i') }}</span>
+													{% if event.participantsList %}
+														{% for team in event.participantsList %}
+															<span class="team">
+																{{ team.name }}
+																{% if team.logo %}
+																	<img src="{{ file_url(team.logo) }}">
+																{% endif %}
+															</span>
+														{% endfor %}
+													{% endif %}
+													{% if event.FodbaldStreamsPreview %}
+														<span class="preview">{{ "fodbodld_streams_schedule_preview"|t }}</span>
+ 													{% endif %}
+												</a>
+											</li>						
+										{% endfor %}
+									</ul>
+								</div>				
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+				<div class="ProgramControls">
+					{% if tags.next %}
+						<span class="next"><a href="{{ tags.next }}">{{ "fodbald_streams_program_next" | t}}</a></span>
+					{% endif%}
+					{% if tags.prev %}
+						<span class="prev"><a href="{{ tags.prev }}">{{ "fodbald_streams_program_prev" | t}}</a></span>
+					{% endif%}
+				</div>			
+			</div>	
+		</div>
+	</div>
+</section>

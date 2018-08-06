@@ -1,0 +1,9 @@
+
+rp_block_data_configuration.DefaultForm_configuration:
+  path: 'admin/block-configuration'
+  defaults:
+    _form: '\Drupal\rp_block_data_configuration\Form\DefaultForm_configuration'
+    _title: 'Blocks Configuration'
+  requirements:
+    _access: 'TRUE'
+  

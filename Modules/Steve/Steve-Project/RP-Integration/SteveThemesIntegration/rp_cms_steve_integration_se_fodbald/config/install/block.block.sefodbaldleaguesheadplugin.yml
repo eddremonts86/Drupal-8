@@ -1,0 +1,20 @@
+uuid: 6149c2f5-d3de-4eb9-b323-2980c3558b08
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldleaguesheadplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldleaguesheadplugin
+settings:
+  id: sefodbaldleaguesheadplugin
+  label: 'Se Fodbald Leagues Head Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

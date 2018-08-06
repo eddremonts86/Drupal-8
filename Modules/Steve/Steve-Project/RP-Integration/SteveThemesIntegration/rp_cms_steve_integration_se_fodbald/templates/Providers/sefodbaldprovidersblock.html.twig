@@ -1,0 +1,48 @@
+{% if tags %}
+	{% for provider in tags %}
+		{% set rating = 100 %}
+	
+		{% if provider.rating %}
+			{% set rating = 20 * provider.rating %}
+		{% endif %}
+	
+		<div class="col col-md-12 col-sm-12 col-xs-12 ProviderBlock">
+			<div class="row">
+				<div class="col col-md-3 col-sm-3 col-xs-12 ProviderImage">
+					{% if provider.image %}
+						<a href="{{ provider.link }}" class="ProviderLogo">
+							<img src="{{ file_url(provider.image) }}">
+						</a>
+					{% endif %}
+					
+					{% if provider.sponsored %}
+						<div class="sponsoredLogo">
+							<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_se_fodbald/src/images/sponsored-logo-1.png" class="sponsoredLogo-1">
+							<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_se_fodbald/src/images/sponsored-logo-2.png" class="sponsoredLogo-2">				
+						</div>
+					{% endif %}
+				</div>
+				<div class="col col-md-7 col-sm-7 col-xs-12 ProviderContent">
+					<h2>{{ provider.name }} {{ "se_fodbald_provider_block_head"|t }}<span class="RatingBack"><span class="RatingFront" style="width: {{ rating }}%"></span></span></h2>
+					<p class="description"><strong>{{ "se_fodbald_provider_block_review"|t }}</strong>{{ provider.review }}</p>
+					<p class="description"><strong>{{ "se_fodbald_provider_block_quality"|t }}</strong>{{ provider.quality }}</p>
+					<p class="description"><strong>{{ "se_fodbald_provider_block_price"|t }}</strong>{{ provider.price }}</p>
+					<p>{{ "se_fodbald_provider_block_list"|t }}</p>
+					<ol class="steps">
+						<li>{{ "se_fodbald_provider_block_step_1"|t }}</li>
+						<li>{{ "se_fodbald_provider_block_step_2"|t }}</li>
+						<li>{{ "se_fodbald_provider_block_step_3"|t }}</li>
+					</ol>
+				</div>
+				<div class="col col-md-2 col-sm-2 col-xs-12 ProviderActions">
+					<a href="{{ provider.link }}" class="btn round right-arrow">{{ "se_fodbald_provider_block_button"|t }}<span>{{ provider.name }}</span></a>
+					<a href="#popup3" class="popUp">{{ "se_fodbald_provider_block_popup"|t }}</a>
+					
+					{% if provider.disclaimer %}
+						<p class="disclaimer">{{ provider.disclaimer }}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endif %}

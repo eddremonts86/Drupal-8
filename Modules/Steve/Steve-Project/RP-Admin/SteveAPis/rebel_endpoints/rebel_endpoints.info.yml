@@ -1,0 +1,10 @@
+name: RP - Drupal Endpoints Examples
+type: module
+description: Server RESTful API module.
+author: Eduardo Valdes Inerrate
+core: 8.x
+package: Rebel Penguins Apps - Server
+dependencies:
+  - drupal:node
+configure: rebel_endpoints.description
+

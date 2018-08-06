@@ -1,0 +1,166 @@
+<section style=" padding-bottom: 30px;padding-top: 30px;background: #223a00 url(http://images-cdn.watchfooty.co.uk/watchfooty.co.uk-ver2/ground-image-football.jpg) center top no-repeat;background-size: 100%;width: 100%;" class="">
+    <div class="row">
+        <div class="container GP_stream">
+            {% for eventStream in tags.events.Streamers %}
+
+            	<div class="col-lg-12 StreamPanel" {{ tags.events.Streamers|length > 3 and loop.index > 2 ? attributes.setAttribute('style', 'display: none;') : '' }}>
+                    <div class="panel panel-default panel-primary_ border-panel">
+
+                    	{% if eventStream.sponsor == 1 %}
+                    		<img class="sponsorStrip" width="auto" height="auto" alt="green-strip-right" src="http://images-v2-cdn.sesport.dk/sesport.dk-ver2/green-strip-right.png">
+                    	{% endif %}
+
+                        <div class="col-lg-12 border-panel-title">
+                            <div class="col-lg-6 img_name_stream">
+
+                                {% if stream.streamIMG != '' %}
+									<img class="img-circle" width="25px" height="25px" src="{{ file_url(eventStream.streamIMG) }}"/>
+                                {% else %}
+									<img class="img-circle" width="25px" height="25px" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }}
+										 alt="Opret en konto og Stream fodbold live" width="92" height="70" src="/themes/custom/stevethemebase/src/images/step1.png">
+                                {% endif %}
+
+                                <b class="streamPanelTitle"> {{ eventStream.streamName }} </b>
+                                <span class="rating" data-rating="{{ eventStream.streamRating }}">
+                                        {% for i in 1.. eventStream.streamRating %}
+                                            <em class="fa fa-star" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}} ></em>
+                                        {% endfor %}
+                                    {% for i in 1.. (5 - eventStream.streamRating) %}
+                                        {% if (5 - eventStream.streamRating) > 0 %}
+                                            <em class="fa fa-star-o" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}} ></em>
+                                        {% endif %}
+                                    {% endfor %}
+                                        </span>
+                            </div>
+                            <div class="col-lg-2 text-center element-video_quality"><b>{{ "event_list_plugin_quality" | t }}</b> {{ eventStream.streamVideoQuality }}
+                            </div>
+                            <div class="col-lg-2 text-center element-video_size"><b>{{ "event_list_plugin_vsize" | t }}</b> {{ eventStream.streamVideoSize }}
+                            </div>
+                            <div class="col-lg-2 text-center element-video_price"><b>{{ "event_list_plugin_price" | t }}</b>{{ eventStream.streamPrice }} </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="col-lg-12">
+                            	<div class="main-content">
+	                                <h3 class="streamPanelTitle">
+	                                    {% if eventStream.ProviderPageDetailHeading != '' and  eventStream.ProviderPageDetailHeading != null %}
+	                                        {{ eventStream.ProviderPageDetailHeading }}
+	                                    {% else %}
+	                                        {{ "event_list_plugin_stream_panel_title" |t }} {{ eventStream.streamName }}
+	                                    {% endif %}
+	                                </h3>
+	                                <div class="col-lg-3 text-center">
+	                                    <div class="col-lg-12">
+	                                    	<h4>
+		                                        {% if eventStream.ProviderPageDetailContentIcon1Heading != '' and  eventStream.ProviderPageDetailContentIcon1Heading != null %}
+		                                            {{ eventStream.ProviderPageDetailContentIcon1Heading }}
+		                                        {% else %}
+		                                            {{ "event_list_plugin_itv" |t }}
+		                                        {% endif %}
+	                                        </h4>
+	                                    </div>
+	                                    <div class="col-lg-12">
+ 											{% if eventStream.step1 != '' %}
+                                                <img class="mw80pm"  alt="{{ eventStream.streamName }}" width="92" height="70" class="imgTabStream" alt="{{ eventStream.streamName }}" src="{{ file_url(eventStream.step1) }}">
+                                            {% else %}
+                                                <img class="mw80pm" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }} alt="{{ eventStream.streamName }}" width="92" height="70" src="/themes/custom/stevethemebase/src/images/step1.png">
+                                            {% endif %}
+	                                    </div>
+	                                    <div class="col-lg-12 text-small">
+	                                        {% if eventStream.ProviderPageDetailContentIcon1Subheading != '' and  eventStream.ProviderPageDetailContentIcon1Subheading != null %}
+	                                            {{ eventStream.ProviderPageDetailContentIcon1Subheading }}
+	                                        {% else %}
+	                                            {{ "event_list_plugin_visit" |t }}{{ eventStream.streamName }}
+	                                        {% endif %}
+	                                    </div>
+	                                </div>
+	                                <div class="col-lg-3 text-center">
+	                                    <div class="col-lg-12">
+	                                    	<h4>
+		                                        {% if eventStream.ProviderPageDetailContentIcon2Heading != '' and  eventStream.ProviderPageDetailContentIcon2Heading != null %}
+		                                            {{ eventStream.ProviderPageDetailContentIcon2Heading }}
+		                                        {% else %}
+		                                            {{ "event_list_plugin_select" |t }} {{ tags.events.sport.name }}
+		                                        {% endif %}
+	                                        </h4>
+	                                    </div>
+	                                    <div class="col-lg-12">
+                                                {% if eventStream.step2 != '' %}
+                                                    <img class="mw80pm" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }} alt="Opret en konto og Stream fodbold live" width="92" height="70" src="{{ file_url(eventStream.step2) }}">
+                                                {% else %}
+                                                    <img class="mw80pm" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }} alt="Opret en konto og Stream fodbold live" width="92" height="70" src="/themes/custom/stevethemebase/src/images/step2.png">
+                                                {% endif %}
+	                                    </div>
+	                                    <div class="col-lg-12 text-small">
+	                                        {% if eventStream.ProviderPageDetailContentIcon2Subheading != '' and  eventStream.ProviderPageDetailContentIcon2Subheading != null %}
+	                                            {{ eventStream.ProviderPageDetailContentIcon2Subheading }}
+	                                        {% else %}
+	                                            {{ "event_list_plugin_choose" |t }}
+	                                        {% endif %}
+	                                    </div>
+	                                </div>
+	                                <div class="col-lg-3 text-center">
+	                                    <div class="col-lg-12">
+	                                    	<h4>
+		                                        {% if eventStream.ProviderPageDetailContentIcon3Heading != '' and  eventStream.ProviderPageDetailContentIcon3Heading != null %}
+		                                            {{ eventStream.ProviderPageDetailContentIcon3Heading }}
+		                                        {% else %}
+		                                            {{ "event_list_plugin_watch_live" |t }}
+		                                        {% endif %}
+	                                        </h4>
+	                                    </div>
+	                                    <div class="col-lg-12">
+	                                    	{% if eventStream.step3 != '' %}
+	                                    		<img class="mw80pm" alt="green-icon-3" width="92" height="70" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }} src="{{ file_url(eventStream.step3) }}">
+	                                    	{% else %}
+	                                    		<img class="mw80pm" alt="green-icon-3" width="92" height="70" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : '' }} src="/themes/custom/stevethemebase/src/images/step3.png">
+	                                    	{% endif %}
+	                                    </div>
+	                                    <div class="col-lg-12 text-small">
+	                                        {% if eventStream.ProviderPageDetailContentIcon3Subheading != '' and  eventStream.ProviderPageDetailContentIcon3Subheading != null %}
+	                                            {{ eventStream.ProviderPageDetailContentIcon3Subheading }}
+	                                        {% else %}
+	                                            {{ "event_list_plugin_start_watching" |t }}
+	                                        {% endif %}
+	                                    </div>
+	                                </div>
+                                </div>
+                                <div class="right-content">
+	                                <div class="col-lg-3 text-center">
+	                                	<div class="sep-arw"></div>
+	                                    <a role="button" href=" {{ eventStream.endLink }}"
+	                                       class="btn arrow red">
+	                                        {% if eventStream.ProviderPageDetailButtonHeading != '' and  eventStream.ProviderPageDetailButtonHeading != null %}
+	                                            {{ eventStream.ProviderPageDetailButtonHeading }}
+	                                        {% else %}
+	                                            {{ "event_list_plugin_start_watching_live" |t }}
+	                                        {% endif %}
+	                                        <br>
+	                                        <span> -
+	                                            {% if eventStream.ProviderPageDetailButtonSubheading != '' and  eventStream.ProviderPageDetailButtonSubheading != null %}
+	                                                {{ eventStream.ProviderPageDetailButtonSubheading }}
+	                                            {% else %}
+	                                                {{ "event_list_plugin_with" |t }}{{ eventStream.streamName }}
+	                                            {% endif %}
+	                                        </span>
+	                                    </a>
+	                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if tags.events.Streamers|length > 3 and loop.last %}
+            		<div class="col-lg-12 ShowStreamList">
+            			<a class="btn arrowDown ShowStreamListButton" {{ colors ? attributes.setAttribute('style', 'background: linear-gradient(to bottom, ' ~ colors.button_gradient_light ~ ' 0, ' ~ colors.button_gradient_dark ~ ' 100%)')}}>
+            				{{ "event_list_plugin_show_button" |t }}
+            			</a>
+            		</div>
+            	{% endif %}
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+

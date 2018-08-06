@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.steve_timezones.description
+    - field.field.taxonomy_term.steve_timezones.field_api_id
+    - taxonomy.vocabulary.steve_timezones
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          8edd80f0-05eb-4a64-8f76-e365798ab063:
+            uuid: 8edd80f0-05eb-4a64-8f76-e365798ab063
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_timezones:description'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          40e5b232-ae84-4eba-acd2-d3975ee8420d:
+            uuid: 40e5b232-ae84-4eba-acd2-d3975ee8420d
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_timezones:field_api_id'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+id: taxonomy_term.steve_timezones.default
+targetEntityType: taxonomy_term
+bundle: steve_timezones
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_api_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

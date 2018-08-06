@@ -1,0 +1,51 @@
+<section class="HomeHeadPlugin ContentHeader">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12 match-select">
+				<div class="match-select-title">
+					<i></i>
+					<h2>{{ "fodbald_streams_match_select_head"|t }}<span>{{ "fodbald_streams_match_select_subhead"|t }}</span></h2>
+				</div>
+				
+				{% set fLeague = null %}
+				{% set fMatch = null %}
+				
+				<select id="select-legue">
+					{% for day in tags.AllEvents %}
+						{% for name, tournament in day.alltournament %}
+							{% set LeagueID = 'L' ~ tournament.tournament_id %}
+							{% if fLeague is null %}
+								{% set fLeague = LeagueID %}
+							{% endif %}
+							
+							
+							<option value="{{ LeagueID }}" {{ fLeague == LeagueID ? 'selected="selected"'}}>{{ name }}</option>
+						{% endfor %}
+					{% endfor %}
+				</select>
+				<select id="select-match">
+					{% for day in tags.AllEvents %}
+						{% for name, tournament in day.alltournament %}
+							{% set LeagueID = 'L' ~ tournament.tournament_id %}
+							{% for event in tournament.events %}
+							
+								{% set selected = 0 %}
+								{% if LeagueID == fLeague and fMatch is null %}
+									{% set fMatch = event.eventAlias %}
+									{% set selected = 1 %}
+								{% endif %}
+								<option value="{{ event.eventAlias }}" {{ selected ? 'selected="selected"'}} id="{{ LeagueID }}" {{ fLeague != LeagueID ? 'style="display: none;"'}}>{{ event.title }}</option>
+							{% endfor %}
+						{% endfor %}
+					{% endfor %}
+				</select>
+				
+				<div class="match-select-button">
+					<a href="{{ fMatch }}">
+						<span>{{ "fodbald_streams_match_select_button"|t }}</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

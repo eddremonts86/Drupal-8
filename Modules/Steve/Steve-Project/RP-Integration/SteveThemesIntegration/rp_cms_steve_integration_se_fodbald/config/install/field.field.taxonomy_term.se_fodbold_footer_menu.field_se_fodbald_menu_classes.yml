@@ -1,0 +1,19 @@
+uuid: df549e05-c671-4632-9113-fd2daa90a09e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_se_fodbald_menu_classes
+    - taxonomy.vocabulary.se_fodbold_footer_menu
+id: taxonomy_term.se_fodbold_footer_menu.field_se_fodbald_menu_classes
+field_name: field_se_fodbald_menu_classes
+entity_type: taxonomy_term
+bundle: se_fodbold_footer_menu
+label: 'Se Fodbald Menu Classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

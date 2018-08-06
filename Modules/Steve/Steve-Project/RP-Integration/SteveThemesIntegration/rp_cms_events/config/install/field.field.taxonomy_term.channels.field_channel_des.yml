@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_channel_des
+    - taxonomy.vocabulary.channels
+id: taxonomy_term.channels.field_channel_des
+field_name: field_channel_des
+entity_type: taxonomy_term
+bundle: channels
+label: 'Channel Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

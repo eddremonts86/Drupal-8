@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sport_stream_reviews
+  module:
+    - path
+id: node.sport_stream_reviews.path
+field_name: path
+entity_type: node
+bundle: sport_stream_reviews
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

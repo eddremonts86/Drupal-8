@@ -1,0 +1,121 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.steve_languages.description
+    - field.field.taxonomy_term.steve_languages.field_api_id
+    - field.field.taxonomy_term.steve_languages.field_code
+    - field.field.taxonomy_term.steve_languages.field_locale
+    - taxonomy.vocabulary.steve_languages
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          39121a51-ae93-4070-9783-695e2cc3cf28:
+            uuid: 39121a51-ae93-4070-9783-695e2cc3cf28
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_languages:description'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          22576fc3-ba9c-461c-ac66-55025615e610:
+            uuid: 22576fc3-ba9c-461c-ac66-55025615e610
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_languages:field_api_id'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          cd8fc212-a7c4-48e2-9848-f5a5c21447f2:
+            uuid: cd8fc212-a7c4-48e2-9848-f5a5c21447f2
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_languages:field_code'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          8c588782-ad0e-4a1a-add3-08ae11a59435:
+            uuid: 8c588782-ad0e-4a1a-add3-08ae11a59435
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_languages:field_locale'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+id: taxonomy_term.steve_languages.default
+targetEntityType: taxonomy_term
+bundle: steve_languages
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_api_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_code:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_locale:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

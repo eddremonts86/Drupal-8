@@ -1,0 +1,20 @@
+uuid: c3339100-2641-422a-a7d6-e896bb86c64c
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldteamsheadplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldteamsheadplugin
+settings:
+  id: fodbaldteamsheadplugin
+  label: 'Fodbald Teams Head Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

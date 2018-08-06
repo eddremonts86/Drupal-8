@@ -1,0 +1,8 @@
+#AdminTeamListSelect .fieldset-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#AdminTeamListSelect .fieldset-wrapper > .form-item{
+	width: 20%;
+} 

@@ -1,0 +1,5 @@
+name: RP Region
+type: module
+description: RP Region entity
+core: 8.x
+package: RP

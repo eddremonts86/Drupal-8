@@ -1,0 +1,13 @@
+# Stream Provider menu items definition
+entity.stream_provider.collection:
+  title: 'Stream Provider list'
+  route_name: entity.stream_provider.collection
+  description: 'List Stream Provider entities'
+  parent: rp_base.controller_entity_content
+  weight: 100
+
+stream_provider.admin.structure.settings:
+  title: Stream Provider settings
+  description: 'Configure Stream Provider entities'
+  route_name: stream_provider.settings
+  parent: rp_base.controller_entity_settings

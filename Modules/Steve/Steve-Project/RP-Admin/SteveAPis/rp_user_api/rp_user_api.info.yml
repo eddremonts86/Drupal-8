@@ -1,0 +1,7 @@
+name: 'RP - Drupal User API'
+type: module
+description: Server RESTful API module.
+author: Eduardo Valdes Inerrate
+core: 8.x
+package: Rebel Penguins Apps - Server
+project: 'steve_RP'

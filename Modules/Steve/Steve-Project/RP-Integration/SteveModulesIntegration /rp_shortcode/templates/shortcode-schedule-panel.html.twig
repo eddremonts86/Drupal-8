@@ -1,0 +1,75 @@
+{% if tags.AllEvents %}
+    {% for AllEvents in tags %}
+        {% set head = random() %}
+        <div class="panel-group" id="accordionSchedule_{{ head }}" role="tablist" aria-multiselectable="true">
+       
+            <div class="panel panel-default panel-kamp">
+                {% for eventDate in AllEvents %}
+                    <div class="panel-heading collabseIN" role="tab" id="heading_{{ eventDate.date |date("d_M_Y") }}_{{ head }}">
+                        <h4 class="panel-title">
+                            <a class="day_kamp {{ loop.index != 1 ? 'collapsed'}}" role="button" data-toggle="collapse" data-parent="#accordionSchedule_{{ head }}" href="#collapse{{ eventDate.date |date("d_M_Y") }}_{{ head }}" {{ loop.index == 1 ? 'aria-expanded="true"' : 'aria-expanded="false"'}} aria-controls="collapse{{ eventDate.date |date("d_M_Y") }}_{{ head }}" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : ''}}>
+                                {{ eventDate.date |date("l d. M") }}
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div id="collapse{{ eventDate.date |date("d_M_Y") }}_{{ head }}" class="panel-collapse collapse {{ loop.index == 1 ? 'in' }}" role="tabpanel" aria-labelledby="heading_{{ eventDate.date |date("d_M_Y") }}_{{ head }}" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.main) : ''}}>
+
+                        <div class="panel-body">
+                            {% for tournament in eventDate.alltournament %}
+                                <div class="panel-group" id="accordion_{{ tournament.eventTournamentIDAcoordion }}_{{ head }}" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default in_body interior" {{ colors ? attributes.setAttribute('style', 'background-color: ' ~ colors.schedule_background) : ''}}>
+
+                                        <div class="panel-heading in_head" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_{{ tournament.eventTournamentIDAcoordion }}_{{ head }}" href="#{{ tournament.eventTournamentIDAcoordion }}_{{ head }}" aria-expanded="false" aria-controls="{{ tournament.eventTournamentIDAcoordion }}_{{ head }}">
+                                                    <span class="no-indent fwnormal fs13-mobile">
+                                                        <img class="inline-block half-gap-right" alt="{{ tournament.tournament }}" width="30" height="30" src="{{ file_url(tournament.tournamentIMG) }}"/> {{ tournament.tournament }}
+                                                        <span class="italic  pad-left-desktop half-pad-left-ipad">
+                                                            ({{ tournament.events |length }} {{ tournament.events | length > 1 ? "matches" |t : "match" |t }})
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="{{ tournament.eventTournamentIDAcoordion }}_{{ head }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <ul role="menu" aria-expanded="true">
+                                                    {% for events in tournament %}
+                                                        {% for event in events %}
+                                                            <li class="o_program_match">
+                                                                <div class="pull-left program_match_ind border">
+                                                                    <a href="{{ event.eventAlias }}">
+                                                                        <span class="fs16 fs14-mobile half-pad-right">
+                                                                            <i class="fa fa-clock-o"></i>
+                                                                            {{ event.eventDate | date("H:i ") }}
+                                                                        </span>
+                                                                        <span class="fs16 fs14-mobile half-pad-right bold-mobile-v">
+                                                                            {{ event.eventName }}
+                                                                        </span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="pull-left program_match_ind border">
+                                                                    <a href="{{ event.eventAlias }}">{{ event.title}}</a>
+                                                                </div>
+                                                                <div class="pull-right">
+                                                                    <a role="button" {{ colors ? attributes.setAttribute('style', 'background: linear-gradient(to bottom, ' ~ colors.button_gradient_light ~ ' 0, ' ~ colors.button_gradient_dark ~ ' 100%)')}} class="btn arrowAfter" href="{{ event.eventAlias }}">
+                                                                        {{"sport_schedule_button" |t}}
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                        {% endfor %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

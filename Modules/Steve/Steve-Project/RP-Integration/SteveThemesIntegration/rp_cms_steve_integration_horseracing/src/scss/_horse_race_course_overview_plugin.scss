@@ -1,0 +1,50 @@
+section.RaceCourseOverviewPlugin{
+	background: #081820;
+	.container{
+		padding: 7% 0;
+		.row{
+			.col-md-4{
+				.content{
+					min-height: 306px;
+					padding: 10px 0;
+					h5{
+						color: #fff;
+					}
+				}
+				&:first-child{
+
+					padding: 0 15px 0 0;
+					.content{
+						border-bottom: 7px solid #f2740c;
+						border-top: 7px solid #f2740c;
+
+						p{
+							color: #fff;	
+						}
+					}
+				}
+				&.head{
+					.content{
+						border-bottom: 2px solid #f2740c;
+						padding-top: 0;
+						h1{
+							border: 7px solid #f2740c;
+							padding: 10px;
+							margin-bottom: 15px;
+							color: #f4af63;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	section.RaceCourseOverviewPlugin{
+		.container{
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+	}
+}

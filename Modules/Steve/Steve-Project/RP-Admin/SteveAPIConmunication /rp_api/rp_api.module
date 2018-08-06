@@ -1,0 +1,20 @@
+<?php
+
+ /**
+  * @file
+  * Primary module hooks for RP API module.
+  */
+
+/**
+ * Implements hook_entity_presave().
+ */
+function rp_api_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+ if($entity->getEntityTypeId() == 'user'){
+       $uuid_service = \Drupal::service('uuid');
+       $uuid = $uuid_service->generate();
+       if($entity->field_token->value == "" or !isset($entity->field_token->value)){
+           $entity->field_token->value = $uuid;
+        }
+       return $entity;
+    }
+}

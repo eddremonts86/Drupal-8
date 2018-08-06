@@ -1,0 +1,100 @@
+{% if tags %}
+	{% set aTabA = null %}
+	{% set event = tags|first %}
+	<div class="ProvidersTabsHeader">
+		<span>{{ "se_fodbald_provider_block_alt_header"|t }}</span>
+	</div>
+
+	<div class="ProviderTabsAlt">
+		<ul class="nav nav-tabs" role="tablist">
+			<li class="tablist-head">
+				<span>{{ "se_fodbald_provider_block_alt_step_provider"|t }}</span>
+				<span>{{ "se_fodbald_provider_block_alt_step_recomendation"|t }}</span>
+			</li>
+			{% for provider in event.providers %}
+				{% set TabID = 't' ~ provider.id %}
+				
+				{% if aTabA is null %}
+					{% set aTabA = TabID %}
+				{% endif %}
+				
+				{% set rating = 100 %}
+
+				{% if provider.rating %}
+					{% set rating = 20 * provider.rating %}
+				{% endif %}
+				
+				<li role="presentation" {{ aTabA == TabID ? 'class="active"' }}>
+					<a href="#{{ TabID }}" aria-controls="{{ TabID }}" role="tab" data-toggle="tab">
+						<span class="ProviderImage">
+							{% if provider.image %}
+								<img src="{{ file_url(provider.image) }}">
+							{% endif %}
+						</span>
+						<span class="ProviderRating">
+							<span class="RatingBack"><span class="RatingFront" style="width: {{ rating }}%"></span></span>
+						</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+		<div class="tab-content">
+			{% for provider in event.providers %}
+				{% set TabID = 't' ~ provider.id %}
+				
+				{% set rating = 100 %}
+
+				{% if provider.rating %}
+					{% set rating = 20 * provider.rating %}
+				{% endif %}
+				
+				<div role="tabpanel" class="tab-pane clearfix {{ aTabA == TabID ? 'active' }}" id="{{ TabID }}">
+					<div class="LeftSide">
+						<a href="#"></a>
+							{% if provider.image %}
+								<img src="{{ file_url(provider.image) }}">
+							{% endif %}
+						</a>
+					</div>
+					<div class="ProviderDescription">		
+						<h2>
+							{{ provider.name }}
+							<span class="ProviderRating">
+								<span class="RatingBack"><span class="RatingFront" style="width: {{ rating }}%"></span></span>
+							</span>
+						</h2>
+						<span class="leagueandmatch">{{ "se_fodbald_provider_block_leagueandmatch"|t }}{{ provider.leagueandmatch }}</span>
+						<span class="quality">{{ "se_fodbald_provider_block_quality"|t }}{{ provider.quality }}</span>
+						<span class="price">{{ "se_fodbald_provider_block_price"|t }}{{ provider.price }}</span>
+						
+						<p><b>{{ "se_fodbald_provider_block_list"|t }}</b></p>
+						
+						<div class="row ProviderFooter">
+							<div class="col col-md-8 ProviderSteps">
+								<ol class="steps">
+									<li>{{ "se_fodbald_provider_block_alt_step_1"|t }}</li>
+									<li>{{ "se_fodbald_provider_block_alt_step_2"|t }}</li>
+									<li>{{ "se_fodbald_provider_block_alt_step_3"|t }}</li>
+								</ol>
+							</div>
+							<div class="col col-md-4 ProviderActions">
+								<a href="{{ provider.link }}" class="btn round right-arrow">
+									{{ "se_fodbald_provider_block_button"|t }}
+									<span>{{ provider.name }}</span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="RightSide">
+						<a href="{{ provider.link }}" class="btn round right-arrow">
+							{{ "se_fodbald_provider_block_button"|t }}
+							<span>{{ provider.name }}</span>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>	
+{% endif %}

@@ -1,0 +1,543 @@
+html, body {
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+body{
+	font-family: Gudea,sans-serif;
+    color: $color-scorpion;
+    font-size: 15px;
+}
+
+.container-fluid,
+.container{
+	max-width: $content-max-width;
+	padding: 0;
+	width: 100%;
+}
+
+.row{
+	margin: 0;
+}
+
+.col{
+	padding: 0;
+}
+
+p, ul, ol, dl {
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+h5{
+	font-size: 15px;
+	font-weight: 700;
+}
+
+h4{
+	font-size: 1.3333333333em;
+}
+
+h3{
+	font-size: 1.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1{
+	font-size: 2.3333333333em;
+}
+
+img{
+	max-width: 100%;
+	vertical-align: baseline;
+}
+
+.views-element-container{
+	margin: 0;
+	
+	.pager-nav,
+	.feed-icons,
+	.view-content{
+		display: none;
+	}
+}
+
+
+section{
+	&.Block{
+		padding: 10px;
+		background: $color-white;
+		border: 1px solid $color-white;
+		color: $color-gray;
+		&.Asphalt{
+			background-color: $color-ebony-clay;
+			border-color: $color-ebony-clay;
+			color: $color-white;
+		}
+		&.Gray{
+			background-color: $color-mercury;
+			border-color: $color-mercury;
+			color: $color-scorpion-2;
+		}
+	}
+}
+
+a{
+	text-decoration: none;
+	line-height: 1.5;
+	color: $color-pelorous;
+	
+	&:hover,
+	&:focus{
+		color: $color-cornflower-blue;
+		text-decoration: underline;
+	}
+	
+	&.readMore{
+		color: $color-emerald;
+		&:hover{
+			color: $color-magic-mint;
+			text-decoration: none;
+			
+			i{
+				margin: 0 0 0 9px;
+			}
+		}
+		i{
+			margin: 0 0 0 4px;
+			transition: ease-in-out .4s;
+		}
+	}
+	
+	&.btn{
+		height: 50px;
+		font-size: 18px;
+		border-radius: 10px;
+		margin-top: 10px;
+		transition: ease-in-out .25s;
+		position: relative;
+		color: $color-white;
+		display: block;
+		width: 100%;
+		background: $color-jungle-green;
+		font-family: Helvetica,Arial,Geneva,sans-serif;
+		font-weight: 700;
+		text-decoration: none;
+		cursor: pointer;
+		line-height: 1.5;
+		border: 1px solid $color-shamrock;
+		word-break: break-word;
+		box-shadow: 0 0 0 5px rgba(46,204,113,.7);
+		padding: 10px 15px 6px 15px;
+		outline: none;
+		
+		&:focus,
+		&:hover{
+			color: $color-white;
+			background: $color-jungle-green;
+			border-color: $color-shamrock;
+			box-shadow: 0 0 0 10px rgba(46,204,113,.7);
+		}
+		
+		&.right-arrow{
+			&:after{
+				font-family: FontAwesome;
+				font-weight: 400;
+				font-style: normal;
+				text-decoration: inherit;
+				-webkit-font-smoothing: antialiased;
+				float: right;
+				display: inline;
+				margin-left: .3em;
+				content: "\f061";
+			}
+		}
+		&.round{
+			height: 128px;
+			width: 128px;
+			display: inline-block;
+			box-shadow: 0 0 0 5px rgba(46,204,113,.7);
+			border-radius: 100%;
+			font-size: 15px;
+			font-family: Gudea, sans-serif;
+			color: $color-white;
+			text-align: center;
+			padding: 43px 15px 15px;
+			line-height: 1;
+			border: none;
+			font-weight: 400;
+			span{
+				border-top: 1px solid $color-white;
+				display: block;
+				font-size: 20px;
+				line-height: 22px;
+				margin-top: 7px;
+				padding-top: 2px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			
+			&.right-arrow{
+				&:after{
+					display: none;
+				}
+				span{
+					&:after{
+					    background: url(../images/smarrow.png);
+					    display: inline-block;
+					    height: 21px;
+					    width: 22px;
+					    position: relative;
+					    top: 3px;
+					    left: 0;
+					    transition: ease-in-out .25s;
+					    content: "";					
+    				}
+				}
+			}
+		}
+	}
+}
+
+p{
+	>a{
+		color: $color-blue;
+		text-decoration: underline;
+	}
+	>strong{
+		>a{
+			color: $color-blue;
+			text-decoration: underline;
+		}
+	}
+	>b{
+		>a{
+			color: $color-blue;
+			text-decoration: underline;
+		}
+	}
+}
+em{
+	a{
+		color: inherit;
+		text-decoration: none;
+		&:hover,
+		&:focus{
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+}
+
+b,
+strong{
+	font-weight: 700;
+}
+
+.sponsoredLogo{
+	position: relative;
+	.sponsoredLogo-2{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	img{
+		width: 95px;
+		height: 30px;
+	}
+}
+
+ul{
+	padding: 0;
+}
+
+ol{
+	&.steps{
+		counter-reset: section;
+		list-style: none;
+		line-height: 1;
+		margin: 0;
+		padding: 0;
+		
+		li{
+			display: list-item;
+			counter-reset: subsection;
+			margin: 12px 5px 12px 50px;
+			position: relative;
+			padding: 3px 0;
+			
+			&:before{
+				content: counter(section,decimal) ". ";
+				counter-increment: section;
+				margin-right: 3px;
+				position: absolute;
+				right: 100%;
+			}
+			&:after{
+				background: $color-whisper;
+				border-radius: 50%;
+				content: "";
+				height: 26px;
+				left: -50px;
+				top: -1px;
+				position: absolute;
+				width: 26px;
+			}
+			
+			&:nth-child(1){
+				&:after{
+					background: url(../images/step-1.png) no-repeat;
+				}
+			}
+					
+			&:nth-child(2){
+				&:after{
+					background: url(../images/step-2.png) no-repeat;
+				}
+			}
+					
+			&:nth-child(3){
+				&:after{
+					background: url(../images/step-3.png) no-repeat;
+				}
+			}
+		}
+	}
+}
+
+img{
+	&.plus18{
+		max-width: 20px;
+		max-height: 20px;
+		display: inline-block;
+		margin: 0 7px 0 10px;
+		border-radius: 9px;
+	}
+}
+
+.BlockHeading{
+	min-height: 45px;
+	padding: 20px 20px 20px 65px;
+	background: url(../images/g-icon-2.png) left center no-repeat;
+	
+	h2{
+		color: $color-scorpion;
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 1.1;
+		margin: 0;
+	}
+	
+	p{
+		color: $color-gray;
+		line-height: 1.1;
+		margin: 0;
+	}
+	
+	&.league{
+		background: url(../images/g-icon-1.png) left center no-repeat;
+	}
+}
+
+.BlockContent{
+	padding: 0 0 0 65px;	
+}
+
+.MainSidebar{
+	.BlockHeading{
+		margin: 0 0 0 -2px;
+	}
+}
+
+.MainContent{
+    color: $color-gray;
+    padding: 12px 0 0 0;
+
+	h4{
+    	font-weight: 700;
+    	font-size: 16px;
+    	color: $color-scorpion;
+	}
+	
+	strong{
+		color: $color-scorpion;
+	}
+	
+	h1,
+	h3{
+	    color: $color-scorpion;
+	    font-size: 15px;
+	    font-weight: 700;
+	    margin-top: 45px;
+	    
+	    &:first-child{
+		    margin-top: 0; 
+	    }
+	}
+	
+	.EventBlock{
+		padding: 45px 20px 45px 0;
+		.EventTeams{
+			justify-content: center;
+			font-size: 16px;
+			font-weight: 700;
+			.TeamHolder{
+				flex-direction: row;
+				align-items: center;
+				max-width: 44%;
+				
+				.TeamLogo{
+					width: 70px;
+					height: 70px;
+					min-width: 70px;
+					margin: 0;
+					background: $color-gray-1;
+					display: flex;
+					justify-content: center;
+					align-self: center;
+					img{
+						display: block;
+						max-height: 100%;
+						max-width: 100%;
+						border-radius: 100%;
+					}
+				}
+				.TeamName{
+				    line-height: 1;
+				    padding: 0 10px;
+					text-overflow: ellipsis;
+				    overflow: hidden;
+				    display: block;
+				    text-align: left;
+				    white-space: pre;
+				    height: 26px;
+				    line-height: 26px;
+				    color: $color-black;
+				}
+				&:first-child{
+					flex-direction: row-reverse;
+					.TeamName{
+						text-align: right;
+					}	
+				}	
+			}
+			
+			.Vs{
+				color: $color-black;
+				padding: 0 10px;
+			}
+		}
+		.EventDate{
+			color: $color-black;
+		}
+	}
+}
+
+.CustomSelect{
+	background-color: rgba(255,255,255,.8);
+    color: $color-ebony-clay-4;
+    font-size: 12px;
+    position: relative;
+    min-width: 200px;
+    height: 35px;
+    border-radius: 25px;
+    
+    &:before{
+		content: "\f063";
+		display: block;
+		color: $color-ebony-clay-4;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: 400;
+		text-decoration: inherit;
+		margin-top: -8px;
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 20px;
+    }
+    
+    select{
+		bottom: 0;
+		cursor: pointer;
+		height: 35px;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+    }
+    
+    span{
+		display: block;
+		height: 35px;
+		line-height: 35px;
+		padding: 0 30px 0 15px;
+		white-space: pre;
+		text-overflow: ellipsis;
+		overflow: hidden;
+    }
+}
+
+
+
+img[data-src]{
+    background: url(../images/ajax-loader.gif) center center no-repeat;
+    background-size: 100% auto;
+    border: none;
+    filter: none !important;
+    color: transparent;
+    display: inline-block;
+}
+
+@include tablet{
+	a{
+		&.btn{
+			margin-top: 0;
+			padding: 10px 5px 6px 5px;
+			
+			&.round{
+				padding: 43px 15px 15px;
+			}
+		}
+	}
+}
+@include mobile{
+	
+	a{
+		&.btn{
+			margin-top: 10px;
+			padding: 10px 15px 6px 15px;
+		}
+	}
+	
+	.MainContent{
+		padding: 10px;
+		.EventBlock{
+			.EventTeams{
+				.TeamHolder{
+					.TeamLogo{
+						height: 40px;
+						width: 40px;
+						min-width: unset;
+					}
+				}
+			}
+		}
+	}
+}

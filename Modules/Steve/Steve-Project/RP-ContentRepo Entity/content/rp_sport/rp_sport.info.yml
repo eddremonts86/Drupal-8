@@ -1,0 +1,5 @@
+name: RP Sport
+type: module
+description: RP Sport Entity
+core: 8.x
+package: RP

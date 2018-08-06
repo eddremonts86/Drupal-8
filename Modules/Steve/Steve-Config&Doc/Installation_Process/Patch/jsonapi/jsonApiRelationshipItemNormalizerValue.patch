@@ -1,0 +1,14 @@
+--- RelationshipItemNormalizerValue.php	2017-11-22 14:31:25.316249323 +0100
++++ RelationshipItemNormalizerValue.php	2017-11-22 16:08:22.700764321 +0100
+@@ -48,6 +48,11 @@
+       $rasterized_value['meta'] = $value['meta'];
+     }
+ 
++    if($rasterized_value['type'] == "file--file"){
++           $data = \Drupal::entityTypeManager()->getStorage('file')->loadByProperties(['uuid' =>  $rasterized_value['id']]);
++           $data = reset($data);
++           $rasterized_value['meta']['imgUrl'] =file_create_url($data->uri->value);
++    }
+     return $rasterized_value;
+   }
+ 

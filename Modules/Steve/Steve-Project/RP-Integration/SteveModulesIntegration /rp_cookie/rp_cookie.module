@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_cookie.module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function rp_cookie_theme()
+{
+    return [
+        'cookiepage' => [
+	    	'template' => 'cookiepage'  
+        ],
+    ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function rp_cookie_page_attachments(array &$page)
+{	
+	if(!\Drupal::service('router.admin_context')->isAdminRoute()){
+		$page['#attached']['library'][] = 'rp_cookie/CookieGeneral';
+	}
+	
+	if(\Drupal::routeMatch()->getRouteName() == 'rp_cookie.cookie'){
+		$page['#attached']['library'][] = 'rp_cookie/CookiePage';
+		
+		$page['#attached']['html_head'][] = [[
+		        '#tag' => 'meta',
+                '#attributes' => [
+                    'name' => 'robots',
+                    'content' => 'noindex, nofollow',
+                ],
+            ], 'no-robots'];
+	}
+}

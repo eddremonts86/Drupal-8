@@ -1,0 +1,33 @@
+add participant info entities:
+  title: 'Create new Participant Info entities'
+
+administer participant info entities:
+  title: 'Administer Participant Info entities'
+  description: 'Allow to access the administration form to configure Participant Info entities.'
+  restrict access: true
+
+delete participant info entities:
+  title: 'Delete Participant Info entities'
+
+edit participant info entities:
+  title: 'Edit Participant Info entities'
+
+access participant info overview:
+  title: 'Access the Participant Info overview page'
+
+view published participant info entities:
+  title: 'View published Participant Info entities'
+
+view unpublished participant info entities:
+  title: 'View unpublished Participant Info entities'
+
+view all participant info revisions:
+  title: 'View all Participant Info revisions'
+
+revert all participant info revisions:
+  title: 'Revert all Participant Info revisions'
+  description: 'Role requires permission <em>view Participant Info revisions</em> and <em>edit rights</em> for participant info entities in question or <em>administer participant info entities</em>.'
+
+delete all participant info revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Participant Info revisions</em> and <em>delete rights</em> for participant info entities in question or <em>administer participant info entities</em>.'

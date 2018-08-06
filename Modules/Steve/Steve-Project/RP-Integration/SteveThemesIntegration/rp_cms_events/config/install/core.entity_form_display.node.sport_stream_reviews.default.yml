@@ -1,0 +1,187 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sport_stream_reviews.body
+    - field.field.node.sport_stream_reviews.field_jsonld_struct
+    - field.field.node.sport_stream_reviews.field_sport_review_properties
+    - field.field.node.sport_stream_reviews.field_sport_stream_reviews_bg
+    - field.field.node.sport_stream_reviews.field_sport_stream_reviews_sport
+    - image.style.thumbnail
+    - node.type.sport_stream_reviews
+  module:
+    - field_group
+    - field_layout
+    - image
+    - layout_discovery
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_sport_stream_reviews:
+      children:
+        - group_sport_stream_general
+        - group_sport_live_content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: 'Sport Stream Reviews'
+      region: content
+    group_sport_live_content:
+      children:
+        - body
+        - field_sport_review_properties
+        - field_sport_stream_reviews_sport
+        - status
+        - field_sport_stream_reviews_bg
+        - field_jsonld_struct
+      parent_name: group_sport_stream_reviews
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Sport live content'
+      region: content
+    group_sport_stream_general:
+      children:
+        - title
+        - langcode
+        - uid
+        - created
+        - translation
+        - promote
+        - sticky
+        - path
+      parent_name: group_sport_stream_reviews
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Sport Stream General'
+      region: content
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.sport_stream_reviews.default
+targetEntityType: node
+bundle: sport_stream_reviews
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 9
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_jsonld_struct:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_sport_review_properties:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_sport_stream_reviews_bg:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_sport_stream_reviews_sport:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

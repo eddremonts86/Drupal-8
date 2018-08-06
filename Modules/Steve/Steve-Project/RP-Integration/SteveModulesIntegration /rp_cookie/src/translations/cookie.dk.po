@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lingohub 1.0.1\n"
+"Report-Msgid-Bugs-To: support@lingohub.com \n"
+"Last-Translator: edd remonts <evi@rebelpenguin.dk>\n"
+"Language: dk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "cookie_agree"
+msgstr "Jeg er enig"
+
+msgid "cookie_head"
+msgstr "Dine Valg Vedrørende Cookies På Dette Site. Cookies Er Vigtige For, At Et Site Fungerer Korrekt."
+
+msgid "cookie_subhead"
+msgstr "For At Forbedre Din Oplevelse Bruger Vi Cookies Til At Huske Login-Oplysninger Og Sørge For Sikkert Login, Indsamle Statistikker For At Optimere Funktionaliten På Webstedet Og Levere Indhold, Der Er Skræddersyet Til Dine Interesser. Klik På Accepter Og Fortsæt For At Acceptere Cookies Og Gå Direkte Til Webstedet. Forskellige Typer Af Cookies Forklares I Vores Politik For Beskyttelse Af Personlige Oplysninger Og Cookies. Du Kan Vælge Om Du Vil Acceptere Visse Cookies Mens Du Er På Sitet.: "
+
+msgid "cookie_req"
+msgstr "Påkrævede Cookies"
+
+msgid "cookie_req_text"
+msgstr "Disse cookies er nødvendige for at aktivere kernefunktioner på siden, specielt til at sikre at hjemmesiden ser konsistent ud."
+
+msgid "cookie_opc"
+msgstr "Funktionelle og Reklame Cookies"
+
+msgid "cookie_opc_text"
+msgstr "Disse cookies giver is muligheden for at analysere brug af sitet, så vi kan måle og forbedre ydeevnen.."
+
+msgid "cookie_req_option"
+msgstr "Påkrævede Cookies"
+
+msgid "cookie_opc_option"
+msgstr "Funktionelle og Reklame Cookie"
+
+msgid "cookie_block_text"
+msgstr "Denne hjemmeside bruger cookies til at sikre, at du får den bedste oplevelse på vores hjemmeside<br>Du kan også skifte dine cookies-konfigurationer <a href="cookies">her</a>"
+
+msgid "cookie_block_learn_more"
+msgstr "Lær mere"
+
+msgid "cookie_block_agree"
+msgstr "Forstået"

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.site.field_site_url
+  module:
+    - link
+    - rp_site
+id: site.site.field_site_url
+field_name: field_site_url
+entity_type: site
+bundle: site
+label: URL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

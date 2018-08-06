@@ -1,0 +1,19 @@
+uuid: 8e7a18f9-95ad-4101-a26b-10acd3aceaf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_fodbald_str_menu_classes
+    - taxonomy.vocabulary.football_streams_footer_menu
+id: taxonomy_term.football_streams_footer_menu.field_fodbald_str_menu_classes
+field_name: field_fodbald_str_menu_classes
+entity_type: taxonomy_term
+bundle: football_streams_footer_menu
+label: 'Fodbald Streams Menu Classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,449 @@
+diff --git a/pathauto.drush.inc b/pathauto.drush.inc
+new file mode 100644
+index 0000000..2d0d49c
+--- /dev/null
++++ b/pathauto.drush.inc
+@@ -0,0 +1,130 @@
++<?php
++
++/**
++ * @file
++ * pathauto.drush.inc
++ */
++
++use Drupal\pathauto\Cli\AliasCliActionInterface;
++use Drupal\pathauto\Cli\AliasDeleteAction;
++use Drupal\pathauto\Cli\AliasGenerateAction;
++use Psr\Log\LogLevel;
++
++/**
++ * Implements hook_drush_command().
++ */
++function pathauto_drush_command() {
++  $items['pathauto-aliases-generate'] = [
++    'description' => dt('Generate aliases for all unaliased entities of a specific type, or all possible entities.'),
++    'arguments' => [
++      'type' => dt('The particular type to process. Omit this argument to choose from available types.'),
++      'action' => dt('The URL aliases to generate. Omit this argument to choose from available actions.'),
++    ],
++    'aliases' => ['pag'],
++  ];
++
++  $items['pathauto-aliases-delete'] = [
++    'description' => dt('Delete aliases for all aliased entities of a specific type, or all possible entities.'),
++    'arguments' => [
++      'type' => dt('The particular type to process. Omit this argument to choose from available types.'),
++      'action' => dt('The URL aliases to delete., Omit this argument to choose from available actions.'),
++    ],
++    'aliases' => ['pad'],
++  ];
++
++  return $items;
++}
++
++/**
++ * Command callback for 'drush pathauto-alias-generate'.
++ */
++function drush_pathauto_aliases_generate($type = NULL, $action = NULL) {
++  /** @var \Drupal\pathauto\Cli\AliasGenerateAction $alias_generate_action */
++  $alias_generate_action = \Drupal::service('pathauto.cli.alias_generate');
++
++  $types = $alias_generate_action->getAliasTypeIds();
++  $actions = $alias_generate_action->getActions();
++
++  // Check of the provided alias type id is valid.
++  if ($type) {
++    if ($type !== AliasCliActionInterface::ALIAS_TYPE_ID_ALL && !isset($types[$type])) {
++      return drush_log(dt('\'!type\' type is not a valid alias type for bulk generation.', [
++        '!type' => $type,
++      ]), LogLevel::ERROR);
++    }
++  }
++  else {
++    $type = drush_choice($types, 'Choose the alias type for which to generate URL aliases.', '!key');
++  }
++
++  if (!$type) {
++    return;
++  }
++
++  // Check if the provided action is valid.
++  if ($action) {
++    if ($action !== AliasGenerateAction::ACTION_ALL && !isset($actions[$action])) {
++      return drush_log(dt('\'!action\' action is not a valid action for bulk generation.', [
++        '!action' => $action,
++      ]), LogLevel::ERROR);
++    }
++  }
++  else {
++    $action = drush_choice($actions, 'Choose the action to perform.', '!key');
++  }
++
++  if (!$action) {
++    return;
++  }
++
++  if ($type) {
++    $alias_generate_action->execute($type, $action);
++  }
++}
++
++/**
++ * Command callback for 'drush pathauto-alias-delete'.
++ */
++function drush_pathauto_aliases_delete($type = NULL, $action = NULL) {
++  /** @var \Drupal\pathauto\Cli\AliasCliActionInterface $alias_delete_action */
++  $alias_delete_action = \Drupal::service('pathauto.cli.alias_delete');
++
++  $types = $alias_delete_action->getAliasTypeIds();
++  $actions = $alias_delete_action->getActions();
++
++  // Check of the provided alias type id is valid.
++  if ($type) {
++    if ($type !== AliasCliActionInterface::ALIAS_TYPE_ID_ALL && !isset($types[$type])) {
++      return drush_log(dt('\'!type\' type is not a valid alias type for bulk generation.', [
++        '!type' => $type,
++      ]), LogLevel::ERROR);
++    }
++  }
++  else {
++    $type = drush_choice($types, 'Choose the alias type for which to delete URL aliases.', '!key');
++  }
++
++  if (!$type) {
++    return;
++  }
++
++  // Check of the provided action is valid.
++  if ($action) {
++    if ($action !== AliasDeleteAction::ACTION_ALL && !isset($actions[$action])) {
++      return drush_log(dt('\'!action\' action is not a valid action for bulk deletion.', [
++        '!action' => $action,
++      ]), LogLevel::ERROR);
++    }
++  }
++  else {
++    $action = drush_choice($actions, 'Choose the action to perform.', '!key');
++  }
++
++  if (!$action) {
++    return;
++  }
++
++  if ($type) {
++    $alias_delete_action->execute($type, $action);
++  }
++}
+diff --git a/pathauto.services.yml b/pathauto.services.yml
+index 3ce704e..bc28304 100644
+--- a/pathauto.services.yml
++++ b/pathauto.services.yml
+@@ -24,3 +24,9 @@ services:
+     arguments: ['@entity_field.manager', '@plugin.manager.alias_type']
+     tags:
+       - { name: event_subscriber }
++  pathauto.cli.alias_generate:
++    class: Drupal\pathauto\Cli\AliasGenerateAction
++    arguments: ['@config.factory', '@plugin.manager.alias_type']
++  pathauto.cli.alias_delete:
++    class: Drupal\pathauto\Cli\AliasDeleteAction
++    arguments: ['@config.factory', '@plugin.manager.alias_type', '@pathauto.alias_storage_helper']
+diff --git a/src/Cli/AbstractAliasCliAction.php b/src/Cli/AbstractAliasCliAction.php
+new file mode 100644
+index 0000000..3b8ee7d
+--- /dev/null
++++ b/src/Cli/AbstractAliasCliAction.php
+@@ -0,0 +1,64 @@
++<?php
++
++namespace Drupal\pathauto\Cli;
++
++use Drupal\Core\Config\ConfigFactoryInterface;
++use Drupal\Core\StringTranslation\StringTranslationTrait;
++use Drupal\pathauto\AliasTypeBatchUpdateInterface;
++use Drupal\pathauto\AliasTypeManager;
++
++/**
++ * Class AbstractAliasCliAction.
++ */
++abstract class AbstractAliasCliAction implements AliasCliActionInterface {
++
++  use StringTranslationTrait;
++
++  /**
++   * The config manager.
++   *
++   * @var \Drupal\Core\Config\ConfigFactoryInterface
++   */
++  protected $config_factory;
++
++  /**
++   * The alias type manager.
++   *
++   * @var \Drupal\pathauto\AliasTypeManager
++   */
++  protected $aliasTypeManager;
++
++  /**
++   * AliasGenerateAction constructor.
++   *
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
++   *   The config factory.
++   * @param \Drupal\pathauto\AliasTypeManager $aliasTypeManager
++   *   The alias type manager.
++   */
++  public function __construct(
++    ConfigFactoryInterface $config_factory, AliasTypeManager $aliasTypeManager
++  ) {
++    $this->configFactory = $config_factory;
++    $this->aliasTypeManager = $aliasTypeManager;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getAliasTypeIds() {
++    $types = [
++      static::ALIAS_TYPE_ID_ALL => $this->t('All'),
++    ];
++    foreach ($this->aliasTypeManager->getVisibleDefinitions() as $id => $definition) {
++      /** @var \Drupal\pathauto\AliasTypeInterface $aliasType */
++      $aliasType = $this->aliasTypeManager->createInstance($id);
++      if ($aliasType instanceof AliasTypeBatchUpdateInterface) {
++        $types[$aliasType->getPluginId()] = $aliasType->getLabel();
++      }
++    }
++
++    return $types;
++  }
++
++}
+diff --git a/src/Cli/AliasCliActionInterface.php b/src/Cli/AliasCliActionInterface.php
+new file mode 100644
+index 0000000..09825bd
+--- /dev/null
++++ b/src/Cli/AliasCliActionInterface.php
+@@ -0,0 +1,38 @@
++<?php
++
++namespace Drupal\pathauto\Cli;
++
++/**
++ * Interface AliasActionCLIInterface.
++ */
++interface AliasCliActionInterface {
++
++  const ALIAS_TYPE_ID_ALL = 'all';
++
++  /**
++   * Perform a certain action on an alias type.
++   *
++   * @param string $aliasTypeId
++   *   The alias type ID.
++   * @param string $action
++   *   The action.
++   */
++  public function execute($aliasTypeId, $action);
++
++  /**
++   * Get all possible types of paths for which to edit URL aliases.
++   *
++   * @return array
++   *   An array of possible types of patch for which to edit URL aliases.
++   */
++  public function getAliasTypeIds();
++
++  /**
++   * Get all possible actions.
++   *
++   * @return array
++   *   An array of applicable actions.
++   */
++  public function getActions();
++
++}
+diff --git a/src/Cli/AliasDeleteAction.php b/src/Cli/AliasDeleteAction.php
+new file mode 100644
+index 0000000..a61bb4a
+--- /dev/null
++++ b/src/Cli/AliasDeleteAction.php
+@@ -0,0 +1,109 @@
++<?php
++
++namespace Drupal\pathauto\Cli;
++
++use Drupal\Core\Config\ConfigFactoryInterface;
++use Drupal\pathauto\AliasStorageHelper;
++use Drupal\pathauto\AliasTypeManager;
++use Drupal\pathauto\Form\PathautoAdminDelete;
++
++/**
++ * Class AliasDeleteAction.
++ */
++class AliasDeleteAction extends AbstractAliasCliAction {
++
++  const ACTION_ALL = 'all';
++  const ACTION_KEEP_CUSTOM = 'keep_custom_aliases';
++
++  /**
++   * The alias storage helper.
++   *
++   * @var \Drupal\pathauto\AliasStorageHelper
++   */
++  protected $aliasStorageHelper;
++
++  /**
++   * AliasDeleteAction constructor.
++   *
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
++   *   The config factory.
++   * @param \Drupal\pathauto\AliasTypeManager $aliasTypeManager
++   *   The alias type manager.
++   * @param \Drupal\pathauto\AliasStorageHelper $aliasStorageHelper
++   *   The alias storage helper.
++   */
++  public function __construct(
++    ConfigFactoryInterface $configFactory,
++    AliasTypeManager $aliasTypeManager,
++    AliasStorageHelper $aliasStorageHelper
++  ) {
++    parent::__construct($configFactory, $aliasTypeManager);
++
++    $this->aliasStorageHelper = $aliasStorageHelper;
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function execute($aliasTypeId, $action = self::ACTION_KEEP_CUSTOM) {
++    $deleteAll = ($aliasTypeId === self::ALIAS_TYPE_ID_ALL);
++
++    if ($action === self::ACTION_KEEP_CUSTOM) {
++      $batch = [
++        'title' => $this->t('Bulk deleting URL aliases'),
++        'operations' => [
++          [
++            sprintf('%s::batchStart', PathautoAdminDelete::class),
++            [
++              $deleteAll
++            ],
++          ],
++        ],
++        'finished' => sprintf('%s::batchFinished', PathautoAdminDelete::class),
++      ];
++
++      if ($deleteAll) {
++        foreach ($this->getAliasTypeIds() as $id => $label) {
++          $batch['operations'][] = [
++            sprintf('%s::batchProcess', PathautoAdminDelete::class),
++            [
++              $id
++            ],
++          ];
++        }
++      }
++      else {
++        $batch['operations'][] = [
++          sprintf('%s::batchProcess', PathautoAdminDelete::class),
++          [
++            $aliasTypeId
++          ],
++        ];
++      }
++
++      $batch['progressive'] = FALSE;
++      batch_set($batch);
++
++      // Process the batch.
++      drush_backend_batch_process();
++    }
++    elseif ($deleteAll) {
++      $this->aliasStorageHelper->deleteAll();
++    }
++    else {
++      /** @var \Drupal\pathauto\AliasTypeInterface $aliasTypeId */
++      $aliasTypeId = $this->aliasTypeManager->createInstance($aliasTypeId);
++      $this->aliasStorageHelper->deleteBySourcePrefix((string) $aliasTypeId->getSourcePrefix());
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getActions() {
++    return[
++      self::ACTION_ALL => $this->t('All of your path aliases will be deleted.'),
++      self::ACTION_KEEP_CUSTOM => $this->t('Only delete automatically generated aliases.')
++    ];
++  }
++}
+diff --git a/src/Cli/AliasGenerateAction.php b/src/Cli/AliasGenerateAction.php
+new file mode 100644
+index 0000000..08ec6bd
+--- /dev/null
++++ b/src/Cli/AliasGenerateAction.php
+@@ -0,0 +1,64 @@
++<?php
++
++namespace Drupal\pathauto\Cli;
++
++use Drupal\pathauto\Form\PathautoBulkUpdateForm;
++use Drupal\pathauto\PathautoGeneratorInterface;
++
++/**
++ * Class AliasGenerate.
++ */
++class AliasGenerateAction extends AbstractAliasCliAction {
++
++  const ACTION_CREATE = 'create';
++  const ACTION_UPDATE = 'update';
++  const ACTION_ALL = 'all';
++
++  /**
++   * {@inheritdoc}
++   */
++  public function execute($aliasTypeId, $action = self::ACTION_CREATE) {
++    $batch = [
++      'title' => $this->t('Bulk updating URL aliases'),
++      'operations' => [
++        [
++          sprintf('%s::batchStart', PathautoBulkUpdateForm::class),
++          [],
++        ],
++        [
++          sprintf('%s::batchProcess', PathautoBulkUpdateForm::class),
++          [
++            $aliasTypeId,
++            $action,
++          ],
++        ],
++      ],
++      'finished' => sprintf('%s::batchFinished', PathautoBulkUpdateForm::class),
++      'progressive' => FALSE,
++    ];
++
++    $batch['progressive'] = FALSE;
++    batch_set($batch);
++
++    // Process the batch.
++    drush_backend_batch_process();
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getActions() {
++    $actions = [
++      self::ACTION_CREATE => $this->t('Generate a URL alias for un-aliased paths only.'),
++    ];
++
++    $config = $this->configFactory->get('pathauto.settings');
++    if ($config->get('update_action') !== PathautoGeneratorInterface::UPDATE_ACTION_NO_NEW) {
++      $actions[self::ACTION_UPDATE] = $this->t('Update the URL alias for paths having an old URL alias');
++      $actions[self::ACTION_ALL] = $this->t('Regenerate URL aliases for all paths');
++    }
++
++    return $actions;
++  }
++
++}

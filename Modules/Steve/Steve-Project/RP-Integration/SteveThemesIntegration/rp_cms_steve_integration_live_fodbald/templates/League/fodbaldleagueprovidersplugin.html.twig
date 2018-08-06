@@ -1,0 +1,102 @@
+<section class="LeagueProvidersPlugin">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-8">
+				<div class="row ProviderTabs">
+					{% if tags %}
+						{% set event = tags|first %}
+						<div class="col col-md-12">
+							<ul class="nav nav-tabs" role="tablist">
+							{% for provider in event.matchProviders %}
+								{% set TabID = 'T' ~ provider.id %}
+								<li role="presentation" {{ loop.index == 1 ? attributes.addClass('active')}}>
+									<a href="#{{ TabID }}" aria-controls="{{ TabID }}" role="tab" data-toggle="tab">{{ provider.streamName }}</a>
+								</li>
+							{% endfor %}
+							</ul>
+						</div>
+						<div class="col col-md-12">
+							<div class="tab-content">
+								{% for provider in event.matchProviders %}
+									{% set TabID = 'T' ~ provider.id %}
+									<div role="tabpanel" id="{{ TabID }}" class="tab-pane clearfix {{loop.index == 1 ? 'active' }}">
+										{% if provider.sponsor %}
+											<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/anouncement.png" class="sponsored">
+										{% endif %}
+										<h3>{{ "live_fodbald_providers_see" | t }} {{ tags.matchName }} {{ provider.streamName }}</h3>
+										<p>{{ "live_fodbald_provider_tab_subhead_text" | t}}</p>
+										<p>{{ "live_fodbald_provider_tab_subhead_2_text" | t}}</p>
+										<div class="ProviderHolder">
+											<div class="ProviderImage">
+												{% if provider.streamIMG %}
+													<a href="{{ provider.FrontPageAffiliateButtonUrl }}">
+														<img src="{{ file_url(provider.streamIMG) }}">
+													</a>
+												{% endif %}
+											</div>
+											<div class="ProviderSteps">
+												<ul>
+													<li><a href="#">{{ "live_fodbald_provider_tab_step_1" | t }}</a></li>
+													<li><a href="#">{{ "live_fodbald_provider_tab_step_2" | t }}</a></li>
+													<li><a href="#">{{ "live_fodbald_provider_tab_step_3" | t }}<span>{{ "live_fodbald_provider_tab_step_disclaimer" | t}}</span></a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="actions">
+											<a href="{{ provider.FrontPageAffiliateButtonUrl }}" class="btn arrow">{{ provider.FrontPageAffiliateButtonText }}</a>
+											{% if provider.disclaimer %}
+												<p>{{ provider.disclaimer }}</p>
+											{% endif %}
+											<span>{{ "live_fodbald_provider_warning" | t }}</span>
+											<a href="#popup-test" class="popUp">{{ "live_fodbald_provider_popup" | t }}</a>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+			<div class="col col-md-4 tv-block">
+				<div class="tv-block-head">
+					{% if info.image %}
+						<img src="{{ file_url(info.image) }}">
+					{% endif %}
+					
+                    {{ "live_fodbald_league_tv_title" | t}} {{ info.name }} 
+				</div>
+				<div class="tv-block-select">		
+					<select>
+						{% set aDay = null %}
+						{% for day in schedule.AllEvents%}
+							{% set DayID = 'D' ~ day.date %}
+							
+							{% if loop.index == 1 %}
+								{% set aDay = DayID %}
+							{% endif %}
+							
+			            	<option {{ loop.index == 1 ? 'selected="selected"'}} value="#{{ DayID }}">{{ day.date|date('D, d M Y') }}</option>
+			            {% endfor %}
+		            </select>
+		        </div>
+		        <div class="tv-block-schedule">
+		        	<ul>
+		        	{% for day in schedule.AllEvents%}
+		        		{% set DayID = 'D' ~ day.date %}
+		        		{% for name, tournament in day.alltournament %}
+		        			{% for match in tournament.events %}
+		        				<li id="{{ DayID }}" {{ DayID != aDay ? 'style="display: none;"'}}>
+		        					<a href="{{ match.LiveFodbaldAlias }}">
+		        						<div class="date">{{ match.eventDate|date("H:i") }}</div>
+		        						<div class="name">{{ match.title }}</div>
+		        					</a>
+		        				</li>
+		        			{% endfor %}
+		        		{% endfor %}
+		        	{% endfor %}
+		        	</ul>
+		        </div>
+			</div>
+		</div>
+	</div>
+</section>

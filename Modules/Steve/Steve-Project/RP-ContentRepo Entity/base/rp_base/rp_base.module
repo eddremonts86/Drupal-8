@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_base.module.
+ */
+
+use Drupal\node\Entity\Node;
+
+function rp_base_get_node($field_name = null, $value = null) {
+
+    $query = \Drupal::service('entity.query')->get('node');
+    $query
+    	->condition('status', 1)
+    	->condition($field_name, $value);
+    $id = $query->execute();
+
+    if (empty($id)) {
+      return false;
+    }
+    else {
+      return Node::load(current($id));
+    }
+}
+
+function rp_base_preprocess_node(&$variables) {
+  //$variables['content_node_load'] = rp_base_get_node('field_test_api_id', 33);
+}
+
+
+/**
+ * Implements hook_toolbar().
+ */
+function rp_base_toolbar() {
+  $items = array();
+  $items['rp_base'] = array(
+      '#attached' => array('library' => array('rp_base/rp_base')),
+  );
+
+  return $items;
+}

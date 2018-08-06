@@ -1,0 +1,20 @@
+uuid: a5b8fa8a-40de-42f0-8af2-517456f0c1d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamsleaguetitleplugin
+theme: live_fodbald_streams
+region: none
+weight: 100
+provider: null
+plugin: fodbaldstreamsleaguetitleplugin
+settings:
+  id: fodbaldstreamsleaguetitleplugin
+  label: 'Fodbald Streams League Title Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

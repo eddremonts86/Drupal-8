@@ -1,0 +1,15 @@
+name: 'RP CMS - Steve Base Config'
+type: module
+core: 8.x
+package: 'Rebel Penguins CMS - Frontend'
+project: steve_base_config
+dependencies:
+  - block
+  - help
+  - language
+  - locale
+  - pathauto
+  - rp_cms_steve_integration
+  - search
+  - system
+  - user

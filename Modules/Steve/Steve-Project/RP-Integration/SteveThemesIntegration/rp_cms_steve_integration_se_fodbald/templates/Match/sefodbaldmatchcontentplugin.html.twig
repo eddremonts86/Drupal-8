@@ -1,0 +1,133 @@
+<section class="MatchContentPlugin Block">
+	<div class="container">
+		<div class="col col-md-5 col-sm-5 col-xs-12 MainSidebar">
+			{% if schedule %}
+				{% set aDay = null %}
+				<div class="ScheduleBlock Widget">
+					<div class="BlockHeading league">
+						<h2>{{ "se_fodbald_block_program_head"|t }}</h2>
+					</div>
+					<div class="BlockContent">
+						<div class="ScheduleHead">
+							<div class="ScheduleSelect">					
+								<div class="CustomSelect">
+									<select class="date-select">
+										{% for day in schedule.AllEvents %}
+											{% if aDay is null %}
+												{% set aDay = day.date %}
+											{% endif %}
+											<option value="{{ day.date }}" {{ aDay == day.date ? 'selected' }}>{{ day.date|date('l d F') }}</option>
+										{% endfor %}
+		                            </select>
+									<span>{{ aDay|date('l d F') }}</span>
+								</div>
+							</div>
+						</div>
+						<div class="ScheduleList">
+							{% for day in schedule.AllEvents %}
+								<div class="DayContainer {{ day.date == aDay ? 'active' }}" day="{{ day.date }}">
+									{% for name, tournament in day.alltournament %}
+										<div class="LeagueContainer Open">
+											<div class="LeagueName">
+												{% if tournament.tournamentIMG %}
+													<div class="leagueImage">
+														<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ file_url(tournament.tournamentIMG) }}">
+													</div>
+												{% endif %}
+												<span>{{ name }}</span>
+											</div>
+											<ul class="ScheduleList">
+												{% for event in tournament.events %}
+													<li>
+														<a href="{{ event.eventAlias }}">
+															<div class="row">
+																<div class="col col-md-2 col-sm-2 col-xs-2 date">
+																	<span>{{ event.eventDate|date('H:i') }}</span>
+																</div>
+																<div class="col col-md-10 col-sm-10 col-xs-10 teams">
+																	{% if event.participantsList %}
+																		{% for team in event.participantsList %}
+																			<div class="team team-left">
+																				<span>{{ team.name }}</span>
+																				<div class="imageHolder">
+																					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ file_url(team.logo) }}">
+																				</div>
+																			</div>
+																		{% endfor %}
+																	{% endif %}
+																</div>
+															</div>
+														</a>
+													</li>
+												{% endfor %}
+											</ul>
+										</div>
+									{% endfor %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+			{% if events %}
+				<div class="ArticlesBlock">
+					<div class="BlockHeading">
+						<h2>{{ "se_fodbold_block_review_head"|t }}</h2>
+						<p>{{ "se_fodbold_block_review_subhead"|t }}</p>
+					</div>
+					<div class="BlockContent">
+						<ul class="ArticlesList">
+							{% for event in events %}
+								<li>
+									<a href="{{ event.link}}">
+										<i class="fa fa-arrow-right" aria-hidden="true"></i>
+										<span>{{ event.date|date('d.F Y:') }}</span>
+										{{ event.name }}
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+		<div class="col col-md-7 col-sm-7 col-xs-12 MainContent">
+			{% if tags %}
+				{% set event = tags|first %}
+				<div class="EventBlock">
+					<div class="EventTeams">
+						{% if event.teams.left %}
+							<div class="TeamHolder">
+								{% if event.teams.left.image %}
+									<div class="TeamLogo">
+										<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ file_url(event.teams.left.image) }}">
+									</div>
+								{% endif %}
+								<span class="TeamName">{{ event.teams.left.name }}</span>
+							</div>
+						{% endif %}
+						<div class="Vs">{{ "se_fodbald_team_vs"|t }}</div>
+						{% if event.teams.right %}
+							<div class="TeamHolder">
+								{% if event.teams.right.image %}
+									<div class="TeamLogo">
+										<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ file_url(event.teams.right.image) }}">
+									</div>
+								{% endif %}
+								<span class="TeamName">{{ event.teams.right.name }}</span>
+							</div>
+						{% endif %}
+					</div>
+					<div class="EventDate">{{ event.date|date("j. F Y") }}</div>
+				</div>
+				{% if event.teams.left.name and event.teams.right.name %}
+					<h1 class="MainContentPreview">{{ "se_fodbald_event_page_preview"|t}} {{ event.teams.left.name }} {{ "se_fodbald_event_page_vs"|t}} {{ event.teams.right.name }}</h1>
+				{% endif %}
+				{{ event.description|raw }}
+			{% endif %}
+
+		<div class="col-md-12 MainContentProviders">
+			{{render_block('sefodbaldproviderstab')}}
+		</div></div>
+	</div>
+</section>

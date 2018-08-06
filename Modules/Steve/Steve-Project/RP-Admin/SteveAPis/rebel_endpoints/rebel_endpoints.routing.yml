@@ -1,0 +1,108 @@
+# Test API endpoints
+
+
+# GET Request
+rebel_endpoints.getnode:
+  path: 'rpendp/getnodebyid.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getNodebyid' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getnodes:
+  path: 'rpendp/getallnodes.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getNodes' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getNodesbytype:
+  path: 'rpendp/getNodesbytype.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getNodesbytype' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getrules:
+  path: 'rpendp/getrules.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getRules' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getrulesbyid:
+  path: 'rpendp/getrulesbyid.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getRulesbyID' }
+  methods:  [GET]
+  requirements:
+        _access: 'TRUE'
+
+rebel_endpoints.getlastRevision:
+  path: 'rpendp/getlastRevision.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getlastRevision' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getallRevisionbyid:
+  path: 'rpendp/getallrevisionbyid.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getallRevisionbyid' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getRevisionbysite:
+  path: 'rpendp/getrevisionbysite.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getRevisionbysite' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.gettaxonomy:
+  path: 'rpendp/gettaxonomy.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getTaxonomy' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getctype:
+  path: 'rpendp/getctype.json'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getCType' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getuser:
+  path: 'rpendp/getuser'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getUsers' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getuserbySiteId:
+  path: 'rpendp/getuserbySiteId/{SiteId}'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getuserbySiteId' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rebel_endpoints.getuserbySiteId:
+  path: 'rpendp/importUserbySite/{SiteId}'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::importUserbySite' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+# POST Request
+rebel_endpoints.getLoginCheck:
+  path: 'rpendp/{siteToken}/{userToken}'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\UserCredentials::getLoginCheck' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+# POST Request
+rebel_endpoints.getAPIUserbyTonkesandSite:
+  path: 'rpendp/getAPIUserbyTonkesandSite/{site}/{usertoken}/{sitetoken}'
+  defaults: { _controller: '\Drupal\rebel_endpoints\Controller\Rebel_endpointsAPIController::getuserbySiteId' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

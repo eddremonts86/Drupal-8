@@ -1,0 +1,27 @@
+# Competition Info routing definition
+competition_info.settings_tab:
+  route_name: competition_info.settings
+  title: 'Settings'
+  base_route: competition_info.settings
+
+entity.competition_info.canonical:
+  route_name: entity.competition_info.canonical
+  base_route: entity.competition_info.canonical
+  title: 'View'
+
+entity.competition_info.edit_form:
+  route_name: entity.competition_info.edit_form
+  base_route: entity.competition_info.canonical
+  title: 'Edit'
+
+entity.competition_info.version_history:
+  route_name: entity.competition_info.version_history
+  base_route: entity.competition_info.canonical
+  title: 'Revisions'
+
+entity.competition_info.delete_form:
+  route_name:  entity.competition_info.delete_form
+  base_route:  entity.competition_info.canonical
+  title: Delete
+  weight: 10
+

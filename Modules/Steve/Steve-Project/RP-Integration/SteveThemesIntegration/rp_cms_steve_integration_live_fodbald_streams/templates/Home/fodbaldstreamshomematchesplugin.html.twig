@@ -1,0 +1,66 @@
+<section class="HomeMatchesPlugin">
+	<div class="container">
+		<div class="row">
+			{% if tags %}
+				{% set active = null %}
+				<div class="col col-sm-12 col-xs-12 col-md-12 HomeSchedule">
+					<div class="DaySelectContainer">
+						<select id="DaySelect">
+							{% for day in tags.AllEvents %}
+							
+								{% if active is null %}
+									{% set active = day.date %}
+								{% endif %}
+								
+								<option value="{{ day.date }}" {{ active == day.date ? 'selected="selected"'}}>
+									{{ day.date|date('U') == "now"|date('U') ? 'fodbald_streams_schedule_home_title_today'|t : day.date|date('D, d M Y') }}
+								</option>
+							{% endfor %}
+						</select>
+					</div>
+					{% for day in tags.AllEvents %}
+						<div class="panel-group {{ active == day.date ? 'active' }}" day="{{ day.date }}"> 
+							<h3>{{ day.date|date('D, d M Y') }}</h3>
+							{% for name, tournament in day.alltournament %}
+								<div class="panel panel-default ScheduleList">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											{% if tournament.tournamentIMG %}
+												<img src="{{ file_url(tournament.tournamentIMG) }}">
+											{% endif %}
+											{{ name }}
+										</h4>
+									</div>
+									<div class="panel-body">
+										<ul class="Events">
+											{% for event in tournament.events %}
+												<li>
+													<a href="{{ event.eventAlias }}">
+														<span class="date">{{ event.eventDate|date('H:i') }}</span>
+														{% if event.participantsList %}
+															{% for team in event.participantsList %}
+																<span class="team">
+																	{{ team.name }}
+																	{% if team.logo %}
+																		<img src="{{ file_url(team.logo) }}">
+																	{% endif %}
+																</span>
+															{% endfor %}
+														{% endif %}
+														{% if event.FodbaldStreamsPreview %}
+															<span class="preview">{{ "fodbodld_streams_schedule_preview"|t }}</span>
+ 														{% endif %}
+													</a>
+												</li>						
+											{% endfor %}
+										</ul>
+									</div>				
+								</div>
+							{% endfor %}
+						</div>
+					{% endfor %}
+				</div>	
+			{% endif %}
+		</div>
+	</div>
+</section>

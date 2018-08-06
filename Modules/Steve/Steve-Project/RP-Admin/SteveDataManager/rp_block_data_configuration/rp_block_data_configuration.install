@@ -1,0 +1,119 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the database_test module.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * The database tests use the database API which depends on schema
+ * information for certain operations on certain databases.
+ * Therefore, the schema must actually be declared in a normal module
+ * like any other, not directly in the test file.
+ */
+
+function rp_block_data_configuration_schema()
+{
+    $schema['configuration_block_list'] = [
+        'description' => 'Basic test table for the database unit tests.',
+        'fields' => [
+            'id' => [
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'block_id' => [
+                'description' => "Block id, usually is a string",
+                'type' => 'varchar_ascii',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+                'binary' => TRUE,
+            ],
+            'active' => [
+                'description' => "The person's age",
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 1,
+            ],
+        ],
+        'primary key' => ['id'],
+        'unique keys' => [
+            'block_id' => ['block_id']
+        ]
+    ];
+
+    $schema['configuration_block'] = [
+        'description' => 'Basic test table for the database unit tests.',
+        'fields' => [
+            'id' => [
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'tournaments_weight' => [
+                'description' => "A person's name",
+                'type' => 'varchar_ascii',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => '',
+                'binary' => TRUE,
+            ],
+            'event_number' => [
+                'description' => "The person's age",
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+            'only_promotion' => [
+                'description' => "The person's age",
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+            'active' => [
+                'description' => "The person's age",
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 1,
+            ],
+            'tournaments_list' => [
+                'description' => "The person's job",
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => 'Undefined',
+            ],
+            'block_name' => [
+                'description' => "The person's job",
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => 'Undefined',
+            ],
+            'block_id' => [
+                'description' => "The person's job",
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+                'default' => 'Undefined',
+            ],
+        ],
+        'primary key' => ['id'],
+        'unique keys' => [
+            'block_id' => ['block_id']
+        ],
+        'indexes' => [
+            'block_name' => ['block_name'],
+        ],
+    ];
+    return $schema;
+}
+
+
+?>

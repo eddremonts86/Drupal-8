@@ -1,0 +1,26 @@
+CookieGeneral:
+  version: 1.x
+  js:
+    src/js/cookieconsent.min.js: {}
+    src/js/js.cookie.min.js: {}
+    src/js/cookieblock.js: {}
+  css:
+    theme:
+      src/css/cookieconsent.min.css: {}
+      src/css/cookieblock.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+CookiePage:
+  version: 1.x
+  js:
+    src/js/bootstrap-slider.js: {}
+    src/js/cookiepage.js: {}
+  css:
+    theme:
+      src/css/bootstrap-slider.min.css: {}
+      src/css/cookiepage.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

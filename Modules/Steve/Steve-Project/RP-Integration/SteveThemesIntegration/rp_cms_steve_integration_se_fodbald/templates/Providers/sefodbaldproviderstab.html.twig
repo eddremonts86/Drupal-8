@@ -1,0 +1,80 @@
+{% if tags %}
+    {% set event = tags|first %}
+    {% set aTab = null %}
+
+    <div class="BlockHeading">
+        <h2>{{ "se_fodbald_block_provider_head"|t }}</h2>
+        <p>{{ "se_fodbald_block_provider_subhead"|t }}</p>
+    </div>
+
+    <div class="ProviderTabs">
+        <ul class="nav nav-tabs " role="tablist">
+            {% for provider in event.providers %}
+                {% set TabID = 'T' ~ provider.id %}
+
+                {% if aTab is null %}
+                    {% set aTab = TabID %}
+                {% endif %}
+
+                <li role="presentation" {{ aTab == TabID ? 'class="active"' }}>
+                    <a href="#{{ TabID }}" aria-controls="{{ TabID }}" role="tab"
+                       data-toggle="tab">{{ provider.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="tab-content">
+            {% for provider in event.providers %}
+                {% set TabID = 'T' ~ provider.id %}
+                <div role="tabpanel" class="tab-pane clearfix {{ aTab == TabID ? 'active' }}" id="{{ TabID }}">
+                    <div class="ProviderDescription">
+						<span class="name">
+						{% if provider.image %}
+                            <img src="{{ file_url(provider.image) }}">
+                        {% endif %}
+                            {{ provider.name }}
+						</span>
+                        <div>
+                            <span class="price">{{ "se_fodbald_provider_block_price"|t }}{{ provider.price }}</span>
+                            <span class="quality">{{ "se_fodbald_provider_block_quality"|t }}{{ provider.quality }}</span>
+                        </div>
+                    </div>
+                    <div class="row ProviderContent">
+                        <div class="col col-md-10 col-sm-10 col-xs-12 ProviderSteps">
+                            <div class="row">
+                                <div class="col col-md-4 col-sm-4 col-xs-4">
+                                    <img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_se_fodbald/src/images/step-1-big.png">
+                                    <strong>{{ "se_fodbald_provider_block_step_2"|t }}</strong>
+                                </div>
+                                <div class="col col-md-4 col-sm-4 col-xs-4">
+                                    <img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_se_fodbald/src/images/step-2-big.png">
+                                    <strong>{{ "se_fodbald_provider_block_step_2"|t }}</strong>
+                                </div>
+                                <div class="col col-md-4 col-sm-4 col-xs-4">
+                                    <img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_se_fodbald/src/images/step-3-big.png">
+                                    <strong>{{ "se_fodbald_provider_block_step_2"|t }}</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-2 col-sm-2 col-xs-12 ProviderActions">
+                            <a href="{{ provider.link }}" class="btn round right-arrow">
+                                {{ "se_fodbald_provider_block_button"|t }}
+                                <span>{{ provider.name }}</span>
+                            </a>
+
+                            <div class="warning">
+                                <span><i class="fa fa-exclamation-circle"
+                                         aria-hidden="true"></i>{{ "se_fodbald_provider_block_warning"|t }}</span>
+                            </div>
+
+                            <a href="#popup3" class="popUp">{{ "se_fodbald_provider_block_popup"|t }}</a>
+
+                            {% if provider.disclaimer %}
+                                <p class="disclaimer">{{ provider.disclaimer }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

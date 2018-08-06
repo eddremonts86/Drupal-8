@@ -1,0 +1,20 @@
+uuid: 53e53249-3be1-43a4-a98f-9cba8971e471
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldhomematchwidgetplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldhomematchwidgetplugin
+settings:
+  id: sefodbaldhomematchwidgetplugin
+  label: 'Se Fodbald Home Match Widget Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

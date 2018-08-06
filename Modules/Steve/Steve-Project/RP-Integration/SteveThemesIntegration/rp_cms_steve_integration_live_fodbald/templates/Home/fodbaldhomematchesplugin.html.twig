@@ -1,0 +1,117 @@
+<section class="HomeMatchesPlugin">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-6 Previews">
+				<h2>{{"live_fodbald_home_matches_title" | t}}</h2>
+				<div class="row">
+					{% if article %}
+						<ul class="HomePreviewsSlider">
+							{% for slide in article %}
+								<li>
+									{% for preview in slide %}
+										<div class="col col-md-10 Article">
+											<h2>
+												<a href="{{ preview.link }}"> {{ preview.name }} </a>
+												<strong>|</strong> 
+												{{ preview.date | date("d. M Y") }}
+											</h2>
+											{{ preview.description_short|raw }}
+											<a href="{{ preview.link }}">{{ "live_fodbald_article_read_more"|t }}</a>
+											<div class="writer">
+												<p>– <a href="{{ preview.userLink }}">{{ preview.userName }}</a></p>
+												<a href="{{ preview.userLink }}">
+													<i class="fa fa-quote-left" aria-hidden="true"></i>
+													{% if preview.userImage %}
+														<img src="{{ preview.userImage }}">
+													{% else %}
+														<img src="/modules/custom/RP_CMS/RP_ThemesIntegration/rp_cms_steve_integration_live_fodbald/src/images/profile_default.png">
+													{% endif %}	
+												</a>
+											</div>
+										</div>
+									{% endfor %}
+								</li>
+							{% endfor %}		
+						</ul>
+					{% endif %}
+				</div>
+			</div>
+			<div class="col-md-6 ProgramBlock">
+				<div class="ProgramHeader">
+					<h3 class="title">{{"live_fodbald_home_matches_program_title" | t}}</h3>
+				</div>
+				<div class="ProgramList">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						{% if tags %}
+							{% for day in tags.AllEvents%}
+								{% set PanelID = 'D' ~ day.date %}
+								{% set HeadID = 'H' ~ day.date %}
+								{% set AccordionID = 'A' ~ day.date %}
+								<div class="panel panel-default">
+									<div class="panel-heading" role="tab" id="{{ HeadID }}">
+										<h4 class="panel-title">
+											<a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{ PanelID }}" aria-expanded="false" aria-controls="{{ PanelID }}">
+												{{ day.date|date('D, d M Y') }}
+											</a>
+										</h4>
+									</div>
+									
+									<div id="{{ PanelID }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{ HeadID }}">
+										<div class="panel-body">
+											<div class="panel-group InnerPanels" id="{{ AccordionID }}" role="tablist" aria-multiselectable="true">
+												{% for name, tournament in day.alltournament %}
+													{% set LeaguePanelID = PanelID ~ 'L' ~ tournament.tournament_id %}
+													{% set LeagueHeadID = HeadID ~ 'L' ~ tournament.tournament_id %}
+													<div class="panel panel-default">
+														<div class="panel-heading" role="tab" id="{{ LeagueHeadID }}">
+															<h4 class="panel-title">
+																<a role="button" data-toggle="collapse" data-parent="#{{ AccordionID }}" href="#{{ LeaguePanelID }}" aria-expanded="false" aria-controls="{{ LeaguePanelID }}">
+																	{% if tournament.tournamentIMG %}
+																		<img src="{{ file_url(tournament.tournamentIMG) }}">
+																	{% endif %}
+																	{{ name }}
+																</a>
+															</h4>
+														</div>
+														<div id="{{ LeaguePanelID }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{ LeagueHeadID }}">
+															<div class="panel-body">
+																<ul class="Matches">
+																	{% for match in tournament.events %}
+																		<li>
+																			<a href="{{ match.LiveFodbaldAlias }}">
+																				{% if match.participantsList %}
+																					<span class="date">{{ match.eventDate|date('H:i') }}</span>
+																					{% for team in match.participantsList %}
+																						<span class="team">
+																							{{ team.name }}
+																							{% if team.logo %}
+																								<img src="{{ file_url(team.logo) }}">
+																							{% endif %}
+																						</span>
+																					{% endfor %}
+																				{% endif %}
+																			</a>
+																		</li>
+																	{% endfor %}
+																</ul>
+															</div>
+														</div>
+													</div>
+												{% endfor %}
+											</div>
+										</div>
+									</div>		
+								</div>
+							{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+				<div class="ProgramFooter">
+					<a class="btn arrow" href="/fodbaldprogram">
+						{{"live_fodbald_home_matches_program_button" | t}}
+					</a>
+				</div>
+			</div>	
+		</div>
+	</div>
+</section>

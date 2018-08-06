@@ -1,0 +1,8 @@
+name: RP RepoWS
+type: module
+description: RP RepoWS Definitions
+core: 8.x
+package: RP
+dependencies:
+  - jsonapi
+  - jsonapi_extras

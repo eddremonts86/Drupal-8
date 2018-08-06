@@ -1,0 +1,9 @@
+name: RP CMS - Steve Integration Live-Fodbald
+type: module
+description: Live-Fodbald 
+core: 8.x
+package: 'Rebel Penguins CMS - Frontend'
+project: steve_RP
+dependencies:
+  - steve_RP:rp_client_base
+project: 'steve_integration_live_fodbald'

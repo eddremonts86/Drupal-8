@@ -1,0 +1,35 @@
+rp_cms_steve_integration_live_fodbald.home:
+  title: 'Home'
+  route_name: <front>
+  menu_name: fodbaldmenu
+  weight: 1
+
+rp_cms_steve_integration_live_fodbald.program:
+  title: 'Program'
+  route_name: rp_cms_steve_integration_live_fodbald.fodbald_program
+  menu_name: fodbaldmenu
+  weight: 2
+  
+rp_cms_steve_integration_live_fodbald.providers:
+  title: 'Providers'
+  route_name: rp_cms_steve_integration_live_fodbald.fodbald_providers
+  menu_name: fodbaldmenu
+  weight: 3
+  
+rp_cms_steve_integration_live_fodbald.leagues:
+  title: 'Leagues'
+  route_name: rp_cms_steve_integration_live_fodbald.fodbald_leagues
+  menu_name: fodbaldmenu
+  weight: 4
+
+rp_cms_steve_integration_live_fodbald.teams:
+  title: 'Teams'
+  route_name: rp_cms_steve_integration_live_fodbald.fodbald_teams
+  menu_name: fodbaldmenu
+  weight: 5
+   
+rp_cms_steve_integration_live_fodbald.previews:
+  title: 'Previews'
+  route_name: rp_cms_steve_integration_live_fodbald.fodbald_previews
+  menu_name: fodbaldmenu
+  weight: 6

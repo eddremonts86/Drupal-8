@@ -1,0 +1,20 @@
+uuid: a6f7f06b-cf16-422e-8b1c-b10df392af15
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldproviderstabalt
+theme: se_fodbald
+region: none
+weight: -12
+provider: null
+plugin: sefodbaldproviderstabalt
+settings:
+  id: sefodbaldproviderstabalt
+  label: 'Se Fodbald Providers Tab Alt'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

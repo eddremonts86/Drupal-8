@@ -1,0 +1,16 @@
+section.PageTitle{
+	background: $color-heavy-metal-2;
+	margin-bottom: 10px;
+	> .container{
+		padding: 0;
+		h1{
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+	@include mobile{
+		>.container{
+			padding: 0 1em;
+		}
+	}
+}

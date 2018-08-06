@@ -1,0 +1,360 @@
+@media only screen and (max-width: 604px){
+	p{
+		line-height: 15px;
+	}
+	body{
+		padding: 0;
+	}
+	footer.siteFooter{
+		position: relative;
+		max-height: unset;
+		padding: 0 10px;
+	}
+	.providerTabs{
+		flex-direction: column;
+	}
+	.providerTabs .tab-content,
+	.providerTabs .nav-tabs{
+		width: 100%;
+		padding: 0;
+	}
+	.providerTabs .tab-content .tab-pane{
+		border: 0;
+		padding: 20px 0 0 0;
+	}
+	.StreamProvider .step-images .col-md-4{
+		padding: 0 !important;
+	}
+	.providerTabs .nav-tabs li{
+		padding: 0 15px;
+	}
+	.providerTabs .nav-tabs .stars,
+	.providerTabs .nav-tabs .price,
+	.providerTabs .nav-tabs .name{
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.StreamProvider .ProviderLinks{
+		padding: 0;
+	}
+	.StreamProvider .step-list ul li{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.StreamProvider .step-list ul li span{
+		text-align: left;
+		margin: 0;
+	}
+	.StreamProvider .step-images .col-md-4 > img{
+		max-width: 100px !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+	.StreamProvider .step-images .col-md-1.arrow{
+		display: none;
+	}
+	.StreamProvider .ProviderHeading .title h1{
+		font-size: 30px;
+		line-height: 34px;
+	}
+	.StreamProvider .ProviderHeading .title span.stars{
+		font-size: 20px;
+		margin: 0 0 0 5px;	
+		line-height: 34px;
+	}
+	.StreamProvider .ProviderHeading .quality,
+	.StreamProvider .ProviderHeading .price{
+		display: none;
+	}
+	.StreamProvider .ProviderHeading.sponsored{
+		align-items: flex-start;
+	}
+	.TrackOverview .col-md-4{
+		width: 100%;
+		padding: 0 !important;
+	}
+	.TrackOverview .col-md-12 .btn{
+		width: 100%;
+	}
+	.TrackOverview .container{
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.TrackOverview .col-md-4.head .content{
+		text-align: center;
+	}
+	header.siteHeader{
+		padding: 0 0 2px 0;
+	}
+	section.ContentHeader .showcase .next{
+		text-align: center;
+	}
+	section.ContentHeader .showcase .steps p{
+		display: none;
+	}
+	section.ContentHeader .showcase .steps h2{
+		font-size: 18px;
+		line-height: 20px;
+	}
+	section.ContentHeader .showcase .sponsored{
+		margin: 4px 0 2px 0;
+		font-size: 12.5px;
+	}
+	section.ContentHeader .showcase .disclaimer{
+		text-align: center;
+		float: right;
+	}
+	section.ContentHeader .showcase .steps li{
+		padding-left: 30px;
+		background-size: 27px !important;
+	}
+	section.ContentHeader .showcase .btn{
+		flex-direction: column;
+	}
+	section.ContentHeader .showcase{
+		padding-bottom: 0;
+	}
+	section.ReviewsProviders .providerTabs .nav-tabs,
+	section.ReviewsProviders .providerTabs .tab-content{
+		width: 100%;
+	}
+	/*HOME PAGE*/
+	content.frontPage section.Home .container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	content.frontPage section.HomeBlog .container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	content.frontPage section.HomeBlog .contentBlock{
+		flex-direction: column;
+	}
+	content.frontPage section.HomeBlog .contentBlock .col-md-4,
+	content.frontPage section.HomeBlog .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.frontPage section.HomeBlog .contentBlock .col-md-8{
+		border-bottom: none;
+	}
+	content.frontPage section.HomeBlog .contentBlock .col-md-4{
+		padding: 0;
+	}
+	content.frontPage section.HomeBlog .contentBlock .col-md-4 h5{
+		width: 100%;
+	}
+	content.frontPage section.HomeBlog .contentBlock .col-md-4 .contentBlockHead{
+		margin-bottom: 10%;
+	}
+	content.frontPage section.HomeProviders .container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	content.frontPage section.HomeProviders .sponsoredLabel{
+		justify-content: flex-start;
+	}
+	content.frontPage section.HomeProviders .sponsoredLabel span{
+		padding: 0;
+	}
+	content.frontPage section.ContentHeader .showcase{
+		top: -26px;
+	}
+	/*RACE COURSEs PAGE*/
+	content.racecoursesPage section.Tracklist .row.cards .courseCard{
+		width: 100%;
+	}
+	/*RACE COURSE PAGE*/
+	content.racecoursePage section.Racecourse .container{
+		min-height: auto !important;
+	}
+	content.racecoursePage section.Racecourse .row{
+		display: none;
+	}
+	content.racecoursePage section > .container,
+	content.racecoursePage section.Guide > .container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	content.racecoursePage section.Guide .col-md-6 h5{
+		text-align: center;
+	}
+	content.racecoursePage .StreamProvider{
+		padding: 7% 0 2% 0;
+	}
+	content.racecoursePage section .StreamProvider .ProviderContent{
+		display: flex;
+		align-items: center;
+	}
+	content.racecoursePage section .StreamProvider .ProviderContent .contentInfo{
+		display: block;
+	}
+	content.racecoursePage section .StreamProvider .ProviderContent .text,
+	content.racecoursePage section .StreamProvider .ProviderContent .contentInfo{
+		width: 50%;
+	}
+	content.racecoursePage section .StreamProvider .ProviderContent .contentInfo span{
+		color: #103040;
+		text-transform: uppercase;
+		font-family: "Geogrotesque Light";
+		font-size: 16px;
+		line-height: 16px;
+		margin: 0 20px 0 0;
+	}
+	content.reviewsPage section.ReviewsProviders .providerTabs .tab-content h2,
+	content.reviewPage section.ReviewContent .providerTabs .tab-content h2{
+		font-size: 18px;
+		line-height: 20px;
+	}
+	/*REVIEWS PAGE*/
+	content.reviewsPage section.ReviewsProviders > .container{
+		padding-left: 10px;
+		padding-bottom: 30px;
+		padding-right: 10px;
+	}
+	/*REVIEWS PAGE*/
+	content.reviewPage section.ReviewContent > .container,
+	content.reviewPage section.ReviewsProviders > .container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	/*BLOG PAGE*/
+	content.blogPage section.Blog > .container{
+		padding-left: 10px;
+		padding-right: 10px;		
+	}
+	content.blogPage section.Blog .contentBlock{
+		flex-direction: column;
+	}
+	content.blogPage section.Blog .contentBlock .col-md-4,
+	content.blogPage section.Blog .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.blogPage section.Blog .contentBlock .col-md-4{
+		padding: 0;
+	}
+	/*FAQ PAGE*/
+	content.faqPage section.faq .container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	content.faqPage section.faq .container .contentBlock .contentBlock{
+		flex-direction: column;
+	}
+	content.faqPage section.faq .container .contentBlock .col-md-4,
+	content.faqPage section.faq .container .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.faqPage section.faq .container .contentBlock .col-md-4{
+		padding: 0;
+	}
+	content.faqPage section.faq .container .contentBlock .contentBlockHead{
+		border: none;
+		padding: 0;
+	}
+	content.faqPage section.faq .container .contentBlock .contentBlockHead h1{
+		padding: 10px 0 20px 0;
+	}
+	content.faqPage section.faq .container .contentBlock p{
+		line-height: 21px;
+	}
+	/*CONTENT PAGE*/
+	content.contactPage section.Contact .contentBlock .contentBlock{
+		flex-direction: column;
+	}
+	content.contactPage section.Contact .contentBlock .col-md-4,
+	content.contactPage section.Contact  .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.contactPage section.Contact  .contentBlock .col-md-4{
+		padding: 0;
+	}
+	content.contactPage section.Contact .contentBlock .col-md-4{
+		margin-bottom: 87px;
+	}
+	content.contactPage section.Contact .contentBlock .contentBlockHead{
+		padding: 5px;
+	}
+	/*SITEMAP PAGE*/
+	content.sitemapPage section.Sitemap .contentBlock .contentBlock{
+		flex-direction: column;
+	}
+	content.sitemapPage section.Sitemap .contentBlock .col-md-4,
+	content.sitemapPage section.Sitemap  .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.sitemapPage section.Sitemap .contentBlock .col-md-4{
+		padding: 0;
+	}
+	content.sitemapPage section.Sitemap .contentBlock .col-md-4{
+		margin-bottom: 87px;
+		padding: 10px 0 0 0 !important;
+	}
+	content.sitemapPage section.Sitemap .contentBlock .contentBlockHead{
+		padding: 5px;
+	}
+	/*PRIVACY POLICY PAGE*/
+	content.privacyPolicyPage section.Privacypolicy .contentBlock .contentBlock{
+		flex-direction: column;
+	}
+	content.privacyPolicyPage section.Privacypolicy .contentBlock .col-md-4,
+	content.privacyPolicyPage section.Privacypolicy  .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.privacyPolicyPage section.Privacypolicy  .contentBlock .col-md-4{
+		padding: 0;
+	}
+	content.privacyPolicyPage section.Privacypolicy  .contentBlock .contentBlockHead{
+		padding: 0 !important;
+		border: none;
+	}
+	content.privacyPolicyPage section.Privacypolicy a{
+		word-break: break-all;
+	}
+	/*UNDERAGE POLICYPAGE*/
+	content.underagePolicyPage section.Underagepolicy .contentBlock .contentBlock{
+		flex-direction: column;
+	}
+	content.underagePolicyPage section.Underagepolicy .contentBlock .col-md-4,
+	content.underagePolicyPage section.Underagepolicy  .contentBlock .col-md-8{
+		width: 100%;
+	}
+	content.underagePolicyPage section.Underagepolicy  .contentBlock .col-md-4{
+		padding: 0;
+	}
+	content.underagePolicyPage section.Underagepolicy  .contentBlock .contentBlockHead{
+		padding: 0 !important;
+		border: none;
+	}
+	/*WATCH LIVE PAGE*/
+	content.watchLivePage section .contentBlock .col-md-4,
+	content.watchLivePage section .contentBlock .col-md-8{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	content.watchLivePage section .contentBlock .contentBlockHead{
+		padding: 20px 0;
+		border: none;
+	}
+	content.watchLivePage section .StreamProvider{
+		padding: 6% 0;
+	}
+	content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row{
+		flex-direction: column;
+	}
+	content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > div{
+		width: 100% !important;
+		padding: 0;
+	}
+	content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > .col-md-4 .line{
+		width: 100%;
+	}
+	content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > .col-md-4 .line .btn{
+		width: 100%;
+	}
+	content.watchLivePage section .StreamProvider .ProviderLinks > .container > .row > .col-md-4.arrow .disclaimer{
+		font-size: 12px;
+		font-weight: 600;
+	}
+}

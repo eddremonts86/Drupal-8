@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.participant_info.field_participant_info_body
+  module:
+    - rp_participant_info
+    - text
+id: participant_info.participant_info.field_participant_info_body
+field_name: field_participant_info_body
+entity_type: participant_info
+bundle: participant_info
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

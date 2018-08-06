@@ -1,0 +1,10 @@
+.LeagueProvidersPlugin{
+	.tv-block{
+		padding-left: 3%; 
+	}
+	@include tablet{
+		.tv-block{
+			margin-top: 1em;
+		}
+	}
+}

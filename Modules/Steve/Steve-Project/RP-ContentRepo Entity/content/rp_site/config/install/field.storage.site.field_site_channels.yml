@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_channel
+    - rp_site
+id: site.field_site_channels
+field_name: field_site_channels
+entity_type: site
+type: entity_reference
+settings:
+  target_type: channel
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

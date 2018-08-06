@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Frontent  - Social Networks'
+vid: social_networks
+description: 'Social Networks'
+hierarchy: 0
+weight: -8

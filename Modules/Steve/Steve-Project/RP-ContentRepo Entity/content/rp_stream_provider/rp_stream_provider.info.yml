@@ -1,0 +1,5 @@
+name: RP Stream Provider
+type: module
+description: Stream Provider Entity
+core: 8.x
+package: RP

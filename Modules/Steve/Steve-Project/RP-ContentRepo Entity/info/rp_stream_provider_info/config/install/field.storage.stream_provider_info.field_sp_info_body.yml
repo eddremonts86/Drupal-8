@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_stream_provider_info
+    - text
+id: stream_provider_info.field_sp_info_body
+field_name: field_sp_info_body
+entity_type: stream_provider_info
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

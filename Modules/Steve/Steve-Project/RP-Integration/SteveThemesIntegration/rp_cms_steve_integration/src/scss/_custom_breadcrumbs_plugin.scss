@@ -1,0 +1,52 @@
+.breadcrumbs{
+    margin: 0 auto;
+    border: none;
+    background: 0 0;
+    position: relative;
+    width: 950px;
+    z-index: 999;
+    ul{
+        position: absolute;
+        top: 0;
+        left: 16px;
+    	display: flex;
+    	justify-content: flex-start;
+    	align-items: flex-end;
+        margin: 0;
+        background: none;
+        padding: 0;
+
+        p,
+        a,
+        span{
+            color: #808080;
+            font-size: 11px;
+            line-height: 16px;
+            display: block;
+            margin: 0;
+        }
+
+        p{
+            color: $color-emperor;
+        }
+
+        a{
+            &:hover{
+                text-decoration: underline;
+                color: #808080;
+            }
+        }
+
+        span{
+            margin: 0 3px;
+        }
+    }
+
+    @include tablet{
+        width: 100%;
+    }
+
+    @include mobile{
+        display: none;
+    }
+}

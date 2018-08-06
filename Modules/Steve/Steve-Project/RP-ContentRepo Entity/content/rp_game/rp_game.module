@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_game.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_game_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_game module.
+    case 'help.page.rp_game':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RP Game from API Schedule') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function rp_game_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view_names = array('game_info_content');
+  $view = $form_state->getStorage('view');
+  if ($form_id == 'views_exposed_form' && in_array($view['view']->id(), $view_names)) {
+
+    $form['field_game_info_site_target_id'] = [
+      '#type' => 'select',
+      '#options' => rp_game_get_entities('site')
+    ];
+    $form['field_game_info_region_target_id'] = [
+      '#type' => 'select',
+      '#options' => rp_game_get_entities('region')
+    ];
+    $form['field_game_info_language_target_id'] = [
+      '#type' => 'select',
+      '#options' => rp_game_get_entities('language_content')
+    ];
+    if(isset($form['field_game_info_date_value_op']))
+      $form['field_game_date_value_op']['#title'] = 'Date';
+    if(isset($form['field_game_body_value_op']))
+      $form['field_game_body_value_op']['#title'] = 'Body';
+
+  }
+
+  if ($form_id == 'views_exposed_form' && in_array($view['view']->id(), array('game_content'))) {
+    if(isset($form['field_game_date_value_op']))
+      $form['field_game_date_value_op']['#title'] = 'Date';
+    if(isset($form['field_game_body_value_op']))
+      $form['field_game_body_value_op']['#title'] = 'Body';
+  }
+}
+
+function rp_game_get_entities($entity) {
+
+  $ids = \Drupal::entityQuery($entity)->execute();
+  $storage_handler = \Drupal::entityTypeManager()->getStorage($entity);
+  $entities = $storage_handler->loadMultiple($ids);
+
+  $options = [];
+  $options[''] = t('Select');
+  foreach($entities as $id => $ent) {
+    $options[$id] = $ent->getName();
+  }
+  return $options;
+
+}

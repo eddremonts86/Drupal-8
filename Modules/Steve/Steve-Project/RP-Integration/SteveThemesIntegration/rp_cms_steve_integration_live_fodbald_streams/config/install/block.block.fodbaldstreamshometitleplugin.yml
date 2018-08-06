@@ -1,0 +1,20 @@
+uuid: 8bf8cd94-8e0b-4f41-b46e-9df4933cf417
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamshometitleplugin
+theme: live_fodbald_streams
+region: none
+weight: 100
+provider: null
+plugin: fodbaldstreamshometitleplugin
+settings:
+  id: fodbaldstreamshometitleplugin
+  label: 'Fodbald Streams Home Title Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

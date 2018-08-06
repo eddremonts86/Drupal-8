@@ -1,0 +1,8 @@
+section.HomeHeadPlugin{
+	padding: 0;
+	min-height: 316px;
+	@include tablet{
+		padding: 1em 0;
+		min-height: 185px;
+	}	
+}

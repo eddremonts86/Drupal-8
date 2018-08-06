@@ -1,0 +1,6 @@
+{
+  "name": "rp/rp_api",
+    "require": {
+      "guzzlehttp/guzzle-services": "^1.1"
+    }
+}

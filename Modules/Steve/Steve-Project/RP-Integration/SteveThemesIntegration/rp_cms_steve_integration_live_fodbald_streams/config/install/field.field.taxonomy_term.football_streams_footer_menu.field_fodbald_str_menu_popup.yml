@@ -1,0 +1,23 @@
+uuid: a1f8bd5e-2d90-495a-b087-51b03738bec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_fodbald_str_menu_popup
+    - taxonomy.vocabulary.football_streams_footer_menu
+id: taxonomy_term.football_streams_footer_menu.field_fodbald_str_menu_popup
+field_name: field_fodbald_str_menu_popup
+entity_type: taxonomy_term
+bundle: football_streams_footer_menu
+label: 'Fodbald Streams Menu Popup'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

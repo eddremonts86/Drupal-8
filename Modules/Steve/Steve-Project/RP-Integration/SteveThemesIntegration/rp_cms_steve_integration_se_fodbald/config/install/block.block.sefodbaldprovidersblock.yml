@@ -1,0 +1,20 @@
+uuid: f110b260-3943-4951-b28f-d01ff6d68f0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldprovidersblock
+theme: se_fodbald
+region: none
+weight: 0
+provider: null
+plugin: sefodbaldprovidersblock
+settings:
+  id: sefodbaldprovidersblock
+  label: 'Se Fodbald Providers Block'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

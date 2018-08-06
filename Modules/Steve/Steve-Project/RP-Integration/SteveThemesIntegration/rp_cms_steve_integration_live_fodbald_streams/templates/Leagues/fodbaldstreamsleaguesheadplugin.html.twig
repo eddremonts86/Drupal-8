@@ -1,0 +1,30 @@
+<section class="LeaguesHeadPlugin ContentHeader">
+	{% if tags %}
+		<ul class="headSlider">
+			{% set a = 0 %}
+				{% for leagues in tags %}
+					{% for league in leagues.list %}
+						{% if a < 5%}
+							<li>
+								<div class="container">
+									<div class="row">
+										<div class="col col-md-12 league">
+											<a href="{{ league.link}}">
+												{% if league.img %}
+													<div class="league-image">
+														<img src="{{ file_url(league.img) }}">
+													</div>
+												{% endif %}
+												<h3>{{ league.name }}</h3>
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						{% endif %}
+					{% set a = a + 1 %}
+				{% endfor %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+</section>

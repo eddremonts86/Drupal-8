@@ -1,0 +1,20 @@
+uuid: cd4557cb-5118-4f4c-811b-f8685ba63553
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldmatchbreadcrumbsplugin
+theme: se_fodbald
+region: none
+weight: 100
+provider: null
+plugin: sefodbaldmatchbreadcrumbsplugin
+settings:
+  id: sefodbaldmatchbreadcrumbsplugin
+  label: 'Se Fodbald Match Breadcrumbs Plugin'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

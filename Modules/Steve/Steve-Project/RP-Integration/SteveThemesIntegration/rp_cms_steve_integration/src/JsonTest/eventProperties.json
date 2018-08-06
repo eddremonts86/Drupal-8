@@ -1,0 +1,87 @@
+{
+  "sport": {
+    "id": 10,
+    "meta": [
+      {
+        "channel": 1
+      }
+    ]
+  },
+  "competition": {
+    "id": 1102,
+    "meta": [
+      {
+        "channel": 1
+      }
+    ]
+  },
+  "event": [
+    {
+      "channel": 1
+    }
+  ],
+  "participants": [
+    {
+      "id": 4556,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ],
+      "name": "Red Reserve",
+      "running_order": 2
+    },
+    {
+      "id": 4767,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ],
+      "name": "North Academy",
+      "running_order": 1
+    }
+  ],
+  "streamers": [
+    {
+      "id": 1,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "meta": [
+        {
+          "channel": 1
+        }
+      ]
+    }
+  ]
+}

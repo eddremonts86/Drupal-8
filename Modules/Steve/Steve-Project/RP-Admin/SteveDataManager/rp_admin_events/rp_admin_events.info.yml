@@ -1,0 +1,5 @@
+name: 'RP Admin Events'
+type: module
+description: 'Events Administration'
+core: 8.x
+package: 'Rebel Penguins CMS - Sites Administration'

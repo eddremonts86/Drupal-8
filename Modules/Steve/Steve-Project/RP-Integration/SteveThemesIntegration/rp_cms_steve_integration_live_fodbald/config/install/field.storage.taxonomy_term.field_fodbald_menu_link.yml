@@ -1,0 +1,19 @@
+uuid: de26450b-a42c-423b-b9a4-3d56a49a78cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_fodbald_menu_link
+field_name: field_fodbald_menu_link
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

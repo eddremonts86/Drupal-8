@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration
+  theme:
+    - stevethemebase
+id: homepagetophead
+theme: stevethemebase
+region: homehead
+weight: -8
+provider: null
+plugin: homeheadplugin
+settings:
+  id: homeheadplugin
+  label: 'Home Page Top/head'
+  provider: rp_cms_steve_integration
+  label_display: '0'
+visibility: {  }

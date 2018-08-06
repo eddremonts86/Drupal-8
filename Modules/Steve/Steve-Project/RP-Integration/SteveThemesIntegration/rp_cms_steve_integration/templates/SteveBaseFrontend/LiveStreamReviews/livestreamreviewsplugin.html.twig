@@ -1,0 +1,37 @@
+<section class="LiveStreamReviewsBlock">
+	<div class="LiveStreamReviewsHead">
+		<h1>{{ "live_stream_reviews_head" | t }}</h1>
+		<h2>{{ "live_stream_reviews_subhead" | t }}</h2>
+	</div>
+	<div class="streamsContainer">
+		{% for stream in tags %}
+			<div class="stream">
+				{% if stream.logo %}
+					<div class="left">
+						<img alt="logo" width="auto" height="auto" src="{{ file_url(stream.logo) }}">
+					</div>
+				{% endif %}
+				<div class="{{ stream.logo ? 'right' : 'full'}}">
+					<h2>
+						{{stream.name}}
+						<span class="rating" data-rating="{{ stream.rating }}">
+							{% for i in 1.. stream.rating %}
+								<em class="fa fa-star"></em>
+							{% endfor %}
+							{% for i in 1.. (5 - stream.rating) %}
+								{% if (5 - stream.rating) > 0 %}
+									<em class="fa fa-star-o"></em>
+								{% endif %}
+							{% endfor %}
+						</span>
+					</h2>
+					<p>{{stream.description}}</p>
+					<div class="actions">
+						<a class="btn arrow grayNoGrad" href="{{stream.link1url}}">{{stream.link1text}}</a>
+						<a class="btn arrow green" href="{{stream.link2url}}">{{stream.link2text}}</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

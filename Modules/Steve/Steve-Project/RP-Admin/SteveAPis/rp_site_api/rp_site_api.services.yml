@@ -1,0 +1,5 @@
+services:
+  rp_site_api.reposervice:
+    class: Drupal\rp_site_api\Controller\site\siteAPIController
+    arguments: []
+

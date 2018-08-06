@@ -1,0 +1,15 @@
+rp_site_api.site_a_p_i_controller_getAllSite:
+  path: '/steveAPI/getSites'
+  defaults:
+    _controller: '\Drupal\rp_site_api\Controller\site\siteAPIController::getAllSite'
+    _title: 'Get All Sites'
+  requirements:
+    _access: 'TRUE'
+
+rp_site_api.site_a_p_i_controller_getSitebyID:
+  path: '/steveAPI/getSite/{site}'
+  defaults:
+    _controller: '\Drupal\rp_site_api\Controller\site\siteAPIController::getSitebyID'
+    _title: 'Get Site by ID'
+  requirements:
+    _access: 'TRUE'

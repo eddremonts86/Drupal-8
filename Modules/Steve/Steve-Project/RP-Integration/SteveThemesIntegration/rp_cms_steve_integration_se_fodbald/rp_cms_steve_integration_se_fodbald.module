@@ -1,0 +1,316 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_cms_steve_integration_se_fodbald.module.
+ */
+use Drupal\rp_cms_steve_integration_se_fodbald\Controller\SeLiveFodbaldController;
+
+use Drupal\taxonomy\Entity\Term;
+use Drupal\block\Entity\Block;
+use Drupal\Core\StreamWrapper\PublicStream;
+use Drupal\file\Entity\File;
+
+
+/**
+ * Implements hook_theme().
+ */
+function rp_cms_steve_integration_se_fodbald_theme()
+{
+    return [
+        //PAGES
+        'sefodbaldhomepage' => [
+            'template' => 'Pages/sefodbaldhomepage'
+        ],
+        'sefodbaldproviderspage' => [
+            'template' => 'Pages/sefodbaldproviderspage'
+        ],
+        'sefodbaldprogrampage' => [
+            'template' => 'Pages/sefodbaldprogrampage'
+        ],
+        'sefodbaldleaguespage' => [
+            'template' => 'Pages/sefodbaldleaguespage'
+        ],
+        'sefodbaldmatchpage' => [
+            'template' => 'Pages/sefodbaldmatchpage'
+        ],
+        'sefodbaldleaguepage' => [
+            'template' => 'Pages/sefodbaldleaguepage'
+        ],
+        
+        //GENERAL
+        'sefodbaldheaderplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => [],
+                'menu' => []
+            ],
+            'template' => 'Site/sefodbaldheaderplugin'
+        ],
+        'sefodbaldfooterplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Site/sefodbaldfooterplugin'
+        ],
+        'sefodbaldfootermenuplugin' => [
+            'variables' => [
+                'tags' => [],
+                'help' => [],
+                'socials' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Site/sefodbaldfootermenuplugin'
+        ],
+        'sefodbaldpopupplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Site/sefodbaldpopupplugin'
+        ],
+        
+        //HOME PAGE
+        'sefodbaldhomeheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/sefodbaldhomeheadplugin'
+        ],
+        'sefodbaldhomebreadcrumbsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/sefodbaldhomebreadcrumbsplugin'
+        ],
+        'sefodbaldhomescheduleplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/sefodbaldhomescheduleplugin'
+        ],
+        'sefodbaldhomematchwidgetplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/sefodbaldhomematchwidgetplugin'
+        ],
+        'sefodbaldhometeaserplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Home/sefodbaldhometeaserplugin'
+        ],
+        
+        //PROVIDERS
+        'sefodbaldprovidersheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldprovidersheadplugin' 
+        ],
+        'sefodbaldprovidersbreadcrumbsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldprovidersbreadcrumbsplugin' 
+        ],
+        'sefodbaldproviderscontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'events' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldproviderscontentplugin' 
+        ],
+        'sefodbaldproviderstabalt' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldproviderstabalt' 
+        ],
+        'sefodbaldproviderstab' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldproviderstab' 
+        ], 
+        
+        'sefodbaldprovidersblockalt' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldprovidersblockalt' 
+        ], 
+
+        'sefodbaldprovidersblock' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Providers/sefodbaldprovidersblock' 
+        ], 
+
+
+        //PROGRAM
+        'sefodbaldprogramheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Program/sefodbaldprogramheadplugin'
+        ],
+        'sefodbaldprogrambreadcrumbsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Program/sefodbaldprogrambreadcrumbsplugin'
+        ],
+        'sefodbaldprogramscheduleplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Program/sefodbaldprogramscheduleplugin'
+        ],
+
+        //LEAGUES
+        'sefodbaldleaguesheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Leagues/sefodbaldleaguesheadplugin'
+        ],
+        'sefodbaldleaguesbreadcrumbsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Leagues/sefodbaldleaguesbreadcrumbsplugin'
+        ],
+        'sefodbaldleagueslistplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Leagues/sefodbaldleagueslistplugin'
+        ],
+        
+        //MATCH
+        'sefodbaldmatchheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Match/sefodbaldmatchheadplugin'
+        ],
+        'sefodbaldmatchbreadcrumbsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'Match/sefodbaldmatchbreadcrumbsplugin'
+        ],
+        'sefodbaldmatchcontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'schedule' => [],
+				'events' => [],
+                'colors' => []
+            ],
+            'template' => 'Match/sefodbaldmatchcontentplugin'
+        ],
+
+        //LEAGUE
+        'sefodbaldleagueheadplugin' => [
+            'variables' => [
+                'tags' => [],
+                'info' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'League/sefodbaldleagueheadplugin'
+        ],
+        'sefodbaldleaguebreadcrumbsplugin' => [
+            'variables' => [
+                'tags' => [],
+                'background' => [],
+                'colors' => []
+            ],
+            'template' => 'League/sefodbaldleaguebreadcrumbsplugin'
+        ],
+        'sefodbaldleaguecontentplugin' => [
+            'variables' => [
+                'tags' => [],
+                'info' => [],
+                'background' => [],
+                'colors' => [],
+                'schedule' => [],
+				'events' => []
+            ],
+            'template' => 'League/sefodbaldleaguecontentplugin'
+        ],
+    ];
+}
+
+
+function rp_cms_steve_integration_se_fodbald_page_attachments(array &$page)
+{	
+	if(!\Drupal::service('router.admin_context')->isAdminRoute() && \Drupal::service('theme.manager')->getActiveTheme()->getName() == 'se_fodbald'){
+    	$page['#attached']['library'][] = 'rp_cms_steve_integration_se_fodbald/SeFodbaldGeneral';
+    }
+}
+
+function rp_cms_steve_integration_se_fodbald_system_breadcrumb_alter(&$breadcrumb, $route_match, $context) {
+	if($route_match->getRouteName() == 'entity.taxonomy_term.canonical'){	
+		$breadcrumb = \Drupal::service('rp_cms_steve_integration_se_fodbald.breadcrumb')->build(\Drupal::routeMatch());
+	}
+}
+
+function rp_cms_steve_integration_se_fodbald_preprocess_block(&$vars){
+    $blocks = [];
+
+    foreach ($blocks as $block) {
+        if($vars['elements']['#plugin_id'] == $block){
+            $vars['#cache']['max-age'] = 0;
+        }
+    }
+}

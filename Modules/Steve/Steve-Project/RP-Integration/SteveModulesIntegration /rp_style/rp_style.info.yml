@@ -1,0 +1,5 @@
+name: RP Style
+type: module
+description: This moduele provides style guide page
+core: 8.x
+package: RP

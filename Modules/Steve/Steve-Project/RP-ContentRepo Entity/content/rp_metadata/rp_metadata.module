@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_metadata.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\rp_metadata\MetadataFieldClient;
+use Drupal\Core\Entity\ContentEntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_metadata_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_metadata module.
+    case 'help.page.rp_metadata':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RP Metadata Fields') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_entity_presave().
+ */
+function rp_metadata_entity_presave(EntityInterface $entity) {
+
+  if($entity instanceof ContentEntityInterface) {
+    $metadata = new MetadataFieldClient();
+    $entity_name = $entity->bundle();
+    $fields = array_keys($entity->getFields());
+
+    foreach($fields as $field_name) {
+      if(substr($field_name,0,5) == 'field' ) {
+        $family = $metadata->getHierarchicalByEntityAndField($entity_name, $field_name);
+        //var_dump($family);
+        if(!empty($family)) {
+          //array_shift($family);
+          if(empty($entity->get($family[$entity_name]['field'])->value))
+            $value = $metadata->getFieldValue($family, $entity_name, $entity);
+            if(!empty($value)) {
+              $entity->set($field_name,$value);
+            }
+        }
+      }
+    }
+  }
+
+
+}

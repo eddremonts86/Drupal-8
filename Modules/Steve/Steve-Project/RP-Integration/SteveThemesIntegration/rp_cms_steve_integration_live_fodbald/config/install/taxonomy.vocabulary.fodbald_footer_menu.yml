@@ -1,0 +1,9 @@
+uuid: 5befad92-ff4e-4b5e-962e-9cbac7c99962
+langcode: en
+status: true
+dependencies: {  }
+name: 'Fodbald Footer Menu'
+vid: fodbald_footer_menu
+description: ''
+hierarchy: 0
+weight: 0

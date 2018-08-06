@@ -1,0 +1,20 @@
+uuid: 43d40662-faf3-442b-b141-483dfc343c73
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldproviderstab
+theme: se_fodbald
+region: none
+weight: -13
+provider: null
+plugin: sefodbaldproviderstab
+settings:
+  id: sefodbaldproviderstab
+  label: 'Se Fodbald Providers Tab'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

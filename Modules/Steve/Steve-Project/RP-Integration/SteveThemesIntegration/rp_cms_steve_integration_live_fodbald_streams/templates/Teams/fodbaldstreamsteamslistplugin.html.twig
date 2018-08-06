@@ -1,0 +1,31 @@
+<section class="TeamsListPlugin">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-12">
+				<h2>{{"fodbald_streams_teams_list_block_title" | t}}</h2>
+			</div>
+		</div>
+		<div class="row TeamsList">
+			{% if tags %}
+				{% for league in tags %}
+					<div class="col col-md-4">
+						<div class="panel panel-default List">
+							<div class="panel-heading">
+								<h3 class="panel-title">{{ league.name }}</h3>
+							</div>
+							<div class="panel-body">
+								{% if league.list %}
+								<ul>
+									{% for team in league.list %}
+										<li><a href="{{team.link}}"><div class="img-holder"><img src="{{ file_url(team.img) }}"></div>{{ team.name}}</a></li>
+									{% endfor %}
+								</ul>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				{% endfor%}
+			{% endif %}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_sites_asignated
+    - taxonomy.vocabulary.steve_site
+  module:
+    - user
+id: user.user.field_sites_asignated
+field_name: field_sites_asignated
+entity_type: user
+bundle: user
+label: 'Sites Asignated'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      steve_site: steve_site
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

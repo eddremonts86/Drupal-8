@@ -1,0 +1,5 @@
+name: 'Blocks configuration'
+type: module
+description: 'Configuration of our modules'
+core: 8.x
+package: 'Rebel Penguins CMS - Sites Administration'

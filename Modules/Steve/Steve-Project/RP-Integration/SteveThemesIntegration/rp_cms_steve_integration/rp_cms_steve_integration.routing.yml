@@ -1,0 +1,40 @@
+rp_cms_steve_integration.index:
+  path: '/admin/steve'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Steve Integration'
+  requirements:
+    _permission: 'access administration pages'
+
+rp_cms_steve_integration.__construct:
+  path: '/rp_cms_steve_integration/SteveBaseControler/construct'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration\Controller\SteveBaseControler::__construct'
+    _title: 'SteveBaseControler'
+  requirements:
+    _permission: 'access administration pages'
+
+rp_cms_steve_integration.live_stream_reviews:
+  path: '/live-stream-reviews'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration\Controller\SteveFrontendControler::liveStreamReviewsPage'
+    _title: 'LiveStreamReviews'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration.live_stream_review:
+  path: '/live-stream-reviews/{term}'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration\Controller\SteveFrontendControler::liveStreamReviewPage'
+    _title: 'LiveStreamReviews'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration.event_filters:
+  path: '/admin/steve_integration/form/event_filters'
+  defaults:
+    _form: '\Drupal\rp_cms_steve_integration\Form\EventFilters'
+    _title: 'EventFilters'
+  requirements:
+    _permission: 'access administration pages'
+

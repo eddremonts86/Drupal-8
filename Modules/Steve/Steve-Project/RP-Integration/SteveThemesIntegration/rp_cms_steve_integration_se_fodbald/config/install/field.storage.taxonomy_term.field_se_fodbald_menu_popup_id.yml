@@ -1,0 +1,21 @@
+uuid: e536de59-bc30-4796-8378-7a77d3cd5323
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_se_fodbald_menu_popup_id
+field_name: field_se_fodbald_menu_popup_id
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

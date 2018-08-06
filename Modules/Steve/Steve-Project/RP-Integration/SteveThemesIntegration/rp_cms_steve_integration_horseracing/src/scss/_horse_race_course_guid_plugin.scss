@@ -1,0 +1,84 @@
+section.RaceCourseGuidPlugin{
+	background: #103040;
+	.container{
+		padding: 0 0 7% 0;
+		.row{
+			.col-md-6{
+				padding: 0;
+				&:first-child{
+					padding: 0 30px 0 0;
+				}
+				.line{
+					border-bottom: 7px solid #f2740c;
+					margin: 0 0 30px 0;
+					.ico{
+						display: none;
+					}
+					p{
+						margin-bottom: 30px;
+						color: #fff;
+					}
+					h5{
+						font-size: 18px;
+						line-height: 20px;
+						margin-bottom: 10px;
+						padding-bottom: 5px;
+						font-family: "Geogrotesque SemiBold";	
+					}
+				}
+			}
+			&:nth-child(2){
+				padding: 50px 0 0 0;
+			}
+		}
+	}
+}
+
+@include tablet{
+	section.RaceCourseGuidPlugin{
+		.container{
+			padding-right: 30px;
+			padding-left: 30px;
+			.row{
+				.col-md-6{
+					.line{
+						display: flex;
+
+						.ico{
+							width: 17%;
+							display: block;
+
+							img{
+								max-width: 100%;
+							}
+						}
+						.text{
+							width: 83%;
+							img{
+								display: none;	
+							}	
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mobile{
+	section.RaceCourseGuidPlugin{
+		.container{
+			padding-left: 10px;
+			padding-right: 10px;
+			.row{
+				.col-md-6{
+					.line{
+						h5{
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}

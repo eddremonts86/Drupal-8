@@ -1,0 +1,23 @@
+uuid: cc2dad49-f3e7-4563-8e0f-20b805758e86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_fodbald_menu_popup
+    - taxonomy.vocabulary.fodbald_footer_menu
+id: taxonomy_term.fodbald_footer_menu.field_fodbald_menu_popup
+field_name: field_fodbald_menu_popup
+entity_type: taxonomy_term
+bundle: fodbald_footer_menu
+label: 'Fodbald Menu Popup'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

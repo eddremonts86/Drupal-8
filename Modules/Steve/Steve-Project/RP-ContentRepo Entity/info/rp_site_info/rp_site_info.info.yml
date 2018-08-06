@@ -1,0 +1,7 @@
+name: RP Site Info
+type: module
+description: RP Site Info extend site entity
+core: 8.x
+package: RP
+dependencies:
+  - rp_site

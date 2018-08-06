@@ -1,0 +1,23 @@
+uuid: b3494a90-5e79-48be-b735-136a9f2a5da1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_se_fodbald_menu_popup
+    - taxonomy.vocabulary.se_fodbold_footer_menu
+id: taxonomy_term.se_fodbold_footer_menu.field_se_fodbald_menu_popup
+field_name: field_se_fodbald_menu_popup
+entity_type: taxonomy_term
+bundle: se_fodbold_footer_menu
+label: 'Se Fodbald Menu Popup'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,9 @@
+{
+    "name": "Repo&CMS/RP",
+    "description": "Repo&CMS/RP dependences.",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "require": {
+        "guzzlehttp/guzzle-services" : "*"
+    }
+}

@@ -1,0 +1,121 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.base_field_override.taxonomy_term.steve_regions.description
+    - field.field.taxonomy_term.steve_regions.field_api_id
+    - field.field.taxonomy_term.steve_regions.field_code
+    - field.field.taxonomy_term.steve_regions.field_parent
+    - taxonomy.vocabulary.steve_regions
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c22b9795-cf3a-4c7a-a2fe-48de6dcdb793:
+            uuid: c22b9795-cf3a-4c7a-a2fe-48de6dcdb793
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_regions:description'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          e9cf0d77-6613-4af8-95de-13f24f49116a:
+            uuid: e9cf0d77-6613-4af8-95de-13f24f49116a
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_regions:field_api_id'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          c89382f8-894c-4d71-a707-2c1a447bbcc9:
+            uuid: c89382f8-894c-4d71-a707-2c1a447bbcc9
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_regions:field_code'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          1281f7f0-68de-43ed-ad65-cb4f377b9650:
+            uuid: 1281f7f0-68de-43ed-ad65-cb4f377b9650
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:steve_regions:field_parent'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+id: taxonomy_term.steve_regions.default
+targetEntityType: taxonomy_term
+bundle: steve_regions
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_api_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_code:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_parent:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

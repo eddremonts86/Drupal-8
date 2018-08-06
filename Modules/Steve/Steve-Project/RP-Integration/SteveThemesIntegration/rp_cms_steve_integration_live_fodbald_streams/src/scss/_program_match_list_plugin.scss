@@ -1,0 +1,10 @@
+section.ProgramMatchListPlugin{
+    min-height: 360px;
+	>.container{
+		padding: 0 15px 2.5em 15px;
+	}
+	@include mobile{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

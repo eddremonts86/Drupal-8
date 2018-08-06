@@ -1,0 +1,23 @@
+
+# Site info menu items definition
+#entity.site_info.collection:
+#  title: 'Site info list'
+#  route_name: entity.site_info.collection
+#  description: 'List Site info entities'
+#  parent: rp_base.controller_entity_content
+#  weight: 100
+
+site_info.admin.structure.settings:
+  title: Site info settings
+  description: 'Configure Site info entities'
+  route_name: site_info.settings
+  parent: rp_base.controller_entity_settings
+
+# Site info config menu items definition
+entity.site_info_config.collection:
+  title: 'Site info config'
+  route_name: entity.site_info_config.collection
+  description: 'List Site info config (bundles)'
+  parent: rp_base.controller_entity_settings
+  weight: 99
+

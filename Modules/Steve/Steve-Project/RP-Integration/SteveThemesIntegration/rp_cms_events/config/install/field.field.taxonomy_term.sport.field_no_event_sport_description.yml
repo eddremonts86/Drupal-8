@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_no_event_sport_description
+    - taxonomy.vocabulary.sport
+  module:
+    - text
+id: taxonomy_term.sport.field_no_event_sport_description
+field_name: field_no_event_sport_description
+entity_type: taxonomy_term
+bundle: sport
+label: 'Show when sport haven''t events - Descriptions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

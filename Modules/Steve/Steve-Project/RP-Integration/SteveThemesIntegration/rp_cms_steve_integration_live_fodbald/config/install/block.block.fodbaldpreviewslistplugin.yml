@@ -1,0 +1,20 @@
+uuid: 2b6d55b5-f936-48b7-a261-bc8678b37cc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald
+  theme:
+    - live_fodbald
+id: fodbaldpreviewslistplugin
+theme: live_fodbald
+region: none
+weight: 100
+provider: null
+plugin: fodbaldpreviewslistplugin
+settings:
+  id: fodbaldpreviewslistplugin
+  label: 'Fodbald Previews List Plugin'
+  provider: rp_cms_steve_integration_live_fodbald
+  label_display: '0'
+visibility: {  }

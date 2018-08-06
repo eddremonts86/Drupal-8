@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lingohub 1.0.1\n"
+"Report-Msgid-Bugs-To: support@lingohub.com \n"
+"Last-Translator: edd remonts <evi@rebelpenguin.dk>\n"
+"Language: dk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "se_fodbald_leagues_list_title"
+msgstr "Ligaer"
+
+msgid "se_fodbald_leagues_page_head"
+msgstr "<b>Fodboldligaer - Live stream kampene online fra de store ligaer</b>"
+
+msgid "se_fodbald_leagues_page_subhead"
+msgstr "Vælg en liga og se hvordan du streamer kampene live online"
+
+msgid "se_fodbald_home_title"
+msgstr "Live stream <b>fodbold:</b> find din kamp <b>her</b>!"
+
+msgid "se_fodbald_select_match_title"
+msgstr "Stream live fodbold,<br>find den kamp du ønsker at se lige her"
+
+msgid "se_fodbald_select_match_button"
+msgstr "Se kampen live"
+
+msgid "se_fodbald_home_teaser_title"
+msgstr "<h2>Se fodbold live: De bedste kampe med gratis online streaming</h2>"
+
+msgid "se_fodbald_home_teaser_text"
+msgstr "<p>At live streame fodbold er i dag en lige så naturlig del af sporten som fans og fadøl. Men ofte kan det være en dyr fornøjelse at få sit ugentlige fodboldfiks.</p> <p>Men sådan behøver det slet ikke at være.</p> <p>Hos Sefodbold.dk er vores mål at gøre det nemt for sig at finde alle kampene fra de mest populære ligaer. Vi hjælper dig med at finde de bedste streaming udbydere, så du kan se kampene i den bedste kvalitet uden, a det koster noget.</p> <p>Det lyder næste for godt til at være sandt, men den er god nok. Det er ofte muligt at live streame fodbold fra de helt store europæiske ligaer uden at skulle have pungen op af lommen. Og så er det oven i købet lovligt.</p> <p>Tag et kig på vores side med <a href="#">live streaming udbydere</a> og find den, der passer dig bedst. Uanset om du leder efter kampe fra den danske <a href="#">Superliga</a>, den tyske Bundesliga, Æresdivisionen i Holland, den spanske La Liga eller internationale kampe fra <a href="#">Champions League</a>, så hjælper vi dig med at finde live streaming af kampen nemt og hurtigt.</p> <p>Eksempelvis kan du streame El Clasico live online!</p> <p>For at finde lige præcis den kamp som du har lyst til at live streame på den hurtigste måde, skal du blot finde ligaen eller turneringen i dropdown menuen i toppen af siden. Her kan du se de kampe, du kan streame online. Når du har truffet dit valg, skal du blot klikke på knappen Se kampen live for at gå til kampsiden.</p> <p>Rigtig god fornøjelse!</p>"
+
+msgid "se_fodbald_menu_home"
+msgstr "Forside"
+
+msgid "se_fodbald_menu_providers"
+msgstr "Stream Udbydere"
+
+msgid "se_fodbald_menu_program"
+msgstr "Kampprogram"
+
+msgid "se_fodbald_menu_league"
+msgstr "Ligaer"
+
+msgid "se_fodbald_footer_menu_help"
+msgstr "Hjælp"
+
+msgid "se_fodbald_footer_menu_faq"
+msgstr "FAQ"
+
+msgid "se_fodbald_footer_menu_contact"
+msgstr "Kontakt Os"
+
+msgid "se_fodbald_footer_menu_about"
+msgstr "Om os"
+
+msgid "se_fodbald_footer_menu_follow"
+msgstr "Følg os"
+
+msgid "se_fodbald_footer_menu_twitter"
+msgstr "Twitter"
+
+msgid "se_fodbald_footer_menu_google"
+msgstr "Google+"
+
+msgid "se_fodbald_footer_menu_sefodbald"
+msgstr "SeFodbold"
+
+msgid "se_fodbald_footer_menu_policy"
+msgstr "Persondata Politik"
+
+msgid "se_fodbald_footer_menu_age_policy"
+msgstr "Alderspolitik"
+
+msgid "se_fodbald_footer_menu_authority"
+msgstr "Spillemyndighederne"
+
+msgid "se_fodbald_providers_text_head_1"
+msgstr "<h1>Live stream fodbold | Fodbold i TV | Live stream providere</h1>"
+
+msgid "se_fodbald_providers_text_1"
+msgstr "<p>Vi har samlet de største udbydere af live fodbold, som viser kampe fra de store internationale og europæiske ligaer, landskampe og meget mere... </p><p>Udbyderne har forskellige rettigheder til ligaerne. Se hvilke ligaer de forskellige udbydere viser kampe fra nedenfor.</p>"
+
+msgid "se_fodbald_providers_text_head_2"
+msgstr "<h2>Live stream fodbold på nettet kan sagtens være gratis </h2>"
+
+msgid "se_fodbald_providers_text_2"
+msgstr "<p>Det er efterhånden blevet lige så normalt at live streame fodbold, som det er at se kampene på sit Tv. I dag bestemmer vi selv, hvad vi vil se og hvornår, og Tv-on demand er en lige så naturlig del af dagligdagen som det at vågne op om morgenen.</p><p>    Det eneste vi efterhånden ikke selv kan bestemme, hvornår bliver vist, er sport. En fodboldkamp bliver nu engang spillet, når den er kampsat til, hvad enten du er klar foran flimmeren eller ej.</p>"
+
+msgid "se_fodbald_providers_text_head_3"
+msgstr "<h2>Se fodbold live på nettet </h2>"
+
+msgid "se_fodbald_providers_text_3"
+msgstr "<p>Men ved at streame sit favorithold live online behøver du ikke længere at være tvunget til at opholde dig indenfor hjemmets fire vægge, da du kan live streame fodbold fra hele verden på din telefon, tablet og computer. Det eneste du skal bruge er adgang til internettet og naturligvis en streaming-konto.</p><p>  Der er mange forskellige måder at live streame legen med læderkuglen.</p><ul><li>Du kan enten oprette en konto hos en af de Tv-stationernes streaming-tjenester. Det er den dyre model, men her vil du ofte også kunne streame serier og film.</li><li>Men du kan også live streame både fodbold, tennis og andre store sportsgrene igennem din konto hos en bookmaker. Her vil du ofte kunne finde direkte stream fra de mindre ligaer, som Tv-stationerne ikke vil bruge budget på.</li></ul><p>Vi har samlet de stærkeste udbydere af live fodbold, hvor du kan streame alt fra de mindre nørdeturneringer til de til de store internationale og europæiske ligaer – eller landsholdene, når de er i aktion. </p>"
+
+msgid "se_fodbald_providers_text_head_3"
+msgstr "<h2>Live streaming med bet365</h2>"
+
+msgid "se_fodbald_providers_text_3"
+msgstr "<p>Siden 2000 har bet365 etableret sig som toppen af poppen, når det handler om online gambling, men i dag er bet365 meget mere end bare en topbookmaker, de er også en af verdens største udbydere af live streaming inden for sport.</p><p> Hos bet365 kan du live streame fodboldkampe fra hele verden, og ved at live streame med bet365 vil du altid have alle kampe fra eksempelvis Superligaen, Serie A og Bundesligaen lige ved hånden.</p><p>Eller du kan se Lionel Messi og Cristiano Ronaldo i den spanske La Liga i aktion, når stjernerne de kæmper om det spanske mesterskab. Hos bet365 kan du også live streame, når FC Barcelona og Real Madrid mødes i de traditionsrige El Clasico, der er verdens største fodboldkamp med milliarder af Tv-seere over hele verden. Alt sammen i HD kvalitet. Det eneste, du behøver for at kunne live streame alverdens sport, er, at have penge stående på din spillekonto.</p><p>Ud over fodbold tilbyder bet365 live stream af et væld af andre sportsgrene. Blandt andet kan du live streame Caroline Wozniacki og resten af de største stjerner indenfor tennis, når de kæmper om årets fire grand slams. Alt i alt er der timevis af underholdning, når du live streamer sport med bet365. Kun fantasien sætter grænser.</p><p>Rigtig god fornøjelse!</p>"
+
+msgid "se_fodbald_provider_block_popup"
+msgstr "Regler og vilkår"
+
+msgid "se_fodbald_provider_block_disclaimer"
+msgstr "For at anvende tjenesten Live Billeder skal du logge ind og have midler på din konto eller have placeret et væddemål indenfor de sidste 24 timer."
+
+msgid "se_fodbald_provider_block_button"
+msgstr "Se live fodbold"
+
+msgid "se_fodbald_provider_block_review"
+msgstr "Udvalg : "
+
+msgid "se_fodbald_provider_block_quality"
+msgstr "Kvalitet : "
+
+msgid "se_fodbald_provider_block_warning"
+msgstr "Ikke mulig med dansk IP-adresse"
+
+msgid "se_fodbald_provider_block_price"
+msgstr "Pris : "
+
+msgid "se_fodbald_provider_block_list"
+msgstr "<strong>Sådan ser du live streaming:</strong>"
+
+msgid "se_fodbald_provider_block_step_1"
+msgstr "Gå til bet365 og registrer din konto"
+
+msgid "se_fodbald_provider_block_step_2"
+msgstr "Log ind på din konto"
+
+msgid "se_fodbald_provider_block_step_3"
+msgstr "Gå til live streaming sektionen og vælg din kamp"
+
+msgid "se_fodbald_provider_block_head"
+msgstr "live streaming"
+
+msgid "se_fodbald_showcase_annonce"
+msgstr "Annonce"
+
+msgid "se_fodbald_showcase_head"
+msgstr "Hvordan ser jeg kampen?"
+
+msgid "se_fodbald_showcase_subhead"
+msgstr "Se en hurtige guide her"
+
+msgid "se_fodbald_showcase_step_1"
+msgstr "Klik på den grønne knap"
+
+msgid "se_fodbald_showcase_step_2"
+msgstr "Opret en konto"
+
+msgid "se_fodbald_showcase_step_3"
+msgstr "Vælg live streaming"
+
+msgid "se_fodbald_showcase_button"
+msgstr "Se kampen hos bet365"
+
+msgid "se_fodbald_showcase_disclaimer"
+msgstr "For at anvende tjenesten Live Billeder skal du logge ind og have midler på din konto eller have placeret et væddemål indenfor de sidste 24 timer."
+
+msgid "se_fodbald_showcase_warning"
+msgstr "Ikke mulig med dansk IP-adresse"
+
+msgid "se_fodbald_showcase_popup"
+msgstr "Regler og vilkår"
+
+msgid "se_fodbald_program_title"
+msgstr "Kampprogram"
+
+msgid "se_fodbald_widget_text"
+msgstr "Du kan live streame Superligakampen her!"
+
+msgid "se_fodbald_widget_read_more"
+msgstr "Læs mere"
+
+msgid "se_fodbald_team_vs"
+msgstr "vs"
+
+msgid "se_fodbald_block_provider_head"
+msgstr "Se fodbold live"
+
+msgid "se_fodbald_block_provider_subhead"
+msgstr "Se en hurtige guide her"
+
+msgid "se_fodbald_block_program_head"
+msgstr "Kampskema"
+
+msgid "se_fodbold_block_review_head"
+msgstr "Optakter"
+
+msgid "se_fodbold_block_review_subhead"
+msgstr "Læs flere optakter"
+
+msgid "se_fodbald_match_slider_title"
+msgstr "Udvalgte kampe"
+
+msgid "se_fodbald_popup_1_head"
+msgstr "Alders politik"
+
+msgid "se_fodbald_popup_1_text"
+msgstr "<p><strong>Alle</strong> sportsbooks der henvises til på sefodbold.dk har licens til at udbyde spil i Danmark. Det kræves, at man skal være mindst 18 år gammel for at spille på disse.</p><p>Det er ulovligt for mindreårige at gamble i Danmark.</p><p>Vi anbefaler, at man kun gambler moderat og for sjov.</p><p>livefodboldstreams.dk støtter ansvarlig gambling.</p><p>For more info besøg <a href="#">Center For Ludomani</a></p>"
+
+msgid "se_fodbald_popup_2_text_1"
+msgstr "<p>Alle sportsbooks der henvises til på sefodbold.dk har licens til at udbyde spil i Danmark. Det kræves, at man skal være mindst 18 år gammel for at spille på disse.Det er ulovligt for mindreårige at gamble i Danmark.Vi anbefaler, at man kun gambler moderat og for sjov.</p>"
+
+msgid "se_fodbald_popup_2_text_2"
+msgstr "<p>sefodbold.dk støtter ansvarlig gambling.<br> For more info besøg <b><br><a href="#">Center For Ludomani</a></b></p><b></b>"
+
+msgid "se_fodbald_popup_3_text"
+msgstr "<p>	VIGTIG MEDDELELSE – sefodbold.dk viser sammen med bet365 mere end 100.000 streamede begivenheder direkte hvert år. Bemærk venligst at IP-rettighederne til at streame disse begivenheder ejes på landsniveau, og derfor kan der være begivenheder, som du ikke kan se grundet disse restriktioner. Før du registrerer dig hos bet365 for at kunne se en bestemt begivenhed anbefales det, at du først forespørger hos bet365, hvorvidt det er muligt at se den pågældende begivenhed fra landet, du befinder dig. Du finder bet365's kontaktoplysninger ved at klikke her, derefter skal du gå til Tjenester øverst i højre hjørne og vælge Kontakt os.</p>"
+
+msgid "se_fodbald_match_slider_title"
+msgstr "Udvalgte kampe"
+
+msgid "se_fodbald_provider_block_provider"
+msgstr "Providere"
+
+msgid "se_fodbald_provider_block_quality_1"
+msgstr "Kvalitet"
+
+msgid "se_fodbald_provider_block_price_1"
+msgstr "Pris"
+
+msgid "se_fodbald_provider_block_free"
+msgstr "Gratis"
+
+msgid "se_fodbald_event_page_preview"
+msgstr "Optakt:"
+
+msgid "se_fodbald_event_page_vs"
+msgstr "VS"
+
+msgid "se_fodbald_provider_block_alt_step_provider"
+msgstr "Providere"
+
+msgid "se_fodbald_provider_block_alt_step_recomendation"
+msgstr "Henstilling"
+
+msgid "se_fodbald_provider_block_alt_header"
+msgstr "Find din leverandør for live streams"
+
+msgid "se_fodbald_provider_block_leagueandmatch"
+msgstr "<b>Kampe og ligaer : </b>"
+
+msgid "se_fodbald_showcase_button_link"
+msgstr "http://google.dk"
+
+msgid "se_fodbald_provider_block_alt_header"
+msgstr "Find din leverandør for live streams"
+
+msgid "se_fodbald_provider_block_alt_step_recomendation"
+msgstr "Anbefaling"
+
+msgid "se_fodbald_provider_block_alt_step_1"
+msgstr "Gå til webside og registrer din konto"
+
+msgid "se_fodbald_provider_block_alt_step_2"
+msgstr "Log ind på din konto"
+
+msgid "se_fodbald_provider_block_alt_step_3"
+msgstr "Gå til live streaming sektionen og vælg din kamp"
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid "se_fodbald_widget_text_1"
+msgstr "Se"
+
+msgid "se_fodbald_widget_text_2"
+msgstr "med live stream direkte!"
+
+

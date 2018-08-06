@@ -1,0 +1,8 @@
+uuid: 7740abee-feb2-47b2-b20c-8cb6fb2b3e90
+langcode: en
+status: true
+dependencies: {  }
+id: sefodbaldmenu
+label: 'Se Fodbald Menu'
+description: ''
+locked: false

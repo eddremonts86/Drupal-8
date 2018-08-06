@@ -1,0 +1,8 @@
+styleGuide:
+  version: 1.x
+  js:
+    src/js/rainbow-custom.min.js: {}
+  css:
+    theme:
+      src/css/syntax-theme.css: {}
+      src/css/styleguidepage.css: {}

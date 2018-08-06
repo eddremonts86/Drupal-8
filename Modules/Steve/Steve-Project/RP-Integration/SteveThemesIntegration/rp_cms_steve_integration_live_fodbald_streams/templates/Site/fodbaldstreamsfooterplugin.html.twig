@@ -1,0 +1,36 @@
+<footer class="SiteFooter">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-8 col-sm-12 col-xs-12 FooterMenu">
+			
+				<span>{{ rights|raw }}</span>
+				{% if tags %}
+					<ul>
+						{% for link in tags %}
+							<li {{ attributes.addClass(link.classes) }}>
+								{% if link.url %}
+									<a href="{{ link.url }}">
+								{% endif %}
+									{{ link.name }}
+									
+									{% if link.img %}
+										<img src="{{ file_url(link.img) }}">
+									{% endif %}
+									
+								{% if link.url %}
+									</a>
+								{% endif %}
+							</li>
+							
+							
+							{% set attributes = attributes.removeClass(link.classes) %}
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+			<div class="col col-md-4 col-sm-12 col-xs-12 FooterCopyright">
+				<p>{{ developedby|raw }}</p>
+			</div>
+		</div>
+	</div>
+</footer>

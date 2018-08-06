@@ -1,0 +1,10 @@
+bundle: rp_cms
+excluded:
+  - rdf.mapping.node.page
+  - language.mappings
+  - language.negotiation
+  - language.types
+  - locale.settings
+  - pathauto.settings
+  - language.entity.en
+required: true

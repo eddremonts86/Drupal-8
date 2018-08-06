@@ -1,0 +1,3 @@
+bundle: rp_cms
+required:
+  - language.entity.ie

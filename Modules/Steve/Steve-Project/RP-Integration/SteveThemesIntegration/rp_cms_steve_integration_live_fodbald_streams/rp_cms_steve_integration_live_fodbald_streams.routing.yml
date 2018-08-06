@@ -1,0 +1,23 @@
+rp_cms_steve_integration_live_fodbald_streams.fodbald_streams_program:
+  path: '/fodbaldstreamsprogram'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald_streams\Controller\LiveFodbaldStreamsController::fodbaldStreamsProgramPage'
+    _title: 'Fodbald Streams Program'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald_streams.fodbald_streams_leagues:
+  path: '/fodbaldstreamsleagues'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald_streams\Controller\LiveFodbaldStreamsController::fodbaldStreamsLeaguesPage'
+    _title: 'Fodbald Streams Leagues'
+  requirements:
+    _permission: 'access content'
+
+rp_cms_steve_integration_live_fodbald_streams.fodbald_streams_teams:
+  path: '/fodbaldstreamsteams'
+  defaults:
+    _controller: '\Drupal\rp_cms_steve_integration_live_fodbald_streams\Controller\LiveFodbaldStreamsController::fodbaldStreamsTeamsPage'
+    _title: 'Fodbald Streams Teams'
+  requirements:
+    _permission: 'access content'

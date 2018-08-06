@@ -1,0 +1,17 @@
+
+rp_site_generator.site_generator:
+  path: '/admin/siteGenerator/form/site_generator'
+  defaults:
+    _form: '\Drupal\rp_site_generator\Form\siteGenerator'
+    _title: 'siteGenerator'
+  requirements:
+    _access: 'TRUE'
+
+
+rp_site_generator.site_generator_controller_siteList:
+  path: '/admin/siteGenerator/{siteID}'
+  defaults:
+    _controller: '\Drupal\rp_site_generator\Controller\siteGeneratorController::siteGenerator'
+    _title: 'siteList'
+  requirements:
+     _access: 'TRUE'

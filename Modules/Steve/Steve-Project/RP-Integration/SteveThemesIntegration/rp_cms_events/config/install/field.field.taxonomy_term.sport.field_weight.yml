@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_weight
+    - taxonomy.vocabulary.sport
+id: taxonomy_term.sport.field_weight
+field_name: field_weight
+entity_type: taxonomy_term
+bundle: sport
+label: 'Position/Weight (less is better )'
+description: 'This field provide a way to give a order for our Leagues or Teams. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 10000
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

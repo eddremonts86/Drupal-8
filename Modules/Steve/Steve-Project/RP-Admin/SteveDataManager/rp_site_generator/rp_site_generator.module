@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_site_generator.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_site_generator_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_site_generator module.
+    case 'help.page.rp_site_generator':
+      $output = '';
+      $output .= '<h3>' . t('About Site Generation module') . '</h3>';
+      $output .= '<p>' . t(document()) . '</p>';
+      $output .= '<p>' . t('<a class="button button--primary js-form-submit form-submit" href="/admin/siteGenerator/form/site_generator">Generate now!!!</a>') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_site_generator_theme() {
+  return [
+    'rp_site_generator' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+function document(){
+  $req='
+    <h3>Basic Requirements</h3>
+          - Apache Virtualhost<br>
+          - Data base (mysql or posgrest)
+  ';
+  $configFile='
+     <h3>Config File - Example</h3>
+            <pre>
+            {
+              "multisite" : "content.repository.steve-watchfooty.cu",
+              "siteDB": "content_repository_steve_watchfooty_cu",
+              "id_site": "13",
+            
+              "base_THEME":"stevethemebase",
+              "base_THEME_CONF":"rp_cms_steve_base_config",
+              "admima_theme":"fortytwo_admin",
+              "langcode":"en",
+              "site_name":"steveCMSclient",
+              "site_mail":"contact@client1.dev",
+              "account_name":"admin",
+              "account_mail":"contact@client1.dev",
+              "account_pass":"admin",
+            
+              "type":"mysql",
+              "host":"localhost",
+              "name":"content_repository_steve_watchfooty_cu",
+              "user":"root",
+              "pass":"root",
+              "port":"3316"
+            }
+            <pre>  
+    ';
+  return  $req.$configFile;
+
+
+}

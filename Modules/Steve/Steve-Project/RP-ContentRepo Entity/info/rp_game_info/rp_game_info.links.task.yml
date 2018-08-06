@@ -1,0 +1,27 @@
+# Game info routing definition
+game_info.settings_tab:
+  route_name: game_info.settings
+  title: 'Settings'
+  base_route: game_info.settings
+
+entity.game_info.canonical:
+  route_name: entity.game_info.canonical
+  base_route: entity.game_info.canonical
+  title: 'View'
+
+entity.game_info.edit_form:
+  route_name: entity.game_info.edit_form
+  base_route: entity.game_info.canonical
+  title: 'Edit'
+
+entity.game_info.version_history:
+  route_name: entity.game_info.version_history
+  base_route: entity.game_info.canonical
+  title: 'Revisions'
+
+entity.game_info.delete_form:
+  route_name:  entity.game_info.delete_form
+  base_route:  entity.game_info.canonical
+  title: Delete
+  weight: 10
+

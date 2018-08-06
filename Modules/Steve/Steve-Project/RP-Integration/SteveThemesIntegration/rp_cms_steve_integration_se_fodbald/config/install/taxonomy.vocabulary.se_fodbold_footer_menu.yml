@@ -1,0 +1,9 @@
+uuid: f2237db4-51c7-4695-9717-1d6851e78d95
+langcode: en
+status: true
+dependencies: {  }
+name: 'Se Fodbold Footer Menu'
+vid: se_fodbold_footer_menu
+description: ''
+hierarchy: 0
+weight: 0

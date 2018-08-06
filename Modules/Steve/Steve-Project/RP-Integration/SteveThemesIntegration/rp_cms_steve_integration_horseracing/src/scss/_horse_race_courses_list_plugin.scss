@@ -1,0 +1,227 @@
+section.RaceCoursesListPlugin{
+	.CoursesList{
+		.container{
+			padding: 0 0 40px 0;
+			.row{
+				&.tab{
+					padding: 0 10px;
+					margin: 0 10px 20px 10px;
+					p{
+						padding: 10px 20px;
+						font-size: 18px;
+						line-height: 20px;
+						text-transform: uppercase;
+						letter-spacing: 0.5px;
+						font-family: "Bebas";
+						color: #fff;
+						margin: 0;
+						background: #103040;
+						display: inline-block; 
+						i{
+							width: 30px;
+							height: 25px;
+							margin: 0 0 -2px 5px;
+							display: inline-block;
+							vertical-align: bottom;
+						}
+					}
+					&:after{
+						border-bottom: 7px solid #103040;
+						width: 100%;
+					}
+				}
+				&.cards{
+					.courseCard{
+						padding: 15px 15px 30px 15px;
+						margin: 0 0 25px 0;
+						position: relative;
+						.image{
+							a{
+								display: flex;
+								justify-content: center;
+								img{
+									height: 130px;
+									width: auto;
+								}
+							}
+						}
+						.name{
+							margin-top: 10px;
+							background: #103040;
+
+							h4{
+								margin: 0;
+								padding: 0;
+
+								a{
+									color: #fff;
+									text-transform: uppercase;
+									letter-spacing: 0.5px;
+									font-size: 15px;
+									line-height: 17px;
+									padding: 10px 10px 10px 20px; 
+									display: block;
+									letter-spacing: 0.5px;
+									font-family: "Geogrotesque SemiBold";
+									span{
+										float: right;
+									}
+								}
+							}
+						}
+						.details{
+							position: absolute;
+							height: 30px;
+							overflow: hidden;
+							top: 100%;
+							left: 0;
+							margin: -30px 15px 0 15px;
+							background: #f2740c;
+							z-index: 1;
+							padding: 7px 10px;
+							transition: all 0.5s ease;
+							&.open{
+								height: 100%;
+							}
+							a{
+								color: #fff;
+								cursor: pointer;
+								i{
+									display: inline-block;
+									float: right;
+								}
+							}
+							p{
+								color: #fff;
+								margin: -5px 0 0 0;
+								line-height: 25px;
+								font-size: 15px;
+								font-family: "Geogrotesque";
+								transition: all 0.5s ease;
+							}
+						}
+					}
+				}
+				&.opener{
+					padding: 0 15px;
+					display: none;
+					.col-md-12{
+						padding: 0;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						border-bottom: 7px solid #103040;
+						img{
+							margin-bottom: -23px;
+						}
+						a{
+							color: #f2740c;
+							cursor: pointer;
+							line-height: 18px;
+							padding: 0 0 10px 0;
+						}
+					}
+				}
+			}
+		}
+		&.jump{
+			.container{
+				.row{
+					&.tab{
+						p{
+							i{
+								&.jump{
+									background: url(../images/jump-ico.png);
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+		&.flat{
+			background: #081820;
+			.container{
+				padding: 80px 0 40px 0;
+				.row{
+					&.tab{
+						p{
+							background: #4a788f;
+							i{
+								&.flat{
+									background: url(../images/flat-ico.png); 
+								}	
+							}
+						}
+						&:after{
+							border-color: #4a788f;
+						}
+					}
+					&.cards{
+						.courseCard{
+							.name{
+								background: #4a788f;
+							}
+							.details{
+								background: #103040;
+							}
+						}
+					}
+					&.opener{
+						.col-md-12{
+							border-color: #4a788f;
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet{
+	section.RaceCoursesListPlugin{
+		.CoursesList{
+			.container{
+				.row{
+					&.tab{
+						p{
+							font-size: 15px;
+							line-height: 17px;
+						}
+					}
+					&.cards{
+						.courseCard{
+							display: none;
+						}
+					}
+					&.opener{
+						display: block
+					}
+					&:nth-child(2){
+						.courseCard:nth-child(1),
+						.courseCard:nth-child(2){
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mobile{
+		section.RaceCoursesListPlugin{
+		.CoursesList{
+			.container{
+				.row{
+					&.cards{
+						.courseCard{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

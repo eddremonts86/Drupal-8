@@ -1,0 +1,11 @@
+AdBlockGeneral:
+  version: 1.x
+  js:
+    src/js/blockadblock.js: {}
+    src/js/main.js: {}
+  css:
+    theme:
+      src/css/adblock.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

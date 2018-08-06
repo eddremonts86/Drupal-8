@@ -1,0 +1,23 @@
+uuid: ac3fc7e1-e94c-471f-af37-44a55b665c9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_fodbald_str_menu_link
+    - taxonomy.vocabulary.football_streams_footer_menu
+  module:
+    - link
+id: taxonomy_term.football_streams_footer_menu.field_fodbald_str_menu_link
+field_name: field_fodbald_str_menu_link
+entity_type: taxonomy_term
+bundle: football_streams_footer_menu
+label: 'Fodbald Streams Menu Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

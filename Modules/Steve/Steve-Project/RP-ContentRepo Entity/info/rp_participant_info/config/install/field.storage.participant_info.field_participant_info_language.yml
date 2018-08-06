@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_language
+    - rp_participant_info
+id: participant_info.field_participant_info_language
+field_name: field_participant_info_language
+entity_type: participant_info
+type: entity_reference
+settings:
+  target_type: language_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

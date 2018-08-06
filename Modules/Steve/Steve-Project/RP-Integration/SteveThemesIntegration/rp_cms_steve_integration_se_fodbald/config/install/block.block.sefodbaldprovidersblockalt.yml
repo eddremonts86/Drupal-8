@@ -1,0 +1,20 @@
+uuid: 8976fb5b-ec4f-4757-ac58-095baf081098
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_se_fodbald
+  theme:
+    - se_fodbald
+id: sefodbaldprovidersblockalt
+theme: se_fodbald
+region: none
+weight: 15
+provider: null
+plugin: sefodbaldprovidersblockalt
+settings:
+  id: sefodbaldprovidersblockalt
+  label: 'Se Fodbald Providers Block Alt'
+  provider: rp_cms_steve_integration_se_fodbald
+  label_display: '0'
+visibility: {  }

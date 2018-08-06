@@ -1,0 +1,34 @@
+<footer class="SiteFooter">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-8">
+				{% if tags %}
+					<ul>
+						{% for link in tags %}
+							<li {{ attributes.addClass(link.classes) }}>
+								{% if link.url %}
+									<a href="{{ link.url }}">
+								{% endif %}
+									{{ link.name }}
+									
+									{% if link.img %}
+										<img src="{{ file_url(link.img) }}">
+									{% endif %}
+									
+								{% if link.url %}
+									</a>
+								{% endif %}
+							</li>
+							
+							
+							{% set attributes = attributes.removeClass(link.classes) %}
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+			<div class="col col-md-4">
+				<p>{{ "live_fodbald_footer_developed_by" | t}}<a>Rebelpenguin.dk</a></p>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Matches banner template
+ *
+ * Available variables:
+ * - title: The title text.
+ * - subtitle: The subtitle text.
+ * - background_image: The background image for matches.
+ * - matches: The matches array.
+ */
+#}
+
+<section class="matches-banner" role="banner">
+    {% if title %}
+        <h2>{{ title }}</h2>
+    {% endif %}
+    {% if subtitle %}
+        <p>{{ subtitle }}</p>
+    {% endif %}
+</section>

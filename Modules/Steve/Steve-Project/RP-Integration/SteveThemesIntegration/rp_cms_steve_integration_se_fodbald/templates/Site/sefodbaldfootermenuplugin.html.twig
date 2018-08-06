@@ -1,0 +1,51 @@
+<section class="SiteFooterMenu Block Gray">
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-4 col-sm-4 col-xs-12 footerMenu">
+				<h5>{{ "se_fodbald_footer_menu_help"|t }}</h5>
+				{% if help %}
+					<ul>
+						{% for link in help %}
+							<li><a href="{{ link.link }}">{{ link.name }}</a></li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+			<div class="col col-md-4 col-sm-4 col-xs-12 footerMenu">
+				<h5>{{ "se_fodbald_footer_menu_follow"|t }}</h5>
+				{% if socials %}
+					<ul>
+						{% for soc in socials %}
+							<li><a href="{{ soc.link }}">{{ soc.name }}</a></li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+			<div class="col col-md-4 col-sm-4 col-xs-12 footerMenu">
+				<h5>{{ "se_fodbald_footer_menu_sefodbald"|t }}</h5>
+				{% if tags %}
+					<ul>
+						{% for link in tags %}
+							<li {{ attributes.addClass(link.classes) }}>
+								{% if link.url %}
+									<a href="{{ link.url }}">
+								{% endif %}
+									{{ link.name }}
+									
+									{% if link.img %}
+										<img src="{{ file_url(link.img) }}">
+									{% endif %}
+									
+								{% if link.url %}
+									</a>
+								{% endif %}
+							</li>				
+							
+							{% set attributes = attributes.removeClass(link.classes) %}
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>

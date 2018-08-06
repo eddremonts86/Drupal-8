@@ -1,0 +1,12 @@
+<section class='o-frontpage-partners'>
+    <header>{{ "head_text_homepartnerplugin" | t }}</header>
+    <ul>
+        {% for partner in tags %}
+            <li>
+                <a href={{ partner.url }}>
+                    <img src='{{ file_url(partner.logo) }}' alt="{{ partner.name }}"/>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

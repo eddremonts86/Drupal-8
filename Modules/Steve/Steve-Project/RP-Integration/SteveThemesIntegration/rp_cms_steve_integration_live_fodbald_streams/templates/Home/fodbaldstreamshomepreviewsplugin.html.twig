@@ -1,0 +1,28 @@
+<section class="HomePreviewsPlugin">
+	{% if tags %}
+		<div class="container">
+			<div class="row">
+				{% for event in tags %}
+					<div class="col col-md-6 col-sm-12 col-xs-12">
+						<div class="PreviewBlock">
+							<div class="teams">
+								{% for team in event.teams %}
+									{% if team.image %}
+										<div class="teamlogo">
+											<img src="{{ file_url(team.image) }}">
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+							<h2>{{ event.name }}</h2>
+							{% if event.description %}
+								<p class="eventtext">{{ event.description|raw }}</p>
+							{% endif %}
+							<a href="{{ event.link }}" class="eventlink"><span>{{ "fodbald_streams_preview_read_more"|t }}</span><i class="fa fa-arrow-right"></i></a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+</section>

@@ -1,0 +1,20 @@
+uuid: 72858464-7726-446e-9b20-7bfbd89ace63
+langcode: en
+status: true
+dependencies:
+  module:
+    - rp_cms_steve_integration_live_fodbald_streams
+  theme:
+    - live_fodbald_streams
+id: fodbaldstreamshomematchesplugin
+theme: live_fodbald_streams
+region: none
+weight: 100
+provider: null
+plugin: fodbaldstreamshomematchesplugin
+settings:
+  id: fodbaldstreamshomematchesplugin
+  label: 'Fodbald Streams Home Matches Plugin'
+  provider: rp_cms_steve_integration_live_fodbald_streams
+  label_display: '0'
+visibility: {  }

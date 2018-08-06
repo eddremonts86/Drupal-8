@@ -1,0 +1,80 @@
+<section class="HomeSchedulePlugin Block">
+	<div class="container">
+		<div class="row">
+			{% if tags %}
+				{% set aDay = null %}
+				<div class="col col-md-12 ScheduleBlock">
+					<div class="ScheduleHead">
+						<div class="ScheduleSelect">
+							<div class="row">
+								<div class="col col-md-6 col-sm-6 col-xs-12">
+									<div class="CustomSelect">
+										<select class="date-select">
+											{% for day in tags.AllEvents %}
+												{% if aDay is null %}
+													{% set aDay = day.date %}
+												{% endif %}
+												<option value="{{ day.date }}" {{ aDay == day.date ? 'selected' }}>{{ day.date|date('l d F') }}</option>
+											{% endfor %}
+			                            </select>
+										<span>{{ aDay|date('d F') }}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ScheduleTabs">
+							<ul>
+								<li class="prev"><<<</li>
+								{% for day in tags.AllEvents %}
+									{% if aDay is null %}
+										{% set aDay = day.date %}
+									{% endif %}
+									<li class="normal {{ aDay == day.date ? 'active' }}" day="{{ day.date }}">{{ day.date|date('l d F')  }}</li>
+								{% endfor %}
+								<li class="next">>>></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ScheduleList">
+						{% for day in tags.AllEvents %}
+							<div class="DayContainer {{ day.date == aDay ? 'active' }}" day="{{ day.date }}">
+								{% for name, tournament in day.alltournament %}
+									<div class="LeagueContainer">
+										<div class="LeagueName">
+											<span>{{ name }}</span>
+										</div>
+										<ul class="ScheduleList">
+											{% for event in tournament.events %}
+												<li>
+													<a href="{{ event.eventAlias }}">
+														<div class="row">
+															<div class="col col-md-2 col-sm-2 col-xs-2 date">
+																<span>{{ event.eventDate|date('H:i') }}</span>
+															</div>
+															<div class="col col-md-10 col-sm-10 col-xs-10 teams">
+																{% for team in event.participantsList %}
+																	<div class="team team-left">
+																		<span>{{ team.name }}</span>
+																		{% if team.logo %}
+																			<div class="imageHolder">
+																				<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="{{ file_url(team.logo) }}">
+																			</div>
+																		{% endif %}
+																	</div>
+																{% endfor %}
+															</div>
+														</div>
+													</a>
+												</li>
+											{% endfor %}																																
+										</ul>
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</section>

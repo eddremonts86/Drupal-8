@@ -1,0 +1,22 @@
+{#
+/**
+ * @file competition.html.twig
+ * Default theme implementation to present Competition data.
+ *
+ * This template is used when viewing Competition pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_competition()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('competition') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

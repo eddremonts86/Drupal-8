@@ -1,0 +1,106 @@
+section.MatchProvidersPlugin{
+	.container{
+		padding-bottom: 15px;
+
+		.row.MatchProvidersArticle{
+			padding: 4em 15px 0 15px;
+			.col{
+				.sponsoredLogo{
+					position: relative;
+					margin-top: -25px;
+					margin-left: -10px;
+
+					img{
+						display: inline-block;
+						vertical-align: middle;
+						margin: 0;
+						height: auto;
+						width: auto;
+
+						&:nth-child(2){    
+							position: absolute;
+							top: 0;
+							left: 0;
+							border: none;
+						}
+					}
+				}
+				.writer{
+					position: relative;
+					height: 80px;
+
+					> i{
+						left: 0;
+						right: auto;
+						position: absolute;
+						z-index: 9;
+						bottom: 50px;
+						font-size: 35px;
+						color: $color-lunar-green;
+					}
+					> img{
+						width: 30%;
+						max-width: 80px;
+						position: absolute;
+						bottom: 0;
+						border-radius: 100%;
+						border: 0;
+						right: auto;
+						left: 17px;
+					}
+					> p{
+						bottom: 0;
+						left: 100px;
+						line-height: 1.1;
+						margin: 0;
+						position: absolute;
+						color: $color-highland;
+						font-size: .9em;
+						a{
+							color: $color-highland;
+						}
+						span{
+							display: block;
+							text-indent: 14px;
+						}
+					}
+				}
+				.actions{
+					text-align: right;
+					p{
+						font-size: 9px;
+						color: #000;
+						text-align: right;
+						padding-bottom: 8px;
+					}
+				}
+				a{
+					&.popUp{
+    					font-size: 0.8em;
+						color: $color-dove-gray;
+						margin-top: 0px;
+						width: 100%;
+						margin-bottom: 15px;
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+	@include tablet{
+		.container{
+			.row.MatchProvidersArticle{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	@include mobile{
+		.container{
+			.row.MatchProvidersArticle{
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
+	}
+}

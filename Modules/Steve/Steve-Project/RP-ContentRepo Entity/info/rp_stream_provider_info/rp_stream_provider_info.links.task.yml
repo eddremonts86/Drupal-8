@@ -1,0 +1,27 @@
+# Stream Provider Info routing definition
+stream_provider_info.settings_tab:
+  route_name: stream_provider_info.settings
+  title: 'Settings'
+  base_route: stream_provider_info.settings
+
+entity.stream_provider_info.canonical:
+  route_name: entity.stream_provider_info.canonical
+  base_route: entity.stream_provider_info.canonical
+  title: 'View'
+
+entity.stream_provider_info.edit_form:
+  route_name: entity.stream_provider_info.edit_form
+  base_route: entity.stream_provider_info.canonical
+  title: 'Edit'
+
+entity.stream_provider_info.version_history:
+  route_name: entity.stream_provider_info.version_history
+  base_route: entity.stream_provider_info.canonical
+  title: 'Revisions'
+
+entity.stream_provider_info.delete_form:
+  route_name:  entity.stream_provider_info.delete_form
+  base_route:  entity.stream_provider_info.canonical
+  title: Delete
+  weight: 10
+

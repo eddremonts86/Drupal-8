@@ -1,0 +1,76 @@
+{% if background %}
+    <section class="o-frontpage-hero_footbal sport_home_slider" {{ colors ? attributes.setAttribute('style', 'border-color: ' ~ colors.arrow_1 ~ '; background: url(' ~ file_url(background) ~ ')' ) : ''}}>
+{% else %}
+    <section class="o-frontpage-hero_footbal sport_home_slider" {{ colors ? attributes.setAttribute('style', 'border-color: ' ~ colors.arrow_1) : ''}}>
+{% endif %}
+   
+	<div class="row">
+	    {% if is_front == false %}
+	        <nav class='o-header__secondary'>
+	            <ul>
+	                {{ tags[4].output | raw }}
+	            </ul>
+	        </nav>
+	    {% endif %}
+	</div>
+    
+    {% for nodeinfo in tags %}
+        {% if loop.index == 1 %}
+        <div class="row">
+             <div class="container">
+                <div class="col-md-8">
+                    <div class="col-lg-offset-2 col-md-6">
+                        <h1 class='o-sportpage-hero__title'>
+                            {{ "sport_showcase_head_titulo_1"|t|capitalize }}
+                        </h1>
+                    </div>
+                    <div class="col-lg-offset-3 col-md-9">
+                        <h1 class='o-sportpage-hero__title '>
+                             <span class="text_active" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}> {{ "sport_showcase_head_titulo_2" |t }}</span>
+                        </h1>
+                    </div>
+                    <div class="col-lg-offset-6 col-md-6">
+                        <h1 class='o-sportpage-hero__title'>
+                            <a href="{{ nodeinfo.sportalias }}">{{ nodeinfo.sportname|striptags|capitalize }}</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-8 mobile">
+                    <h1 {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}>
+                        <span> {{ "sport_showcase_head_titulo_1"|t|capitalize }} </span>
+                        <span> {{ "sport_showcase_head_titulo_2" |t }} </span>
+                        <span> {{ nodeinfo.sportname|striptags|capitalize }} </span>
+                    </h1>
+                </div>
+                <div class="col-md-4 sport_home">
+                    <div>
+	                    <div class="hide-on-mobile">
+	                        <h2 class="head" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}> {{ "sport_showcase_head_header" |t|capitalize }} </h2>
+	                        <p>{{ "sport_showcase_head_subheader" |t }}</p>
+	                        <p class="head" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}><i class="fa fa-laptop white fs30"></i> {{ "sport_showcase_head_line_1" |t }}</p>
+	                        <p class="head" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}><i class="fa fa-plane white fs40"></i> {{ "sport_showcase_head_line_2" |t }}</p>
+	                        <p class="head" {{ colors ? attributes.setAttribute('style', 'color: ' ~ colors.main) : ''}}><i class="fa fa-desktop white fs28"></i> {{ "sport_showcase_head_line_3" |t }}</p>
+	                        <p>{{ "sport_showcase_head_subline_3" |t }}</p>
+	                        <hr>
+	                    </div>
+                        <p>{{ "sport_showcase_nextmatch" |t }} : {{ nodeinfo.eventDate |date("d.M Y") }}<br><strong>{{ "Kl." |t }} {{ nodeinfo.eventDate  |date("H:i") }}: {{ nodeinfo.title}}</strong></p>
+                        <p>
+                            <a role="button" class="btn arrow" href="{{ nodeinfo.eventAlias }}" {{ colors ? attributes.setAttribute('style', 'background: linear-gradient(to bottom, ' ~ colors.button_gradient_light ~ ' 0, ' ~ colors.button_gradient_dark ~ ' 100%)')}}>
+                                {{ nodeinfo.title }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else  %}
+            {% set break = true %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="row divisor">
+        <div class="arrow"></div>
+    </div>
+    
+</section>
+    

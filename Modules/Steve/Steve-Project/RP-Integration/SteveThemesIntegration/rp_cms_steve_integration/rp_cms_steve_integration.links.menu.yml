@@ -1,0 +1,13 @@
+rp_cms_steve_integration.steve:
+  title: 'Steve Integration'
+  route_name: rp_cms_steve_integration.index
+  description: 'Steve Integration'
+  parent: rp_base.index
+  weight: 2
+
+rp_cms_steve_integration.event_filters:
+  title: 'Event Filters'
+  description: 'Events by sport'
+  route_name: rp_cms_steve_integration.event_filters
+  parent: rp_cms_steve_integration.steve
+  weight: 1
