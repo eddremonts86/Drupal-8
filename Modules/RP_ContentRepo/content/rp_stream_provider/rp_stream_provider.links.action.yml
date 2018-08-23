@@ -1,5 +1,0 @@
-entity.stream_provider.add_form:
-  route_name: entity.stream_provider.add_form
-  title: 'Add Stream Provider'
-  appears_on:
-    - entity.stream_provider.collection

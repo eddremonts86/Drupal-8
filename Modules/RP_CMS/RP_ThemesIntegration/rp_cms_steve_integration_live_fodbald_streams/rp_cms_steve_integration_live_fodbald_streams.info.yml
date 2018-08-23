@@ -1,8 +1,0 @@
-name: RP CMS - Steve Integration Live-Fodbald Streams
-type: module
-description: Live-Fodbald Streams 
-core: 8.x
-package: 'Rebel Penguins CMS - Frontend'
-project: steve_RP
-dependencies:
-  - steve_RP:rp_client_base

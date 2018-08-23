@@ -2,7 +2,7 @@
 
 namespace Drupal\rp_repo\Controller\oldVersion;
 
-use Cocur\Slugify\Slugify;
+
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\Entity\Node;
@@ -11,6 +11,7 @@ use Drupal\taxonomy\Entity\Term;
 use Symfony\Component\Serializer\Encoder\JsonDecode;
 use Drupal\rp_repo\Controller\entities\Taxonomies\taxonomySteveTimeZone;
 use Drupal\rp_repo\Controller\entities\Taxonomies\taxonomyTournament;
+use Drupal\rp_repo\Controller\entities\Taxonomies\taxonomyParticipan;
 
 /**
  * Class CreateClientData.
@@ -327,7 +328,6 @@ class CreateClientData extends ControllerBase {
   public function createGamePage($sport_tags = '', $event, $stream = '', $defautltText, $Tags_Team, $ChannelByNode = '', $region, $tournamentID) {
     $getInfoObj = new RepoGeneralGetInfo();
     $sport = $getInfoObj->getTaxonomyByAPIID($sport_tags);
-    $slugify = new Slugify();
     if (isset($event)) {
       $metaSportArray = $event['sport'];
       $metaCompetitionArray = $event['competition'];
@@ -364,10 +364,9 @@ class CreateClientData extends ControllerBase {
         'title' => $event['name'],
       ];
       $node = $this->createNodeGeneric($node);
-      $alias = '/' . $slugify->slugify($sport->name->value) . '/' . $slugify->slugify($getInfoObj->getClearUrl($event['name']));
-      // \Drupal::service('path.alias_storage')->save("/node/" . $node, $alias, $region);
     }
-    print ' Creating Game Page - ' . $event['name'] . ' - at ' . date("h:i:s") . "\n";
+    print ' Creating Game Page   - ' . $event['name'] . "\n";
+    print ' Event API ID         - ' . $event['id'] . "\n";
     print "\n";
     return $node;
   }
@@ -406,9 +405,12 @@ class CreateClientData extends ControllerBase {
     foreach ($partArray as $team) {
       $id = $team['id'];
       $opc = 'field_participant_api_id';
-      $taxonomyCompetition = $getInfoObj->getTaxonomyByCriterio($id, $opc);
+      //$taxonomyCompetition = $getInfoObj->getTaxonomyByCriterio($id, $opc);
+      $tParticipan = new  taxonomyParticipan();
+      $taxonomyCompetition = $tParticipan->getTaxonomyByOBj([
+        'vid' => 'sport','field_participant_api_id' => $id,
+      ], 1);
       if (empty($taxonomyCompetition)) {
-
         $parameters = ['id' => $team ['id'], 'include_locales' => 1];
         $rpClient = RPAPIClient::getClient();
         $Participants = $rpClient->getParticipantsbyID($parameters);
@@ -420,7 +422,7 @@ class CreateClientData extends ControllerBase {
         $logo = $getInfoObj->getImg($logo_path, $getInfoObj->getClearUrl($name . '_logo'), 'team');
         $obj = [
           'parent' => [],
-          'name' => $name,
+          'name' => $name == null ? $Participants["name"]:$name ,
           'vid' => 'participant',
           'field_participant_api_id' => $team ['id'],
           'field_participant_content' => '',
@@ -437,13 +439,12 @@ class CreateClientData extends ControllerBase {
         $this->createGenericTaxonomy($obj);
         $taxonomyCompetition = $getInfoObj->getTaxonomyByCriterio($id, $opc);
         $team_tax = $taxonomyCompetition->id();
-        print ' Creating Participant - ' . $name . '- at ' . date("h:i:s") . "\n";
+        print ' Creating Participant - ' . $name . "\n";
       }
       else {
         $team_tax = $taxonomyCompetition->id();
-
       }
-      $tags_team_array [] = ['target_id' => $team_tax];
+        $tags_team_array [] = ['target_id' => $team_tax];
     }
     return $tags_team_array;
   }
@@ -666,14 +667,12 @@ class CreateClientData extends ControllerBase {
       $competition = $rpClient->getSportbyID($para);
       $name = $competition["name"];
       $id_api = $competition["id"];
-      $slugify = new Slugify();
       $node = [
         'type' => 'sport_pages',
         'title' => $name,
         'field_sport_name' => $name,
         'field_sport_api_id' => $id_api,
         'field_sport_theme_descrption' => $getInfoObj->getDefaultSportPage($name),
-        // 'path' => ['alias' => '/' . $slugify->slugify($name)],
         'field_jsonld_struct' => ($getInfoObj->getTaxonomyByCriterioMultiple([
           'vid' => 'jsonld_',
           'name' => 'Site',

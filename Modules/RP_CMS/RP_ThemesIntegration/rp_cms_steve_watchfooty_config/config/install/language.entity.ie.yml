@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ie
-label: Irish
-direction: ltr
-weight: 1
-locked: false

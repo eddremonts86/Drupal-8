@@ -10,7 +10,6 @@
 namespace Drupal\rp_repo\Controller\entities\Taxonomies;
 
 use Drupal\Core\Controller\ControllerBase;
-use Cocur\Slugify\Slugify;
 use Symfony\Component\Serializer\Encoder\JsonDecode;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\rp_api\RPAPIClient;
@@ -272,12 +271,13 @@ abstract class taxonomy extends ControllerBase {
   }
 
   public function getLocaleName($localeObj, $id) {
+    $lang = null;
     foreach ($localeObj as $local) {
       if ($local['language'] == $id) {
-        return $local['name'];
+        $lang = $local['name'];
       }
     }
-
+    return $lang;
   }
 
   /*   -----   Delete Process   ------   */
@@ -323,7 +323,7 @@ abstract class taxonomy extends ControllerBase {
   }
 
 
-  public function createSiteConvination($site_api_id, $days) {
+  public function createSiteConvination($site_api_id, $days, $date= 'Y-m-d') {
     $site = ['vid' => 'steve_site', 'field_api_id' => $site_api_id];
     $siteObj = reset($this->getTaxonomyByOBj($site, 'obj'));
 
@@ -345,8 +345,6 @@ abstract class taxonomy extends ControllerBase {
     }
 
     $paramList = [];
-
-    $date = 'Y-m-d';
     $startday = date($date);
 
     for ($i = 0; $i < $days; $i++) {

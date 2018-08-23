@@ -1,8 +1,0 @@
-name: RP Competition
-type: module
-description: Rp Competition Entity
-core: 8.x
-package: RP
-
-dependencies:
-  - rp_sport

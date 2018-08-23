@@ -22,8 +22,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          3eed4205-16f6-4f26-a03b-b4f3d375c484:
-            uuid: 3eed4205-16f6-4f26-a03b-b4f3d375c484
+          645e9d3a-64b8-4922-9f88-33e18a3d1fa3:
+            uuid: 645e9d3a-64b8-4922-9f88-33e18a3d1fa3
             region: content
             configuration:
               id: 'field_block:user:user:user_picture'

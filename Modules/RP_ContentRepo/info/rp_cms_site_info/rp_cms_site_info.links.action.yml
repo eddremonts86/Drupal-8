@@ -1,6 +1,0 @@
-entity.cms_site_info.add_form:
-  route_name: 'entity.cms_site_info.add_form'
-  title: 'Add CMS Site Info'
-  appears_on:
-    - entity.cms_site_info.collection
-

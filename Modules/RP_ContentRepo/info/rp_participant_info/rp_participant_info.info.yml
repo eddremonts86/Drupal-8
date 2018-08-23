@@ -1,7 +1,0 @@
-name: RP Participant Info
-type: module
-description: RP participant info
-core: 8.x
-package: RP
-dependencies:
-  - rp_participant

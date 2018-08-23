@@ -1,8 +1,0 @@
-entity.participant_info.add_form:
-  route_name: entity.participant_info.add_form
-  title: 'Add Participant Info'
-  appears_on:
-    - entity.participant_info.collection
-  options:
-    query:
-      destination: '/admin/rp/entity-content/participant'

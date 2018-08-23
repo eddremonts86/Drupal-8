@@ -278,21 +278,21 @@ function rp_repo_drush_command() {
 
 function rp_repo_drush_importApiData() {
   $obj = new ImportAPIDATA();
-  $obj->importApiData();
+  $obj->importApiData(null,null);
   drush_print('Import data from API(http://steve.rebelpenguin.dk).');
   drush_print('Success.');
 }
 
 function rp_repo_drush_importApiDataByDate($date) {
   $obj = new ImportAPIDATA();
-  $data = $obj->importApiDataByDate($date);
+  $data = $obj->importApiData($date , 1);
   drush_print('Import data from API(http://steve.rebelpenguin.dk).');
   drush_print('Success.');
 }
 
 function rp_repo_drush_importApiBYDays($days) {
   $obj = new ImportAPIDATA();
-  $data = $obj->importApiBYDays($date = 'Y-m-d', $days);
+  $obj->importApiData($date = 'Y-m-d', $days);
   drush_print('Import data from API(http://steve.rebelpenguin.dk).');
   drush_print('Success.');
 }
@@ -480,16 +480,14 @@ function rp_repo_drush_importSchedule() {
   /*--------------- dev ----------------*/
   $del = new DeleteClientData();
   $del->DeleteClientData();
-
   $site = new taxonomySteveSite();
-  $site->importSite('13');
+  $config = \Drupal::configFactory()->get('rp_base.settings');
+  $site_api_id = $config->get('rp_base_site_api_id');
+  $site->importSite($site_api_id);
   /*-----------------------------------*/
 
   $obj = new ImportAPIDATA();
-  $obj->importApiData();
-
-  /* $api = new fromApi();
-  $api->importApiData();*/
+  $obj->importApiData('Y-m-d');
 
   drush_print('Import data from API(http://steve.rebelpenguin.dk).');
   drush_print('Success.');

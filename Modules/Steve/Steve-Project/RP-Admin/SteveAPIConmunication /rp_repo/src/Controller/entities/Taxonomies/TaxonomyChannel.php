@@ -18,10 +18,10 @@ class TaxonomyChannel extends taxonomy
      * function createChannelsPages (Import all channels )
      *
      */
-    public function getAllchannels()
+  public function getAllchannels()
     {
         $rpClient = RPAPIClient::getClient();
-        $AllChannel = $rpClient->getChannel();
+        $AllChannel = $rpClient->getChannels();
         foreach ($AllChannel as $channel) {
             $oldChanel = $this->getTaxonomyByCriterio($channel['id'], 'field_channel_api_id');
             if (empty($oldChanel) or !isset($oldChanel)) {
@@ -34,9 +34,11 @@ class TaxonomyChannel extends taxonomy
                     'field_channel_des' => $channel['description'],
                     'field_channel_notes' => $channel['notes'],
                 ];
+                print "New Channel - ".$channel['name']."\n";
                 $this->createGenericTaxonomy($chanelOBJ);
                 //print ' Creating node (Channels) "' . $channel['name'] . ' - at ' . date("h:i:s") . "\n";
             } else {
+                print "Update channel - ". $channel['name']. "\n";
                 $oldChanel->field_channel_api_id = $channel['id'];
                 $oldChanel->field_channel_name = $channel['name'];
                 $oldChanel->field_channel_code = $channel['name'];
@@ -52,6 +54,7 @@ class TaxonomyChannel extends taxonomy
     foreach ($AllChannel as $channel) {
       $oldChanel = $this->getTaxonomyByCriterio($channel['id'], 'field_channel_api_id');
       if (empty($oldChanel) or !isset($oldChanel)) {
+        print "New Channel - ".$channel['name']."\n";;
         $chanelOBJ = [
           'vid' => 'channels',
           'name' => $channel['name'],
@@ -64,6 +67,7 @@ class TaxonomyChannel extends taxonomy
         $this->createGenericTaxonomy($chanelOBJ);
         //print ' Creating node (Channels) "' . $channel['name'] . ' - at ' . date("h:i:s") . "\n";
       } else {
+        print "Update channel - ". $channel['name']. "\n";
         $oldChanel->field_channel_api_id = $channel['id'];
         $oldChanel->field_channel_name = $channel['name'];
         $oldChanel->field_channel_code = $channel['name'];

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: alias_taxonomies
+label: 'Alias  - Taxonomies'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  0f4606d1-dc00-4354-81e2-82445713e700:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      channels: channels
+      jsonld_: jsonld_
+      others_sites: others_sites
+      participant: participant
+      social_networks: social_networks
+      sport: sport
+      steve_languages: steve_languages
+      steve_regions: steve_regions
+      steve_site: steve_site
+      steve_timezones: steve_timezones
+      stream_provider: stream_provider
+      tags: tags
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 0f4606d1-dc00-4354-81e2-82445713e700
+selection_logic: and
+weight: -5
+relationships: {  }

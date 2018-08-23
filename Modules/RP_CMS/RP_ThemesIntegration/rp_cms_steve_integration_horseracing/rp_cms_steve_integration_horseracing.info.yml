@@ -1,6 +1,0 @@
-name: RP CMS - Steve Integration HorseRacing
-type: module
-description: HorceRacing 
-core: 8.x
-package: 'Rebel Penguins CMS - Frontend'
-project: 'steve_integration_horseracing'

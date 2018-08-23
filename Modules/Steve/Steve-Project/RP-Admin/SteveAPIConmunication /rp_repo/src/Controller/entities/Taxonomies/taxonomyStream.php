@@ -26,6 +26,7 @@ class taxonomyStream extends taxonomy
                 'type' => $streamObj['type']['type']
             ),
         ];
+        print "New Stream - ".$streamObj['type']['name']."\n";
         return $this->createStreamPages($stream);
     }
 
@@ -68,6 +69,7 @@ class taxonomyStream extends taxonomy
                         'field_stream_provider_type_apiid' => $streamType['id'],
                         'field_jsonld_struct' => $this->getTaxonomyByOBj(array('vid' => 'jsonld_', 'name' => 'Streams'),1)
                     ];
+                  print "New Stream - ".$streamType['name']."\n";
                     $this->createGenericTaxonomy($obj);
                 }
                 if (empty($taxonomyStream)) {
@@ -80,6 +82,7 @@ class taxonomyStream extends taxonomy
                         'field_stream_provider_type_apiid' => $streamType['id'],
                         'field_jsonld_struct' => $this->getTaxonomyByOBj(array('vid' => 'jsonld_', 'name' => 'Streams'),1)
                     ];
+                    print "New Stream - ".$streamObj['name']."\n";
                     $taxonomystream = $this->createGenericTaxonomy($obj, false);
                     $taxonomystreamId = $taxonomystream->id();
                     $tags_array [] = ['target_id' => $taxonomystreamId];

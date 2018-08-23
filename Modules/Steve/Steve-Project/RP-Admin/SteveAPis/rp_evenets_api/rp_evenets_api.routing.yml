@@ -1,0 +1,32 @@
+
+rp_evenets_api.events_getAllevents:
+  path: '/steveAPI/events/{date}/{page}'
+  defaults: { _controller: 'Drupal\rp_evenets_api\Controller\events\eventsAPIExport::getAllNodes' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+
+rp_evenets_api.events_getAlleventsfirstpage:
+  path: '/steveAPI/events/{date}'
+  defaults: { _controller: 'Drupal\rp_evenets_api\Controller\events\eventsAPIExport::getAllNodes' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+
+rp_evenets_api.events_geteventbyID:
+  path: '/steveAPI/event/{eventid}'
+  defaults: { _controller: 'Drupal\rp_evenets_api\Controller\events\eventsAPIExport::geteventByID' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_evenets_api.events_geteventrevisionByID:
+  path: '/steveAPI/eventreviews/{eventid}'
+  defaults: { _controller: 'Drupal\rp_evenets_api\Controller\events\eventsAPIExport::geteventrevisionByID' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+

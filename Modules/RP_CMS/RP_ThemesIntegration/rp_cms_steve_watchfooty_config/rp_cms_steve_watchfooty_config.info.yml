@@ -1,8 +1,0 @@
-name: 'steve watchfooty config'
-type: module
-core: 8.x
-package: 'Rebel Penguins CMS - Frontend'
-project: 'steve_watchfooty'
-dependencies:
-  - language
-  - rp_cms_steve_base_config

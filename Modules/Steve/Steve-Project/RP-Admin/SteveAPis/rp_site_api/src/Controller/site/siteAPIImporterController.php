@@ -19,7 +19,7 @@ class siteAPIImporterController  extends ControllerBase {
     $site = siteRepoService::getClient();
     $obj = $site->getAllSite(false);
   foreach ($obj['data']['sites'] as $ob){
-      $this->createSite($ob);
+      $this->updateSite($ob);
     }
     return TRUE;
   }
@@ -27,17 +27,17 @@ class siteAPIImporterController  extends ControllerBase {
     $site = siteRepoService::getClient();
     $obj=array('site' => $id);
     $obj = $site->getSitebyID($obj);
-    $this->createSite($obj['data']['site'][0]);
+    $this->updateSite($obj['data']['site'][0]);
     return TRUE;
   }
 
-  public function  createSite($siteNEW){
+  public function  updateSite($siteNEW){
       $site = new taxonomySteveSite();
       $site->importSite($siteNEW['apiID']);
       $obj = ['vid' => 'steve_site', 'field_api_id' => $siteNEW['apiID']];
       $id = $site->getTaxonomyByOBj($obj, 1);
       $TaxonomySite = Term::load($id);
-      $TaxonomySite->field_site_configuration = $siteNEW['siteConfigurations'];
+      $TaxonomySite->field_site_configuration = $siteNEW['fileConfig'];
       $TaxonomySite->field_site_url = $siteNEW['siteURL'];
       $TaxonomySite->field_site_token = $siteNEW['token'];
       $TaxonomySite->description = array(

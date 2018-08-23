@@ -1,15 +1,14 @@
 langcode: eo
-status: true
+status: false
 dependencies:
   module:
-    - language
     - node
 id: eventosnode_
-label: 'Nodes CT'
+label: 'General URL Struct'
 type: 'canonical_entities:node'
 pattern: '[node:langcode]/[node:field_event_tournament]/[node:title]'
 selection_criteria:
-  7ad6ba12-baff-42a7-a6f9-b8b35157aff7:
+  d93dc019-c1f4-423f-be03-2b3928f2bb01:
     id: node_type
     bundles:
       article: article
@@ -21,16 +20,7 @@ selection_criteria:
     negate: false
     context_mapping:
       node: node
-    uuid: 7ad6ba12-baff-42a7-a6f9-b8b35157aff7
-  704492d1-7d02-44eb-9c5d-4d87f723d12c:
-    id: language
-    langcodes:
-      en: en
-      ie: ie
-    negate: false
-    context_mapping:
-      language: 'node:langcode:language'
-    uuid: 704492d1-7d02-44eb-9c5d-4d87f723d12c
+    uuid: d93dc019-c1f4-423f-be03-2b3928f2bb01
 selection_logic: and
 weight: -5
 relationships:

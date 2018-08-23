@@ -1,86 +1,61 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # -*- ENCODING: UTF-8 -*-
+echo "------------- All your Conf Vars --------------------
+"1" -  ${1}   
+"2" -  ${2}  
+"3" -  ${3}  
+"4" -  ${4}  
+"5" -  ${5}  
+"6" -  ${6}  
+"7" -  ${7}  
+"8" -  ${8}  
+"9" -  ${9}  
+"10" -  ${10}  
+"11" -  ${11}  
+"12" -  ${12}  
+"13" -  ${13}  
+"14" -  ${14}  
+"15" -  ${15}  
+"16" -  ${16}  
+"17" -  ${17}  
+"18" -  ${18}  
+"19" -  ${19}  
+"20" -  ${20}  
+"21" -  ${21}  
 
-echo "------------- All your Conf Vars --------------------<br>
-echo
-"1" -  ${1}   <br>
-"2" -  ${2}  <br>
-"3" -  ${3}  <br>
-"4" -  ${4}  <br>
-"5" -  ${5}  <br>
-"6" -  ${6}  <br>
-"7" -  ${7}  <br>
-"8" -  ${8}  <br>
-"9" -  ${9}  <br>
-"10" -  ${10}  <br>
-"11" -  ${11}  <br>
-"12" -  ${12}  <br>
-"13" -  ${13}  <br>
-"14" -  ${14}  <br>
-"15" -  ${15}  <br>
-"16" -  ${16}  <br>
-"17" -  ${17}  <br>
-"18" -  ${18}  <br>
 "
 
-echo "<br> --------------File work -------------------<br>"
+echo " --------------File work -------------------"
 
 cd sites
 mkdir $1
-echo " Crerating Folder ${1} <br>"
+echo " Crerating Folder ${1} "
 
-echo " Crerating ${1} SETTINGS   <br>"
+echo " Crerating ${1} SETTINGS   "
 cp default/default.settings.php $1/settings.php
 #chmod -R 777 $1
 #chown -R edd:www-data $1
 
-echo "Writing in [core]/sites.php <br>"
+echo "Writing in [core]/sites.php "
 echo "\$sites['$1'] = '$1';" >> sites.php
 
 
-echo "<br> --------------Data base work -------------------<br>
-      Creating Database ${14}<br>"
+echo " --------------Data base work -------------------
+      Creating Database ${14}"
 
-#Create postgreSql db - pending
-mysql -u ${15} -p${16} <<MY_QUERY
-CREATE DATABASE IF NOT EXISTS ${14}
-MY_QUERY
+drush sql-create --db-su=${16} --db-su-pw=${17} --db-url="${13}://${16}:${17}@${14}/${15}" --yes
+drush site-install standard --sites-subdir=$1 --db-url="${13}://${16}:${17}@${14}/${15}" --site-name=${8} --account-name=${10} --account-pass=${12} --site-mail=${11} --locale=${7} -y
 
+echo " ---------------------------------"
+echo "Installing drupal site  ${8} "
+echo "---------------------------------"
 
-echo "<br> ---------------------------------<br>"
-echo "Installing drupal site  ${7} <br>"
-echo "---------------------------------<br>"
-
-echo "<br><br>
-    --uri=$1  site:install standard <br>
-    --langcode="$6" <br>
-    --db-type="${12}" <br>
-    --db-host="${13}" <br>
-    --db-name="${14}" <br>
-    --db-user="${15}" <br>
-    --db-pass="${16}" <br>
-    --db-port="${17}" <br>
-    --db-prefix="stevecms_" <br>
-    --site-name="$7" <br>
-    --site-mail="$8" <br>
-    --account-name="${9}" <br>
-    --account-mail="${10}" <br>
-    --account-pass="${11}" <br><br><br>
-    "
-pwd
 cd $1
-
-drush site-install standard --sites-subdir=$1 --db-url='mysql://'${15}':'${16}'@'${13}'/'${14}'' --site-name=${7} --account-name=${9} --account-pass=${11} --site-mail=${10} --locale=${6} -y
 drush   --uri=$1 cr all
 
-#drupal --uri=$1  site:install standard --langcode="$6" --db-type="${12}" --db-host="${13}" --db-name="${14}" --db-user="${15}" --db-pass="${16}" --db-port="${17}" --db-prefix="stevecms_" --site-name="$7" --site-mail="$8" --account-name="${9}" --account-mail="${10}" --account-pass="${11}" --force
-#drupal --uri=$1  cr all
-
-
-#chmod 755 $1/settings.php
-    echo "<br> ---------------------------------<br>"
-    echo "Installing other core and contib modules <br>"
-    echo "---------------------------------<br>"
+    echo " ---------------------------------"
+    echo "Installing other core and contib modules "
+    echo "---------------------------------"
 
         drush   --uri=$1  en  media  --resolve-dependencies -y
         drush   --uri=$1  en  admin_toolbar_tools  --resolve-dependencies -y
@@ -100,40 +75,53 @@ drush   --uri=$1 cr all
         drush   --uri=$1  en  schema_metatag --resolve-dependencies -y
 
 
-    echo "<br> ---------------------------------<br>"
-    echo "Instaling modules Requires <br>"
-    echo "---------------------------------<br>"
+    echo " ---------------------------------"
+    echo "Instaling modules Requires "
+    echo "---------------------------------"
         drush   --uri=$1  en  rp_repo --resolve-dependencies -y
         drush   --uri=$1  en  rp_ad_block --resolve-dependencies -y
         drush   --uri=$1  en  rp_cookie --resolve-dependencies -y
         drush   --uri=$1  en  rp_style --resolve-dependencies -y
         drush   --uri=$1  en  rp_layout --resolve-dependencies -y
         drush   --uri=$1  en  rp_client_base --resolve-dependencies -y
-        drush   --uri=$1  en  rebel_endpoints --resolve-dependencies -y
+        drush   --uri=$1  en  rp_site_api --resolve-dependencies -y
+        drush   --uri=$1  en  rp_user_api --resolve-dependencies -y
+        drush   --uri=$1  en  drush_language --resolve-dependencies -y
+    echo " --------------------------------- "
+    echo "Instaling Themes and dependencies "
+    echo "--------------------------------- "
 
-    echo "<br> --------------------------------- <br>"
-    echo "Instaling Themes and dependencies <br>"
-    echo "--------------------------------- <br>"
+        drush   --uri=$1  en bootstrap --resolve-dependencies -y
+        drush   --uri=$1  en stevethemebase  --resolve-dependencies -y
+        drush   --uri=$1  en rp_cms_steve_base_config  --resolve-dependencies -y
 
         # Exp config
-        drush   --uri=$1  en $3  --resolve-dependencies -y
-        drush   --uri=$1 config-set system.theme default $3 -y
         drush   --uri=$1  en $4  --resolve-dependencies -y
+        drush   --uri=$1 config-set system.theme default $4 -y
+        drush   --uri=$1  en $5  --resolve-dependencies -y
 
         #Enable default template
-        drush   --uri=$1  en $5  --resolve-dependencies -y
-        drush   --uri=$1  config-set system.theme admin $5 -y
+        drush   --uri=$1  en $6  --resolve-dependencies -y
+        drush   --uri=$1  config-set system.theme admin $6 -y
 
-
-        drush --uri=$1 -y config-set rp_base.settings rp_base_site_api_id ${18}
-        drush --uri=$1 rprepoapii site_info --query="filter[site][value]=${18}"  --update=1
-
-        drush --uri=$1 rp_importSitesByID ${18}
-        drush --uri=$1 rp_importfromapi
-
-        chmod -R 777 site/$1/files
+        chmod -R 777 files
         drush --uri=$1 cr all
 
+        drush --uri=$1 -y config-set rp_base.settings rp_base_site_api_id ${19}
+        drush --uri=$1 -y config-set rp_base.settings rp_base_site_url ${20}
+        drush --uri=$1 -y config-set rp_base.settings rp_base_site_url_api  ${21}
+        drush --uri=$1 -y config-set rp_base.settings rp_base_def_channel  ${22}
+        drush --uri=$1 rprepoapii site_info --query="filter[site][value]=${3}"  --update=1
 
+        drush --uri=$1 rp_importSitesByID ${3}
+        drush --uri=$1 steve_importSiteByID ${3}
+        drush --uri=$1 steve_updateUsers
+        drush --uri=$1 rp_importfromapi
+
+        drush --uri=$1 langadd ${23}
+        wget ${24}
+        drush l--uri=$1 language-import ${23} ${25}
+
+        drush --uri=$1 cr all
 
 exit

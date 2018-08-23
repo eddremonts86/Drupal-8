@@ -27,7 +27,6 @@ class Events extends pages
     $getInfoObj = new RepoGeneralGetInfo();
     $tournament = $getInfoObj->getTaxonomyByAPIID($event['competition']['id']);
     $sport = $getInfoObj->getTaxonomyByID($sport_tags);
-    $slugify = new Slugify();
     if (isset($event)) {
       $metaSportArray = $event['sport'];
       $metaCompetitionArray = $event['competition'];
@@ -62,14 +61,11 @@ class Events extends pages
         'title' => $event['name']
       ];
       $node = $this->createNodeGeneric($node);
-      $alias = '/' . $slugify->slugify(reset($sport)["name"]["x-default"]) . '/' . $slugify->slugify($getInfoObj->getClearUrl($event['name']));
-      // \Drupal::service('path.alias_storage')->save("/node/" . $node, $alias, $region);
     }
     print ' Creating Game Page - ' . $event['name'] . ' - at ' . date("h:i:s") . "\n";
     print "\n";
     return $node;
   }
-
   public function updateEvents($event, $node_id, $region)
   {
     $node = Node::load($node_id);

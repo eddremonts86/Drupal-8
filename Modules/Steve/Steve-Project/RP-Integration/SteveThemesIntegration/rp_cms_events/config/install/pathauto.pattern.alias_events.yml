@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: alias_events
+label: 'Alias  - Events'
+type: 'canonical_entities:node'
+pattern: '/[node:field_event_tournament]/[node:title]'
+selection_criteria:
+  17065301-c823-4bb8-b1d4-f75f6707c1da:
+    id: node_type
+    bundles:
+      events: events
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 17065301-c823-4bb8-b1d4-f75f6707c1da
+selection_logic: and
+weight: -5
+relationships: {  }

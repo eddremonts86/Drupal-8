@@ -1,0 +1,426 @@
+------------- All your Conf Vars --------------------
+1 -  content.repository.live-fodbold.dk   
+2 -  content_repository_live_fodbold_dk  
+3 -  16  
+4 -  live_fodbald  
+5 -  rp_cms_steve_integration_live_fodbald  
+6 -  fortytwo_admin  
+7 -  en  
+8 -  Live-fodbold.dk_Content_Repository  
+9 -  contact@client1.dev  
+10 -  admin  
+11 -  contact@client1.dev  
+12 -  admin  
+13 -  mysql  
+14 -  localhost  
+15 -  content_repository_live_fodbold_dk  
+16 -  root  
+17 -  root  
+18 -  3316  
+19 -  16  
+20 -  http://content.repository.live-fodbold.dk  
+21 -  http://user.controller.cu/  
+
+
+ --------------File work -------------------
+ Crerating Folder content.repository.live-fodbold.dk 
+ Crerating content.repository.live-fodbold.dk SETTINGS   
+Writing in [core]/sites.php 
+ --------------Data base work -------------------
+      Creating Database localhost
+Creating database content_repository_live_fodbold_dk. Any possible existing database will be dropped!
+Do you really want to continue? (y/n): y
+You are about to DROP all tables in your 'content_repository_live_fodbold_dk' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the --notify global option.                                                                     [1;32;40m[1m[ok][0m
+Installation complete.                                                                                                                                           [1;32;40m[1m[ok][0m
+Congratulations, you installed Drupal!                                                                                                                           [1;32;40m[1m[status][0m
+ ---------------------------------
+Installing drupal site  Live-fodbold.dk_Content_Repository 
+---------------------------------
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m
+ ---------------------------------
+Installing other core and contib modules 
+---------------------------------
+The following extensions will be enabled: media
+Do you really want to continue? (y/n): y
+media was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
+media defines the following permissions: create audio media, create file media, create image media, create video media, delete any audio media, delete any file media, delete any image media, delete any video media, delete own audio media, delete own file media, delete own image media, delete own video media, edit any audio media, edit any file media, edit any image media, edit any video media, edit own audio media, edit own file media, edit own image media, edit own video media, access media overview, administer media, administer media types, create media, delete any media, delete media, update any media, update media, view all media revisions, view media
+The following extensions will be enabled: admin_toolbar_tools, admin_toolbar
+Do you really want to continue? (y/n): y
+admin_toolbar was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+admin_toolbar_tools was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
+The following extensions will be enabled: admin_toolbar_links_access_filter
+Do you really want to continue? (y/n): y
+admin_toolbar_links_access_filter was enabled successfully.                                                                                                      [1;32;40m[1m[ok][0m
+The following extensions will be enabled: ctools_views
+Do you really want to continue? (y/n): y
+ctools_views was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+The following extensions will be enabled: field_layout, layout_discovery
+Do you really want to continue? (y/n): y
+field_layout was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+layout_discovery was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+The following extensions will be enabled: layout_builder
+Do you really want to continue? (y/n): y
+layout_builder was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+layout_builder defines the following permissions: configure any layout
+The following extensions will be enabled: devel
+Do you really want to continue? (y/n): y
+devel was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
+devel defines the following permissions: access devel information, execute php code, switch users
+The following extensions will be enabled: devel_generate
+Do you really want to continue? (y/n): y
+devel_generate was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+devel_generate defines the following permissions: administer devel_generate
+The following extensions will be enabled: features, config_update
+Do you really want to continue? (y/n): y
+config_update was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+features was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+The following extensions will be enabled: field_group
+Do you really want to continue? (y/n): y
+field_group was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: shortcode
+Do you really want to continue? (y/n): y
+shortcode was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+The following extensions will be enabled: panelizer, panels_ipe, panels, ctools, ctools_block
+Do you really want to continue? (y/n): y
+ctools was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+ctools_block was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+panelizer was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+panelizer defines the following permissions: administer panelizer node article content, administer panelizer node article layout, administer panelizer node article revert, administer panelizer node page content, administer panelizer node page layout, administer panelizer node page revert, administer panelizer user user content, administer panelizer user user layout, administer panelizer user user revert, administer panelizer taxonomy_term tags content, administer panelizer taxonomy_term tags layout, administer panelizer taxonomy_term tags revert, administer panelizer node article defaults, administer panelizer node page defaults, administer panelizer user user defaults, administer panelizer taxonomy_term tags defaults, administer panelizer, set panelizer default
+panels was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+panels defines the following permissions: administer panels layouts, administer panels styles, administer pane access, administer advanced pane settings, use panels caching features, use panels dashboard, use panels locks, use ipe with page manager, view pane admin links
+panels_ipe was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+panels_ipe defines the following permissions: access panels in-place editing
+The following extensions will be enabled: panelizer_quickedit
+Do you really want to continue? (y/n): y
+panelizer_quickedit was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
+The following extensions will be enabled: pathauto, token
+Do you really want to continue? (y/n): y
+pathauto was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+pathauto defines the following permissions: administer pathauto, notify of path changes
+token was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
+The following extensions will be enabled: twig_blocks
+Do you really want to continue? (y/n): y
+twig_blocks was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: schema_metatag, metatag
+Do you really want to continue? (y/n): y
+metatag was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+metatag defines the following permissions: administer meta tags
+schema_metatag was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+ ---------------------------------
+Instaling modules Requires 
+---------------------------------
+The following extensions will be enabled: rp_repo, rp_client_base, rp_jsonld_struct, syslog, responsive_image, page_manager, rp_shortcode, rp_cms_steve_integration, restui, content_translation, language, locale, config_translation, rp_cms_events, rp_cms_site_info, rp_site_info, rp_language, rp_channel, rp_region, rp_site, rp_repoapi, rp_base, serialization, rest, rp_api
+Do you really want to continue? (y/n): y
+config_translation was enabled successfully.                                                                                                                     [1;32;40m[1m[ok][0m
+config_translation defines the following permissions: translate configuration
+content_translation was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
+content_translation defines the following permissions: administer content translation, create content translations, delete content translations, update content translations, translate any entity
+language was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+language defines the following permissions: administer languages
+locale was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+locale defines the following permissions: translate interface
+page_manager was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+page_manager defines the following permissions: administer pages
+responsive_image was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+responsive_image defines the following permissions: administer responsive images
+rest was enabled successfully.                                                                                                                                   [1;32;40m[1m[ok][0m
+rest defines the following permissions: restful get site_rest_resource, administer rest resources
+restui was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+rp_api was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+rp_api defines the following permissions: administer rp_api configuration
+rp_base was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_base defines the following permissions: access rp base configuration
+rp_channel was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+rp_channel defines the following permissions: access channel overview, administer channel entities, add channel entities, delete channel entities, delete all channel revisions, edit channel entities, revert all channel revisions, view all channel revisions, view published channel entities, view unpublished channel entities
+rp_client_base was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+rp_cms_events was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+rp_cms_site_info was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+rp_cms_steve_integration was enabled successfully.                                                                                                               [1;32;40m[1m[ok][0m
+rp_jsonld_struct was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+rp_language was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+rp_language defines the following permissions: access language content overview, administer language content entities, add language content entities, delete language content entities, delete all language content revisions, edit language content entities, revert all language content revisions, view all language content revisions, view published language content entities, view unpublished language content entities
+rp_region was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+rp_region defines the following permissions: access region overview, administer region entities, add region entities, delete region entities, delete all region revisions, edit region entities, revert all region revisions, view all region revisions, view published region entities, view unpublished region entities
+rp_repo was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_repoapi was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+rp_shortcode was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+rp_site was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_site defines the following permissions: access site overview, administer site entities, add site entities, delete site entities, delete all site revisions, edit site entities, revert all site revisions, view all site revisions, view published site entities, view unpublished site entities
+rp_site_info was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+rp_site_info defines the following permissions: access site info overview, administer site info entities, add site info entities, delete site info entities, delete all site info revisions, edit site info entities, revert all site info revisions, view all site info revisions, view published site info entities, view unpublished site info entities
+serialization was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+syslog was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_ad_block
+Do you really want to continue? (y/n): y
+rp_ad_block was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_cookie
+Do you really want to continue? (y/n): y
+rp_cookie was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_style
+Do you really want to continue? (y/n): y
+rp_style was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_layout
+Do you really want to continue? (y/n): y
+rp_layout was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+rp_client_base is already enabled.                                                                                                                               [1;32;40m[1m[ok][0m
+There were no extensions that could be enabled.                                                                                                                  [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_site_api
+Do you really want to continue? (y/n): y
+rp_site_api was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_user_api
+Do you really want to continue? (y/n): y
+rp_user_api was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: drush_language
+Do you really want to continue? (y/n): y
+drush_language was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+ --------------------------------- 
+Instaling Themes and dependencies 
+--------------------------------- 
+The following extensions will be enabled: live_fodbald
+Do you really want to continue? (y/n): y
+live_fodbald was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+Do you want to update default key in system.theme config? (y/n): y
+The following extensions will be enabled: rp_cms_steve_integration_live_fodbald, rp_cms_steve_base_config
+Do you really want to continue? (y/n): y
+Drupal\Core\Config\UnmetDependenciesException: Configuration objects provided by <em class="placeholder">rp_cms_steve_base_config</em> have unmet dependencies:  [31;40m[1m[error][0m
+<em class="placeholder">block.block.colormainmenublock (stevethemebase)</em> in
+/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Config/UnmetDependenciesException.php:98
+Stack trace:
+#0 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Config/ConfigInstaller.php(469):
+Drupal\Core\Config\UnmetDependenciesException::create('rp_cms_steve_ba...', Array)
+#1 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Extension/ModuleInstaller.php(145):
+Drupal\Core\Config\ConfigInstaller->checkConfigurationToInstall('module', 'rp_cms_steve_ba...')
+#2 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/ProxyClass/Extension/ModuleInstaller.php(83):
+Drupal\Core\Extension\ModuleInstaller->install(Array, true)
+#3 phar:///usr/local/bin/drush/commands/core/drupal/environment.inc(131): Drupal\Core\ProxyClass\Extension\ModuleInstaller->install(Array, true)
+#4 phar:///usr/local/bin/drush/commands/core/drupal/environment.inc(198): drush_module_install(Array)
+#5 phar:///usr/local/bin/drush/commands/pm/pm.drush.inc(1180): drush_module_enable(Array)
+#6 phar:///usr/local/bin/drush/includes/command.inc(422): drush_pm_enable('rp_cms_steve_in...')
+#7 phar:///usr/local/bin/drush/includes/command.inc(231): _drush_invoke_hooks(Array, Array)
+#8 phar:///usr/local/bin/drush/includes/command.inc(199): drush_command('rp_cms_steve_in...')
+#9 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67): drush_dispatch(Array)
+#10 phar:///usr/local/bin/drush/includes/preflight.inc(66): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#11 phar:///usr/local/bin/drush/includes/startup.inc(465): drush_main()
+#12 phar:///usr/local/bin/drush/includes/startup.inc(369): drush_run_main(false, '/', 'Phar detected. ...')
+#13 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
+#14 /usr/local/bin/drush(10): require('phar:///usr/loc...')
+#15 {main}
+The following extensions will be enabled: fortytwo_admin
+Do you really want to continue? (y/n): y
+fortytwo_admin was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+Do you want to update admin key in system.theme config? (y/n): y
+chmod: cannot access 'content.repository.live-fodbold.dk': No such file or directory
+chmod: cannot access 'content.repository.live-fodbold.dk/files': No such file or directory
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m
+rp_base.settings config does not exist. Do you want to create a new config object? (y/n): y
+rp_base_site_url key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
+rp_base_site_url_api key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
+rp_base_def_channel key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
+Plugin ID/Model: site_info Description: CMS Sites Info Config Repo API Model (all of them)
+Update is enabled
+No entities created or updated
+
+Done....
+
+ Schedule day(2018-08-07). Update started at 01:00:20 whit (0) events.  
+
+
+ Schedule day(2018-08-07) has been updating at 01:00:20 whit (0) events.  
+
+
+ Schedule day(2018-08-08). Update started at 01:00:21 whit (0) events.  
+
+
+ Schedule day(2018-08-08) has been updating at 01:00:21 whit (0) events.  
+
+
+ Schedule day(2018-08-09). Update started at 01:00:22 whit (0) events.  
+
+
+ Schedule day(2018-08-09) has been updating at 01:00:22 whit (0) events.  
+
+
+ Schedule day(2018-08-10). Update started at 01:00:22 whit (0) events.  
+
+
+ Schedule day(2018-08-10) has been updating at 01:00:22 whit (0) events.  
+
+
+ Schedule day(2018-08-11). Update started at 01:00:24 whit (0) events.  
+
+
+ Schedule day(2018-08-11) has been updating at 01:00:24 whit (0) events.  
+
+
+ Schedule day(2018-08-12). Update started at 01:00:25 whit (0) events.  
+
+
+ Schedule day(2018-08-12) has been updating at 01:00:25 whit (0) events.  
+
+
+ Schedule day(2018-08-13). Update started at 01:00:26 whit (0) events.  
+
+
+ Schedule day(2018-08-13) has been updating at 01:00:26 whit (0) events.  
+
+
+ Schedule day(2018-08-14). Update started at 01:00:26 whit (0) events.  
+
+
+ Schedule day(2018-08-14) has been updating at 01:00:26 whit (0) events.  
+
+
+ Schedule day(2018-08-15). Update started at 01:00:27 whit (0) events.  
+
+
+ Schedule day(2018-08-15) has been updating at 01:00:27 whit (0) events.  
+
+
+ Schedule day(2018-08-16). Update started at 01:00:27 whit (0) events.  
+
+
+ Schedule day(2018-08-16) has been updating at 01:00:27 whit (0) events.  
+
+
+ Schedule day(2018-08-17). Update started at 01:00:28 whit (0) events.  
+
+
+ Schedule day(2018-08-17) has been updating at 01:00:28 whit (0) events.  
+
+
+ Schedule day(2018-08-18). Update started at 01:00:28 whit (0) events.  
+
+
+ Schedule day(2018-08-18) has been updating at 01:00:28 whit (0) events.  
+
+
+ Schedule day(2018-08-19). Update started at 01:00:29 whit (0) events.  
+
+
+ Schedule day(2018-08-19) has been updating at 01:00:29 whit (0) events.  
+
+
+ Schedule day(2018-08-20). Update started at 01:00:30 whit (0) events.  
+
+
+ Schedule day(2018-08-20) has been updating at 01:00:30 whit (0) events.  
+
+
+ Schedule day(2018-08-21). Update started at 01:00:30 whit (0) events.  
+
+
+ Schedule day(2018-08-21) has been updating at 01:00:30 whit (0) events.  
+
+Import data from API(http://steve.rebelpenguin.dk).
+Success.
+Checked translation for admin_toolbar.                                                                                                                           [1;32;40m[1m[ok][0m
+Checked translation for drupal.                                                                                                                                  [1;32;40m[1m[ok][0m
+Checked translation for config_update.                                                                                                                           [1;32;40m[1m[ok][0m
+Checked translation for ctools.                                                                                                                                  [1;32;40m[1m[ok][0m
+Checked translation for devel.                                                                                                                                   [1;32;40m[1m[ok][0m
+Checked translation for features.                                                                                                                                [1;32;40m[1m[ok][0m
+Checked translation for field_group.                                                                                                                             [1;32;40m[1m[ok][0m
+Checked translation for metatag.                                                                                                                                 [1;32;40m[1m[ok][0m
+Checked translation for page_manager.                                                                                                                            [1;32;40m[1m[ok][0m
+Checked translation for panelizer.                                                                                                                               [1;32;40m[1m[ok][0m
+Checked translation for panels.                                                                                                                                  [1;32;40m[1m[ok][0m
+Checked translation for pathauto.                                                                                                                                [1;32;40m[1m[ok][0m
+Checked translation for restui.                                                                                                                                  [1;32;40m[1m[ok][0m
+Checked translation for steve_RP.                                                                                                                                [1;32;40m[1m[ok][0m
+Checked translation for schema_metatag.                                                                                                                          [1;32;40m[1m[ok][0m
+Checked translation for shortcode.                                                                                                                               [1;32;40m[1m[ok][0m
+Checked translation for token.                                                                                                                                   [1;32;40m[1m[ok][0m
+Checked translation for bootstrap.                                                                                                                               [1;32;40m[1m[ok][0m
+Checked translation for fortytwo_admin.                                                                                                                          [1;32;40m[1m[ok][0m
+Downloaded translation for admin_toolbar.                                                                                                                        [1;32;40m[1m[ok][0m
+Imported translation for admin_toolbar.                                                                                                                          [1;32;40m[1m[ok][0m
+Downloaded translation for drupal.                                                                                                                               [1;32;40m[1m[ok][0m
+Importing translation for drupal. (1%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (2%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (3%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (4%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (5%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (7%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (9%).                                                                                                                          [1;32;40m[1m[ok][0m
+Importing translation for drupal. (10%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (12%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (14%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (18%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (21%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (23%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (26%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (29%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (33%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (35%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (38%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (41%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (44%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (48%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (51%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (54%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (57%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (60%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (63%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (66%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (69%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (71%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (73%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (76%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (80%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (82%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (85%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (90%).                                                                                                                         [1;32;40m[1m[ok][0m
+Importing translation for drupal. (95%).                                                                                                                         [1;32;40m[1m[ok][0m
+Imported translation for drupal.                                                                                                                                 [1;32;40m[1m[ok][0m
+Downloaded translation for config_update.                                                                                                                        [1;32;40m[1m[ok][0m
+Imported translation for config_update.                                                                                                                          [1;32;40m[1m[ok][0m
+Downloaded translation for ctools.                                                                                                                               [1;32;40m[1m[ok][0m
+Imported translation for ctools.                                                                                                                                 [1;32;40m[1m[ok][0m
+Downloaded translation for devel.                                                                                                                                [1;32;40m[1m[ok][0m
+Importing translation for devel. (95%).                                                                                                                          [1;32;40m[1m[ok][0m
+Imported translation for devel.                                                                                                                                  [1;32;40m[1m[ok][0m
+Downloaded translation for features.                                                                                                                             [1;32;40m[1m[ok][0m
+Imported translation for features.                                                                                                                               [1;32;40m[1m[ok][0m
+Downloaded translation for field_group.                                                                                                                          [1;32;40m[1m[ok][0m
+Imported translation for field_group.                                                                                                                            [1;32;40m[1m[ok][0m
+Downloaded translation for metatag.                                                                                                                              [1;32;40m[1m[ok][0m
+Imported translation for metatag.                                                                                                                                [1;32;40m[1m[ok][0m
+Downloaded translation for page_manager.                                                                                                                         [1;32;40m[1m[ok][0m
+Imported translation for page_manager.                                                                                                                           [1;32;40m[1m[ok][0m
+Downloaded translation for panelizer.                                                                                                                            [1;32;40m[1m[ok][0m
+Imported translation for panelizer.                                                                                                                              [1;32;40m[1m[ok][0m
+Downloaded translation for panels.                                                                                                                               [1;32;40m[1m[ok][0m
+Imported translation for panels.                                                                                                                                 [1;32;40m[1m[ok][0m
+Downloaded translation for pathauto.                                                                                                                             [1;32;40m[1m[ok][0m
+Imported translation for pathauto.                                                                                                                               [1;32;40m[1m[ok][0m
+Downloaded translation for restui.                                                                                                                               [1;32;40m[1m[ok][0m
+Imported translation for restui.                                                                                                                                 [1;32;40m[1m[ok][0m
+Downloaded translation for schema_metatag.                                                                                                                       [1;32;40m[1m[ok][0m
+Imported translation for schema_metatag.                                                                                                                         [1;32;40m[1m[ok][0m
+Downloaded translation for shortcode.                                                                                                                            [1;32;40m[1m[ok][0m
+Imported translation for shortcode.                                                                                                                              [1;32;40m[1m[ok][0m
+Downloaded translation for token.                                                                                                                                [1;32;40m[1m[ok][0m
+Imported translation for token.                                                                                                                                  [1;32;40m[1m[ok][0m
+Downloaded translation for bootstrap.                                                                                                                            [1;32;40m[1m[ok][0m
+Imported translation for bootstrap.                                                                                                                              [1;32;40m[1m[ok][0m
+Downloaded translation for fortytwo_admin.                                                                                                                       [1;32;40m[1m[ok][0m
+Imported translation for fortytwo_admin.                                                                                                                         [1;32;40m[1m[ok][0m
+18 translation files imported. 7806 translations were added, 613 translations were updated and 0 translations were removed.                                      [1;32;40m[1m[status][0m
+Added language: da                                                                                                                                               [1;32;40m[1m[ok][0m
+--2018-08-07 13:01:29--  http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po
+Resolving ftp.drupal.org (ftp.drupal.org)... 151.101.85.175
+Connecting to ftp.drupal.org (ftp.drupal.org)|151.101.85.175|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://ftp-origin.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po [following]
+--2018-08-07 13:01:29--  https://ftp-origin.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po
+Resolving ftp-origin.drupal.org (ftp-origin.drupal.org)... 151.101.85.175
+Connecting to ftp-origin.drupal.org (ftp-origin.drupal.org)|151.101.85.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 730205 (713K) [application/octet-stream]
+drupal-8.6.0-beta2.da.po: Permission denied
+
+Cannot write to ‘drupal-8.6.0-beta2.da.po’ (Success).
+The drush command 'l--uri=content.repository.live-fodbold.dk language-import da drupal-8.6.0-beta2.da.po' could not be found.  Run `drush cache-clear drush` to  [31;40m[1m[error][0m
+clear the commandfile cache if you have installed new extensions.
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m

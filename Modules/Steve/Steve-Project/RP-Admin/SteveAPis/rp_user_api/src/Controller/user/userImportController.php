@@ -20,7 +20,6 @@ class userImportController extends ControllerBase{
       $userOBJ =  $rpClient->getUser();
       $user = new UserSteve();
       $user->inesertUser($userOBJ);
-
       return true;
     }
 

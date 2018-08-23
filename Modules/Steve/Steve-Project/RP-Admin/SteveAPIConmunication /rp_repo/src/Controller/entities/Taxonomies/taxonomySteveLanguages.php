@@ -28,6 +28,7 @@ class taxonomySteveLanguages extends taxonomy
         'vid' => 'steve_languages',
       ];
       if (!($this->getTaxonomyByOBj($obj))) {
+        print "New Lang - ". $language['name']."\n";
         $this->createGenericTaxonomy($obj);
       }
     return TRUE;
@@ -46,6 +47,7 @@ class taxonomySteveLanguages extends taxonomy
         'vid' => 'steve_languages',
       ];
       if (!($this->getTaxonomyByOBj($obj))) {
+        print "New Lang - ". $language['name']."\n";
         $this->createGenericTaxonomy($obj);
       }
     }

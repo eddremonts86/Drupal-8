@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Stream Provider'
-vid: stream_provider
-description: ''
-hierarchy: 1
-weight: -7

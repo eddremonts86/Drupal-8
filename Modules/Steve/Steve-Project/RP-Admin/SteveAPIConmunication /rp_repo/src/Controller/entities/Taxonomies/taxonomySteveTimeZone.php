@@ -17,14 +17,15 @@ class taxonomySteveTimeZone extends taxonomy {
 
   public function importTimeZones() {
     $rpClient = RPAPIClient::getClient(); //new guzzle http object
-    $all_t_zones = $rpClient->getTimezones(); //get Schedule from API(JSON)
-    foreach ($all_t_zones as $_t_zone) {
+    $allTZones = $rpClient->getTimezones(); //get Schedule from API(JSON)
+    foreach ($allTZones as $tZone) {
       $obj = [
-        'field_api_id' => $_t_zone['id'],
-        'name' => $_t_zone['name'],
+        'field_api_id' => $tZone['id'],
+        'name' => $tZone['name'],
         'vid' => 'steve_timezones',
       ];
       if (!($this->getTaxonomyByOBj($obj))) {
+        print "New Time Zone - ".$tZone['name']."\n";
         $this->createGenericTaxonomy($obj);
       }
     }
@@ -33,16 +34,32 @@ class taxonomySteveTimeZone extends taxonomy {
   public function importTimeZone($api_id) {
     $obj=['id' => $api_id];
     $rpClient = RPAPIClient::getClient(); //new guzzle http object
-    $_t_zone = $rpClient->getTimezone($obj); //get Schedule from API(JSON)
+    $tZone = $rpClient->getTimezone($obj); //get Schedule from API(JSON)
       $obj = [
-        'field_api_id' => $_t_zone['id'],
-        'name' => $_t_zone['name'],
+        'field_api_id' => $tZone['id'],
+        'name' => $tZone['name'],
         'vid' => 'steve_timezones',
       ];
       if (!($this->getTaxonomyByOBj($obj))) {
+        print "New Time Zone - ".$tZone['name']."\n";
         $this->createGenericTaxonomy($obj);
 
     }
   }
+
+
+  public function importTimeZoneByOBJ($tZone) {
+    $obj = [
+      'field_api_id' => $tZone['id'],
+      'name' => $tZone['name'],
+      'vid' => 'steve_timezones',
+    ];
+    if (!($this->getTaxonomyByOBj($obj))) {
+      print "New Time Zone - ".$tZone['name']."\n";
+      $this->createGenericTaxonomy($obj);
+
+    }
+  }
+
 
 }

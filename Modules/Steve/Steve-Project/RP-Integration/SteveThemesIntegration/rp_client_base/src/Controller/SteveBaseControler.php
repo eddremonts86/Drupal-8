@@ -216,7 +216,6 @@ abstract class SteveBaseControler extends ControllerBase
     public function getSport($id = NULL, $type = NULL)
     {
         $data = ['vid' => 'sport'];
-
         if (!is_null($id) && !is_null($type)) {
             switch ($type) {
                 case 'node':
@@ -243,23 +242,28 @@ abstract class SteveBaseControler extends ControllerBase
                 }
             }
         }
-
         if (empty($data['tid']) && empty($data['field_api_id'])) {
             return [];
         }
 
         $sportObj = $this->getTaxonomyByCriterio($data);
-        $sportbackground = @$this->getImgUrl($sportObj->field_background->target_id);
-        $sportbackground = (isset($sportbackground)) ? $sportbackground : '';
-        $sportObjFormnat = [
+        if($sportObj!=false){
+          $sportbackground = @$this->getImgUrl($sportObj->field_background->target_id);
+          $sportbackground = (isset($sportbackground)) ? $sportbackground : '';
+          $sportObjFormnat = [
             'sportDrupalId' => $sportObj->id(),
             'sportName' => $sportObj->name->value,
             'sportBackground' => $sportbackground,
             'sportColor' => (isset($sportObj->field_base_color->value) ? $sportObj->field_base_color->value : NULL)
-        ];
+          ];
 
-        return $sportObjFormnat;
-    }
+          return $sportObjFormnat;
+
+          }
+        else{
+          return [];
+        }
+  }
 
     public function getNodeByUrl($toArray = 0)
     {

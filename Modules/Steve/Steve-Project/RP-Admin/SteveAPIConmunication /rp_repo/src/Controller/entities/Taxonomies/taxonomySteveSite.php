@@ -18,12 +18,7 @@ use Drupal\rp_repo\Controller\entities\Taxonomies\TaxonomyChannel;
 use Drupal\rp_repo\Controller\entities\Taxonomies\taxonomyStream;
 use \Drupal\file\Entity\File;
 
-
-
 class taxonomySteveSite extends taxonomy {
-
-
-
 
   public function getSitebyToken($token) {
     $obj = [
@@ -50,7 +45,6 @@ class taxonomySteveSite extends taxonomy {
     }
 
     if (isset($siteID) and isset($allsites)) {
-
 
       $allsitesChannels = $rpClient->getSiteChannel($siteID);
       $channels = new TaxonomyChannel();
@@ -79,7 +73,8 @@ class taxonomySteveSite extends taxonomy {
       */
 
       $t_zone = new taxonomySteveTimeZone ();
-      $t_zone->importTimeZones();
+      $t_zone->importTimeZoneByOBJ($allsites["timezone"]);
+
       $this->createSite($allsites);
       return TRUE;
     }
@@ -154,6 +149,7 @@ class taxonomySteveSite extends taxonomy {
       'field_api_id' => $site['id'],
     ];
     if (!($this->getTaxonomyByOBj($objT))) {
+      print "New Site - ".$site['name']."\n";;
       $this->createGenericTaxonomy($obj);
     }
     return TRUE;
@@ -252,7 +248,6 @@ class taxonomySteveSite extends taxonomy {
       return $all_site;
   }
 
-
   public function getFileURL($id) {
     $imgUrl = '';
     if (isset($id) and $id != NULL and $id != '') {
@@ -262,7 +257,5 @@ class taxonomySteveSite extends taxonomy {
     }
     return $imgUrl;
   }
-
-
 
 }

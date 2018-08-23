@@ -26,15 +26,22 @@ class Users {
     $id = $siteObj->getTaxonomyByOBj($obj, 1);
     foreach ($userArray['data']['users'] AS $userA) {
       if (isset($userA['token']) and $userA['token'] != "") {
-        $users = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties([/*'field_token' => $userA['token'],*/'name' => $userA['name']]);
-        $user = User::load(reset($users)->id());
-        $picture = $img->getImg($userA['user_picture']['img_url'], $userA['user_picture']['alt'], 'user');
-        $user->set('user_picture', $picture);
-        $user->set('roles', $userA['roles']);
-        $user->set('status', $userA['status']);
-        $user->set('field_token', $userA['token']);
-        $user->set('field_sites_asignated', $id);
-        $user->save();
+        $users = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties(['name' => $userA['name']]);
+       if(isset($users) and !empty($users)){
+          $userDrupalID = reset($users)->id();
+          $user = User::load($userDrupalID);
+          $picture = $img->getImg($userA['user_picture']['img_url'], $userA['user_picture']['alt'], 'user');
+          $user->set('user_picture', $picture);
+          $user->set('roles', $userA['roles']);
+          $user->set('status', $userA['status']);
+          $user->set('field_token', $userA['token']);
+          $user->set('field_sites_asignated', $id);
+          $user->save();
+        }
+        else{
+          $getUser['data']['users'][]=$userA;
+          $this->inesertUser($getUser);
+        }
       }
     }
   }

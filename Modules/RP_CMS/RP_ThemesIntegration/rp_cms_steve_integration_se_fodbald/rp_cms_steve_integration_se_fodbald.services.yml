@@ -1,5 +1,0 @@
-services:
-  rp_cms_steve_integration_se_fodbald.breadcrumb:
-    class: Drupal\rp_cms_steve_integration_se_fodbald\SeFodbaldBreadcrumbBuilder
-    tags:
-      - { name: breadcrumb_builder, priority: 1000 }

@@ -1,5 +1,0 @@
-services:
-  rp_repo.reposervice:
-    class: Drupal\rp_repo\RepoService
-    arguments: []
-

@@ -1,8 +1,0 @@
-
-rp_metadata.default_controller_hello:
-  path: '/rp_metadata/hello/{name}'
-  defaults:
-    _controller: '\Drupal\rp_metadata\Controller\DefaultController::hello'
-    _title: 'test'
-  requirements:
-    _permission: 'access content'

@@ -28,7 +28,7 @@ class FodbaldHomeMatchesPlugin extends BlockBase
 
         $data = [
             '#theme' => 'fodbaldhomematchesplugin',
-            '#tags' => $controllerObject->getSchedulePlusTree(0, "Y-m-d", 5, 0, $controllerObject->getSport(2, 'api'), NULL, NULL, ['LiveFodbaldScheduleFormatModificator']),
+            '#tags' => $controllerObject->getSchedulePlusTree(0, "Y-m-d", 1, 0, $controllerObject->getSport(2, 'api'), NULL, NULL, ['LiveFodbaldScheduleFormatModificator']),
             '#article' => $controllerObject->getFodbaldPreviews(10, null, 2),
             '#background' => [],
             '#colors' => []

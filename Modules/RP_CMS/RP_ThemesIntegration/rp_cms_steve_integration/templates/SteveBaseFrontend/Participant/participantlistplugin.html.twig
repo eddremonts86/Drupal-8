@@ -1,8 +1,0 @@
-<div class="list-group">
-	<div class="list-group-item" {{ colors ? attributes.setAttribute('style', 'background: ' ~ colors.main) : ''}}> Event List </div>
-	{% for event in tags %}
-		 <a href="{{ event.eventLink }}" class="list-group-item">
-			 <p>{{ event.eventDate | date("d.M Y")}} &nbsp; {{ event.eventName }}</p>
-		 </a>
-	{% endfor %}
-</div>

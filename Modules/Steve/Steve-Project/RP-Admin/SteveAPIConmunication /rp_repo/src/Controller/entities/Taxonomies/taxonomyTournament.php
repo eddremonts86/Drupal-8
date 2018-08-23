@@ -194,7 +194,7 @@ class taxonomyTournament extends taxonomy {
       $node->field_logo_date = $logo_modified;
       $node->field_logo = $newLogo;
       $node->save();
-      echo 'Update Tournament -' . $competitionName . ' - at ' . date("h:i:s") . "\n";
+      print 'Update Tournament -' . $competitionName . ' - at ' . date("h:i:s") . "\n";
     }
     return $competitionId;
   }

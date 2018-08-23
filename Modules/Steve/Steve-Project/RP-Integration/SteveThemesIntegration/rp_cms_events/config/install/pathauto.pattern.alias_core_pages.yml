@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: alias_core_pages
+label: 'Alias  - Core Pages'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  6830aff7-9176-4546-8e31-6e3a561aa9b4:
+    id: node_type
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6830aff7-9176-4546-8e31-6e3a561aa9b4
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,106 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Content Repository",
+		"_postman_id": "ca3fd6d3-bc7c-d385-a1c4-97b4441af556",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sites",
+			"description": "",
+			"item": [
+				{
+					"name": "Get All Sites",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/getSites",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Site by Site ID",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/getSite/2",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Parameters : \n\t- Site id (exp : 2)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User/Users by Site id",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/updateUser/13",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Parameters : \n\t- Site id (exp : 2)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all Users",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/getUsers",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by site id",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/getUser/2",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Parameters : \n\t- Site id (exp : 2)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Full Content",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/getUserContent/13",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Parameters : \n\t- Site id (exp : 2)"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User by site id ",
+					"request": {
+						"url": "http://user.controller.cu/steveAPI/updateUser/13",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "The difference between \"Get User by site id\" and \"Update User by site id\" is that the second returns all users are blocked or not.\n\n\nParameters : \n\t- Site id (exp : 2)\n\n\n"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

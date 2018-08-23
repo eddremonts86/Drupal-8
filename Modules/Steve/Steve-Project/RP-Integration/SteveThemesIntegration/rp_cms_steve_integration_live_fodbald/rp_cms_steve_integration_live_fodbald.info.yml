@@ -6,4 +6,4 @@ package: 'Rebel Penguins CMS - Frontend'
 project: steve_RP
 dependencies:
   - steve_RP:rp_client_base
-project: 'steve_integration_live_fodbald'
+  - rp_cms_steve_base_config

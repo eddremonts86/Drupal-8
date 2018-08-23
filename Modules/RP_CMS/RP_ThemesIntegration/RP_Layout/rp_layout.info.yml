@@ -1,8 +1,0 @@
-name : 'RP CMS -  Layout'
-description : 'Provides layouts'
-core: 8.x
-type: module
-package: 'Rebel Penguins CMS - Frontend'
-project: 'steve_RP'
-dependencies:
-  - panels:panels

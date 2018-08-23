@@ -1,8 +1,0 @@
-name: RP CMS - Json LD
-description: Provides Json LD 
-type: module
-core: 8.x
-package: 'Rebel Penguins CMS - Frontend'
-project: steve_RP
-dependencies:
-  - steve_RP:rp_client_base

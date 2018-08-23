@@ -1,0 +1,27 @@
+{
+  "multisite" : "content.repository.steve-watchfooty.cu",
+  "siteDB": "content_repository_steve_watchfooty_cu",
+  "id_site": "13",
+
+  "base_THEME":"stevethemebase",
+  "base_THEME_CONF":"rp_cms_steve_base_config",
+  "admima_theme":"fortytwo_admin",
+  "langcode":"en",
+  "site_name":"Steve - Watchfooty.cu Content Repository",
+  "site_mail":"contact@client1.dev",
+  "account_name":"admin",
+  "account_mail":"contact@client1.dev",
+  "account_pass":"admin",
+
+  "type":"mysql",
+  "host":"localhost",
+  "name":"content_repository_steve_watchfooty_cu",
+  "user":"root",
+  "pass":"root",
+  "port":"3316",
+
+  "base_site_api_id":"13",
+  "base_site_url":"http://content.repository.steve-watchfooty.cu",
+  "site_url_api":"http://user.controller.cu/"
+
+}

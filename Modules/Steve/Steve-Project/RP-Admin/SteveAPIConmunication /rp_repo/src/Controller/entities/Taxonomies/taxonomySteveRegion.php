@@ -18,16 +18,17 @@ class taxonomySteveRegion extends taxonomy
 
   public function importRegions() {
     $rpClient = RPAPIClient::getClient(); //new guzzle http object
-    $allsites = $rpClient->getRegions(); //get Schedule from API(JSON)
-    foreach ($allsites as $site) {
+    $Regions = $rpClient->getRegions(); //get Schedule from API(JSON)
+    foreach ($Regions as $region) {
       $obj = [
-        'field_api_id' => $site['id'],
-        'name' => $site['name'],
-        'field_code' => $site['code'],
-        'field_parent' => $site['parent']? $site['parent']: " ",
+        'field_api_id' => $region['id'],
+        'name' => $region['name'],
+        'field_code' => $region['code'],
+        'field_parent' => $region['parent']? $region['parent']: " ",
         'vid' => 'steve_regions',
       ];
       if (!($this->getTaxonomyByOBj($obj))) {
+        print "New Region - ". $region['name']."\n";
         $this->createGenericTaxonomy($obj);
       }
     }
@@ -36,15 +37,16 @@ class taxonomySteveRegion extends taxonomy
   public function importRegion($api_id) {
     $obj=['id'=>$api_id];
     $rpClient = RPAPIClient::getClient(); //new guzzle http object
-    $site = $rpClient->getRegion($obj); //get Schedule from API(JSON)
+    $region = $rpClient->getRegion($obj); //get Schedule from API(JSON)
       $obj = [
-        'field_api_id' => $site['id'],
-        'name' => $site['name'],
-        'field_code' => $site['code'],
-        'field_parent' => $site['parent']? $site['parent']: " ",
+        'field_api_id' => $region['id'],
+        'name' => $region['name'],
+        'field_code' => $region['code'],
+        'field_parent' => $region['parent']? $region['parent']: " ",
         'vid' => 'steve_regions',
       ];
       if (!($this->getTaxonomyByOBj($obj))) {
+        print "New Region - ". $region['name']."\n";
         $this->createGenericTaxonomy($obj);
 
     }

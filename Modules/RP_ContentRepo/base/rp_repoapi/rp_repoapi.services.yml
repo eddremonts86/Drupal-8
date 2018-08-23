@@ -1,3 +1,0 @@
-services:
-  rp_api.client:
-    class: Drupal\rp_repoapi\RPRepoAPIClient

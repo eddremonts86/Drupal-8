@@ -1,0 +1,26 @@
+{
+  "multisite" : "content.repository.sesport.cu",
+  "siteDB": "content_repository_sesport_cu",
+  "id_site": "2",
+
+  "base_THEME":"stevethemebase",
+  "base_THEME_CONF":"rp_cms_steve_base_config",
+  "admima_theme":"fortytwo_admin",
+  "langcode":"en",
+  "site_name":"Sesport.cu Content Repository",
+  "site_mail":"contact@client1.dev",
+  "account_name":"admin",
+  "account_mail":"contact@client1.dev",
+  "account_pass":"admin",
+
+  "type":"mysql",
+  "host":"localhost",
+  "name":"content_repository_sesport_cu",
+  "user":"root",
+  "pass":"root",
+  "port":"3316",
+
+  "base_site_api_id":"2",
+  "base_site_url":"http://content.repository.sesport.cu",
+  "site_url_api":"http://user.controller.cu/"
+}

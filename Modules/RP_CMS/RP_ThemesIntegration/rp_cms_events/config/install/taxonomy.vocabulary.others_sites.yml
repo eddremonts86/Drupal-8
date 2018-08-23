@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Others Sites'
-vid: others_sites
-description: 'List of links to other sites.'
-hierarchy: 0
-weight: 0

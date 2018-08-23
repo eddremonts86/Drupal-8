@@ -126,7 +126,7 @@ class support extends ControllerBase
     return $s;
   }
 
-  public function getMultiplesAlias($urldata)
+  /*public function getMultiplesAlias($urldata)
   {
     $data = RPCmsSiteInfoHelper::getSiteInfoCombos();
     $slugify = new Slugify();
@@ -138,7 +138,7 @@ class support extends ControllerBase
       }
     }
     return $list;
-  }
+  }*/
 
   public function getAliasbyUrl($alias)
   {

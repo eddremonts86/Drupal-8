@@ -2,21 +2,20 @@
 
 namespace Drupal\rp_repo\Controller\oldVersion;
 
-
 use Drupal\Core\Controller\ControllerBase;
-
-
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\rp_api\RPAPIClient;
+
+/*
 use Cocur\Slugify\Slugify;
 use Drupal\rp_repo\Controller\oldVersion\RepoGeneralGetInfo;
 use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\taxonomy\Plugin\views\argument\Taxonomy;
-
 use Drupal\Core\Language\LanguageInterface;
+*/
 
 /**
  * Class UpdateClienetData.
@@ -82,8 +81,8 @@ class UpdateClienetData extends ControllerBase
     ];
     $data = json_decode($node->field_events_properties->value);
     $sport = $getInfoObj->getTaxonomyByCriterioMultiple($obj, 0);
-    $alias = '/' . $region . '/' . $getInfoObj->getClearUrl(reset($sport)["name"]["x-default"]) . '/' . $getInfoObj->getClearUrl($event['name']);
-    $ifAlias = $getInfoObj->getAlias('/node/' . $node_id, $alias);
+    $alias = '/'.$region.'/'.$getInfoObj->getClearUrl(reset($sport)["name"]["x-default"]).'/'.$getInfoObj->getClearUrl($event['name']);
+    $ifAlias = $getInfoObj->getAlias('/node/'.$node_id, $alias);
     if (!isset($data->$region)) {
       $metaSportArray = $event['sport'];
       $metaCompetitionArray = $event['competition'];
@@ -97,7 +96,6 @@ class UpdateClienetData extends ControllerBase
         "participants" => $metaParticipantsArray,
         "streamers" => $metaStreamproviderArray,
       ];
-
       $properties = json_encode($data);
       $this->createTranslation($node, $region, $properties, $alias);
     }
@@ -204,11 +202,12 @@ class UpdateClienetData extends ControllerBase
     }
     return true;
   }
+
   public function createTranslation($node, $region, $properties = [], $alias)
-  {return true;
+  {
     $defLand = \Drupal::languageManager()->getDefaultLanguage()->getId();
     if (!$node->hasTranslation($region) and $region != $defLand) {
-      var_dump("Making translation to " . $region . "lang");
+      print "Making translation to " . $region . "lang";
       $node_translate = $node;
       if (!empty($properties)) {
         $newTranslation = [
@@ -218,12 +217,14 @@ class UpdateClienetData extends ControllerBase
         $translated_entity_array = array_merge($node->toArray(), $newTranslation);
         $node_translate->addTranslation(strval($region), $translated_entity_array)->save();
         return true;
-      } else {
+      }
+      else {
         $newTranslation = [
           'title' => $node->getTitle() . ' -' . $region
         ];
         $translated_entity_array = array_merge($node->toArray(), $newTranslation);
         $node_translate->addTranslation(strval($region), $translated_entity_array)->save();
+        print 'Title Translation ';
         return true;
       }
     }

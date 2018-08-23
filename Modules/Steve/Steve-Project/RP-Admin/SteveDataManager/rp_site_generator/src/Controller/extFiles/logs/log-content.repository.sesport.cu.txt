@@ -1,0 +1,875 @@
+------------- All your Conf Vars --------------------
+1 -  content.repository.sesport.cu   
+2 -  content_repository_sesport_cu  
+3 -  2  
+4 -  stevethemebase  
+5 -  rp_cms_steve_base_config  
+6 -  fortytwo_admin  
+7 -  en  
+8 -  Sesport.cu_Content_Repository  
+9 -  contact@client1.dev  
+10 -  admin  
+11 -  contact@client1.dev  
+12 -  admin  
+13 -  mysql  
+14 -  localhost  
+15 -  content_repository_sesport_cu  
+16 -  root  
+17 -  root  
+18 -  3316  
+19 -  2  
+20 -  http://content.repository.sesport.cu  
+21 -  http://user.controller.cu/  
+
+
+ --------------File work -------------------
+ Crerating Folder content.repository.sesport.cu 
+ Crerating content.repository.sesport.cu SETTINGS   
+Writing in [core]/sites.php 
+ --------------Data base work -------------------
+      Creating Database localhost
+Creating database content_repository_sesport_cu. Any possible existing database will be dropped!
+Do you really want to continue? (y/n): y
+You are about to DROP all tables in your 'content_repository_sesport_cu' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the --notify global option.                                                                     [1;32;40m[1m[ok][0m
+Installation complete.                                                                                                                                           [1;32;40m[1m[ok][0m
+Congratulations, you installed Drupal!                                                                                                                           [1;32;40m[1m[status][0m
+ ---------------------------------
+Installing drupal site  Sesport.cu_Content_Repository 
+---------------------------------
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m
+ ---------------------------------
+Installing other core and contib modules 
+---------------------------------
+The following extensions will be enabled: media
+Do you really want to continue? (y/n): y
+media was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
+media defines the following permissions: create audio media, create file media, create image media, create video media, delete any audio media, delete any file media, delete any image media, delete any video media, delete own audio media, delete own file media, delete own image media, delete own video media, edit any audio media, edit any file media, edit any image media, edit any video media, edit own audio media, edit own file media, edit own image media, edit own video media, access media overview, administer media, administer media types, create media, delete any media, delete media, update any media, update media, view all media revisions, view media
+The following extensions will be enabled: admin_toolbar_tools, admin_toolbar
+Do you really want to continue? (y/n): y
+admin_toolbar was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+admin_toolbar_tools was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
+The following extensions will be enabled: admin_toolbar_links_access_filter
+Do you really want to continue? (y/n): y
+admin_toolbar_links_access_filter was enabled successfully.                                                                                                      [1;32;40m[1m[ok][0m
+The following extensions will be enabled: ctools_views
+Do you really want to continue? (y/n): y
+ctools_views was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+The following extensions will be enabled: field_layout, layout_discovery
+Do you really want to continue? (y/n): y
+field_layout was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+layout_discovery was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+The following extensions will be enabled: layout_builder
+Do you really want to continue? (y/n): y
+layout_builder was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+layout_builder defines the following permissions: configure any layout
+The following extensions will be enabled: devel
+Do you really want to continue? (y/n): y
+devel was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
+devel defines the following permissions: access devel information, execute php code, switch users
+The following extensions will be enabled: devel_generate
+Do you really want to continue? (y/n): y
+devel_generate was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+devel_generate defines the following permissions: administer devel_generate
+The following extensions will be enabled: features, config_update
+Do you really want to continue? (y/n): y
+config_update was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+features was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+The following extensions will be enabled: field_group
+Do you really want to continue? (y/n): y
+field_group was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: shortcode
+Do you really want to continue? (y/n): y
+shortcode was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+The following extensions will be enabled: panelizer, panels_ipe, panels, ctools, ctools_block
+Do you really want to continue? (y/n): y
+ctools was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+ctools_block was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+panelizer was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+panelizer defines the following permissions: administer panelizer node article content, administer panelizer node article layout, administer panelizer node article revert, administer panelizer node page content, administer panelizer node page layout, administer panelizer node page revert, administer panelizer user user content, administer panelizer user user layout, administer panelizer user user revert, administer panelizer taxonomy_term tags content, administer panelizer taxonomy_term tags layout, administer panelizer taxonomy_term tags revert, administer panelizer node article defaults, administer panelizer node page defaults, administer panelizer user user defaults, administer panelizer taxonomy_term tags defaults, administer panelizer, set panelizer default
+panels was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+panels defines the following permissions: administer panels layouts, administer panels styles, administer pane access, administer advanced pane settings, use panels caching features, use panels dashboard, use panels locks, use ipe with page manager, view pane admin links
+panels_ipe was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+panels_ipe defines the following permissions: access panels in-place editing
+The following extensions will be enabled: panelizer_quickedit
+Do you really want to continue? (y/n): y
+panelizer_quickedit was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
+The following extensions will be enabled: pathauto, token
+Do you really want to continue? (y/n): y
+pathauto was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+pathauto defines the following permissions: administer pathauto, notify of path changes
+token was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
+The following extensions will be enabled: twig_blocks
+Do you really want to continue? (y/n): y
+twig_blocks was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: schema_metatag, metatag
+Do you really want to continue? (y/n): y
+metatag was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+metatag defines the following permissions: administer meta tags
+schema_metatag was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+ ---------------------------------
+Instaling modules Requires 
+---------------------------------
+The following extensions will be enabled: rp_repo, rp_client_base, rp_jsonld_struct, syslog, responsive_image, page_manager, rp_shortcode, rp_cms_steve_integration, restui, content_translation, language, locale, config_translation, rp_cms_events, rp_cms_site_info, rp_site_info, rp_language, rp_channel, rp_region, rp_site, rp_repoapi, rp_base, serialization, rest, rp_api
+Do you really want to continue? (y/n): y
+config_translation was enabled successfully.                                                                                                                     [1;32;40m[1m[ok][0m
+config_translation defines the following permissions: translate configuration
+content_translation was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
+content_translation defines the following permissions: administer content translation, create content translations, delete content translations, update content translations, translate any entity
+language was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+language defines the following permissions: administer languages
+locale was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+locale defines the following permissions: translate interface
+page_manager was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+page_manager defines the following permissions: administer pages
+responsive_image was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+responsive_image defines the following permissions: administer responsive images
+rest was enabled successfully.                                                                                                                                   [1;32;40m[1m[ok][0m
+rest defines the following permissions: restful get site_rest_resource, administer rest resources
+restui was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+rp_api was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+rp_api defines the following permissions: administer rp_api configuration
+rp_base was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_base defines the following permissions: access rp base configuration
+rp_channel was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+rp_channel defines the following permissions: access channel overview, administer channel entities, add channel entities, delete channel entities, delete all channel revisions, edit channel entities, revert all channel revisions, view all channel revisions, view published channel entities, view unpublished channel entities
+rp_client_base was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+rp_cms_events was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+rp_cms_site_info was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+rp_cms_steve_integration was enabled successfully.                                                                                                               [1;32;40m[1m[ok][0m
+rp_jsonld_struct was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+rp_language was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+rp_language defines the following permissions: access language content overview, administer language content entities, add language content entities, delete language content entities, delete all language content revisions, edit language content entities, revert all language content revisions, view all language content revisions, view published language content entities, view unpublished language content entities
+rp_region was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+rp_region defines the following permissions: access region overview, administer region entities, add region entities, delete region entities, delete all region revisions, edit region entities, revert all region revisions, view all region revisions, view published region entities, view unpublished region entities
+rp_repo was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_repoapi was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+rp_shortcode was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+rp_site was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_site defines the following permissions: access site overview, administer site entities, add site entities, delete site entities, delete all site revisions, edit site entities, revert all site revisions, view all site revisions, view published site entities, view unpublished site entities
+rp_site_info was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+rp_site_info defines the following permissions: access site info overview, administer site info entities, add site info entities, delete site info entities, delete all site info revisions, edit site info entities, revert all site info revisions, view all site info revisions, view published site info entities, view unpublished site info entities
+serialization was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+syslog was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_ad_block
+Do you really want to continue? (y/n): y
+rp_ad_block was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_cookie
+Do you really want to continue? (y/n): y
+rp_cookie was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_style
+Do you really want to continue? (y/n): y
+rp_style was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_layout
+Do you really want to continue? (y/n): y
+rp_layout was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+rp_client_base is already enabled.                                                                                                                               [1;32;40m[1m[ok][0m
+There were no extensions that could be enabled.                                                                                                                  [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_site_api
+Do you really want to continue? (y/n): y
+rp_site_api was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_user_api
+Do you really want to continue? (y/n): y
+rp_user_api was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: drush_language
+Do you really want to continue? (y/n): y
+drush_language was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+ --------------------------------- 
+Instaling Themes and dependencies 
+--------------------------------- 
+The following extensions will be enabled: stevethemebase
+Do you really want to continue? (y/n): y
+stevethemebase was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+Do you want to update default key in system.theme config? (y/n): y
+The following extensions will be enabled: rp_cms_steve_base_config
+Do you really want to continue? (y/n): y
+rp_cms_steve_base_config was enabled successfully.                                                                                                               [1;32;40m[1m[ok][0m
+The following extensions will be enabled: fortytwo_admin
+Do you really want to continue? (y/n): y
+fortytwo_admin was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+Do you want to update admin key in system.theme config? (y/n): y
+rp_base.settings config does not exist. Do you want to create a new config object? (y/n): y
+rp_base_site_url key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
+rp_base_site_url_api key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
+Plugin ID/Model: site_info Description: CMS Sites Info Config Repo API Model (all of them)
+Update is enabled
+No entities created or updated
+
+Done....
+
+ Schedule day(2018-08-07). Update started at 11:34:08 whit (2) events.  
+
+Creating Sport Pages -Football - at 11:34:09
+ Creating menu item '. Football Forside . ' on Menu - at 11:34:09
+ Creating Sport Intern Pages - Live Stream Football - at 11:34:09
+ Creating menu item '. Live Stream Football . ' on Menu - at 11:34:09
+ Creating Sport Internal Blog Page - Blog Football- at 11:34:09
+ Creating menu item '. Blog Football . ' on Menu - at 11:34:09
+ Creating menuitem Football on Menu main - at 11:34:09
+ Creating Participant - West Bromwich- at 11:34:10
+ Creating Participant - Nottingham Forest- at 11:34:12
+ Creating Game Page - Nottingham Forest - West Bromwich - at 11:34:12
+
+ Creating Participant - Middlesbrough- at 11:34:13
+ Creating Participant - Sheffield United- at 11:34:14
+ Creating Game Page - Middlesbrough - Sheffield United - at 11:34:14
+
+
+ Schedule day(2018-08-07) has been updating at 11:34:14 whit (2) events.  
+
+
+ Schedule day(2018-08-08). Update started at 11:34:15 whit (0) events.  
+
+
+ Schedule day(2018-08-08) has been updating at 11:34:15 whit (0) events.  
+
+
+ Schedule day(2018-08-09). Update started at 11:34:17 whit (0) events.  
+
+
+ Schedule day(2018-08-09) has been updating at 11:34:17 whit (0) events.  
+
+
+ Schedule day(2018-08-10). Update started at 11:34:17 whit (9) events.  
+
+ Creating Participant - Malmö FF- at 11:34:19
+ Creating Participant - Dalkurd FF- at 11:34:20
+ Creating Game Page - Dalkurd FF - Malmö FF - at 11:34:20
+
+ Creating Participant - Sirius FK- at 11:34:21
+ Creating Participant - IFK Göteborg- at 11:34:23
+ Creating Game Page - IFK Göteborg - IK Sirius FK - at 11:34:23
+
+ Creating Participant - Vitoria Guimarães- at 11:34:24
+ Creating Participant - Benfica- at 11:34:25
+ Creating Game Page - Benfica - Vitoria Guimarães - at 11:34:26
+
+ Creating Participant - Vejle Boldklub- at 11:34:27
+ Creating Participant - Vendsyssel FF- at 11:34:28
+ Creating Game Page - Vendsyssel FF - Vejle Boldklub - at 11:34:29
+
+ Creating Participant - Paris SG- at 11:34:30
+ Creating Participant - Caen- at 11:34:31
+ Creating Game Page - Caen - Paris SG - at 11:34:32
+
+ Creating Participant - Marseille- at 11:34:33
+ Creating Participant - Toulouse- at 11:34:34
+ Creating Game Page - Marseille - Toulouse - at 11:34:34
+
+ Creating Participant - Leicester City- at 11:34:35
+ Creating Participant - Manchester United- at 11:34:36
+ Creating Game Page - Manchester United - Leicester City - at 11:34:36
+
+ Creating Participant - SC Heerenveen- at 11:34:38
+ Creating Participant - PEC Zwolle- at 11:34:39
+ Creating Game Page - PEC Zwolle - SC Heerenveen - at 11:34:39
+
+ Creating Participant - Tromsø- at 11:34:41
+ Creating Participant - Sandefjord Fotball- at 11:34:42
+ Creating Game Page - Sandefjord Fotball - Tromsø - at 11:34:42
+
+
+ Schedule day(2018-08-10) has been updating at 11:34:42 whit (9) events.  
+
+
+ Schedule day(2018-08-11). Update started at 11:34:44 whit (37) events.  
+
+ Creating Participant - VPS- at 11:34:46
+ Creating Participant - SJK Seinäjoki- at 11:34:47
+ Creating Game Page - VPS - SJK Seinäjoki - at 11:34:47
+
+ Creating Participant - FC Honka- at 11:34:48
+ Creating Participant - TPS- at 11:34:49
+ Creating Game Page - FC Honka - TPS - at 11:34:49
+
+ Creating Participant - Norwich City- at 11:34:50
+ Creating Game Page - Norwich City - West Bromwich - at 11:34:50
+
+ Creating Participant - Birmingham- at 11:34:51
+ Creating Game Page - Middlesbrough - Birmingham - at 11:34:51
+
+ Creating Participant - Brentford- at 11:34:52
+ Creating Participant - Stoke City- at 11:34:53
+ Creating Game Page - Stoke City - Brentford - at 11:34:53
+
+ Creating Participant - Millwall- at 11:34:54
+ Creating Participant - Blackburn Rovers- at 11:34:55
+ Creating Game Page - Blackburn Rovers - Millwall - at 11:34:55
+
+ Creating Participant - Bristol City- at 11:34:56
+ Creating Participant - Bolton- at 11:34:58
+ Creating Game Page - Bolton - Bristol City - at 11:34:58
+
+ Creating Participant - Queens Park Rangers- at 11:34:59
+ Creating Game Page - Queens Park Rangers - Sheffield United - at 11:34:59
+
+ Creating Participant - Hull City- at 11:35:00
+ Creating Participant - Sheffield Wednesday- at 11:35:01
+ Creating Game Page - Sheffield Wednesday - Hull City - at 11:35:01
+
+ Creating Participant - Wigan Athletic- at 11:35:02
+ Creating Participant - Aston Villa- at 11:35:03
+ Creating Game Page - Aston Villa - Wigan Athletic - at 11:35:03
+
+ Creating Participant - Rotherham United- at 11:35:04
+ Creating Participant - Ipswich Town- at 11:35:05
+ Creating Game Page - Rotherham United - Ipswich Town - at 11:35:05
+
+ Creating Participant - Preston North End- at 11:35:06
+ Creating Participant - Swansea City- at 11:35:07
+ Creating Game Page - Swansea City - Preston North End - at 11:35:07
+
+ Creating Participant - OB- at 11:35:08
+ Creating Participant - Hobro- at 11:35:09
+ Creating Game Page - Hobro - Odense BK - at 11:35:09
+
+ Creating Participant - Reading- at 11:35:10
+ Creating Game Page - Nottingham Forest - Reading - at 11:35:10
+
+ Creating Participant - Leeds United- at 11:35:12
+ Creating Participant - Derby County- at 11:35:13
+ Creating Game Page - Derby County - Leeds United - at 11:35:13
+
+ Creating Participant - Dijon- at 11:35:14
+ Creating Participant - Montpellier- at 11:35:15
+ Creating Game Page - Montpellier - Dijon - at 11:35:15
+
+ Creating Participant - Tottenham- at 11:35:16
+ Creating Participant - Newcastle United- at 11:35:17
+ Creating Game Page - Newcastle United - Tottenham - at 11:35:17
+
+ Creating Participant - Rennes- at 11:35:18
+ Creating Participant - Lille- at 11:35:19
+ Creating Game Page - Lille - Rennes - at 11:35:19
+
+ Creating Participant - Monaco- at 11:35:20
+ Creating Participant - Nantes- at 11:35:21
+ Creating Game Page - Nantes - Monaco - at 11:35:21
+
+ Creating Participant - Nîmes Olympique- at 11:35:22
+ Creating Participant - Angers- at 11:35:23
+ Creating Game Page - Angers - Nîmes Olympique - at 11:35:23
+
+ Creating Participant - Nice- at 11:35:24
+ Creating Participant - Reims- at 11:35:25
+ Creating Game Page - Nice - Reims - at 11:35:25
+
+ Creating Participant - Chelsea- at 11:35:26
+ Creating Participant - Huddersfield Town- at 11:35:27
+ Creating Game Page - Huddersfield Town - Chelsea - at 11:35:27
+
+ Creating Participant - Everton- at 11:35:28
+ Creating Participant - Wolverhampton Wanderers- at 11:35:29
+ Creating Game Page - Wolverhampton Wanderers - Everton - at 11:35:29
+
+ Creating Participant - Watford- at 11:35:30
+ Creating Participant - Brighton & Hove Albion- at 11:35:31
+ Creating Game Page - Watford - Brighton & Hove Albion - at 11:35:32
+
+ Creating Participant - Crystal Palace- at 11:35:33
+ Creating Participant - Fulham- at 11:35:34
+ Creating Game Page - Fulham - Crystal Palace - at 11:35:34
+
+ Creating Game Page - Paris SG - Caen - at 11:35:34
+
+ Creating Participant - Cardiff City- at 11:35:35
+ Creating Participant - Bournemouth- at 11:35:36
+ Creating Game Page - Bournemouth - Cardiff City - at 11:35:36
+
+ Creating Participant - VVV Venlo- at 11:35:37
+ Creating Participant - Willem II- at 11:35:38
+ Creating Game Page - Willem II - VVV Venlo - at 11:35:38
+
+ Creating Participant - Fortuna Sittard- at 11:35:39
+ Creating Participant - Excelsior Rotterdam- at 11:35:40
+ Creating Game Page - Excelsior Rotterdam - Fortuna Sittard - at 11:35:40
+
+ Creating Participant - Heracles Almelo- at 11:35:41
+ Creating Participant - Ajax- at 11:35:42
+ Creating Game Page - Ajax - Heracles Almelo - at 11:35:42
+
+ Creating Participant - Santa Clara- at 11:35:43
+ Creating Participant - Marítimo- at 11:35:44
+ Creating Game Page - Marítimo Funchal - Santa Clara - at 11:35:44
+
+ Creating Participant - Aves- at 11:35:45
+ Creating Participant - Vitoria Setúbal- at 11:35:46
+ Creating Game Page - Vitoria Setúbal - Aves - at 11:35:46
+
+ Creating Participant - Belenenses- at 11:35:47
+ Creating Participant - Club Deportivo de Tondela- at 11:35:48
+ Creating Game Page - CD de Tondela - Belenenses - at 11:35:48
+
+ Creating Participant - Chaves- at 11:35:49
+ Creating Participant - FC Porto- at 11:35:50
+ Creating Game Page - FC Porto - Chaves - at 11:35:50
+
+ Creating Participant - IF Brommapojkarna- at 11:35:51
+ Creating Participant - Örebro SK- at 11:35:52
+ Creating Game Page - Örebro SK - IF Brommapojkarna - at 11:35:52
+
+ Creating Participant - Guingamp- at 11:35:53
+ Creating Participant - Saint-Étienne- at 11:35:54
+ Creating Game Page - Saint-Étienne - Guingamp - at 11:35:54
+
+ Creating Participant - FC Utrecht- at 11:35:55
+ Creating Participant - PSV Eindhoven- at 11:35:56
+ Creating Game Page - PSV Eindhoven - FC Utrecht - at 11:35:56
+
+
+ Schedule day(2018-08-11) has been updating at 11:35:56 whit (37) events.  
+
+
+ Schedule day(2018-08-12). Update started at 11:35:58 whit (43) events.  
+
+ Creating Participant - IFK Mariehamn- at 11:35:59
+ Creating Participant - RoPS- at 11:36:00
+ Creating Game Page - RoPS - IFK Mariehamn - at 11:36:00
+
+ Creating Participant - KuPS- at 11:36:01
+ Creating Participant - PS Kemi- at 11:36:02
+ Creating Game Page - KuPS - PS Kemi - at 11:36:02
+
+ Creating Participant - FC Inter Turku- at 11:36:03
+ Creating Participant - FC Lahti- at 11:36:04
+ Creating Game Page - FC Lahti - FC Inter Turku - at 11:36:04
+
+ Creating Participant - Djurgårdens IF- at 11:36:05
+ Creating Participant - BK Häcken- at 11:36:06
+ Creating Game Page - BK Häcken - Djurgårdens IF - at 11:36:06
+
+ Creating Participant - Kalmar FF- at 11:36:07
+ Creating Participant - Östersunds FK- at 11:36:08
+ Creating Game Page - Östersunds FK - Kalmar FF - at 11:36:08
+
+ Creating Participant - IF Elfsborg- at 11:36:09
+ Creating Participant - AIK- at 11:36:10
+ Creating Game Page - AIK - IF Elfsborg - at 11:36:10
+
+ Creating Participant - NAC Breda- at 11:36:12
+ Creating Game Page - AZ Alkmaar - NAC Breda - at 11:36:13
+
+ Creating Participant - Brøndby IF- at 11:36:14
+ Creating Participant - FC København- at 11:36:15
+ Creating Game Page - FC Copenhagen - Brøndby IF - at 11:36:15
+
+ Creating Participant - FC Nordsjælland- at 11:36:16
+ Creating Participant - AaB- at 11:36:17
+ Creating Game Page - AaB Aalborg - FC Nordsjælland - at 11:36:17
+
+ Creating Participant - AGF- at 11:36:18
+ Creating Participant - Randers FC- at 11:36:19
+ Creating Game Page - Randers FC - AGF Aarhus - at 11:36:19
+
+ Creating Participant - AC Horsens- at 11:36:20
+ Creating Participant - FC Midtjylland- at 11:36:21
+ Creating Game Page - FC Midtjylland - AC Horsens - at 11:36:21
+
+ Creating Participant - Burnley- at 11:36:22
+ Creating Participant - Southampton- at 11:36:23
+ Creating Game Page - Southampton - Burnley - at 11:36:23
+
+ Creating Participant - Amiens- at 11:36:24
+ Creating Participant - Lyon- at 11:36:25
+ Creating Game Page - Lyon - Amiens - at 11:36:25
+
+ Creating Participant - Strasbourg- at 11:36:27
+ Creating Participant - Bordeaux- at 11:36:28
+ Creating Game Page - Bordeaux - Strasbourg - at 11:36:28
+
+ Creating Participant - Manchester City- at 11:36:29
+ Creating Participant - Arsenal- at 11:36:30
+ Creating Game Page - Arsenal - Manchester City - at 11:36:30
+
+ Creating Participant - West Ham- at 11:36:31
+ Creating Participant - Liverpool- at 11:36:32
+ Creating Game Page - Liverpool - West Ham - at 11:36:32
+
+ Creating Participant - FC Groningen- at 11:36:33
+ Creating Participant - Vitesse- at 11:36:34
+ Creating Game Page - Vitesse - FC Groningen - at 11:36:34
+
+ Creating Participant - FC Emmen- at 11:36:35
+ Creating Participant - ADO Den Haag- at 11:36:36
+ Creating Game Page - ADO Den Haag - FC Emmen - at 11:36:36
+
+ Creating Participant - Feyenoord- at 11:36:37
+ Creating Participant - De Graafschap- at 11:36:38
+ Creating Game Page - De Graafschap - Feyenoord - at 11:36:38
+
+ Creating Participant - Rio Ave- at 11:36:39
+ Creating Participant - Feirense- at 11:36:40
+ Creating Game Page - Feirense - Rio Ave - at 11:36:40
+
+ Creating Participant - Ranheim- at 11:36:41
+ Creating Participant - Start- at 11:36:42
+ Creating Game Page - Start - Ranheim - at 11:36:42
+
+ Creating Participant - Strømsgodset- at 11:36:43
+ Creating Participant - Odds Ballklubb- at 11:36:44
+ Creating Game Page - Odds Ballklubb - Strømsgodset - at 11:36:44
+
+ Creating Participant - Brann- at 11:36:46
+ Creating Participant - Molde- at 11:36:47
+ Creating Game Page - Molde - Brann - at 11:36:47
+
+ Creating Participant - Kristiansund BK- at 11:36:48
+ Creating Participant - Bodø/Glimt- at 11:36:49
+ Creating Game Page - Bodø/Glimt - Kristiansund BK - at 11:36:49
+
+ Creating Participant - Stabæk- at 11:36:50
+ Creating Participant - Rosenborg- at 11:36:51
+ Creating Game Page - Rosenborg - Stabæk - at 11:36:51
+
+ Creating Participant - Lillestrøm- at 11:36:52
+ Creating Participant - Sarpsborg 08- at 11:36:53
+ Creating Game Page - Sarpsborg 08 - Lillestrøm - at 11:36:53
+
+ Creating Participant - Sporting Lissabon- at 11:36:54
+ Creating Participant - Moreirense- at 11:36:55
+ Creating Game Page - Moreirense - Sporting Lisbon - at 11:36:55
+
+ Creating Participant - Nacional Madeira- at 11:36:56
+ Creating Participant - S.C. Braga- at 11:36:57
+ Creating Game Page - S.C. Braga - Nacional Madeira - at 11:36:57
+
+ Creating Participant - New England Revolution- at 11:36:59
+ Creating Participant - Philadelphia Union- at 11:37:00
+ Creating Game Page - New England Revolution - Philadelphia Union - at 11:37:00
+
+ Creating Participant - Chicago Fire- at 11:37:01
+ Creating Participant - New York Red Bulls- at 11:37:02
+ Creating Game Page - Chicago Fire - New York Red Bulls - at 11:37:03
+
+ Creating Participant - Colorado Rapids- at 11:37:04
+ Creating Participant - San Jose Earthquakes- at 11:37:05
+ Creating Game Page - Colorado Rapids - San Jose Earthquakes - at 11:37:05
+
+ Creating Participant - Real Salt Lake- at 11:37:06
+ Creating Participant - Montreal Impact- at 11:37:07
+ Creating Game Page - Real Salt Lake - Montreal Impact - at 11:37:07
+
+ Creating Participant - Los Angeles FC- at 11:37:08
+ Creating Participant - Sporting Kansas City- at 11:37:09
+ Creating Game Page - Los Angeles FC - Sporting Kansas City - at 11:37:09
+
+ Creating Participant - Los Angeles Galaxy- at 11:37:10
+ Creating Participant - Minnesota United FC- at 11:37:11
+ Creating Game Page - Los Angeles Galaxy - Minnesota United FC - at 11:37:11
+
+ Creating Participant - Portland Timbers- at 11:37:12
+ Creating Participant - Vancouver Whitecaps- at 11:37:13
+ Creating Game Page - Portland Timbers - Vancouver Whitecaps - at 11:37:13
+
+ Creating Participant - Toronto FC- at 11:37:14
+ Creating Participant - New York City FC- at 11:37:15
+ Creating Game Page - Toronto FC - New York City FC - at 11:37:15
+
+ Creating Participant - Columbus Crew- at 11:37:16
+ Creating Participant - Houston Dynamo- at 11:37:17
+ Creating Game Page - Columbus Crew - Houston Dynamo - at 11:37:17
+
+ Creating Participant - Hvidovre- at 11:37:19
+ Creating Participant - FC Fredericia- at 11:37:20
+ Creating Game Page - FC Fredericia - Hvidovre - at 11:37:20
+
+ Creating Participant - Lyngby- at 11:37:21
+ Creating Participant - Fremad Amager- at 11:37:22
+ Creating Game Page - Fremad Amager - Lyngby - at 11:37:22
+
+ Creating Participant - FC Roskilde- at 11:37:23
+ Creating Participant - Nykøbing FC- at 11:37:25
+ Creating Game Page - Nykøbing FC - FC Roskilde - at 11:37:25
+
+ Creating Participant - Thisted- at 11:37:26
+ Creating Participant - Næstved BK- at 11:37:27
+ Creating Game Page - Næstved BK - Thisted - at 11:37:27
+
+ Creating Participant - HB Køge- at 11:37:28
+ Creating Participant - Silkeborg IF- at 11:37:29
+ Creating Game Page - Silkeborg IF - HB Køge - at 11:37:29
+
+ Creating Participant - FC Helsingør- at 11:37:30
+ Creating Participant - Viborg FF- at 11:37:31
+ Creating Game Page - Viborg FF - FC Helsingør - at 11:37:31
+
+
+ Schedule day(2018-08-12) has been updating at 11:37:31 whit (43) events.  
+
+
+ Schedule day(2018-08-13). Update started at 11:37:32 whit (6) events.  
+
+ Creating Participant - Hammarby IF- at 11:37:33
+ Creating Participant - IFK Norrköping- at 11:37:34
+ Creating Game Page - IFK Norrköping - Hammarby IF - at 11:37:34
+
+ Creating Participant - GIF Sundsvall- at 11:37:35
+ Creating Participant - Trelleborgs FF- at 11:37:36
+ Creating Game Page - Trelleborgs FF - GIF Sundsvall - at 11:37:36
+
+ Creating Participant - SønderjyskE- at 11:37:37
+ Creating Participant - Esbjerg- at 11:37:38
+ Creating Game Page - Esbjerg - SønderjyskE - at 11:37:38
+
+ Creating Participant - Boavista- at 11:37:39
+ Creating Participant - Portimonense- at 11:37:40
+ Creating Game Page - Portimonense - Boavista - at 11:37:41
+
+ Creating Participant - D.C. United- at 11:37:42
+ Creating Participant - Orlando City- at 11:37:43
+ Creating Game Page - D.C. United - Orlando City - at 11:37:43
+
+ Creating Participant - Seattle Sounders- at 11:37:44
+ Creating Participant - FC Dallas- at 11:37:45
+ Creating Game Page - Seattle Sounders - FC Dallas - at 11:37:45
+
+
+ Schedule day(2018-08-13) has been updating at 11:37:45 whit (6) events.  
+
+
+ Schedule day(2018-08-14). Update started at 11:37:46 whit (0) events.  
+
+
+ Schedule day(2018-08-14) has been updating at 11:37:46 whit (0) events.  
+
+
+ Schedule day(2018-08-15). Update started at 11:37:46 whit (0) events.  
+
+
+ Schedule day(2018-08-15) has been updating at 11:37:46 whit (0) events.  
+
+
+ Schedule day(2018-08-16). Update started at 11:37:47 whit (0) events.  
+
+
+ Schedule day(2018-08-16) has been updating at 11:37:47 whit (0) events.  
+
+
+ Schedule day(2018-08-17). Update started at 11:37:48 whit (6) events.  
+
+ Creating Participant - Girona FC- at 11:37:50
+ Creating Participant - Valladolid- at 11:37:51
+ Creating Game Page - Girona FC - Valladolid - at 11:37:51
+
+ Creating Game Page - FC Groningen - Willem II - at 11:37:51
+
+ Creating Game Page - Birmingham - Swansea City - at 11:37:51
+
+ Creating Game Page - Reims - Lyon - at 11:37:51
+
+ Creating Game Page - IK Sirius FK - Dalkurd FF - at 11:37:52
+
+ Creating Participant - Levante- at 11:37:53
+ Creating Participant - Real Betis- at 11:37:54
+ Creating Game Page - Real Betis - Levante - at 11:37:54
+
+
+ Schedule day(2018-08-17) has been updating at 11:37:54 whit (6) events.  
+
+
+ Schedule day(2018-08-18). Update started at 11:37:55 whit (33) events.  
+
+ Creating Participant - Napoli- at 11:37:57
+ Creating Participant - Lazio- at 11:37:58
+ Creating Game Page - Lazio - Napoli - at 11:37:58
+
+ Creating Participant - Juventus- at 11:37:59
+ Creating Participant - Chievo Verona- at 11:38:00
+ Creating Game Page - Chievo Verona - Juventus - at 11:38:00
+
+ Creating Game Page - West Ham - Bournemouth - at 11:38:00
+
+ Creating Game Page - Chelsea - Arsenal - at 11:38:00
+
+ Creating Game Page - Tottenham - Fulham - at 11:38:00
+
+ Creating Game Page - Leicester City - Wolverhampton Wanderers - at 11:38:00
+
+ Creating Game Page - Cardiff City - Newcastle United - at 11:38:00
+
+ Creating Game Page - Burnley - Watford - at 11:38:00
+
+ Creating Game Page - Everton - Southampton - at 11:38:00
+
+ Creating Participant - Espanyol- at 11:38:01
+ Creating Participant - Celta Vigo- at 11:38:02
+ Creating Game Page - Celta Vigo - Espanyol - at 11:38:02
+
+ Creating Participant - Alaves- at 11:38:04
+ Creating Participant - FC Barcelona- at 11:38:05
+ Creating Game Page - FC Barcelona - Alavés - at 11:38:05
+
+ Creating Participant - Real Sociedad- at 11:38:06
+ Creating Participant - Villarreal- at 11:38:07
+ Creating Game Page - Villarreal - Real Sociedad - at 11:38:07
+
+ Creating Game Page - Guingamp - Paris SG - at 11:38:07
+
+ Creating Game Page - Caen - Nice - at 11:38:07
+
+ Creating Game Page - Monaco - Lille - at 11:38:07
+
+ Creating Game Page - Rennes - Angers - at 11:38:07
+
+ Creating Game Page - NAC Breda - De Graafschap - at 11:38:07
+
+ Creating Game Page - VVV Venlo - Ajax - at 11:38:07
+
+ Creating Game Page - Fortuna Sittard - PSV Eindhoven - at 11:38:07
+
+ Creating Game Page - Heracles Almelo - ADO Den Haag - at 11:38:07
+
+ Creating Game Page - Wigan Athletic - Nottingham Forest - at 11:38:07
+
+ Creating Game Page - Preston North End - Stoke City - at 11:38:07
+
+ Creating Game Page - Bristol City - Middlesbrough - at 11:38:07
+
+ Creating Game Page - Hull City - Blackburn Rovers - at 11:38:07
+
+ Creating Game Page - Leeds United - Rotherham United - at 11:38:07
+
+ Creating Game Page - Millwall - Derby County - at 11:38:07
+
+ Creating Game Page - Reading - Bolton - at 11:38:07
+
+ Creating Game Page - Sheffield United - Norwich City - at 11:38:07
+
+ Creating Game Page - Ipswich Town - Aston Villa - at 11:38:07
+
+ Creating Game Page - West Bromwich - Queens Park Rangers - at 11:38:07
+
+ Creating Game Page - Amiens - Montpellier - at 11:38:07
+
+ Creating Game Page - Dijon - Nantes - at 11:38:07
+
+ Creating Game Page - Malmö FF - Trelleborgs FF - at 11:38:07
+
+
+ Schedule day(2018-08-18) has been updating at 11:38:07 whit (33) events.  
+
+
+ Schedule day(2018-08-19). Update started at 11:38:08 whit (24) events.  
+
+ Creating Game Page - Brighton & Hove Albion - Manchester United - at 11:38:08
+
+ Creating Game Page - Manchester City - Huddersfield Town - at 11:38:08
+
+ Creating Participant - Huesca- at 11:38:09
+ Creating Participant - Eibar- at 11:38:10
+ Creating Game Page - Eibar - Huesca - at 11:38:11
+
+ Creating Participant - Getafe- at 11:38:12
+ Creating Participant - Real Madrid- at 11:38:13
+ Creating Game Page - Real Madrid - Getafe - at 11:38:13
+
+ Creating Participant - Sevilla- at 11:38:14
+ Creating Participant - Rayo Vallecano- at 11:38:15
+ Creating Game Page - Rayo Vallecano - Sevilla - at 11:38:15
+
+ Creating Game Page - Strasbourg - Saint-Étienne - at 11:38:15
+
+ Creating Game Page - Nîmes Olympique - Marseille - at 11:38:15
+
+ Creating Participant - AC Milan- at 11:38:16
+ Creating Participant - Genoa- at 11:38:17
+ Creating Game Page - AC Milan - Genoa - at 11:38:17
+
+ Creating Participant - Spal- at 11:38:19
+ Creating Participant - Bologna- at 11:38:20
+ Creating Game Page - Bologna - Spal - at 11:38:20
+
+ Creating Participant - Cagliari- at 11:38:21
+ Creating Participant - Empoli- at 11:38:22
+ Creating Game Page - Empoli - Cagliari - at 11:38:22
+
+ Creating Participant - Udinese- at 11:38:23
+ Creating Participant - Parma- at 11:38:24
+ Creating Game Page - Parma - Udinese - at 11:38:24
+
+ Creating Participant - Roma- at 11:38:25
+ Creating Participant - Torino- at 11:38:26
+ Creating Game Page - Torino - Roma - at 11:38:26
+
+ Creating Participant - Inter- at 11:38:27
+ Creating Participant - Sassuolo- at 11:38:28
+ Creating Game Page - Sassuolo - Inter - at 11:38:28
+
+ Creating Game Page - FC Emmen - AZ Alkmaar - at 11:38:28
+
+ Creating Game Page - Feyenoord - Excelsior Rotterdam - at 11:38:28
+
+ Creating Game Page - SC Heerenveen - Vitesse - at 11:38:28
+
+ Creating Game Page - FC Utrecht - PEC Zwolle - at 11:38:28
+
+ Creating Game Page - Brentford - Sheffield Wednesday - at 11:38:28
+
+ Creating Game Page - Toulouse - Bordeaux - at 11:38:29
+
+ Creating Game Page - IF Brommapojkarna - AIK - at 11:38:29
+
+ Creating Game Page - GIF Sundsvall - BK Häcken - at 11:38:29
+
+ Creating Game Page - IF Elfsborg - IFK Norrköping - at 11:38:29
+
+ Creating Game Page - Djurgårdens IF - Kalmar FF - at 11:38:29
+
+ Creating Participant - Sampdoria- at 11:38:30
+ Creating Participant - Fiorentina- at 11:38:31
+ Creating Game Page - Sampdoria - Fiorentina - at 11:38:31
+
+
+ Schedule day(2018-08-19) has been updating at 11:38:31 whit (24) events.  
+
+
+ Schedule day(2018-08-20). Update started at 11:38:32 whit (6) events.  
+
+ Creating Game Page - Crystal Palace - Liverpool - at 11:38:32
+
+ Creating Participant - Leganés- at 11:38:33
+ Creating Participant - Athletic Club Bilbao- at 11:38:34
+ Creating Game Page - Athletic Club Bilbao - Leganés - at 11:38:34
+
+ Creating Participant - Atlético Madrid- at 11:38:35
+ Creating Participant - Valencia- at 11:38:36
+ Creating Game Page - Valencia - Atlético Madrid - at 11:38:36
+
+ Creating Participant - Frosinone- at 11:38:37
+ Creating Participant - Atalanta- at 11:38:38
+ Creating Game Page - Atalanta - Frosinone - at 11:38:38
+
+ Creating Game Page - Hammarby IF - Örebro SK - at 11:38:38
+
+ Creating Game Page - IFK Göteborg - Östersunds FK - at 11:38:38
+
+
+ Schedule day(2018-08-20) has been updating at 11:38:38 whit (6) events.  
+
+
+ Schedule day(2018-08-21). Update started at 11:38:39 whit (0) events.  
+
+
+ Schedule day(2018-08-21) has been updating at 11:38:39 whit (0) events.  
+
+Import data from API(http://steve.rebelpenguin.dk).
+Success.
+chmod: cannot access 'content.repository.sesport.cu': No such file or directory
+chmod: cannot access 'content.repository.sesport.cu/files': No such file or directory
+Please provide one or more language codes as arguments.                                                                                                          [31;40m[1m[error][0m
+--2018-08-07 11:38:39--  http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po
+Resolving ftp.drupal.org (ftp.drupal.org)... 151.101.85.175
+Connecting to ftp.drupal.org (ftp.drupal.org)|151.101.85.175|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://ftp-origin.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po [following]
+--2018-08-07 11:38:39--  https://ftp-origin.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po
+Resolving ftp-origin.drupal.org (ftp-origin.drupal.org)... 151.101.85.175
+Connecting to ftp-origin.drupal.org (ftp-origin.drupal.org)|151.101.85.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 730205 (713K) [application/octet-stream]
+drupal-8.6.0-beta2.da.po: Permission denied
+
+Cannot write to ‘drupal-8.6.0-beta2.da.po’ (Success).
+The drush command 'l--uri=content.repository.sesport.cu language-import drupal-8.6.0-beta2.da.po' could not be found.  Run `drush cache-clear drush` to clear the[31;40m[1m[error][0m
+commandfile cache if you have installed new extensions.
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m

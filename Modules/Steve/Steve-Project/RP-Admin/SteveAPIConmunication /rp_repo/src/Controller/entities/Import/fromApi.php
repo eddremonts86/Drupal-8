@@ -45,71 +45,11 @@ class fromApi extends ControllerBase {
     return TRUE;
   }
 
-  public function importSchedule($parameters) {
-    /* $rpClient = RPAPIClient::getClient(); //new guzzle http object
-     $allSchedule = $rpClient->getschedule($parameters); //get Schedule from API(JSON)
-     $region = $parameters['region'];
-     if ($region == "gb-eng") {
-       $region = "en";
-     }
-     echo "\n Schedule day(" . $parameters['start'] . "). Update started at " . date("h:i:s") . " whit (" . count($allSchedule) . ") events.  \n\n";
-     $getEvents = new Events();
-     foreach ($allSchedule as $event) {
-       $node = $getEvents->getNode($event['id'], 'events', 'field_event_api_id');
-       if (!$node or empty($node)) {
-         $sportDrupalId = 'sport_' . $event['sport']['id'];
-         $sportApiId = $event['sport']['id'];
-         $participants = $event['participants'];
-         $competition = $event['competition'];
-         $streamProvider = $event['streamprovider'];
-         $eventMeta = $event['meta'];
-         $Tags_Team = '';
-
-         if (isset($sportApiId)) {
-           $color = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-           $sportTags = $creatorObj->createSportPages($sportDrupalId, $sportApiId, $region, $color);
-         }
-         if (isset($streamProvider)) {
-           $stream = $creatorObj->createStreamPages($streamProvider, $sportTags);
-         }
-         if (isset($competition)) {
-           $creatorObj->createTournamentPages($competition, $sportTags, $sportApiId);
-         }
-         if (isset($participants)) {
-           $Tags_Team = $creatorObj->createParticipantPages($participants, $sportTags);
-         }
-         if (isset($eventMeta)) {
-           $ChannelByNode = $getInfoObj->getIdChannelByNode($eventMeta);
-         }
-         $creatorObj->createGamePage($sportTags, $event, $stream, '', $Tags_Team, $ChannelByNode, $region);
-       } else {
-
-         $node_id = reset($node)->id();
-         $updateObj = new UpdateClienetData();
-         $updNode = $updateObj->updateEvents($event, $node_id, $region);
-
-
-         $sportDrupalId = 'sport_' . $event['sport']['id'];
-         $sportApiId = $event['sport']['id'];
-         if (isset($sportApiId)) {
-           $color = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-           $sportTags = $creatorObj->createSportPages($sportDrupalId, $sportApiId, $region, $color);
-         }
-
-         if ($updNode) {
-           echo 'Updating Game Page "' . reset($node)->getTitle() . ' - at ' . date("h:i:s") . "\n";
-           echo "\n";
-         }
-       }
-     }
-     echo "\n Schedule day(" . $parameters['start'] . ") has been updating at " . date("h:i:s") . " whit (" . count($allSchedule) . ") events.  \n\n";
-     return TRUE;*/
-
-  }
+  public function importSchedule($parameters) {}
 
   public function importChannels() {
     $tax = new TaxonomyChannel();
-    $tax->createChannelsPages();
+    $tax->getAllchannels();
     return TRUE;
   }
 

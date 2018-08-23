@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: alias_steve_pages
+label: 'Alias - Steve Pages'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  ccde0310-223c-4768-a449-3975807f1df3:
+    id: node_type
+    bundles:
+      sport: sport
+      sport_blogs: sport_blogs
+      sport_stream_reviews: sport_stream_reviews
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ccde0310-223c-4768-a449-3975807f1df3
+selection_logic: and
+weight: -5
+relationships: {  }

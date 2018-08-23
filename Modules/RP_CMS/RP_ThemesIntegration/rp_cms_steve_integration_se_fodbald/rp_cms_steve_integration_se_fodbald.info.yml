@@ -1,8 +1,0 @@
-name: RP CMS - Steve Integration Se-Fodbald
-type: module
-description: Se-Fodbald 
-core: 8.x
-package: 'Rebel Penguins CMS - Frontend'
-project: 'steve_integration_se_fodbald'
-dependencies:
-  - steve_RP:rp_client_base

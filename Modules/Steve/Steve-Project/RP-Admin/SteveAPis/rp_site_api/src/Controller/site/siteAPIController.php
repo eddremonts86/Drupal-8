@@ -16,8 +16,6 @@ use Drupal\rp_repo\Controller\entities\Taxonomies\taxonomySteveSite;
  */
 class siteAPIController extends ControllerBase {
 
-
-
   /**
    * Getallsite.
    *

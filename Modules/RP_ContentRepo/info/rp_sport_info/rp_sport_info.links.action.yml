@@ -1,8 +1,0 @@
-entity.sport_info.add_form:
-  route_name: entity.sport_info.add_form
-  title: 'Add Sport info'
-  appears_on:
-    - entity.sport_info.collection
-  options:
-    query:
-      destination: '/admin/rp/entity-content/sport'

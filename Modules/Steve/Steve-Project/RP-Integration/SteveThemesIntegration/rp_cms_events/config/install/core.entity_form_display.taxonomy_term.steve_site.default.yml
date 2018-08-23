@@ -6,7 +6,6 @@ dependencies:
     - field.field.taxonomy_term.steve_site.field_channels
     - field.field.taxonomy_term.steve_site.field_languages
     - field.field.taxonomy_term.steve_site.field_regions
-    - field.field.taxonomy_term.steve_site.field_site_configuration
     - field.field.taxonomy_term.steve_site.field_site_group
     - field.field.taxonomy_term.steve_site.field_site_token
     - field.field.taxonomy_term.steve_site.field_site_url
@@ -58,14 +57,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_site_configuration:
-    weight: 9
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
     region: content
   field_site_group:
     weight: 2

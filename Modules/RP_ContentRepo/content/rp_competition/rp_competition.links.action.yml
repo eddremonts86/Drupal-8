@@ -1,5 +1,0 @@
-entity.competition.add_form:
-  route_name: entity.competition.add_form
-  title: 'Add Competition'
-  appears_on:
-    - entity.competition.collection

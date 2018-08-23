@@ -54,34 +54,14 @@ class Rebel_endpointsAPIUtiles extends ControllerBase
     }
 
     public function paginations($nids, $page)
-    {
-        $end = 0;
-        $endarray = array();
-
+    {   $endarray = array();
+        $pageList = array_chunk($nids, 100);
         if (!isset($page) || $page == 0) {
-            foreach ($nids as $nid) {
-                $endarray[] = $nid;
-                if ($end == 100) {
-                    break;
-                } else {
-                    $end++;
-                }
-            }
-        } else {
-            foreach ($nids as $nid) {
-                if ($end >= ($page * 100) && $end <= ($page + 1) * 100) {
-                    $endarray[] = $nid;
-                    $end++;
-
-                } else {
-                    if ($end > ($page + 1) * 100) {
-                        break;
-                    } else {
-                        $end++;
-                    }
-                }
-            }
+          $endarray = $pageList[$page];
         }
+        else {
+              $endarray = $pageList[$page];
+          }
         return $endarray;
     }
 
@@ -107,5 +87,9 @@ class Rebel_endpointsAPIUtiles extends ControllerBase
             return reset($taxonomy);
         }
     }
+
+
+
+
 
 }

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_nodes_ct
+    - taxonomy.vocabulary.steve_site
+  module:
+    - file
+id: taxonomy_term.steve_site.field_nodes_ct
+field_name: field_nodes_ct
+entity_type: taxonomy_term
+bundle: steve_site
+label: 'Nodes CT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: json
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

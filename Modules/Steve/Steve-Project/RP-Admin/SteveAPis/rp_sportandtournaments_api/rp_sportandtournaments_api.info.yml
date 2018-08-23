@@ -1,0 +1,5 @@
+name: 'rp_sportandtournaments_api'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Rebel Penguins Apps - Server'

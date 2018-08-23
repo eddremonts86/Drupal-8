@@ -1,6 +1,0 @@
-name: 'rp_client_base'
-type: module
-description: 'Steve import base module '
-core: 8.x
-package: 'Rebel Penguins CMS - Frontend'
-project: steve_RP

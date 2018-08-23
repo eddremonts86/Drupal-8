@@ -9,6 +9,7 @@ dependencies:
   - block
   - config_translation
   - content_translation
+  - ctools
   - devel
   - features
   - field

@@ -1,8 +1,0 @@
-HorseRacingGeneral:
-  version: 1.x
-  js:
-    src/js/main.js: {}
-  css:
-    theme:
-      src/css/font-awesome.min.css: {}
-      src/css/general_layout.min.css: {}

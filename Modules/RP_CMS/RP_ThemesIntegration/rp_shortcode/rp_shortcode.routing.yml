@@ -1,7 +1,0 @@
-rp_shortcode.content:
-  path: '/shortcode' 
-  defaults: 
-    _controller: '\Drupal\rp_shortcode\Controller\ShortcodeController::content' 
-    _title: 'Shortcode'
-  requirements: 
-    _permission: 'access content' 

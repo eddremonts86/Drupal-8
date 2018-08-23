@@ -1,0 +1,14 @@
+{
+  "multisite" : "base.v1.content.repository.katso-urheilua.com",  
+  "siteDB": "base_v1_content_repository_katso_urheilua",
+
+  "type":"mysql",
+  "host":"localhost",
+  "name":"base_v1_content_repository_katso_urheilua",
+  "user":"root",
+  "pass":"root",
+  "port":"3316",
+  
+  "base":"content.repository.katso-urheilua.com",
+  "base_old_conf":"content.repository.katso-urheilua.com"
+}

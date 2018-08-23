@@ -1,1000 +1,388 @@
-------------- All your Conf Vars --------------------<br>
-echo
-1 -  content.repository.katso-urheilua.com   <br>
-2 -  content_repository_katso_urheilua_com  <br>
-3 -  stevethemebase  <br>
-4 -  rp_cms_steve_base_config  <br>
-5 -  fortytwo_admin  <br>
-6 -  en  <br>
-7 -  steveCMSclient  <br>
-8 -  contact@client1.dev  <br>
-9 -  admin  <br>
-10 -  contact@client1.dev  <br>
-11 -  admin  <br>
-12 -  mysql  <br>
-13 -  localhost  <br>
-14 -  content_repository_katso_urheilua_com  <br>
-15 -  root  <br>
-16 -  root  <br>
-17 -  3316  <br>
-18 -  13  <br>
+------------- All your Conf Vars --------------------
+1 -  content.repository.katso-urheilua.com   
+2 -  content_repository_katso_urheilua  
+3 -  4  
+4 -  stevethemebase  
+5 -  rp_cms_steve_base_config  
+6 -  fortytwo_admin  
+7 -  en  
+8 -  katso.urheilua.cu_Content_Repository  
+9 -  contact@client1.dev  
+10 -  admin  
+11 -  contact@client1.dev  
+12 -  admin  
+13 -  mysql  
+14 -  localhost  
+15 -  content_repository_katso_urheilua  
+16 -  root  
+17 -  root  
+18 -  3316  
+19 -  4  
+20 -  http://content.repository.katso-urheilua.com  
+21 -  http://user.controller.cu/  
 
-<br> --------------File work -------------------<br>
- Crerating Folder content.repository.katso-urheilua.com <br>
- Crerating content.repository.katso-urheilua.com SETTINGS   <br>
-Writing in [core]/sites.php <br>
-<br> --------------Data base work -------------------<br>
-      Creating Database content_repository_katso_urheilua_com<br>
-mysql: [Warning] Using a password on the command line interface can be insecure.
-<br> ---------------------------------<br>
-Installing drupal site  steveCMSclient <br>
----------------------------------<br>
-<br><br>
-    --uri=content.repository.katso-urheilua.com  site:install standard <br>
-    --langcode=en <br>
-    --db-type=mysql <br>
-    --db-host=localhost <br>
-    --db-name=content_repository_katso_urheilua_com <br>
-    --db-user=root <br>
-    --db-pass=root <br>
-    --db-port=3316 <br>
-    --db-prefix=stevecms_ <br>
-    --site-name=steveCMSclient <br>
-    --site-mail=contact@client1.dev <br>
-    --account-name=admin <br>
-    --account-mail=contact@client1.dev <br>
-    --account-pass=admin <br><br><br>
-    
-/home/edd/All-Projects/user.controller.cu/sites
-You are about to DROP all tables in your 'content_repository_katso_urheilua_com' database. Do you want to continue? (y/n): y
-Starting Drupal installation. This takes a while. Consider using the        [ok]
---notify global option.
-Installation complete.                                                      [ok]
-Congratulations, you installed Drupal!                                  [status]
-Cache rebuild complete.                                                     [ok]
-<br> ---------------------------------<br>
-Installing other core and contib modules <br>
----------------------------------<br>
+
+ --------------File work -------------------
+mkdir: cannot create directory ‘content.repository.katso-urheilua.com’: File exists
+ Crerating Folder content.repository.katso-urheilua.com 
+ Crerating content.repository.katso-urheilua.com SETTINGS   
+Writing in [core]/sites.php 
+ --------------Data base work -------------------
+      Creating Database localhost
+Creating database content_repository_katso_urheilua. Any possible existing database will be dropped!
+Do you really want to continue? (y/n): y
+You are about to DROP all tables in your 'content_repository_katso_urheilua' database. Do you want to continue? (y/n): y
+Starting Drupal installation. This takes a while. Consider using the --notify global option.                                                                     [1;32;40m[1m[ok][0m
+Installation complete.                                                                                                                                           [1;32;40m[1m[ok][0m
+Congratulations, you installed Drupal!                                                                                                                           [1;32;40m[1m[status][0m
+ ---------------------------------
+Installing drupal site  katso.urheilua.cu_Content_Repository 
+---------------------------------
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m
+ ---------------------------------
+Installing other core and contib modules 
+---------------------------------
 The following extensions will be enabled: media
 Do you really want to continue? (y/n): y
-media was enabled successfully.                                             [ok]
+media was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
 media defines the following permissions: create audio media, create file media, create image media, create video media, delete any audio media, delete any file media, delete any image media, delete any video media, delete own audio media, delete own file media, delete own image media, delete own video media, edit any audio media, edit any file media, edit any image media, edit any video media, edit own audio media, edit own file media, edit own image media, edit own video media, access media overview, administer media, administer media types, create media, delete any media, delete media, update any media, update media, view all media revisions, view media
 The following extensions will be enabled: admin_toolbar_tools, admin_toolbar
 Do you really want to continue? (y/n): y
-admin_toolbar was enabled successfully.                                     [ok]
-admin_toolbar_tools was enabled successfully.                               [ok]
+admin_toolbar was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+admin_toolbar_tools was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
 The following extensions will be enabled: admin_toolbar_links_access_filter
 Do you really want to continue? (y/n): y
-admin_toolbar_links_access_filter was enabled successfully.                 [ok]
+admin_toolbar_links_access_filter was enabled successfully.                                                                                                      [1;32;40m[1m[ok][0m
 The following extensions will be enabled: ctools_views
 Do you really want to continue? (y/n): y
-ctools_views was enabled successfully.                                      [ok]
+ctools_views was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
 The following extensions will be enabled: field_layout, layout_discovery
 Do you really want to continue? (y/n): y
-field_layout was enabled successfully.                                      [ok]
-layout_discovery was enabled successfully.                                  [ok]
+field_layout was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+layout_discovery was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
 The following extensions will be enabled: layout_builder
 Do you really want to continue? (y/n): y
-layout_builder was enabled successfully.                                    [ok]
+layout_builder was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
 layout_builder defines the following permissions: configure any layout
 The following extensions will be enabled: devel
 Do you really want to continue? (y/n): y
-devel was enabled successfully.                                             [ok]
+devel was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
 devel defines the following permissions: access devel information, execute php code, switch users
 The following extensions will be enabled: devel_generate
 Do you really want to continue? (y/n): y
-devel_generate was enabled successfully.                                    [ok]
+devel_generate was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
 devel_generate defines the following permissions: administer devel_generate
 The following extensions will be enabled: features, config_update
 Do you really want to continue? (y/n): y
-config_update was enabled successfully.                                     [ok]
-features was enabled successfully.                                          [ok]
+config_update was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+features was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
 The following extensions will be enabled: field_group
 Do you really want to continue? (y/n): y
-field_group was enabled successfully.                                       [ok]
+field_group was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
 The following extensions will be enabled: shortcode
 Do you really want to continue? (y/n): y
-shortcode was enabled successfully.                                         [ok]
+shortcode was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
 The following extensions will be enabled: panelizer, panels_ipe, panels, ctools, ctools_block
 Do you really want to continue? (y/n): y
-ctools was enabled successfully.                                            [ok]
-ctools_block was enabled successfully.                                      [ok]
-panelizer was enabled successfully.                                         [ok]
+ctools was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+ctools_block was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+panelizer was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
 panelizer defines the following permissions: administer panelizer node article content, administer panelizer node article layout, administer panelizer node article revert, administer panelizer node page content, administer panelizer node page layout, administer panelizer node page revert, administer panelizer user user content, administer panelizer user user layout, administer panelizer user user revert, administer panelizer taxonomy_term tags content, administer panelizer taxonomy_term tags layout, administer panelizer taxonomy_term tags revert, administer panelizer node article defaults, administer panelizer node page defaults, administer panelizer user user defaults, administer panelizer taxonomy_term tags defaults, administer panelizer, set panelizer default
-panels was enabled successfully.                                            [ok]
+panels was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
 panels defines the following permissions: administer panels layouts, administer panels styles, administer pane access, administer advanced pane settings, use panels caching features, use panels dashboard, use panels locks, use ipe with page manager, view pane admin links
-panels_ipe was enabled successfully.                                        [ok]
+panels_ipe was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
 panels_ipe defines the following permissions: access panels in-place editing
 The following extensions will be enabled: panelizer_quickedit
 Do you really want to continue? (y/n): y
-panelizer_quickedit was enabled successfully.                               [ok]
+panelizer_quickedit was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
 The following extensions will be enabled: pathauto, token
 Do you really want to continue? (y/n): y
-pathauto was enabled successfully.                                          [ok]
+pathauto was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
 pathauto defines the following permissions: administer pathauto, notify of path changes
-token was enabled successfully.                                             [ok]
+token was enabled successfully.                                                                                                                                  [1;32;40m[1m[ok][0m
 The following extensions will be enabled: twig_blocks
 Do you really want to continue? (y/n): y
-twig_blocks was enabled successfully.                                       [ok]
+twig_blocks was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
 The following extensions will be enabled: schema_metatag, metatag
 Do you really want to continue? (y/n): y
-metatag was enabled successfully.                                           [ok]
+metatag was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
 metatag defines the following permissions: administer meta tags
-schema_metatag was enabled successfully.                                    [ok]
-<br> ---------------------------------<br>
-Instaling modules Requires <br>
----------------------------------<br>
+schema_metatag was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+ ---------------------------------
+Instaling modules Requires 
+---------------------------------
 The following extensions will be enabled: rp_repo, rp_client_base, rp_jsonld_struct, syslog, responsive_image, page_manager, rp_shortcode, rp_cms_steve_integration, restui, content_translation, language, locale, config_translation, rp_cms_events, rp_cms_site_info, rp_site_info, rp_language, rp_channel, rp_region, rp_site, rp_repoapi, rp_base, serialization, rest, rp_api
 Do you really want to continue? (y/n): y
-config_translation was enabled successfully.                                [ok]
+config_translation was enabled successfully.                                                                                                                     [1;32;40m[1m[ok][0m
 config_translation defines the following permissions: translate configuration
-content_translation was enabled successfully.                               [ok]
+content_translation was enabled successfully.                                                                                                                    [1;32;40m[1m[ok][0m
 content_translation defines the following permissions: administer content translation, create content translations, delete content translations, update content translations, translate any entity
-language was enabled successfully.                                          [ok]
+language was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
 language defines the following permissions: administer languages
-locale was enabled successfully.                                            [ok]
+locale was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
 locale defines the following permissions: translate interface
-page_manager was enabled successfully.                                      [ok]
+page_manager was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
 page_manager defines the following permissions: administer pages
-responsive_image was enabled successfully.                                  [ok]
+responsive_image was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
 responsive_image defines the following permissions: administer responsive images
-rest was enabled successfully.                                              [ok]
+rest was enabled successfully.                                                                                                                                   [1;32;40m[1m[ok][0m
 rest defines the following permissions: restful get site_rest_resource, administer rest resources
-restui was enabled successfully.                                            [ok]
-rp_api was enabled successfully.                                            [ok]
+restui was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
+rp_api was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
 rp_api defines the following permissions: administer rp_api configuration
-rp_base was enabled successfully.                                           [ok]
+rp_base was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
 rp_base defines the following permissions: access rp base configuration
-rp_channel was enabled successfully.                                        [ok]
+rp_channel was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
 rp_channel defines the following permissions: access channel overview, administer channel entities, add channel entities, delete channel entities, delete all channel revisions, edit channel entities, revert all channel revisions, view all channel revisions, view published channel entities, view unpublished channel entities
-rp_client_base was enabled successfully.                                    [ok]
-rp_cms_events was enabled successfully.                                     [ok]
-rp_cms_site_info was enabled successfully.                                  [ok]
-rp_cms_steve_integration was enabled successfully.                          [ok]
-rp_jsonld_struct was enabled successfully.                                  [ok]
-rp_language was enabled successfully.                                       [ok]
+rp_client_base was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+rp_cms_events was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+rp_cms_site_info was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+rp_cms_steve_integration was enabled successfully.                                                                                                               [1;32;40m[1m[ok][0m
+rp_jsonld_struct was enabled successfully.                                                                                                                       [1;32;40m[1m[ok][0m
+rp_language was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
 rp_language defines the following permissions: access language content overview, administer language content entities, add language content entities, delete language content entities, delete all language content revisions, edit language content entities, revert all language content revisions, view all language content revisions, view published language content entities, view unpublished language content entities
-rp_region was enabled successfully.                                         [ok]
+rp_region was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
 rp_region defines the following permissions: access region overview, administer region entities, add region entities, delete region entities, delete all region revisions, edit region entities, revert all region revisions, view all region revisions, view published region entities, view unpublished region entities
-rp_repo was enabled successfully.                                           [ok]
-rp_repoapi was enabled successfully.                                        [ok]
-rp_shortcode was enabled successfully.                                      [ok]
-rp_site was enabled successfully.                                           [ok]
+rp_repo was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
+rp_repoapi was enabled successfully.                                                                                                                             [1;32;40m[1m[ok][0m
+rp_shortcode was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
+rp_site was enabled successfully.                                                                                                                                [1;32;40m[1m[ok][0m
 rp_site defines the following permissions: access site overview, administer site entities, add site entities, delete site entities, delete all site revisions, edit site entities, revert all site revisions, view all site revisions, view published site entities, view unpublished site entities
-rp_site_info was enabled successfully.                                      [ok]
+rp_site_info was enabled successfully.                                                                                                                           [1;32;40m[1m[ok][0m
 rp_site_info defines the following permissions: access site info overview, administer site info entities, add site info entities, delete site info entities, delete all site info revisions, edit site info entities, revert all site info revisions, view all site info revisions, view published site info entities, view unpublished site info entities
-serialization was enabled successfully.                                     [ok]
-syslog was enabled successfully.                                            [ok]
+serialization was enabled successfully.                                                                                                                          [1;32;40m[1m[ok][0m
+syslog was enabled successfully.                                                                                                                                 [1;32;40m[1m[ok][0m
 The following extensions will be enabled: rp_ad_block
 Do you really want to continue? (y/n): y
-rp_ad_block was enabled successfully.                                       [ok]
+rp_ad_block was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
 The following extensions will be enabled: rp_cookie
 Do you really want to continue? (y/n): y
-rp_cookie was enabled successfully.                                         [ok]
+rp_cookie was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
 The following extensions will be enabled: rp_style
 Do you really want to continue? (y/n): y
-rp_style was enabled successfully.                                          [ok]
+rp_style was enabled successfully.                                                                                                                               [1;32;40m[1m[ok][0m
 The following extensions will be enabled: rp_layout
 Do you really want to continue? (y/n): y
-rp_layout was enabled successfully.                                         [ok]
-rp_client_base is already enabled.                                          [ok]
-There were no extensions that could be enabled.                             [ok]
-The following extensions will be enabled: rebel_endpoints
+rp_layout was enabled successfully.                                                                                                                              [1;32;40m[1m[ok][0m
+rp_client_base is already enabled.                                                                                                                               [1;32;40m[1m[ok][0m
+There were no extensions that could be enabled.                                                                                                                  [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_site_api
 Do you really want to continue? (y/n): y
-rebel_endpoints was enabled successfully.                                   [ok]
-<br> --------------------------------- <br>
-Instaling Themes and dependencies <br>
---------------------------------- <br>
+rp_site_api was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: rp_user_api
+Do you really want to continue? (y/n): y
+rp_user_api was enabled successfully.                                                                                                                            [1;32;40m[1m[ok][0m
+The following extensions will be enabled: drush_language
+Do you really want to continue? (y/n): y
+drush_language was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
+ --------------------------------- 
+Instaling Themes and dependencies 
+--------------------------------- 
 The following extensions will be enabled: stevethemebase
 Do you really want to continue? (y/n): y
-stevethemebase was enabled successfully.                                    [ok]
+stevethemebase was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
 Do you want to update default key in system.theme config? (y/n): y
 The following extensions will be enabled: rp_cms_steve_base_config
 Do you really want to continue? (y/n): y
-rp_cms_steve_base_config was enabled successfully.                          [ok]
+rp_cms_steve_base_config was enabled successfully.                                                                                                               [1;32;40m[1m[ok][0m
 The following extensions will be enabled: fortytwo_admin
 Do you really want to continue? (y/n): y
-fortytwo_admin was enabled successfully.                                    [ok]
+fortytwo_admin was enabled successfully.                                                                                                                         [1;32;40m[1m[ok][0m
 Do you want to update admin key in system.theme config? (y/n): y
 rp_base.settings config does not exist. Do you want to create a new config object? (y/n): y
+rp_base_site_url key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
+rp_base_site_url_api key does not exist in rp_base.settings config. Do you want to create a new config key? (y/n): y
 Plugin ID/Model: site_info Description: CMS Sites Info Config Repo API Model (all of them)
 Update is enabled
-Entities created or updated:
-13.GB-ENG.en_GB 13.GB-ENG.en_GB
-13.IE.en_GB 13.IE.en_GB
+No entities created or updated
 
 Done....
 
- Schedule day(2018-08-02). Update started at 02:39:14 whit (124) events.  
-
-Creating Sport Pages -Football - at 02:39:15
- Creating menu item '. Football Forside . ' on Menu - at 02:39:15
- Creating Sport Intern Pages - Live Stream Football - at 02:39:15
- Creating menu item '. Live Stream Football . ' on Menu - at 02:39:16
- Creating Sport Internal Blog Page - Blog Football- at 02:39:16
- Creating menu item '. Blog Football . ' on Menu - at 02:39:16
- Creating menuitem Football on Menu main - at 02:39:16
- Creating Participant - San José Oruro- at 02:39:17
- Creating Participant - Club Aurora- at 02:39:18
- Creating Game Page - San José Oruro - Club Aurora - at 02:39:19
-
- Creating Participant - Kairat Almaty- at 02:39:20
- Creating Participant - AZ Alkmaar- at 02:39:21
- Creating Game Page - AZ Alkmaar - Kairat Almaty - at 02:39:21
-
- Creating Participant - Shakhtyor Soligorsk- at 02:39:22
- Creating Participant - Lech Poznań- at 02:39:23
- Creating Game Page - Lech Poznań - Shakhtyor Soligorsk - at 02:39:23
-
- Creating Participant - Blooming- at 02:39:24
- Creating Participant - Real Potosí- at 02:39:25
- Creating Game Page - Blooming - Real Potosí - at 02:39:25
-
- Creating Participant - El Gounah- at 02:39:27
- Creating Participant - Al-Masry Club- at 02:39:28
- Creating Game Page - El Gounah - Al-Masry Club - at 02:39:28
-
- Creating Participant - Al-Ahly Cairo- at 02:39:29
- Creating Participant - Ismaily SC- at 02:39:30
- Creating Game Page - Al-Ahly Cairo - Ismaily SC - at 02:39:30
-
- Creating Participant - Hittarps IK- at 02:39:32
- Creating Participant - BK Olympic- at 02:39:33
- Creating Game Page - Hittarps IK - BK Olympic - at 02:39:33
-
- Creating Participant - Genoa- at 02:39:35
- Creating Participant - ASD Albissola 2010- at 02:39:36
- Creating Game Page - Genoa - ASD Albissola 2010 - at 02:39:36
-
- Creating Participant - Nacional Asunción (PAR)- at 02:39:38
- Creating Participant - Botafogo-RJ- at 02:39:39
- Creating Game Page - Nacional Asunción (PAR) - Botafogo-RJ - at 02:39:39
-
- Creating Participant - CA Boston River- at 02:39:40
- Creating Participant - Banfield- at 02:39:41
- Creating Game Page - Banfield - CA Boston River - at 02:39:41
-
- Creating Participant - Hapoel Nazareth Illit- at 02:39:43
- Creating Participant - Maccabi Ahi Nazareth- at 02:39:44
- Creating Game Page - Hapoel Nazareth Illit - Maccabi Ahi Nazareth - at 02:39:44
-
- Creating Participant - İstanbul Başakşehir- at 02:39:45
- Creating Participant - Bayer Leverkusen- at 02:39:46
- Creating Game Page - İstanbul Başakşehir - Bayer Leverkusen - at 02:39:46
-
- Creating Participant - Lokomotiva Zagreb- at 02:39:47
- Creating Participant - Hrvatski Dragovoljac- at 02:39:48
- Creating Game Page - Lokomotiva Zagreb - Hrvatski Dragovoljac - at 02:39:48
-
- Creating Participant - Japan (W)- at 02:39:50
- Creating Participant - Australia (W)- at 02:39:51
- Creating Game Page - Australia (W) - Japan (W) - at 02:39:51
-
- Creating Participant - Hapoel Katamon Jerusalem- at 02:39:52
- Creating Participant - Hapoel Ashkelon- at 02:39:53
- Creating Game Page - Hapoel Ashkelon - Hapoel Katamon Jerusalem - at 02:39:53
-
- Creating Participant - Hapoel Bnei Lod Rakevet- at 02:39:54
- Creating Participant - Beitar Tel Aviv Ramla- at 02:39:55
- Creating Game Page - Hapoel Bnei Lod Rakevet - Beitar Tel Aviv Ramla - at 02:39:55
-
- Creating Participant - Hapoel Kfar Saba- at 02:39:56
- Creating Participant - Hapoel Irony Nir Ramat Hasharon- at 02:39:57
- Creating Game Page - Hapoel Kfar Saba - Hapoel Irony Nir Ramat Hasharon - at 02:39:58
-
- Creating Participant - Hapoel Marmorek Irony Rehovot- at 02:39:59
- Creating Participant - Hapoel Ramat Gan- at 02:40:00
- Creating Game Page - Hapoel Marmorek Irony Rehovot - Hapoel Ramat Gan - at 02:40:00
-
- Creating Participant - Sektzia Nes Tziona- at 02:40:01
- Creating Participant - Hapoel Rishon LeZion- at 02:40:02
- Creating Game Page - Sektzia Nes Tziona - Hapoel Rishon LeZion - at 02:40:02
-
- Creating Participant - FC Twente- at 02:40:03
- Creating Participant - Göztepe A.Ş.- at 02:40:04
- Creating Game Page - FC Twente - Göztepe A.Ş. - at 02:40:04
-
- Creating Participant - FC Utrecht- at 02:40:05
- Creating Participant - Levante- at 02:40:06
- Creating Game Page - FC Utrecht - Levante - at 02:40:06
-
- Creating Participant - Polisportiva AZ Picerno- at 02:40:07
- Creating Participant - Potenza- at 02:40:08
- Creating Game Page - Polisportiva AZ Picerno - Potenza - at 02:40:08
-
- Creating Participant - Sabadell FC- at 02:40:09
- Creating Participant - Girona FC- at 02:40:10
- Creating Game Page - Sabadell FC - Girona FC - at 02:40:10
-
- Creating Participant - Hapoel Iksal Amad- at 02:40:11
- Creating Participant - Hapoel Acre- at 02:40:12
- Creating Game Page - Hapoel Iksal Amad - Hapoel Acre - at 02:40:12
-
- Creating Participant - Linense- at 02:40:13
- Creating Participant - Mallorca- at 02:40:14
- Creating Game Page - Linense - Mallorca - at 02:40:15
-
- Creating Participant - Castilleja- at 02:40:16
- Creating Participant - Écija Balompié- at 02:40:17
- Creating Game Page - Castilleja - Écija Balompié - at 02:40:17
-
- Creating Participant - Cesarense- at 02:40:20
- Creating Participant - FC Porto B- at 02:40:21
- Creating Game Page - Cesarense - FC Porto B - at 02:40:21
-
- Creating Participant - Extremadura Union Deportiva- at 02:40:22
- Creating Participant - Vitoria Setúbal- at 02:40:23
- Creating Game Page - Vitoria Setúbal - Extremadura Union Deportiva - at 02:40:23
-
- Creating Participant - Welco Elekter- at 02:40:25
- Creating Participant - Tallinna Kalev II- at 02:40:26
- Creating Game Page - Welco Elekter - Tallinna Kalev II - at 02:40:26
-
- Creating Participant - Paykan FC- at 02:40:28
- Creating Participant - Saipa Karaj FC- at 02:40:29
- Creating Game Page - Paykan FC - Saipa Karaj FC - at 02:40:29
-
- Creating Participant - Pars Jonoubi Jam- at 02:40:32
- Creating Participant - Naft Masjed Soleyman- at 02:40:33
- Creating Game Page - Pars Jonoubi Jam - Naft Masjed Soleyman - at 02:40:33
-
- Creating Participant - Esteghlal Sanati Khuzestan- at 02:40:34
- Creating Participant - Padideh FC- at 02:40:35
- Creating Game Page - Esteghlal Sanati Khuzestan - Padideh FC - at 02:40:35
-
- Creating Participant - Zob Ahan- at 02:40:36
- Creating Participant - Esteghlal Tehran FC- at 02:40:37
- Creating Game Page - Zob Ahan - Esteghlal Tehran FC - at 02:40:37
-
- Creating Participant - Patriotas FC- at 02:40:41
- Creating Participant - Atlético Nacional (COL)- at 02:40:42
- Creating Game Page - Atlético Nacional (COL) - Patriotas FC - at 02:40:42
-
- Creating Participant - FK Vityaz Ufa- at 02:40:44
- Creating Participant - Tobol Kurgan- at 02:40:46
- Creating Game Page - FK Vityaz Ufa - Tobol Kurgan - at 02:40:47
-
- Creating Participant - Shandong Luneng Reserves- at 02:40:48
- Creating Participant - Shanghai Shenhua Reserves- at 02:40:49
- Creating Game Page - Shandong Luneng Reserves - Shanghai Shenhua Reserves - at 02:40:50
-
- Creating Participant - Dynamo Moscow U21- at 02:40:51
- Creating Participant - Rubin Kazan U21- at 02:40:52
- Creating Game Page - Dynamo Moscow U21 - Rubin Kazan U21 - at 02:40:52
-
- Creating Participant - Zvezda Perm- at 02:40:54
- Creating Participant - Volga Ulyanovsk- at 02:40:55
- Creating Game Page - Volga Ulyanovsk - Zvezda Perm - at 02:40:55
-
- Creating Participant - MTK Hungaria Budapest (W)- at 02:40:57
- Creating Participant - Spartak Subotica (W)- at 02:40:58
- Creating Game Page - MTK Hungaria Budapest (W) - Spartak Subotica (W) - at 02:40:58
-
- Creating Participant - Viikingit 2- at 02:41:00
- Creating Participant - FC POHU- at 02:41:01
- Creating Game Page - Viikingit 2 - FC POHU - at 02:41:01
-
- Creating Participant - Union Plaani- at 02:41:02
- Creating Participant - PeKa- at 02:41:03
- Creating Game Page - Union Plaani - PeKa - at 02:41:04
-
- Creating Participant - Someron Voima- at 02:41:05
- Creating Participant - MaPS- at 02:41:09
- Creating Game Page - Someron Voima - MaPS - at 02:41:09
-
- Creating Participant - Reipas- at 02:41:10
- Creating Participant - Nopsa- at 02:41:11
- Creating Game Page - Nopsa - Reipas - at 02:41:11
-
- Creating Participant - JoKi- at 02:41:12
- Creating Participant - FC Korso/United- at 02:41:13
- Creating Game Page - JoKi - FC Korso/United - at 02:41:13
-
- Creating Participant - Ponnistajat- at 02:41:14
- Creating Participant - TuPS- at 02:41:15
- Creating Game Page - Ponnistajat - TuPS - at 02:41:15
-
- Creating Participant - Sibbov- at 02:41:16
- Creating Participant - VJS- at 02:41:17
- Creating Game Page - Sibbov - VJS - at 02:41:17
-
- Creating Participant - Virkiä- at 02:41:18
- Creating Participant - KPS- at 02:41:19
- Creating Game Page - Virkiä - KPS - at 02:41:19
-
- Creating Participant - FC Inter 2- at 02:41:20
- Creating Participant - P-Iirot- at 02:41:21
- Creating Game Page - FC Inter 2 - P-Iirot - at 02:41:21
-
- Creating Participant - FC Espoo II- at 02:41:22
- Creating Participant - HooGee- at 02:41:23
- Creating Game Page - FC Espoo II - HooGee - at 02:41:24
-
- Creating Participant - Audax-SP U20- at 02:41:25
- Creating Participant - Red Bull Brasil-SP U20- at 02:41:26
- Creating Game Page - Audax-SP U20 - Red Bull Brasil-SP U20 - at 02:41:26
-
- Creating Participant - Adanaspor A.Ş.- at 02:41:27
- Creating Participant - Boluspor- at 02:41:29
- Creating Game Page - Boluspor - Adanaspor A.Ş. - at 02:41:29
-
- Creating Participant - Anguiano- at 02:41:30
- Creating Participant - UD Logroñés- at 02:41:31
- Creating Game Page - Anguiano - UD Logroñés - at 02:41:31
-
- Creating Participant - Moggill FC- at 02:41:33
- Creating Participant - Grange Thistle- at 02:41:34
- Creating Game Page - Moggill FC - Grange Thistle - at 02:41:34
-
- Creating Participant - FBC Melgar- at 02:41:36
- Creating Participant - Real Garcilaso- at 02:41:37
- Creating Game Page - FBC Melgar - Real Garcilaso - at 02:41:37
-
- Creating Participant - Beijing Guoan- at 02:41:39
- Creating Participant - Hebei CFFC- at 02:41:40
- Creating Game Page - Beijing Guoan - Hebei CFFC - at 02:41:40
-
- Creating Participant - Unión Comercio- at 02:41:41
- Creating Participant - Comerciantes Unidos- at 02:41:42
- Creating Game Page - Unión Comercio - Comerciantes Unidos - at 02:41:42
-
- Creating Participant - Guangzhou Evergrande Taobao- at 02:41:43
- Creating Participant - Tianjin Teda- at 02:41:44
- Creating Game Page - Tianjin Teda - Guangzhou Evergrande Taobao - at 02:41:44
-
- Creating Participant - Academia Cantolao- at 02:41:45
- Creating Participant - Lima Alianza- at 02:41:46
- Creating Game Page - Academia Cantolao - Alianza Lima - at 02:41:46
-
- Creating Participant - Boca Juniors- at 02:41:48
- Creating Participant - Club Atlético Alvarado- at 02:41:49
- Creating Game Page - Boca Juniors - Club Atlético Alvarado - at 02:41:49
-
- Creating Participant - Tianjin Quanjian Reserves- at 02:41:50
- Creating Participant - Shanghai SIPG FC Reserves- at 02:41:51
- Creating Game Page - Shanghai SIPG FC Reserves - Tianjin Quanjian Reserves - at 02:41:51
-
- Creating Participant - Academia Cantolao Reserves- at 02:41:53
- Creating Participant - Alianza Lima Reserves- at 02:41:54
- Creating Game Page - Academia Cantolao Reserves - Alianza Lima Reserves - at 02:41:54
-
- Creating Participant - Blumenau Esporte Clube- at 02:41:56
- Creating Participant - Fluminense SC- at 02:41:57
- Creating Game Page - Blumenau Esporte Clube - Fluminense SC - at 02:41:57
-
- Creating Participant - Marcílio Dias-SC- at 02:41:58
- Creating Participant - Almirante Barroso- at 02:41:59
- Creating Game Page - Marcílio Dias-SC - Almirante Barroso - at 02:41:59
-
- Creating Participant - Camboriú-SC- at 02:42:00
- Creating Participant - Guarani de Palhoça-SC- at 02:42:01
- Creating Game Page - Camboriú-SC - Guarani de Palhoça-SC - at 02:42:01
-
- Creating Participant - Željezničar Sarajevo- at 02:42:02
- Creating Participant - Apollon Limassol- at 02:42:03
- Creating Game Page - Apollon Limassol - Željezničar Sarajevo - at 02:42:03
-
- Creating Participant - Illichivec Mariupol- at 02:42:04
- Creating Participant - Djurgårdens IF- at 02:42:05
- Creating Game Page - FC Mariupol - Djurgårdens IF - at 02:42:05
-
- Creating Participant - Los Angeles Galaxy Reserves- at 02:42:08
- Creating Participant - Swope Park Rangers- at 02:42:09
- Creating Game Page - Los Angeles Galaxy Reserves - Swope Park Rangers - at 02:42:09
-
- Creating Participant - Trindade-GO- at 02:42:11
- Creating Participant - Goiania EC Goiania- at 02:42:12
- Creating Game Page - Trindade-GO - Goiania EC Goiania - at 02:42:12
-
- Creating Participant - Atromitos Athens- at 02:42:13
- Creating Participant - Dinamo Brest- at 02:42:14
- Creating Game Page - Atromitos Athens - Dinamo Brest - at 02:42:14
-
- Creating Participant - Hapoel Afula- at 02:42:15
- Creating Participant - Hapoel Petach Tikva- at 02:42:16
- Creating Game Page - Hapoel Afula - Hapoel Petach Tikva - at 02:42:17
-
- Creating Participant - Aberdeen- at 02:42:18
- Creating Participant - Burnley- at 02:42:19
- Creating Game Page - Burnley - Aberdeen - at 02:42:19
-
- Creating Participant - FC Copenhagen- at 02:42:20
- Creating Participant - Stjarnan Gardabae- at 02:42:21
- Creating Game Page - FC Copenhagen - Stjarnan Gardabae - at 02:42:21
-
- Creating Participant - St. Gallen- at 02:42:22
- Creating Participant - Sarpsborg 08- at 02:42:23
- Creating Game Page - Sarpsborg 08 - St. Gallen - at 02:42:23
-
- Creating Participant - MLS All Stars- at 02:42:25
- Creating Participant - Juventus- at 02:42:26
- Creating Game Page - MLS All Stars - Juventus - at 02:42:26
-
- Creating Participant - CSKA Sofia- at 02:42:27
- Creating Participant - Admira- at 02:42:28
- Creating Game Page - Admira - CSKA Sofia - at 02:42:28
-
- Creating Participant - Bordeaux- at 02:42:29
- Creating Participant - FK Ventspils- at 02:42:30
- Creating Game Page - Bordeaux - FK Ventspils - at 02:42:30
-
- Creating Participant - AIK- at 02:42:31
- Creating Participant - FC Nordsjælland- at 02:42:32
- Creating Game Page - AIK - FC Nordsjælland - at 02:42:32
-
- Creating Participant - Querétaro FC- at 02:42:34
- Creating Participant - Club León- at 02:42:35
- Creating Game Page - Club León - Querétaro FC - at 02:42:35
-
- Creating Participant - Cruz Azul- at 02:42:36
- Creating Participant - Zacatepec- at 02:42:37
- Creating Game Page - Zacatepec - Cruz Azul - at 02:42:37
-
- Creating Participant - Puebla FC- at 02:42:38
- Creating Participant - CF Monterrey- at 02:42:39
- Creating Game Page - CF Monterrey - Puebla FC - at 02:42:39
-
- Creating Participant - FC Juárez- at 02:42:41
- Creating Participant - Deportivo Toluca FC- at 02:42:42
- Creating Game Page - Deportivo Toluca FC - FC Juárez - at 02:42:42
-
- Creating Participant - Tampico Madero- at 02:42:44
- Creating Participant - Club Necaxa- at 02:42:45
- Creating Game Page - Club Necaxa - Tampico Madero - at 02:42:45
-
- Creating Participant - The Strongest- at 02:42:46
- Creating Participant - Club Destroyers- at 02:42:47
- Creating Game Page - The Strongest - Club Destroyers - at 02:42:47
-
- Creating Participant - Club Franciscain- at 02:42:49
- Creating Participant - Deportivo Walter Ferreti- at 02:42:50
- Creating Game Page - Club Franciscain - Deportivo Walter Ferreti - at 02:42:50
-
- Creating Participant - Russia U20- at 02:42:52
- Creating Participant - Qatar U20- at 02:42:53
- Creating Game Page - Russia U20 - Qatar U20 - at 02:42:53
-
- Creating Participant - Santos de Guápiles- at 02:42:55
- Creating Participant - Portmore United- at 02:42:56
- Creating Game Page - Santos de Guápiles - Portmore United - at 02:42:56
-
- Creating Participant - Diriangen FC- at 02:42:57
- Creating Participant - CD Universitario- at 02:42:58
- Creating Game Page - Diriangen FC - CD Universitario - at 02:42:58
-
- Creating Participant - Santos-SP- at 02:43:00
- Creating Participant - Cruzeiro-MG- at 02:43:01
- Creating Game Page - Santos-SP - Cruzeiro-MG - at 02:43:01
-
- Creating Participant - Chapecoense-SC- at 02:43:02
- Creating Participant - Corinthians-SP- at 02:43:04
- Creating Game Page - Corinthians-SP - Chapecoense-SC - at 02:43:04
-
- Creating Participant - Grêmio-RS- at 02:43:05
- Creating Participant - Flamengo-RJ- at 02:43:06
- Creating Game Page - Grêmio-RS - Flamengo-RJ - at 02:43:06
-
- Creating Participant - Norrby IF- at 02:43:08
- Creating Participant - Helsingborgs IF- at 02:43:09
- Creating Game Page - Helsingborgs IF - Norrby IF - at 02:43:09
-
- Creating Participant - Spartak Subotica- at 02:43:10
- Creating Participant - Sparta Praha- at 02:43:11
- Creating Game Page - Sparta Praha - Spartak Subotica - at 02:43:11
-
- Creating Participant - Molde- at 02:43:12
- Creating Participant - KF Laçi- at 02:43:13
- Creating Game Page - KF Laçi - Molde - at 02:43:13
-
- Creating Participant - Alashkert- at 02:43:15
- Creating Participant - Sutjeska FK- at 02:43:17
- Creating Game Page - Alashkert - Sutjeska FK - at 02:43:17
-
- Creating Participant - Dunajska Streda- at 02:43:18
- Creating Participant - Dinamo Minsk- at 02:43:19
- Creating Game Page - Dinamo Minsk - Dunajska Streda - at 02:43:19
-
- Creating Participant - Flora Tallinn- at 02:43:20
- Creating Participant - Apoel Nicosia- at 02:43:21
- Creating Game Page - Flora Tallinn - Apoel Nicosia - at 02:43:21
-
- Creating Participant - LASK Linz- at 02:43:22
- Creating Participant - Lillestrøm- at 02:43:23
- Creating Game Page - Lillestrøm - LASK Linz - at 02:43:23
-
- Creating Participant - BK Häcken- at 02:43:24
- Creating Participant - RB Leipzig- at 02:43:25
- Creating Game Page - BK Häcken - RB Leipzig - at 02:43:25
-
- Creating Participant - Slavia Sofia- at 02:43:26
- Creating Participant - Hajduk Split- at 02:43:27
- Creating Game Page - Slavia Sofia - Hajduk Split - at 02:43:27
-
- Creating Participant - Valletta FC- at 02:43:28
- Creating Participant - Zrinjski Mostar- at 02:43:29
- Creating Game Page - Valletta FC - Zrinjski Mostar - at 02:43:29
-
- Creating Participant - B36 Tórshavn- at 02:43:30
- Creating Participant - Beşiktaş A.Ş.- at 02:43:31
- Creating Game Page - Beşiktaş A.Ş. - B36 Tórshavn - at 02:43:31
-
- Creating Participant - Vaduz- at 02:43:32
- Creating Participant - Žalgiris Vilnius- at 02:43:33
- Creating Game Page - Vaduz - Žalgiris Vilnius - at 02:43:33
-
- Creating Participant - Asteras Tripolis- at 02:43:34
- Creating Participant - Hibernian- at 02:43:35
- Creating Game Page - Asteras Tripolis - Hibernian - at 02:43:35
-
- Creating Participant - AEK Larnaca- at 02:43:36
- Creating Participant - Dundalk- at 02:43:37
- Creating Game Page - AEK Larnaca - Dundalk - at 02:43:37
-
- Creating Participant - Partizan Belgrade- at 02:43:38
- Creating Participant - FK Trakai- at 02:43:39
- Creating Game Page - FK Trakai - Partizan Belgrade - at 02:43:39
-
- Creating Participant - Maccabi Tel Aviv- at 02:43:40
- Creating Participant - Radnički Niš- at 02:43:41
- Creating Game Page - Radnički Niš - Maccabi Tel Aviv - at 02:43:41
-
- Creating Participant - Vitesse- at 02:43:43
- Creating Participant - Viitorul Constanța- at 02:43:43
- Creating Game Page - Vitesse - Viitorul Constanța - at 02:43:44
-
- Creating Participant - Atalanta- at 02:43:45
- Creating Participant - FK Sarajevo- at 02:43:46
- Creating Game Page - FK Sarajevo - Atalanta - at 02:43:46
-
- Creating Participant - Domžale- at 02:43:47
- Creating Participant - Ufa- at 02:43:48
- Creating Game Page - Domžale - Ufa - at 02:43:48
-
- Creating Participant - FCSB- at 02:43:49
- Creating Participant - Rudar Velenje- at 02:43:50
- Creating Game Page - FCSB - Rudar Velenje - at 02:43:50
-
- Creating Participant - Lincoln Red IMPS FC- at 02:43:51
- Creating Participant - The New Saints- at 02:43:53
- Creating Game Page - Lincoln Red IMPS FC - The New Saints - at 02:43:53
-
- Creating Participant - Víkingur Gøta- at 02:43:54
- Creating Participant - Torpedo Kutaisi- at 02:43:55
- Creating Game Page - Víkingur Gøta - Torpedo Kutaisi - at 02:43:55
-
- Creating Participant - FC Progrès Niederkorn- at 02:43:56
- Creating Participant - Budapest Honvéd FC- at 02:43:58
- Creating Game Page - FC Progrès Niederkorn - Budapest Honvéd FC - at 02:43:58
-
- Creating Participant - Chikhura Sachkhere- at 02:43:59
- Creating Participant - Maribor- at 02:44:00
- Creating Game Page - Maribor - Chikhura Sachkhere - at 02:44:00
-
- Creating Participant - Balzan FC- at 02:44:01
- Creating Participant - Slovan Bratislava- at 02:44:02
- Creating Game Page - Slovan Bratislava - Balzan FC - at 02:44:02
-
- Creating Participant - Trenčín- at 02:44:03
- Creating Participant - Górnik Zabrze- at 02:44:04
- Creating Game Page - Trenčín - Górnik Zabrze - at 02:44:04
-
- Creating Participant - F91 Dudelange- at 02:44:05
- Creating Participant - Drita (KOS)- at 02:44:06
- Creating Game Page - Drita (KOS) - F91 Dudelange - at 02:44:06
-
- Creating Participant - Olimpija Ljubljana- at 02:44:07
- Creating Participant - Crusaders Belfast- at 02:44:08
- Creating Game Page - Crusaders Belfast - Olimpija Ljubljana - at 02:44:08
-
- Creating Participant - Sevilla- at 02:44:09
- Creating Participant - Újpest FC- at 02:44:10
- Creating Game Page - Újpest FC - Sevilla - at 02:44:10
-
- Creating Participant - Spartaks Jūrmala- at 02:44:11
- Creating Participant - La Fiorita- at 02:44:13
- Creating Game Page - La Fiorita - Spartaks Jūrmala - at 02:44:14
-
- Creating Participant - Rio Ave- at 02:44:15
- Creating Participant - Jagiellonia Białystok- at 02:44:16
- Creating Game Page - Rio Ave - Jagiellonia Białystok - at 02:44:16
-
- Creating Participant - Rangers FC- at 02:44:17
- Creating Participant - Osijek- at 02:44:18
- Creating Game Page - Rangers FC - Osijek - at 02:44:18
-
- Creating Participant - Valur Reykjavík- at 02:44:19
- Creating Participant - FC Santa Coloma- at 02:44:20
- Creating Game Page - Valur Reykjavík - FC Santa Coloma - at 02:44:20
-
- Creating Participant - FH Hafnarfjarðar- at 02:44:21
- Creating Participant - Hapoel Haifa- at 02:44:22
- Creating Game Page - FH Hafnarfjarðar - Hapoel Haifa - at 02:44:22
-
-
- Schedule day(2018-08-02) has been updating at 02:44:22 whit (124) events.  
-
-
- Schedule day(2018-08-02). Update started at 02:44:24 whit (124) events.  
-
-Illegal string offset 'sportName' CreateClientData.php:786             [warning]
-Illegal string offset 'taxonomySportId' CreateClientData.php:787       [warning]
-Illegal string offset 'region' CreateClientData.php:788                [warning]
-Illegal string offset 'json' CreateClientData.php:789                  [warning]
-Illegal string offset 'sportDrupalId' CreateClientData.php:790         [warning]
-Creating Sport Pages -s - at 02:44:24
-Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]:          [error]
-General error: 1366 Incorrect integer value: 's' for column 'tid' at
-row 1: INSERT INTO {taxonomy_index} (nid, tid, status, sticky,
-created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1,
-:db_insert_placeholder_2, :db_insert_placeholder_3,
-:db_insert_placeholder_4); Array
+ Schedule day(2018-08-07). Update started at 11:21:15 whit (156) events.  
+
+Creating Sport Pages -Football - at 11:21:16
+ Creating menu item '. Football Forside . ' on Menu - at 11:21:16
+ Creating Sport Intern Pages - Live Stream Football - at 11:21:16
+ Creating menu item '. Live Stream Football . ' on Menu - at 11:21:16
+ Creating Sport Internal Blog Page - Blog Football- at 11:21:16
+ Creating menu item '. Blog Football . ' on Menu - at 11:21:16
+ Creating menuitem Football on Menu main - at 11:21:16
+ Creating Participant - Salgueiro-PE- at 11:21:18
+ Creating Participant - Remo-PA- at 11:21:19
+ Creating Game Page - Salgueiro-PE - Remo-PA - at 11:21:19
+
+ Creating Participant - SSV Ulm- at 11:21:21
+ Creating Participant - FK Pirmasens- at 11:21:22
+ Creating Game Page - FK Pirmasens - SSV Ulm - at 11:21:22
+
+Drupal\Core\Database\IntegrityConstraintViolationException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null: INSERT INTO      [31;40m[1m[error][0m
+{taxonomy_term_field_data} (tid, vid, langcode, name, description__value, description__format, weight, changed, default_langcode) VALUES
+(:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5,
+:db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8); Array
 (
-    [:db_insert_placeholder_0] => 128
-    [:db_insert_placeholder_1] => s
-    [:db_insert_placeholder_2] => 1
-    [:db_insert_placeholder_3] => 0
-    [:db_insert_placeholder_4] => 1533213552
+    [:db_insert_placeholder_0] => 468
+    [:db_insert_placeholder_1] => participant
+    [:db_insert_placeholder_2] => en
+    [:db_insert_placeholder_3] => 
+    [:db_insert_placeholder_4] => 
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1533633672
+    [:db_insert_placeholder_8] => 1
 )
- in taxonomy_build_node_index() (line 555 of
-/home/edd/All-Projects/user.controller.cu/core/modules/taxonomy/taxonomy.module).
-PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer     [error]
-value: 's' for column 'tid' at row 1 in
+ in Drupal\Core\Database\Connection->handleQueryException() (line 683 of /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php).
+PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null in                                                              [31;40m[1m[error][0m
 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Statement.php:59
 Stack trace:
-#0
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Statement.php(59):
-PDOStatement->execute(Array)
-#1
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php(625):
-Drupal\Core\Database\Statement->execute(Array, Array)
-#2
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(87):
-Drupal\Core\Database\Connection->query('INSERT INTO {ta...', Array,
-Array)
-#3
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Insert.php(32):
-Drupal\Core\Database\Driver\mysql\Connection->query('INSERT INTO
+#0 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Statement.php(59): PDOStatement->execute(Array)
+#1 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php(625): Drupal\Core\Database\Statement->execute(Array, Array)
+#2 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(87): Drupal\Core\Database\Connection->query('INSERT INTO
 {ta...', Array, Array)
-#4
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Query/Merge.php(371):
+#3 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Insert.php(32):
+Drupal\Core\Database\Driver\mysql\Connection->query('INSERT INTO {ta...', Array, Array)
+#4 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(976):
 Drupal\Core\Database\Driver\mysql\Insert->execute()
-#5
-/home/edd/All-Projects/user.controller.cu/core/modules/taxonomy/taxonomy.module(555):
-Drupal\Core\Database\Query\Merge->execute()
-#6
-/home/edd/All-Projects/user.controller.cu/core/modules/taxonomy/taxonomy.module(509):
-taxonomy_build_node_index(Object(Drupal\node\Entity\Node))
-#7 [internal function]:
-taxonomy_node_insert(Object(Drupal\node\Entity\Node))
-#8
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Extension/ModuleHandler.php(402):
-call_user_func_array('taxonomy_node_i...', Array)
-#9
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(167):
-Drupal\Core\Extension\ModuleHandler->invokeAll('node_insert', Array)
-#10
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php(730):
-Drupal\Core\Entity\EntityStorageBase->invokeHook('insert',
-Object(Drupal\node\Entity\Node))
-#11
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(470):
-Drupal\Core\Entity\ContentEntityStorageBase->invokeHook('insert',
-Object(Drupal\node\Entity\Node))
-#12
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php(615):
-Drupal\Core\Entity\EntityStorageBase->doPostSave(Object(Drupal\node\Entity\Node),
-false)
-#13
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(395):
-Drupal\Core\Entity\ContentEntityStorageBase->doPostSave(Object(Drupal\node\Entity\Node),
-false)
-#14
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(820):
-Drupal\Core\Entity\EntityStorageBase->save(Object(Drupal\node\Entity\Node))
-#15
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Entity.php(391):
-Drupal\Core\Entity\Sql\SqlContentEntityStorage->save(Object(Drupal\node\Entity\Node))
-#16
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/CreateClientData.php(1019):
-Drupal\Core\Entity\Entity->save()
-#17
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/CreateClientData.php(805):
-Drupal\rp_repo\Controller\oldVersion\CreateClientData->createNodeGeneric(Array)
-#18
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(169):
-Drupal\rp_repo\Controller\oldVersion\CreateClientData->createSportPages('sport_2',
-2, 'en', '#149202')
-#19
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(55):
-Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->Schedule(Array)
-#20
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/rp_repo.drush.inc(281):
+#5 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(914):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->saveToSharedTables(Object(Drupal\taxonomy\Entity\Term))
+#6 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php(552):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->doSaveFieldItems(Object(Drupal\taxonomy\Entity\Term))
+#7 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(392): Drupal\Core\Entity\ContentEntityStorageBase->doSave(NULL,
+Object(Drupal\taxonomy\Entity\Term))
+#8 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(820):
+Drupal\Core\Entity\EntityStorageBase->save(Object(Drupal\taxonomy\Entity\Term))
+#9 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Entity.php(391):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->save(Object(Drupal\taxonomy\Entity\Term))
+#10 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/CreateClientData.php(113): Drupal\Core\Entity\Entity->save()
+#11 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/CreateClientData.php(437): Drupal\rp_repo\Controller\oldVersion\CreateClientData->createGenericTaxonomy(Array)
+#12 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(153): Drupal\rp_repo\Controller\oldVersion\CreateClientData->createParticipantPages(Array, '456', '18')
+#13 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(55): Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->Schedule(Array)
+#14 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication /rp_repo/rp_repo.drush.inc(281):
 Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->importApiData()
-#21 phar:///usr/local/bin/drush/includes/command.inc(422):
-rp_repo_drush_importApiData()
-#22 phar:///usr/local/bin/drush/includes/command.inc(231):
-_drush_invoke_hooks(Array, Array)
-#23 phar:///usr/local/bin/drush/includes/command.inc(199):
-drush_command()
-#24 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67):
-drush_dispatch(Array)
-#25 phar:///usr/local/bin/drush/includes/preflight.inc(66):
-Drush\Boot\BaseBoot->bootstrap_and_dispatch()
-#26 phar:///usr/local/bin/drush/includes/startup.inc(465):
-drush_main()
-#27 phar:///usr/local/bin/drush/includes/startup.inc(369):
-drush_run_main(false, '/', 'Phar detected. ...')
-#28 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
-#29 /usr/local/bin/drush(10): require('phar:///usr/loc...')
-#30 {main}
+#15 phar:///usr/local/bin/drush/includes/command.inc(422): rp_repo_drush_importApiData()
+#16 phar:///usr/local/bin/drush/includes/command.inc(231): _drush_invoke_hooks(Array, Array)
+#17 phar:///usr/local/bin/drush/includes/command.inc(199): drush_command()
+#18 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67): drush_dispatch(Array)
+#19 phar:///usr/local/bin/drush/includes/preflight.inc(66): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#20 phar:///usr/local/bin/drush/includes/startup.inc(465): drush_main()
+#21 phar:///usr/local/bin/drush/includes/startup.inc(369): drush_run_main(false, '/', 'Phar detected. ...')
+#22 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
+#23 /usr/local/bin/drush(10): require('phar:///usr/loc...')
+#24 {main}
 
-Next Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]:
-General error: 1366 Incorrect integer value: 's' for column 'tid' at
-row 1: INSERT INTO {taxonomy_index} (nid, tid, status, sticky,
-created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1,
-:db_insert_placeholder_2, :db_insert_placeholder_3,
-:db_insert_placeholder_4); Array
+Next Drupal\Core\Database\IntegrityConstraintViolationException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null: INSERT INTO
+{taxonomy_term_field_data} (tid, vid, langcode, name, description__value, description__format, weight, changed, default_langcode) VALUES
+(:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5,
+:db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8); Array
 (
-    [:db_insert_placeholder_0] => 128
-    [:db_insert_placeholder_1] => s
-    [:db_insert_placeholder_2] => 1
-    [:db_insert_placeholder_3] => 0
-    [:db_insert_placeholder_4] => 1533213552
+    [:db_insert_placeholder_0] => 468
+    [:db_insert_placeholder_1] => participant
+    [:db_insert_placeholder_2] => en
+    [:db_insert_placeholder_3] => 
+    [:db_insert_placeholder_4] => 
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1533633672
+    [:db_insert_placeholder_8] => 1
 )
- in
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php:686
+ in /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php:683
 Stack trace:
-#0
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php(650):
-Drupal\Core\Database\Connection->handleQueryException(Object(PDOException),
-'INSERT INTO {ta...', Array, Array)
-#1
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(87):
-Drupal\Core\Database\Connection->query('INSERT INTO {ta...', Array,
-Array)
-#2
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Insert.php(32):
-Drupal\Core\Database\Driver\mysql\Connection->query('INSERT INTO
+#0 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Connection.php(650):
+Drupal\Core\Database\Connection->handleQueryException(Object(PDOException), 'INSERT INTO {ta...', Array, Array)
+#1 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Connection.php(87): Drupal\Core\Database\Connection->query('INSERT INTO
 {ta...', Array, Array)
-#3
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Query/Merge.php(371):
+#2 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Database/Driver/mysql/Insert.php(32):
+Drupal\Core\Database\Driver\mysql\Connection->query('INSERT INTO {ta...', Array, Array)
+#3 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(976):
 Drupal\Core\Database\Driver\mysql\Insert->execute()
-#4
-/home/edd/All-Projects/user.controller.cu/core/modules/taxonomy/taxonomy.module(555):
-Drupal\Core\Database\Query\Merge->execute()
-#5
-/home/edd/All-Projects/user.controller.cu/core/modules/taxonomy/taxonomy.module(509):
-taxonomy_build_node_index(Object(Drupal\node\Entity\Node))
-#6 [internal function]:
-taxonomy_node_insert(Object(Drupal\node\Entity\Node))
-#7
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Extension/ModuleHandler.php(402):
-call_user_func_array('taxonomy_node_i...', Array)
-#8
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(167):
-Drupal\Core\Extension\ModuleHandler->invokeAll('node_insert', Array)
-#9
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php(730):
-Drupal\Core\Entity\EntityStorageBase->invokeHook('insert',
-Object(Drupal\node\Entity\Node))
-#10
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(470):
-Drupal\Core\Entity\ContentEntityStorageBase->invokeHook('insert',
-Object(Drupal\node\Entity\Node))
-#11
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php(615):
-Drupal\Core\Entity\EntityStorageBase->doPostSave(Object(Drupal\node\Entity\Node),
-false)
-#12
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(395):
-Drupal\Core\Entity\ContentEntityStorageBase->doPostSave(Object(Drupal\node\Entity\Node),
-false)
-#13
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(820):
-Drupal\Core\Entity\EntityStorageBase->save(Object(Drupal\node\Entity\Node))
-#14
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Entity.php(391):
-Drupal\Core\Entity\Sql\SqlContentEntityStorage->save(Object(Drupal\node\Entity\Node))
-#15
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/CreateClientData.php(1019):
-Drupal\Core\Entity\Entity->save()
-#16
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/CreateClientData.php(805):
-Drupal\rp_repo\Controller\oldVersion\CreateClientData->createNodeGeneric(Array)
-#17
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(169):
-Drupal\rp_repo\Controller\oldVersion\CreateClientData->createSportPages('sport_2',
-2, 'en', '#149202')
-#18
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(55):
-Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->Schedule(Array)
-#19
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/rp_repo.drush.inc(281):
+#4 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(914):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->saveToSharedTables(Object(Drupal\taxonomy\Entity\Term))
+#5 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/ContentEntityStorageBase.php(552):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->doSaveFieldItems(Object(Drupal\taxonomy\Entity\Term))
+#6 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/EntityStorageBase.php(392): Drupal\Core\Entity\ContentEntityStorageBase->doSave(NULL,
+Object(Drupal\taxonomy\Entity\Term))
+#7 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php(820):
+Drupal\Core\Entity\EntityStorageBase->save(Object(Drupal\taxonomy\Entity\Term))
+#8 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Entity.php(391):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->save(Object(Drupal\taxonomy\Entity\Term))
+#9 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/CreateClientData.php(113): Drupal\Core\Entity\Entity->save()
+#10 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/CreateClientData.php(437): Drupal\rp_repo\Controller\oldVersion\CreateClientData->createGenericTaxonomy(Array)
+#11 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(153): Drupal\rp_repo\Controller\oldVersion\CreateClientData->createParticipantPages(Array, '456', '18')
+#12 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(55): Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->Schedule(Array)
+#13 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication /rp_repo/rp_repo.drush.inc(281):
 Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->importApiData()
-#20 phar:///usr/local/bin/drush/includes/command.inc(422):
-rp_repo_drush_importApiData()
-#21 phar:///usr/local/bin/drush/includes/command.inc(231):
-_drush_invoke_hooks(Array, Array)
-#22 phar:///usr/local/bin/drush/includes/command.inc(199):
-drush_command()
-#23 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67):
-drush_dispatch(Array)
-#24 phar:///usr/local/bin/drush/includes/preflight.inc(66):
-Drush\Boot\BaseBoot->bootstrap_and_dispatch()
-#25 phar:///usr/local/bin/drush/includes/startup.inc(465):
-drush_main()
-#26 phar:///usr/local/bin/drush/includes/startup.inc(369):
-drush_run_main(false, '/', 'Phar detected. ...')
-#27 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
-#28 /usr/local/bin/drush(10): require('phar:///usr/loc...')
-#29 {main}
+#14 phar:///usr/local/bin/drush/includes/command.inc(422): rp_repo_drush_importApiData()
+#15 phar:///usr/local/bin/drush/includes/command.inc(231): _drush_invoke_hooks(Array, Array)
+#16 phar:///usr/local/bin/drush/includes/command.inc(199): drush_command()
+#17 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67): drush_dispatch(Array)
+#18 phar:///usr/local/bin/drush/includes/preflight.inc(66): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#19 phar:///usr/local/bin/drush/includes/startup.inc(465): drush_main()
+#20 phar:///usr/local/bin/drush/includes/startup.inc(369): drush_run_main(false, '/', 'Phar detected. ...')
+#21 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
+#22 /usr/local/bin/drush(10): require('phar:///usr/loc...')
+#23 {main}
 
-Next Drupal\Core\Entity\EntityStorageException: SQLSTATE[HY000]:
-General error: 1366 Incorrect integer value: 's' for column 'tid' at
-row 1: INSERT INTO {taxonomy_index} (nid, tid, status, sticky,
-created) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1,
-:db_insert_placeholder_2, :db_insert_placeholder_3,
-:db_insert_placeholder_4); Array
+Next Drupal\Core\Entity\EntityStorageException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null: INSERT INTO
+{taxonomy_term_field_data} (tid, vid, langcode, name, description__value, description__format, weight, changed, default_langcode) VALUES
+(:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5,
+:db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8); Array
 (
-    [:db_insert_placeholder_0] => 128
-    [:db_insert_placeholder_1] => s
-    [:db_insert_placeholder_2] => 1
-    [:db_insert_placeholder_3] => 0
-    [:db_insert_placeholder_4] => 1533213552
+    [:db_insert_placeholder_0] => 468
+    [:db_insert_placeholder_1] => participant
+    [:db_insert_placeholder_2] => en
+    [:db_insert_placeholder_3] => 
+    [:db_insert_placeholder_4] => 
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => 0
+    [:db_insert_placeholder_7] => 1533633672
+    [:db_insert_placeholder_8] => 1
 )
- in
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829
+ in /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php:829
 Stack trace:
-#0
-/home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Entity.php(391):
-Drupal\Core\Entity\Sql\SqlContentEntityStorage->save(Object(Drupal\node\Entity\Node))
-#1
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/CreateClientData.php(1019):
-Drupal\Core\Entity\Entity->save()
-#2
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/CreateClientData.php(805):
-Drupal\rp_repo\Controller\oldVersion\CreateClientData->createNodeGeneric(Array)
-#3
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(169):
-Drupal\rp_repo\Controller\oldVersion\CreateClientData->createSportPages('sport_2',
-2, 'en', '#149202')
-#4
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(55):
-Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->Schedule(Array)
-#5
-/home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
-/rp_repo/rp_repo.drush.inc(281):
+#0 /home/edd/All-Projects/user.controller.cu/core/lib/Drupal/Core/Entity/Entity.php(391):
+Drupal\Core\Entity\Sql\SqlContentEntityStorage->save(Object(Drupal\taxonomy\Entity\Term))
+#1 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/CreateClientData.php(113): Drupal\Core\Entity\Entity->save()
+#2 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/CreateClientData.php(437): Drupal\rp_repo\Controller\oldVersion\CreateClientData->createGenericTaxonomy(Array)
+#3 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(153): Drupal\rp_repo\Controller\oldVersion\CreateClientData->createParticipantPages(Array, '456', '18')
+#4 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication
+/rp_repo/src/Controller/oldVersion/ImportAPIDATA.php(55): Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->Schedule(Array)
+#5 /home/edd/All-Projects/user.controller.cu/modules/custom/Steve-Project/RP-Admin/SteveAPIConmunication /rp_repo/rp_repo.drush.inc(281):
 Drupal\rp_repo\Controller\oldVersion\ImportAPIDATA->importApiData()
-#6 phar:///usr/local/bin/drush/includes/command.inc(422):
-rp_repo_drush_importApiData()
-#7 phar:///usr/local/bin/drush/includes/command.inc(231):
-_drush_invoke_hooks(Array, Array)
-#8 phar:///usr/local/bin/drush/includes/command.inc(199):
-drush_command()
-#9 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67):
-drush_dispatch(Array)
-#10 phar:///usr/local/bin/drush/includes/preflight.inc(66):
-Drush\Boot\BaseBoot->bootstrap_and_dispatch()
-#11 phar:///usr/local/bin/drush/includes/startup.inc(465):
-drush_main()
-#12 phar:///usr/local/bin/drush/includes/startup.inc(369):
-drush_run_main(false, '/', 'Phar detected. ...')
+#6 phar:///usr/local/bin/drush/includes/command.inc(422): rp_repo_drush_importApiData()
+#7 phar:///usr/local/bin/drush/includes/command.inc(231): _drush_invoke_hooks(Array, Array)
+#8 phar:///usr/local/bin/drush/includes/command.inc(199): drush_command()
+#9 phar:///usr/local/bin/drush/lib/Drush/Boot/BaseBoot.php(67): drush_dispatch(Array)
+#10 phar:///usr/local/bin/drush/includes/preflight.inc(66): Drush\Boot\BaseBoot->bootstrap_and_dispatch()
+#11 phar:///usr/local/bin/drush/includes/startup.inc(465): drush_main()
+#12 phar:///usr/local/bin/drush/includes/startup.inc(369): drush_run_main(false, '/', 'Phar detected. ...')
 #13 phar:///usr/local/bin/drush/drush(114): drush_startup(Array)
 #14 /usr/local/bin/drush(10): require('phar:///usr/loc...')
 #15 {main}
+Please provide one or more language codes as arguments.                                                                                                          [31;40m[1m[error][0m
+--2018-08-07 11:21:24--  http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po
+Resolving ftp.drupal.org (ftp.drupal.org)... 151.101.85.175
+Connecting to ftp.drupal.org (ftp.drupal.org)|151.101.85.175|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://ftp-origin.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po [following]
+--2018-08-07 11:21:24--  https://ftp-origin.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po
+Resolving ftp-origin.drupal.org (ftp-origin.drupal.org)... 151.101.85.175
+Connecting to ftp-origin.drupal.org (ftp-origin.drupal.org)|151.101.85.175|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 730205 (713K) [application/octet-stream]
+drupal-8.6.0-beta2.da.po: Permission denied
+
+Cannot write to ‘drupal-8.6.0-beta2.da.po’ (Success).
+The drush command 'l--uri=content.repository.katso-urheilua.com language-import drupal-8.6.0-beta2.da.po' could not be found.  Run `drush cache-clear drush` to  [31;40m[1m[error][0m
+clear the commandfile cache if you have installed new extensions.
 chmod: cannot access 'site/content.repository.katso-urheilua.com/files': No such file or directory
-Cache rebuild complete.                                                     [ok]
+Cache rebuild complete.                                                                                                                                          [1;32;40m[1m[ok][0m

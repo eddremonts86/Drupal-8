@@ -1,8 +1,0 @@
-entity.competition_info.add_form:
-  route_name: entity.competition_info.add_form
-  title: 'Add Competition Info'
-  appears_on:
-    - entity.competition_info.collection
-  options:
-    query:
-      destination: '/admin/rp/entity-content/competition'

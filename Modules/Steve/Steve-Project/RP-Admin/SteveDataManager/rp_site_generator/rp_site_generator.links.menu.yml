@@ -1,0 +1,6 @@
+rp_site_generator.help:
+  title: 'Site Generation'
+  description: 'Please take a look to http://[siteUrl]/admin/help/rp_site_generator'
+  route_name: rp_site_generator.site_generator
+  parent: rp_cms_steve_integration.steve
+  weight: 0

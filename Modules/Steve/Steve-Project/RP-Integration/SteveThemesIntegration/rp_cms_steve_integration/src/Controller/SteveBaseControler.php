@@ -33,7 +33,10 @@ abstract class SteveBaseControler extends ControllerBase
         $session = @$_SESSION["channel"];
         $channel = @$_GET["channel"];
         if ($session == NULL or $session == '' or !isset($session)) {
-            $_SESSION["channel"] = '1';
+
+          $config = \Drupal::configFactory()->get('rp_base.settings');
+          $site_def_channel = $config->get('rp_base_def_channel');
+          $_SESSION["channel"] = $site_def_channel;
         } else {
             if ($channel != $session and isset($channel)) {
                 $_SESSION["channel"] = $channel;
@@ -272,6 +275,7 @@ abstract class SteveBaseControler extends ControllerBase
     public function getSchedulePlusTree($range = 0, $format = "Y-m-d")
     {
         $nodes = $this->getSchedule($range);
+
         if ($nodes) {
             $tree = $this->getTree($nodes, $format);
         } else {
@@ -281,7 +285,7 @@ abstract class SteveBaseControler extends ControllerBase
         return $tree;
     }
 
-    public function getSchedule($range, $days = 3, $round = 0)
+    public function getSchedule($range, $days = 7, $round = 0)
     {
         set_time_limit(120);
         $date = date('Y-m-d');
@@ -442,6 +446,9 @@ abstract class SteveBaseControler extends ControllerBase
         }
         return $newNodeList;
     }
+
+
+
 
 
 
