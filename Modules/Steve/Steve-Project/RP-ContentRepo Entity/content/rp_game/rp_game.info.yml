@@ -2,7 +2,7 @@ name: RP Game
 type: module
 description: RP Game from API Schedule
 core: 8.x
-package: RP
+package: Rebel Penguin - Entities
 
 dependencies:
   - rp_site

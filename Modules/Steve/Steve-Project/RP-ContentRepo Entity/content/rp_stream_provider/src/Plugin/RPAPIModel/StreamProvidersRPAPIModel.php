@@ -22,7 +22,7 @@ class StreamProvidersRPAPIModel extends RPAPIModelBase {
    */
   public function mapping() {
     return [
-      'field_stream_provider_api_id' => [
+      'field_api_id' => [
         'api_field' => 'id'
       ],
       'name' => [

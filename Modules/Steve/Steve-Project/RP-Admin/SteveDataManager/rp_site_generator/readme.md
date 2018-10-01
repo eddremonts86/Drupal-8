@@ -1,0 +1,44 @@
+#Site Generator
+###Basic Requirements
+  - Apache Virtualhost
+  - Data base (mysql or posgrest)
+
+###Config File - Example
+           {
+            "multisite" : "content.repository.katso-urheilua.com",  
+            "siteDB": "content_repository_katso_urheilua",
+            "id_site": "4",
+          
+            "base_THEME":"stevethemebase",
+            "base_THEME_CONF":"rp_cms_steve_base_config",
+            "admima_theme":"fortytwo_admin",
+            "langcode":"en",
+            "site_name":"katso.urheilua.cu Content Repository",
+            "site_mail":"contact@client1.dev",
+            "account_name":"admin",
+            "account_mail":"contact@client1.dev",
+            "account_pass":"admin",
+          
+            "type":"mysql",
+            "host":"localhost",
+            "name":"content_repository_katso_urheilua",
+            "user":"root",
+            "pass":"root",
+            "port":"3316",
+          
+            "base_site_api_id":"4",
+            "base_site_url":"http://content.repository.katso-urheilua.com",
+            "site_url_api":"http://user.controller.cu/",  
+            "site_def_channel":"1",
+          
+            "langcode_code":"da",
+            "langcode_url":"http://ftp.drupal.org/files/translations/8.x/drupal/drupal-8.6.0-beta2.da.po",
+            "langcode_filename":"drupal-8.6.0-beta2.da.po"
+          }
+        
+##Drush commands
+####To more Info rum "drush help" in you terminal
+
+- steve_generateSites (Generate All sites with a config file).
+- steve_generateSite (Generate sites by Steve Site ID with a config file).
+

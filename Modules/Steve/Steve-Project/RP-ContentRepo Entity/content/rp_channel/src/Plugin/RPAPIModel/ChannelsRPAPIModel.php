@@ -22,7 +22,7 @@ class ChannelsRPAPIModel extends RPAPIModelBase {
    */
   public function mapping() {
     return [
-      'field_channel_api_id' => [
+      'field_api_id' => [
         'api_field' => 'id'
       ],
       'name' => [

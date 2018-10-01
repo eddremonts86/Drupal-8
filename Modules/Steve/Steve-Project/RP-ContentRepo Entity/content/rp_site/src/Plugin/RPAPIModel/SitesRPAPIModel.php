@@ -52,7 +52,7 @@ class SitesRPAPIModel extends RPAPIModelBase {
         'api_field' => 'channels',
         'field_type' => 'entity_reference',
         'entity_type' => 'channel',
-        'entity_field_reference' => 'field_channel_api_id',
+        'entity_field_reference' => 'field_api_id',
         'required' => true
       ],
     ];

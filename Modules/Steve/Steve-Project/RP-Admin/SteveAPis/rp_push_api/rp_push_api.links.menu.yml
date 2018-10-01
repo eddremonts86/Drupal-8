@@ -1,0 +1,6 @@
+rp_site_generator.help:
+  title: 'Site API PUSH Generation'
+  description: 'Please take a look to http://[siteUrl]/admin/help/rp_site_generator'
+  route_name: rp_push_api.push_api_config
+  parent:  rp_repo.steve
+  weight: 3

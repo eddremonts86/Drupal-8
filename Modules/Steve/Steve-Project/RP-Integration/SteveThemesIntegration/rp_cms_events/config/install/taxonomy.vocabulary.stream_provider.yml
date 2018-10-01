@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'Site - Stream Provider'
+name: 'Steve - Stream Provider'
 vid: stream_provider
 description: ''
 hierarchy: 0

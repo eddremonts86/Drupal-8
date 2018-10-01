@@ -9,7 +9,6 @@ dependencies:
     - field.field.taxonomy_term.stream_provider.field_step_3
     - field.field.taxonomy_term.stream_provider.field_step_lvs
     - field.field.taxonomy_term.stream_provider.field_stream_disclaimer
-    - field.field.taxonomy_term.stream_provider.field_stream_provider_api_id
     - field.field.taxonomy_term.stream_provider.field_stream_provider_home_promo
     - field.field.taxonomy_term.stream_provider.field_stream_provider_sponsor
     - field.field.taxonomy_term.stream_provider.field_stream_provider_type_apiid
@@ -59,7 +58,6 @@ hidden:
   field_step_3: true
   field_step_lvs: true
   field_stream_disclaimer: true
-  field_stream_provider_api_id: true
   field_stream_provider_home_promo: true
   field_stream_provider_sponsor: true
   field_stream_provider_type_apiid: true

@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_repo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\rp_repo\Controller\entities\Taxonomies\TaxonomyChannel;
+
+/**
+ * Implements hook_help().
+ */
+function rp_repo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_repo module.
+    case 'help.page.rp_repo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_repo_theme() {
+  return [
+    'rp_repo' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+function rp_repo_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ('rp_base_config'== $form_id) {
+    $config = \Drupal::configFactory()->get('rp_base.settings');
+    $channels = new  TaxonomyChannel();
+    $list = $channels->getChannelList();
+    $form['site']['rp_base_site_channel'] = [
+      '#type' => 'select',
+      '#title' => 'Select Environment',
+      '#default_value' =>  $config->get('rp_base_site_channel'),
+      '#options' => $list
+    ];
+    $form['site']['rp_base_scheduleDays'] = [
+      '#type' => 'textfield',
+      '#title' => 'Shedule Show/import days ',
+      '#maxlength' => 64,
+      '#size' => 64,
+      '#default_value' =>  $config->get('rp_base_scheduleDays'),
+      '#description' => '',
+    ];
+    $form['actions']['submit']['#submit'][] = 'save_repo_conf';
+
+  }
+
+}
+
+function save_repo_conf($form, &$form_state){
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('rp_base.settings');
+  $formValues = $form_state->cleanValues()->getValues('');
+  foreach ($formValues as $values => $key){
+    $config->set($values, $form_state->getValue($values))->save();
+  }
+
+}

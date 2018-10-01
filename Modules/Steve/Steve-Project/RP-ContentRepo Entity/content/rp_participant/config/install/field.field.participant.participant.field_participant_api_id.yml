@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.participant.field_participant_api_id
+    - field.storage.participant.field_api_id
   module:
     - rp_participant
-id: participant.participant.field_participant_api_id
-field_name: field_participant_api_id
+id: participant.participant.field_api_id
+field_name: field_api_id
 entity_type: participant
 bundle: participant
 label: 'API ID'

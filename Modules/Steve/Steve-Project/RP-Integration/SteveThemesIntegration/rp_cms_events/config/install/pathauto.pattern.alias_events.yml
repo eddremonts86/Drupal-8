@@ -8,14 +8,14 @@ label: 'Alias  - Events'
 type: 'canonical_entities:node'
 pattern: '/[node:field_event_tournament]/[node:title]'
 selection_criteria:
-  17065301-c823-4bb8-b1d4-f75f6707c1da:
+  81b98e17-306e-4c2b-a9fb-6ce0fe328595:
     id: node_type
     bundles:
       events: events
     negate: false
     context_mapping:
       node: node
-    uuid: 17065301-c823-4bb8-b1d4-f75f6707c1da
+    uuid: 81b98e17-306e-4c2b-a9fb-6ce0fe328595
 selection_logic: and
 weight: -5
 relationships: {  }

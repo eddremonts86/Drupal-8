@@ -1,0 +1,5 @@
+name: 'Steve API - Drupal Evenets API'
+type: module
+description: 'Server RESTful API module - RESTful API'
+core: 8.x
+package: 'Rebel Penguins - Apps Server'

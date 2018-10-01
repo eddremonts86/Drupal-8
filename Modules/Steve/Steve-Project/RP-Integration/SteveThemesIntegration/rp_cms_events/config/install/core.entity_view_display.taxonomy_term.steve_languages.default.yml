@@ -81,6 +81,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 3
+    enabled: true
 id: taxonomy_term.steve_languages.default
 targetEntityType: taxonomy_term
 bundle: steve_languages

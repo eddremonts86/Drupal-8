@@ -166,6 +166,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 15
+    enabled: true
 id: taxonomy_term.steve_site.default
 targetEntityType: taxonomy_term
 bundle: steve_site

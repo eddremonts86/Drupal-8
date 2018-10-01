@@ -22,7 +22,7 @@ class ParticipantsRPAPIModel extends RPAPIModelBase {
    */
   public function mapping() {
     return [
-      'field_participant_api_id' => [
+      'field_api_id' => [
         'api_field' => 'id'
       ],
       'name' => [

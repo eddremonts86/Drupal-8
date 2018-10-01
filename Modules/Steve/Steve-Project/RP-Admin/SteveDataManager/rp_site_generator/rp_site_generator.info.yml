@@ -1,5 +1,7 @@
-name: 'Site Generator'
+name: '	Steve - Site Generator'
 type: module
 description: 'Module to generate new sites using a config file. (using site taxonomy).'
 core: 8.x
-package: 'Rebel Penguins CMS - Sites Administration'
+package: 'Rebel Penguins - Sites Administration'
+autor: 'Eduardo Valdes Inerarte'
+project: 'steve_RP'

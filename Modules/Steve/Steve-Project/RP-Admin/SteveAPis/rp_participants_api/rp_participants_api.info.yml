@@ -1,5 +1,5 @@
-name: 'rp_participants_api'
+name: 'Steve API - Participants'
 type: module
-description: 'My Awesome Module'
+description: 'Export/Import Participants - RESTful API'
 core: 8.x
-package: 'Rebel Penguins Apps - Server'
+package: 'Rebel Penguins - Apps Server'

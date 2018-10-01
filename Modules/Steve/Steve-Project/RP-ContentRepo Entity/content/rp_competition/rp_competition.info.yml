@@ -2,7 +2,7 @@ name: RP Competition
 type: module
 description: Rp Competition Entity
 core: 8.x
-package: RP
+package: Rebel Penguin - Entities
 
 dependencies:
   - rp_sport

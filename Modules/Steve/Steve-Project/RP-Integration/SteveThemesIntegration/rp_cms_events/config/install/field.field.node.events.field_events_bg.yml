@@ -5,7 +5,14 @@ dependencies:
     - field.storage.node.field_events_bg
     - node.type.events
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.events.field_events_bg
 field_name: field_events_bg
 entity_type: node
@@ -13,7 +20,7 @@ bundle: events
 label: 'Events Background Page'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

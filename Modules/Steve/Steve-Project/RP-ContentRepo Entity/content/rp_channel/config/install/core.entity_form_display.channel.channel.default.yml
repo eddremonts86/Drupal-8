@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.channel.channel.field_channel_api_id
+    - field.field.channel.channel.field_api_id
     - field.field.channel.channel.field_channel_code
   module:
     - rp_channel
@@ -11,7 +11,7 @@ targetEntityType: channel
 bundle: channel
 mode: default
 content:
-  field_channel_api_id:
+  field_api_id:
     weight: 26
     settings:
       size: 60

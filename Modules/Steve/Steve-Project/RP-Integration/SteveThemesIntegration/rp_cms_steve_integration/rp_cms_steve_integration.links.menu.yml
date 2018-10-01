@@ -2,7 +2,7 @@ rp_cms_steve_integration.steve:
   title: 'Steve Integration'
   route_name: rp_cms_steve_integration.index
   description: 'Steve Integration'
-  parent: rp_base.index
+  parent: rp_repo.steve
   weight: 2
 
 rp_cms_steve_integration.event_filters:

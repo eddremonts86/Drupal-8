@@ -72,9 +72,6 @@ class RenderBlock extends \Twig_Extension
                                 </div>');
             return false;
         }
-
-
-
     }
 
     public function enable_block($block_id)

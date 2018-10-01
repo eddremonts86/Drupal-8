@@ -13,4 +13,5 @@ dependencies:
   - search
   - system
   - user
+  - drush_language
 

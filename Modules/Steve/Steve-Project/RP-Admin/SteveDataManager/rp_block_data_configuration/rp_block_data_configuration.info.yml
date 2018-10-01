@@ -1,5 +1,7 @@
-name: 'Blocks configuration'
+name: 'Steve - Blocks configuration'
 type: module
 description: 'Configuration of our modules'
 core: 8.x
-package: 'Rebel Penguins CMS - Sites Administration'
+package: 'Rebel Penguins - Sites Administration'
+autor: 'Eduardo Valdes Inerarte'
+project: 'steve_RP'

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/rp_push_api",
+  "type": "drupal-module",
+  "description": "This module provide an automatically content update between Content Repo Server and Content Clients",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_push_api",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_push_api",
+    "source": "http://cgit.drupalcode.org/rp_push_api"
+  },
+  "require": { }
+}

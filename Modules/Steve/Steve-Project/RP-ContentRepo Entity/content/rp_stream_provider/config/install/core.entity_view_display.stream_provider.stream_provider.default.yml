@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.stream_provider.stream_provider.field_stream_provider_api_id
+    - field.field.stream_provider.stream_provider.field_api_id
     - field.field.stream_provider.stream_provider.field_stream_provider_name
     - field.field.stream_provider.stream_provider.field_stream_provider_type
   module:
@@ -13,7 +13,7 @@ targetEntityType: stream_provider
 bundle: stream_provider
 mode: default
 content:
-  field_stream_provider_api_id:
+  field_api_id:
     weight: 1
     label: above
     settings:

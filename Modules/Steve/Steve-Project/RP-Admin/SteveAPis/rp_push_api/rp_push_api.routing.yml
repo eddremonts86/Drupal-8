@@ -1,0 +1,42 @@
+
+rp_push_api.push_api_config:
+  path: '/admin/push_api/config'
+  defaults:
+    _form: '\Drupal\rp_push_api\Form\push_api_config'
+    _title: 'Push API config'
+  requirements:
+    _access: 'TRUE'
+  
+rp_push_api.push_api_update_site:
+  path: '/admin/push_api/{cToken}/{sToken}/{active}'
+  defaults:
+    _controller: '\Drupal\rp_push_api\Controller\pushController::updateSiteList'
+    _title: 'Update Site list'
+  requirements:
+    _access: 'TRUE'
+
+
+rp_events_api.pushtokens:
+  path: '/steveAPI/push/{ctoken}'
+  defaults: { _controller: '\Drupal\rp_push_api\Controller\push\pushExport::getSiteToken' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+
+rp_events_api.pushcontnets:
+  path: '/steveAPI/push/{s_token}/{c_token}/{c_type}'
+  defaults: { _controller: '\Drupal\rp_push_api\Controller\push\pushImport::pushInfo' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_events_api.pushcontnetsbyID:
+  path: '/steveAPI/push/{s_token}/{c_token}/{c_type}/{apiid}'
+  defaults: { _controller: '\Drupal\rp_push_api\Controller\push\pushImport::pushInfo' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+
+

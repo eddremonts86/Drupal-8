@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.channels.field_channel_api_id
+    - field.field.taxonomy_term.channels.field_api_id
     - field.field.taxonomy_term.channels.field_channel_code
     - field.field.taxonomy_term.channels.field_channel_des
     - field.field.taxonomy_term.channels.field_channel_name
@@ -31,8 +31,8 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_channel_api_id:
-    weight: 31
+  field_api_id:
+    weight: 37
     settings:
       size: 60
       placeholder: ''

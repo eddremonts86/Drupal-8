@@ -1,5 +1,5 @@
-name: 'rp_streamproviders_api'
+name: 'Steve API - Streamers '
 type: module
-description: 'My Awesome Module'
+description: 'Export/import Steamers contents between Systems - RESTful API'
 core: 8.x
-package: 'Rebel Penguins Apps - Server'
+package: 'Rebel Penguins - Apps Server'

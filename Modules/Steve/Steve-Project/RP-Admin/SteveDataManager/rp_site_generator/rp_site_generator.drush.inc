@@ -8,25 +8,24 @@ use Drupal\rp_site_generator\Controller\siteGeneratorController;
 function rp_site_generator_drush_command() {
 
   $commands['rp-site-generator-importAllSites'] = [
-    'description' => 'RP API Import entities',
+    'description' => 'Generate All sites with a config file',
     'callback' => 'rp_site_generator_drush_generateSites',
     'aliases' => ['steve_generateSites'],
     'examples' => [
-      'drush rpapii sites' => 'Import Sites entity from API STEVE',
+      'drush steve_generateSites' => 'Generate All sites with a config file',
 
     ],
   ];
 
-
   $commands['rp-site-generator-importSiteByID'] = [
-    'description' => '-==- Import data and create all content type and tax From API -==-  ',
+    'description' => 'Generate sites by Steve Site ID with a config file',
     'callback' => 'rp_site_generator_drush_generateSite',
     'aliases' => ['steve_generateSite'],
     'arguments' => [
       'siteId' => 'siteId'
     ],
     'examples' => [
-      'drush rp_importApiBYDays 10' => 'Import all data for the next 10 days',
+      'drush steve_generateSite 10' => 'Generate sites by Steve Site ID with a config file',
     ],
   ];
 

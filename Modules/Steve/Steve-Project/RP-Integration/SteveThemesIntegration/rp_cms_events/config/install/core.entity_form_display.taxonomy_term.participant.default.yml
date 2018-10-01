@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.participant.field_api_id
     - field.field.taxonomy_term.participant.field_jsonld_struct
     - field.field.taxonomy_term.participant.field_locales
-    - field.field.taxonomy_term.participant.field_participant_api_id
     - field.field.taxonomy_term.participant.field_participant_background_pag
     - field.field.taxonomy_term.participant.field_participant_content
     - field.field.taxonomy_term.participant.field_participant_logo
@@ -89,6 +89,14 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_api_id:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_jsonld_struct:
     type: entity_reference_autocomplete
     weight: 3
@@ -106,14 +114,6 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_participant_api_id:
-    type: string_textfield
-    weight: -2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_participant_background_pag:
     type: image_image
     weight: 0

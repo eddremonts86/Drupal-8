@@ -256,8 +256,8 @@ class StreamProvider extends RevisionableContentEntityBase implements StreamProv
    * Get API ID value
    */
   public function getApiId() {
-    if($this->hasField('field_stream_provider_api_id'))
-      return $this->get('field_stream_provider_api_id')->value;
+    if($this->hasField('field_api_id'))
+      return $this->get('field_api_id')->value;
     else
       return null;
   }
@@ -266,7 +266,7 @@ class StreamProvider extends RevisionableContentEntityBase implements StreamProv
    * Get API ID Field
    */
   public function getFieldApiId() {
-    return 'field_stream_provider_api_id';
+    return 'field_api_id';
   }
 
   protected function urlRouteParameters($rel) {

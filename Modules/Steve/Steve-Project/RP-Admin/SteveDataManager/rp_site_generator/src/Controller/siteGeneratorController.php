@@ -35,7 +35,7 @@ class siteGeneratorController extends ControllerBase {
     if (is_array($results)) {
       foreach ($results as $result) {
 
-        if(count($result['fileConfig']) >= 1)
+        if(count($result['fileConfig']) >= 0)
           $OPERATIONS = ['#markup' => $this->t('<a href="/admin/siteGenerator/' . $result['apiID'] . '" class="button js-form-submit form-submit">Create a new version</a>')];
         else
           $OPERATIONS = ['#markup' => $this->t('')];
@@ -89,27 +89,60 @@ class siteGeneratorController extends ControllerBase {
      if(!isset($data)){
         $data = json_decode(file_get_contents(end($site[0]["siteConfigurations"])["value"]));
      }
-    $multiSite = $data->multisite;
-    $shArray = array();
-    foreach ($data as $key => $d ){$shArray[] =$d;}
-    $shArray = str_replace(' ',"_",$shArray);
-    $shArray = implode(' ', $shArray);
-    $logfile = ROOTPATH.'/extFiles/logs/log-'.$multiSite.'.txt';
-    if ($shArray){
-        if($data->base != null ){
-          $takeoldconfg  = ROOTPATH.'/extFiles/shScript/takeoldconfg.sh';
-          shell_exec("sh $takeoldconfg $shArray  >$logfile 2>&1");
+     if($this->testSite($data)){
+        $multiSite = $data->multisite;
+          $shArray = array();
+          foreach ($data as $key => $d ){$shArray[] =$d;}
+          $shArray = str_replace(' ',"_",$shArray);
+          $shArray = implode(' ', $shArray);
+          $logfile = ROOTPATH.'/extFiles/logs/log-'.$multiSite.'.txt';
+          if ($shArray){
+            if($data->base != null ){
+              $takeoldconfg  = ROOTPATH.'/extFiles/shScript/takeoldconfg.sh';
+              shell_exec("sh $takeoldconfg $shArray  >$logfile 2>&1");
+            }
+            else{
+              $newSite  = ROOTPATH.'/extFiles/shScript/siteGenerator.sh';
+              shell_exec("sh $newSite $shArray >$logfile 2>&1");
+            }
+            $goTo = "<a class='button button--primary js-form-submit form-submit' target='_blank' href='http://$multiSite'>Go to  $multiSite now !!!</a>";
+            return ['#type' => 'markup','#markup' => $goTo];
           }
-        else{
-          $newSite  = ROOTPATH.'/extFiles/shScript/siteGenerator.sh';
-          shell_exec("sh $newSite $shArray >$logfile 2>&1");
+          else{
+            return ['#type' => 'markup','#markup' => 'Please check your site configuration.'];
+          }
         }
-        $goTo = "<a class='button button--primary js-form-submit form-submit' target='_blank' href='http://$multiSite'>Go to  $multiSite now !!!</a>";
-        return ['#type' => 'markup','#markup' => $goTo];
-    }
     else{
-      return ['#type' => 'markup','#markup' => 'Please check your site configuration.'];
+        drush_print('Please change "multisite" name. We have other folder/multisite with this name ('.$data->multisite.')');
     }
+
+  }
+
+
+  public function testSite($data){
+    $multisiteURL = getcwd().'/sites/'.$data->multisit;
+    if (file_exists($multisiteURL)){
+      return false;
+    }
+    $databases = array(
+      'database' => $data->name,
+      'username' => $data->user,
+      'password' => $data->pass,
+      'prefix' => '',
+      'host' => $data->host,
+      'port' => $data->port,
+      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+      'driver' => $data->type,
+    );
+    /*
+    \Drupal\Core\Database\Database::addConnectionInfo('external','external', $databases);
+    \Drupal\Core\Database\Database::setActiveConnection('external');
+    \Drupal\Core\Database\Database::getConnection('external');
+    $query = \Drupal\Core\Database\Database::getAllConnectionInfo();
+    $db = \Drupal::database();
+    $query = $db->select('node', 'n')->execute();
+    */
+    return TRUE;
   }
 }
 

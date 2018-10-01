@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.channels.field_channel_api_id
+    - field.field.taxonomy_term.channels.field_api_id
     - field.field.taxonomy_term.channels.field_channel_code
     - field.field.taxonomy_term.channels.field_channel_des
     - field.field.taxonomy_term.channels.field_channel_name
@@ -28,8 +28,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_channel_api_id:
-    weight: 1
+  field_api_id:
+    weight: 7
     label: above
     settings:
       link_to_entity: false

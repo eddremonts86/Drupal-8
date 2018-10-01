@@ -1,0 +1,7 @@
+rp_repo.steve:
+  title: 'Steve'
+  route_name: rp_repo.steve_info
+  description: 'System Base configurations'
+  parent: rp_base.index
+  weight: 0
+

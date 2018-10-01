@@ -1,0 +1,97 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the database_test module.
+ */
+
+/**
+ * Implements hook_schema().
+ *
+ * The database tests use the database API which depends on schema
+ * information for certain operations on certain databases.
+ * Therefore, the schema must actually be declared in a normal module
+ * like any other, not directly in the test file.
+ */
+
+function rp_push_api_schema()
+{
+  drupal_set_message('Install DB steve_push_api');
+  $schema['steve_push_api'] = [
+    'description' => 'This module provide an automatically content update between Content Repo Server and Content Clients.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'server_token' => [
+        'description' => "Site ID",
+        'type' => 'varchar_ascii',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'binary' => TRUE,
+      ],
+      'client_name' => [
+        'description' => "Client site name",
+        'type' => 'varchar_ascii',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'binary' => TRUE,
+      ],
+      'client_token' => [
+        'description' => "Client ID",
+        'type' => 'varchar_ascii',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'binary' => TRUE,
+      ],
+      'active' => [
+        'description' => "Client and server are active",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 1,
+      ],
+    ],
+    'primary key' => ['id'],
+    'unique keys' => [
+      'client_token' => ['client_token']
+    ]
+  ];
+  $schema['steve_push_api_entity_config'] = [
+    'description' => 'This module provide an automatically content update between Content Repo Server and Content Clients.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'entity_type' => [
+        'description' => "entity_type(node,taxonomy)",
+        'type' => 'varchar_ascii',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'binary' => TRUE,
+      ],
+      'active' => [
+        'description' => "Client and server are active",
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 1,
+      ],
+    ],
+    'primary key' => ['id'],
+    'unique keys' => [
+      'entity_type' => ['entity_type']
+    ]
+  ];
+  return $schema;
+}
+
+
+?>

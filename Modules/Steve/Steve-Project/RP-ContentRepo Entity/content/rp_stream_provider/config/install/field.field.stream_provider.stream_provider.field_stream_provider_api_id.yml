@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.stream_provider.field_stream_provider_api_id
+    - field.storage.stream_provider.field_api_id
   module:
     - rp_stream_provider
-id: stream_provider.stream_provider.field_stream_provider_api_id
-field_name: field_stream_provider_api_id
+id: stream_provider.stream_provider.field_api_id
+field_name: field_api_id
 entity_type: stream_provider
 bundle: stream_provider
 label: 'API ID'

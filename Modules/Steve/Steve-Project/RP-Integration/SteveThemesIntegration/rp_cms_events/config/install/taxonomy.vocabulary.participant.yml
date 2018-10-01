@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'Site - Participant'
+name: 'Steve - Participant'
 vid: participant
 description: ''
 hierarchy: 0

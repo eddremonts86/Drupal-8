@@ -1,7 +1,7 @@
-name: 'RP - Drupal User API'
+name: 'Steve API - Drupal User API'
 type: module
-description: Server RESTful API module.
+description: RESTful API to export/import system users.
 author: Eduardo Valdes Inerrate
 core: 8.x
-package: Rebel Penguins Apps - Server
+package: Rebel Penguins - Apps Server
 project: 'steve_RP'

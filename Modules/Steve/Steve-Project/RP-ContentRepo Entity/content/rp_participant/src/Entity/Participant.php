@@ -256,8 +256,8 @@ class Participant extends RevisionableContentEntityBase implements ParticipantIn
    * Get API ID value
    */
   public function getApiId() {
-    if($this->hasField('field_participant_api_id'))
-      return $this->get('field_participant_api_id')->value;
+    if($this->hasField('field_api_id'))
+      return $this->get('field_api_id')->value;
     else
       return null;
   }
@@ -266,7 +266,7 @@ class Participant extends RevisionableContentEntityBase implements ParticipantIn
    * Get API ID Field
    */
   public function getFieldApiId() {
-    return 'field_participant_api_id';
+    return 'field_api_id';
   }
 
   protected function urlRouteParameters($rel) {

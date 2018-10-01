@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - rp_participant
-id: participant.field_participant_api_id
-field_name: field_participant_api_id
+id: participant.field_api_id
+field_name: field_api_id
 entity_type: participant
 type: string
 settings:

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.participant.participant.field_participant_api_id
+    - field.field.participant.participant.field_api_id
     - field.field.participant.participant.field_participant_logo_modified
     - field.field.participant.participant.field_participant_logo_path
     - field.field.participant.participant.field_participant_sport
@@ -14,7 +14,7 @@ targetEntityType: participant
 bundle: participant
 mode: default
 content:
-  field_participant_api_id:
+  field_api_id:
     weight: 1
     label: above
     settings:

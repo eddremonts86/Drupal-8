@@ -1,0 +1,7 @@
+name: 'Steve - Rollbar Integration'
+type: module
+description: 'Steve Rollbar Integration.'
+core: 8.x
+package: 'Rebel Penguins - Sites Administration'
+autor: 'Eduardo Valdes Inerarte'
+project: 'steve_RP'

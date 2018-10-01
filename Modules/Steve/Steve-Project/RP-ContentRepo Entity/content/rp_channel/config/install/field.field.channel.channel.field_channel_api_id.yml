@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.channel.field_channel_api_id
+    - field.storage.channel.field_api_id
   module:
     - rp_channel
-id: channel.channel.field_channel_api_id
-field_name: field_channel_api_id
+id: channel.channel.field_api_id
+field_name: field_api_id
 entity_type: channel
 bundle: channel
 label: 'API ID'

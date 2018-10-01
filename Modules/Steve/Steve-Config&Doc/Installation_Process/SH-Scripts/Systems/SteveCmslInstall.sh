@@ -47,7 +47,7 @@
     #_THEME_CONF=rp_cms_steve_integration_horseracing               #3
     #_THEME_CONF=rp_cms_steve_integration_live_fodbald              #1
     #_THEME_CONF=rp_cms_steve_integration_se_fodbald                #2
-    #_THEME_CONF=rp_cms_steve_watchfooty_config                     #5
+    #_THEME_CONF=rp_cms_steve_integration_watchfooty                     #5
 
 
 

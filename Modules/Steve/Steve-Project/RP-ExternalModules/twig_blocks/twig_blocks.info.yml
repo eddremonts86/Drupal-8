@@ -1,7 +1,7 @@
 name:  'RP CMS - Twig Blocks'
 description: 'Provides the ability to render a block in twig.'
 type: module
-package: 'Rebel Penguins CMS - Frontend'
+package: 'Rebel Penguins CMS - Frontend  Helper '
 # core: 8.x
 
 # Information added by Drupal.org packaging script on 2017-05-02

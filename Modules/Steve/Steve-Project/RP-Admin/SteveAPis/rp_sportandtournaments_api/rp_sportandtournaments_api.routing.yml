@@ -1,0 +1,35 @@
+rp_sportandtournaments_api.general_controller_getAll:
+  path: '/steveApi/sports/getAll'
+  defaults: { _controller: '\Drupal\rp_sportandtournaments_api\Controller\generalController::getAll' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_sportandtournaments_api.general_controller_getAllperpage:
+  path: '/steveApi/sports/getAll/{page}'
+  defaults: { _controller: '\Drupal\rp_sportandtournaments_api\Controller\generalController::getAll' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_sportandtournaments_api.general_controller_getsportbyid:
+  path: '/steveAPI/sports/getSportByid/{eventid}'
+  defaults: { _controller: '\Drupal\rp_sportandtournaments_api\Controller\generalController::getsportbyid' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_sportandtournaments_api.general_controller_getsportbyidtranslation:
+  path: '/steveAPI/sports/getSportTranslationByid/{eventid}/{lang}'
+  defaults: { _controller: '\Drupal\rp_sportandtournaments_api\Controller\generalController::getsportbyidtranslation' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+
+rp_sportandtournaments_api.general_controller_getsportbyidtranslationtest:
+  path: '/steveAPI/sports/getSportTranslations/{lang}/{page}'
+  defaults: { _controller: '\Drupal\rp_sportandtournaments_api\Controller\generalController::getAllTranslation' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

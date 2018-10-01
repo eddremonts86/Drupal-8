@@ -415,7 +415,7 @@ abstract class SteveBaseControler extends ControllerBase
     {
         $obj = [
             'vid' => 'channels',
-            'field_channel_api_id' => $_SESSION['channel'],
+            'field_api_id' => $_SESSION['channel'],
         ];
         $channel = $this->getTaxonomyByCriterio($obj, 0);
         if ($channel) {
@@ -424,7 +424,7 @@ abstract class SteveBaseControler extends ControllerBase
         } else {
             $obj = [
                 'vid' => 'channels',
-                'field_channel_api_id' => 3,
+                'field_api_id' => 3,
             ];
             $channel = $this->getTaxonomyByCriterio($obj, 0);
             if ($channel) {
@@ -564,7 +564,7 @@ abstract class SteveBaseControler extends ControllerBase
                 ], 0);
                 $name = $tournamentContent->name->value;
                 $id = $tournamentContent->tid->value;
-                $idAPI = $tournamentContent->field_participant_api_id->value;
+                $idAPI = $tournamentContent->field_api_id->value;
                 $logo = $tournamentContent->field_participant_logo->target_id;
                 $participantsListFormat[] = [
                     'id' => $id,
@@ -689,11 +689,11 @@ abstract class SteveBaseControler extends ControllerBase
             $listFormat[] = [
                 'id' => $listF->id(),
                 'streamName' => $listF->name->value,
-                'apiId' => $listF->field_stream_provider_api_id->value,
+                'apiId' => $listF->field_api_id->value,
                 'homePromo' => $listF->field_stream_provider_home_promo->value,
                 'sponsor' => $listF->field_stream_provider_sponsor->value,
                 'description' => $this->getShortcode($listF->description->value),
-                'idTabsTemplate' => $this->getClearUrl($listF->name->value . '_' . $listF->field_stream_provider_api_id->value),
+                'idTabsTemplate' => $this->getClearUrl($listF->name->value . '_' . $listF->field_api_id->value),
                 'streamIMG' => $streamIMG,
                 'streamIMGAlt' => $streamIMGAlt,
                 'sport' => $this->getSport(),
@@ -1219,7 +1219,7 @@ abstract class SteveBaseControler extends ControllerBase
                 'Provider6Stars' => 4,
 
                 'ProviderSponsored' => 'Sponsoreret indhold',
-                'gotoButton' => 'Go to ' . $term->name->value,
+                'gotoButton' => t('Go to '). $term->name->value,
                 'step1' => $this->getImgUrl($term->field_step_1->target_id),
                 'step2' => $this->getImgUrl($term->field_step_2->target_id),
                 'step3' => $this->getImgUrl($term->field_step_3->target_id)
@@ -1263,7 +1263,7 @@ abstract class SteveBaseControler extends ControllerBase
                 if ($metas->channel == $_SESSION["channel"]) {
                     $obj = [
                         'vid' => 'stream_provider',
-                        'field_stream_provider_api_id' => $steam->id,
+                        'field_api_id' => $steam->id,
                     ];
                     $term = $this->getTaxonomyByCriterio($obj);
                     if ($term) {

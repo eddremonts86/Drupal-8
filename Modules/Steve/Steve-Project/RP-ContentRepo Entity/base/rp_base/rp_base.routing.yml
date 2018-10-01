@@ -22,11 +22,12 @@ rp_base.rp_base_controller_entity_settings:
     _title: 'Entity Settings'
   requirements:
     _permission: 'access rp base configuration'
+
 rp_base.rp_base_config:
-  path: '/admin/rp/rp_base_config'
+  path: '/admin/steve/system/config'
   defaults:
     _form: '\Drupal\rp_base\Form\RPBaseConfig'
     _title: 'RPBaseConfig'
   requirements:
     _access: 'TRUE'
-  
+

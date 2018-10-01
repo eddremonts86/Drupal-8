@@ -1,5 +1,5 @@
-name: 'rp_othersites_api'
+name: 'Steve API - Others Sites taxonomy'
 type: module
-description: 'My Awesome Module'
+description: 'Export Import Others Sites taxonomy -  RESTful API'
 core: 8.x
-package: 'Rebel Penguins Apps - Server'
+package: 'Rebel Penguins - Apps Server'

@@ -1,0 +1,11 @@
+name: Steve API
+type: module
+description: This module provides a Base API, We used this module to connect the system to Steve API.
+package: Rebel Penguins - Apps Server
+version: 8.x-1.0
+core: 8.x
+autor: 'Eduardo Valdes Inerarte'
+project: 'steve_RP'
+dependencies:
+  - rest
+  - rp_rollbar

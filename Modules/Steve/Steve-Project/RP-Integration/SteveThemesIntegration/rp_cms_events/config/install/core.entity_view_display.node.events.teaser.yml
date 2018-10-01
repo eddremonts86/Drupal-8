@@ -42,6 +42,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_event_api_id: true
   field_event_channels: true

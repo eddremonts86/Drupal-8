@@ -21,7 +21,8 @@ rp_base.controller_entity_settings:
   weight: 2
 
 rp_base.rp_base_config_form:
-  title: 'Base config'
+  title: 'Steve Site Config'
   route_name: rp_base.rp_base_config
-  parent: rp_base.index
-  weight: 5
+  description: 'System Base configurations'
+  parent: rp_repo.steve
+  weight: 0

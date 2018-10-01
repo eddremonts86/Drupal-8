@@ -47,6 +47,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+    enabled: true
 id: taxonomy_term.steve_timezones.default
 targetEntityType: taxonomy_term
 bundle: steve_timezones

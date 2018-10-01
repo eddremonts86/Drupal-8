@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_rollbar.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_rollbar_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_rollbar module.
+    case 'help.page.rp_rollbar':
+      $output = '';
+      $output .= '<h3>' . t('Steve Rollbar Integration.') . '</h3>';
+      $output .= '<p>' . t('Rollbar provides real-time exception reporting and continuous deployment monitoring for developers. 
+                                   These docs will help you get up and running with Rollbar quickly and discover how Rollbar can help 
+                                   your team throughout your development process.') . '</p>';
+      $output .= '<p><b>' . t('Installation') . '</b><br>';
+      $output .=  t('- Install Composer in your environment. Read more').'<a href=" https://getcomposer.org" target="_blank"> '.t('here').' </a><br>';
+      $output .=  t('- Rum  " composer require rollbar/rollbar:~1.5.* " ') . '</p>';
+      $output .= '<p> <b>' . t('Configuration') . '</b><br>';
+      $output .= t('Go to').'<a href="/admin/rp/rp_base_config"> Rollbar Configuration </a>' . t('and edit Rollbar credentials') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_rollbar_theme() {
+  return [
+    'rp_rollbar' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+function rp_rollbar_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ('rp_base_config'== $form_id) {
+    $config = \Drupal::configFactory()->get('rp_base.settings');
+    $form['rollbar'] = array(
+      '#type' => 'details',
+      '#title' => 'Rollbar Configuration',
+      '#group' => 'information',
+    );
+    $form['rollbar']['rp_base_rollbar_environment'] = [
+      '#type' => 'select',
+      '#title' => 'Select Environment',
+      '#default_value' =>  $config->get('rp_base_rollbar_environment'),
+      '#options' => [
+        '1' => 'Production',
+        '2' => 'Texting',
+        '3' => 'Development',
+      ],
+    ];
+    $form['rollbar']['rp_base_rollbar_access_token'] = [
+      '#type' => 'textfield',
+      '#title' => 'Access Token',
+      '#maxlength' => 64,
+      '#size' => 64,
+      '#default_value' =>  $config->get('rp_base_rollbar_access_token'),
+      '#description' => '',
+    ];
+    $form['actions']['submit']['#submit'][] = 'save_rollbar_conf';
+
+  }
+
+}
+
+function save_rollbar_conf($form, &$form_state){
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('rp_base.settings');
+  $formValues = $form_state->cleanValues()->getValues('');
+  foreach ($formValues as $values => $key){
+    $config->set($values, $form_state->getValue($values))->save();
+  }
+
+}

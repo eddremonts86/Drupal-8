@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.stream_provider.field_api_id
     - field.field.taxonomy_term.stream_provider.field_jsonld_struct
     - field.field.taxonomy_term.stream_provider.field_step_1
     - field.field.taxonomy_term.stream_provider.field_step_2
     - field.field.taxonomy_term.stream_provider.field_step_3
     - field.field.taxonomy_term.stream_provider.field_step_lvs
     - field.field.taxonomy_term.stream_provider.field_stream_disclaimer
-    - field.field.taxonomy_term.stream_provider.field_stream_provider_api_id
     - field.field.taxonomy_term.stream_provider.field_stream_provider_home_promo
     - field.field.taxonomy_term.stream_provider.field_stream_provider_sponsor
     - field.field.taxonomy_term.stream_provider.field_stream_provider_type_apiid
@@ -18,80 +18,12 @@ dependencies:
     - image.style.thumbnail
     - taxonomy.vocabulary.stream_provider
   module:
-    - field_group
     - field_layout
     - image
     - layout_discovery
     - path
     - text
 third_party_settings:
-  field_group:
-    group_streams:
-      children:
-        - group_general_info
-        - group_api_info
-        - group_repo_info
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      format_settings:
-        id: ''
-        classes: ''
-        direction: vertical
-      label: Streams
-      region: content
-    group_general_info:
-      children:
-        - name
-        - field_streamprovider_logo
-        - description
-        - field_stream_provider_sponsor
-        - field_stream_provider_home_promo
-        - field_stream_sport_promote
-      parent_name: group_streams
-      weight: 20
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'General Info'
-      region: content
-    group_api_info:
-      children:
-        - langcode
-        - field_streamprovider_logo_date
-        - path
-        - field_stream_provider_api_id
-        - field_stream_provider_type_apiid
-        - field_jsonld_struct
-      parent_name: group_streams
-      weight: 21
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'API Info'
-      region: content
-    group_repo_info:
-      children:
-        - translation
-      parent_name: group_streams
-      weight: 22
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Repo Info'
-      region: content
   field_layout:
     id: layout_onecol
     settings: {  }
@@ -108,6 +40,14 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_api_id:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_jsonld_struct:
     weight: 8
     settings:
@@ -149,14 +89,14 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_stream_provider_api_id:
-    weight: 6
+  field_stream_disclaimer:
+    type: string_textarea
+    weight: 0
+    region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_stream_provider_home_promo:
     weight: 5
     settings:
@@ -228,5 +168,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_stream_disclaimer: true
+hidden: {  }

@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_push_api.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\rp_push_api\Controller\pushController;
+
+/**
+ * Implements hook_help().
+ */
+function rp_push_api_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rp_push_api module.
+    case 'help.page.rp_push_api':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module provide an automatically content update between Content Repo Server and Content Clients') . '</p>';
+      $output .= '<a href="/admin/push_api/config"><p>' . t('Se the configuration here') . '</p></a> ';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_push_api_theme() {
+  return [
+    'rp_push_api' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function rp_push_api_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+   push_data_command($entity->getEntityTypeId() , $entity->toArray(),true);
+
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function rp_push_api_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+push_data_command($entity->getEntityTypeId() , $entity->toArray(),true);
+}
+/**/
+
+function push_data_command($type , $entity,$here = false ){
+  if($here){
+    $push = new pushController();
+    $data = array();
+    if($type == "user"){
+      $data = ['c_type' => "user"];
+    }
+    else if($type == "node"){
+      $data = ['c_type' => $entity["type"][0]["target_id"]];
+      if( $data['c_type'] == 'events'){
+        $data['apiid'] = $entity["field_event_api_id"][0]["value"];
+      }
+    }
+    else if($type == "taxonomy_term"){
+      $data = [
+        'c_type' => $entity["vid"][0]["target_id"]
+      ];
+      if( $data['c_type'] == 'sport' or $data['c_type'] == 'stream_provider' or $data['c_type'] == 'participant'){
+        $data['api_id'] = $entity["field_api_id"][0]["value"];
+      }
+    }
+    $push->pushRequest($data);
+   }
+   return TRUE;
+}

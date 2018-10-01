@@ -30,7 +30,6 @@ class siteAPIImporterController  extends ControllerBase {
     $this->updateSite($obj['data']['site'][0]);
     return TRUE;
   }
-
   public function  updateSite($siteNEW){
       $site = new taxonomySteveSite();
       $site->importSite($siteNEW['apiID']);

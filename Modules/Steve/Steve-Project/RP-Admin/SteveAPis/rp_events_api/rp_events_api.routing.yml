@@ -1,0 +1,42 @@
+rp_events_api.events_api_getAllevents:
+  path: '/steveAPI/events/{date}/{page}'
+  defaults: { _controller: 'Drupal\rp_events_api\Controller\events\eventsAPIExportController::getAllNodes' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+
+rp_events_api.events_api_getAlleventsfirstpage:
+  path: '/steveAPI/events/{date}'
+  defaults: { _controller: 'Drupal\rp_events_api\Controller\events\eventsAPIExportController::getAllNodes' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_events_api.events_api_geteventbyID:
+  path: '/steveAPI/event/{eventid}'
+  defaults: { _controller: 'Drupal\rp_events_api\Controller\events\eventsAPIExportController::geteventByID' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_events_api.events_api_geteventrevisionByID:
+  path: '/steveAPI/eventreviews/{eventid}'
+  defaults: { _controller: 'Drupal\rp_events_api\Controller\events\eventsAPIExportController::geteventrevisionByID' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_events_api.events_api_getAlleventsTranslation:
+  path: '/steveAPI/eventsTranslaion/{date}/{page}/{lang}'
+  defaults: { _controller: 'Drupal\rp_events_api\Controller\events\eventsAPIExportController::getAllNodesTranslation' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'
+
+rp_events_api.events_api_getAlleventTranslation:
+  path: '/steveAPI/eventsTranslaion/{eventid}/{lang}'
+  defaults: { _controller: 'Drupal\rp_events_api\Controller\events\eventsAPIExportController::geteventTranslation' }
+  methods:  [GET]
+  requirements:
+    _access: 'TRUE'

@@ -80,7 +80,7 @@ class GamesRPAPIModel extends RPAPIModelBase {
         'api_field' => 'participants',
         'field_type' => 'entity_reference',
         'entity_type' => 'participant',
-        'entity_field_reference' => 'field_participant_api_id',
+        'entity_field_reference' => 'field_api_id',
         'reference_schema' => [
           'type' => 'array',
           'subtype' => 'array',
@@ -91,7 +91,7 @@ class GamesRPAPIModel extends RPAPIModelBase {
         'api_field' => 'streamprovider',
         'field_type' => 'entity_reference',
         'entity_type' => 'stream_provider',
-        'entity_field_reference' => 'field_stream_provider_api_id',
+        'entity_field_reference' => 'field_api_id',
         'reference_schema' => [
           'type' => 'array',
           'subtype' => 'array',

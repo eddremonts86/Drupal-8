@@ -1,5 +1,5 @@
-name: 'rp_sportandtournaments_api'
+name: 'Steve API - Sport and Tournaments API'
 type: module
-description: 'My Awesome Module'
+description: 'Sport and Tournaments Import/Export - RESTful API'
 core: 8.x
-package: 'Rebel Penguins Apps - Server'
+package: 'Rebel Penguins - Apps Server'

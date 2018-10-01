@@ -210,9 +210,9 @@ Differences of the active config to the export directory:
              block.block.adblockplugin                                                    [1;32;40m[1mcreate[0m 
              language.content_settings.channel.channel                                    [1;32;40m[1mcreate[0m 
              field.storage.channel.field_channel_code                                     [1;32;40m[1mcreate[0m 
-             field.storage.channel.field_channel_api_id                                   [1;32;40m[1mcreate[0m 
+             field.storage.channel.field_api_id                                   [1;32;40m[1mcreate[0m
              field.field.channel.channel.field_channel_code                               [1;32;40m[1mcreate[0m 
-             field.field.channel.channel.field_channel_api_id                             [1;32;40m[1mcreate[0m 
+             field.field.channel.channel.field_api_id                             [1;32;40m[1mcreate[0m
              core.entity_form_display.channel.channel.default                             [1;32;40m[1mcreate[0m 
              block.block.sportpagefooter                                                  [1;32;40m[1mcreate[0m 
              block.block.sitepagetop                                                      [1;32;40m[1mcreate[0m 
@@ -386,7 +386,7 @@ Differences of the active config to the export directory:
              field.storage.taxonomy_term.field_stream_provider_type_apiid                 [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_stream_provider_sponsor                    [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_stream_provider_home_promo                 [1;32;40m[1mcreate[0m 
-             field.storage.taxonomy_term.field_stream_provider_api_id                     [1;32;40m[1mcreate[0m 
+             field.storage.taxonomy_term.field_api_id                     [1;32;40m[1mcreate[0m
              field.storage.taxonomy_term.field_stream_disclaimer                          [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_streamprovider_logo_date                   [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_streamprovider_logo                        [1;32;40m[1mcreate[0m 
@@ -406,7 +406,7 @@ Differences of the active config to the export directory:
              field.storage.taxonomy_term.field_participant_logo_date                      [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_participant_logo                           [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_participant_background_pag                 [1;32;40m[1mcreate[0m 
-             field.storage.taxonomy_term.field_participant_api_id                         [1;32;40m[1mcreate[0m 
+             field.storage.taxonomy_term.field_api_id                         [1;32;40m[1mcreate[0m
              field.storage.taxonomy_term.field_parent                                     [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_no_event_sport                             [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_logo_date                                  [1;32;40m[1mcreate[0m 
@@ -424,7 +424,7 @@ Differences of the active config to the export directory:
              field.storage.taxonomy_term.field_channel_name                               [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_channel_des                                [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_channel_code                               [1;32;40m[1mcreate[0m 
-             field.storage.taxonomy_term.field_channel_api_id                             [1;32;40m[1mcreate[0m 
+             field.storage.taxonomy_term.field_api_id                             [1;32;40m[1mcreate[0m
              field.storage.taxonomy_term.field_channels                                   [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_base_color                                 [1;32;40m[1mcreate[0m 
              field.storage.taxonomy_term.field_background                                 [1;32;40m[1mcreate[0m 
@@ -451,7 +451,7 @@ Differences of the active config to the export directory:
              field.field.taxonomy_term.channels.field_channel_name                        [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.channels.field_channel_des                         [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.channels.field_channel_code                        [1;32;40m[1mcreate[0m 
-             field.field.taxonomy_term.channels.field_channel_api_id                      [1;32;40m[1mcreate[0m 
+             field.field.taxonomy_term.channels.field_api_id                      [1;32;40m[1mcreate[0m
              field.field.node.events.field_event_channels                                 [1;32;40m[1mcreate[0m 
              core.base_field_override.taxonomy_term.channels.path                         [1;32;40m[1mcreate[0m 
              core.base_field_override.taxonomy_term.channels.name                         [1;32;40m[1mcreate[0m 
@@ -481,7 +481,7 @@ Differences of the active config to the export directory:
              field.field.taxonomy_term.participant.field_participant_logo_date            [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.participant.field_participant_logo                 [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.participant.field_participant_background_pag       [1;32;40m[1mcreate[0m 
-             field.field.taxonomy_term.participant.field_participant_api_id               [1;32;40m[1mcreate[0m 
+             field.field.taxonomy_term.participant.field_api_id               [1;32;40m[1mcreate[0m
              field.field.taxonomy_term.participant.field_locales                          [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.participant.field_jsonld_struct                    [1;32;40m[1mcreate[0m 
              field.field.node.events.field_event_participants                             [1;32;40m[1mcreate[0m 
@@ -571,7 +571,7 @@ Differences of the active config to the export directory:
              field.field.taxonomy_term.stream_provider.field_stream_provider_type_apiid   [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.stream_provider.field_stream_provider_sponsor      [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.stream_provider.field_stream_provider_home_promo   [1;32;40m[1mcreate[0m 
-             field.field.taxonomy_term.stream_provider.field_stream_provider_api_id       [1;32;40m[1mcreate[0m 
+             field.field.taxonomy_term.stream_provider.field_api_id       [1;32;40m[1mcreate[0m
              field.field.taxonomy_term.stream_provider.field_stream_disclaimer            [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.stream_provider.field_streamprovider_logo_date     [1;32;40m[1mcreate[0m 
              field.field.taxonomy_term.stream_provider.field_streamprovider_logo          [1;32;40m[1mcreate[0m 

@@ -1,7 +1,7 @@
-name: 'RP - Drupal Site API'
+name: 'Steve API - Site API'
 type: module
-description: Server RESTful API module.
+description: Export/import Sites content- RESTful API -  RESTful API.
 autor: 'Eduardo Valdes Inerarte'
 project: 'steve_RP'
 core: 8.x
-package: Rebel Penguins Apps - Server
+package: Rebel Penguins - Apps Server

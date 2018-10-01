@@ -1,0 +1,31 @@
+{
+  "name": "drupal/rp_rollbar",
+  "type": "drupal-module",
+  "description": "Steve Rollbar Integration.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/rp_rollbar",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/rp_rollbar",
+    "source": "http://cgit.drupalcode.org/rp_rollbar"
+  },
+  "require": {
+      "rollbar/rollbar":"~1.5"
+  },
+  "extra": {
+    "_readme": [
+      "By default Drupal loads the autoloader from ./vendor/autoload.php.",
+      "To change the autoloader you can edit ./autoload.php."
+    ],
+    "merge-plugin": {
+      "include": [
+        "core/composer.json",
+        "modules/rp_rollbar/composer.json"
+      ],
+        "recurse": false,
+        "replace": false,
+        "merge-extra": false
+      }
+    }
+}

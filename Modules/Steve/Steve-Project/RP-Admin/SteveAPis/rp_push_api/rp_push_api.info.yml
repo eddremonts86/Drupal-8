@@ -1,0 +1,5 @@
+name: 'rp_push_api'
+type: module
+description: 'This module provide an automatically content update between Content Repo Server and Content Clients'
+core: 8.x
+package: 'Rebel Penguins - Sites Administration'

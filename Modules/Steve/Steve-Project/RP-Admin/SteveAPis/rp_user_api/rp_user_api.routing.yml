@@ -1,23 +1,23 @@
-rp_user_api.userApicontroller_getAllUsers:
+rp_user_api.userAPIExport_getAllUsers:
   path: '/steveAPI/getUsers'
   defaults:
-    _controller: '\Drupal\rp_user_api\Controller\user\userAPIController::getAllUsers'
+    _controller: '\Drupal\rp_user_api\Controller\user\userAPIExport::getAllUsers'
     _title: 'Get Users'
   requirements:
     _permission: 'access content'
 
-rp_user_api.userApicontroller_getUserbyId:
+rp_user_api.userAPIExport_getUserbyId:
   path: '/steveAPI/getUser/{SiteId}'
   defaults:
-    _controller: '\Drupal\rp_user_api\Controller\user\userAPIController::getUserById'
+    _controller: '\Drupal\rp_user_api\Controller\user\userAPIExport::getUserById'
     _title: 'Get User'
   requirements:
     _permission: 'access content'
 
-rp_user_api.userApicontroller_getUserContent:
+rp_user_api.userAPIExport_getUserContent:
   path: '/steveAPI/getUserContent/{SiteId}'
   defaults:
-    _controller: '\Drupal\rp_user_api\Controller\user\userAPIController::getUserContent'
+    _controller: '\Drupal\rp_user_api\Controller\user\userAPIExport::getUserContent'
     _title: 'Import - User'
   requirements:
     _permission: 'access content'
@@ -31,14 +31,14 @@ rp_user_api.getLoginCheck:
 
 rp_user_api.getAPIUserbyTonkesandSite:
   path: '/steveAPI/getAPIUserbyTonkesandSite/{site}/{userToken}/{siteToken}'
-  defaults: { _controller: 'Drupal\rp_user_api\Controller\user\userAPIController::getAPIUserbyTonkesandSite' }
+  defaults: { _controller: 'Drupal\rp_user_api\Controller\user\userAPIExport::getAPIUserbyTonkesandSite' }
   methods:  [GET]
   requirements:
     _access: 'TRUE'
 
-rp_user_api.userApicontroller_updateUser:
+rp_user_api.userAPIExport_updateUser:
   path: '/steveAPI/updateUser/{SiteId}'
-  defaults: { _controller:  '\Drupal\rp_user_api\Controller\user\userAPIController::getAllUsersToUpdate' }
+  defaults: { _controller:  '\Drupal\rp_user_api\Controller\user\userAPIExport::getAllUsersToUpdate' }
   methods:  [GET]
   requirements:
     _access: 'TRUE'

@@ -159,6 +159,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 id: taxonomy_term.sport.default
 targetEntityType: taxonomy_term
 bundle: sport

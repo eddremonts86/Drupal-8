@@ -9,25 +9,25 @@ use Drupal\rp_site_api\Controller\site\siteAPIController;
 function rp_site_api_drush_command() {
 
   $commands['rp-site-api-importAllSites'] = [
-    'description' => 'RP API Import entities',
+    'description' => 'Import All Site',
     'callback' => 'rp_site_api_drush_importAllSites',
     'aliases' => ['steve_importAllSites'],
     'examples' => [
-      'drush rpapii sites' => 'Import Sites entity from API STEVE',
+      'drush steve_importAllSites' => 'Import All Site',
 
     ],
   ];
 
 
   $commands['rp-site-api-importSiteByID'] = [
-    'description' => '-==- Import data and create all content type and tax From API -==-  ',
+    'description' => 'Import Site by Steve Site id',
     'callback' => 'rp_site_api_drush_importSiteByID',
     'aliases' => ['steve_importSiteByID'],
     'arguments' => [
      'siteId' => 'siteId'
     ],
     'examples' => [
-      'drush rp_importApiBYDays 10' => 'Import all data for the next 10 days',
+      'drush steve_importSiteByID 10' => 'Import Site by Steve Site id',
     ],
   ];
 
