@@ -1,0 +1,6 @@
+name: 'RP CMS -  Cookie'
+type: module
+description: 'Provide a bottom bar with Cookie Police.'
+core: 8.x
+package: 'Rebel Penguins CMS - Frontend  Helper '
+project: 'steve_RP'

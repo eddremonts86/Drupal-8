@@ -1,0 +1,22 @@
+<?php
+
+use Drupal\rp_jsonld_struct\Controller\JsonLdController;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function rp_jsonld_struct_page_attachments(array &$page)
+{
+    $ControllerObject = new JsonLdController();
+    $value = $ControllerObject->getJsonLd();
+    if ($value) {
+        $script = [
+            '#tag' => 'script',
+            '#attributes' => [
+                'type' => 'application/ld+json'
+            ],
+            '#value' => $value
+        ];
+        $page['#attached']['html_head'][] = [$script, 'jsonld'];
+    }
+}

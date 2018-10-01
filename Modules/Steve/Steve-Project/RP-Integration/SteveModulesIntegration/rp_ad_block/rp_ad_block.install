@@ -1,0 +1,24 @@
+<?php
+	
+use Drupal\block\Entity\Block;
+
+function rp_ad_block_install() {
+	foreach(\Drupal::service('plugin.manager.block')->getDefinitions() as $plugin){
+		if($plugin['provider'] == 'rp_ad_block'){
+			$block = Block::create([
+				'id' => $plugin['id'],
+				'plugin' => $plugin['id'],
+				'region' => 'none',
+				'settings' => array(
+				    'label' => $plugin['admin_label']->getUntranslatedString(),
+					'label_display' => '0',
+				),
+				'theme' => \Drupal::service('theme.manager')->getActiveTheme()->getName(),
+				'visibility' => array(),
+				'weight' => 100,
+			]);
+			$block->save();
+		}
+	}
+}
+

@@ -1,0 +1,7 @@
+rp_cookie.cookie:
+  path: '/cookies'
+  defaults:
+    _controller: '\Drupal\rp_cookie\Controller\CookieController::cookiePage'
+    _title: 'Cookie'
+  requirements:
+    _permission: 'access content'

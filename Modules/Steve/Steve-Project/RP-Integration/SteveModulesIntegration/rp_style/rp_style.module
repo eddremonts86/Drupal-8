@@ -1,0 +1,43 @@
+<?php
+/**
+ * @file
+ * Contains rp_style.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_style_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the rp_shortcode module.
+    case 'help.page.rp_style':
+      $output = '';
+      $output .= '<h3>'.t('About') . '</h3>';
+      $output .= '<p>'.t('RP styles for - Sesport and Watchfooty template -  provides a list of diferent way to make better articles.') . '</p>';
+      $output .= '<p><a href="/styles"> ' . t('List of Styles') . '</input></p>';
+      return $output;
+    default:
+  }
+}
+
+function rp_style_theme()
+{
+	return [
+		'styleguidepage' =>
+		[
+			'variables' => [
+				'tags' => [],
+			],
+			'template' => 'styleguidepage',
+		],
+	];
+}
+function rp_style_page_attachments(array &$page)
+{
+    if(\Drupal::request()->getRequestUri() == '/style'){
+        $page['#attached']['library'][] = 'rp_style/styleGuide';
+    }
+}

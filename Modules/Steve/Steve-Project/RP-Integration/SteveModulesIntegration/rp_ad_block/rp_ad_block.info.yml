@@ -1,0 +1,6 @@
+name: 'RP CMS - Ad Block'
+type: module
+description: 'Who can you now when a browser have any Ad blocks ? This module provide a good way to inform the users about this'
+core: 8.x
+package: 'Rebel Penguins CMS - Frontend  Helper '
+project: 'steve_RP'

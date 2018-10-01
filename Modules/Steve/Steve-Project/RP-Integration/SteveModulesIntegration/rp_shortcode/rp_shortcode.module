@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Contains rp_shortcode.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rp_shortcode_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the rp_shortcode module.
+        case 'help.page.rp_shortcode':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('RP Shortcode module implements shortcode filters for content') . '</p>';
+            $output .= '<p><a href="/shortcode"> ' . t('List of Shortcodes') . '</input></p>';
+            return $output;
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rp_shortcode_theme()
+{
+    return array(
+        // Page Header
+        'shortcode_page_header' => array(
+          'variables' => array('text'=> NULL,'background_image'=> NULL,'title'=> NULL,'type'=> NULL),
+        ),
+        // Page Header Main
+        'shortcode_page_header_main' => array(
+          'variables' => array('text'=> NULL,'background_image'=> NULL,'title'=> NULL,'type'=> 'main'),
+        ),
+        // Page Header Game Page
+        'shortcode_page_header_game_page' => array(
+          'variables' => array('text'=> NULL,'background_image'=> NULL,'title'=> NULL,'subtitle'=> NULL,'type'=> 'game_page'),
+        ),
+        // Page Header Game Page
+        'shortcode_page_header_compact' => array(
+          'variables' => array('text'=> NULL,'background_image'=> NULL,'title'=> NULL,'subtitle'=> NULL,'p1'=> NULL,'p2'=> NULL,'type'=> 'compact'),
+        ),
+
+        // Match ad
+        'shortcode_match_ad' => array(
+          'variables' => array('type' => NULL,'text'=> NULL,'title'=> NULL,'subtitle'=> NULL,'details'=> NULL,'modes'=> NULL),
+        ),
+        // Match ad for Page Header Main
+        'shortcode_match_ad_page_header_main' => array(
+          'variables' => array('type' => 'page_header_main','text'=> NULL,'title'=> NULL,'subtitle'=> NULL,'details'=> NULL,'modes'=> NULL),
+        ),
+
+        // Matches banner
+        'shortcode_matches_banner' => array(
+          'variables' => array('title'=> NULL,'subtitle'=> NULL,'background_image'=> NULL,'count'=> NULL),
+        ),
+
+        // Schedule
+        'shortcode_schedule' => array(
+          'variables' => array('title'=> NULL,'background_image'=> NULL),
+        ),
+
+        //Schedule panel
+        'shortcode_schedule_panel' => array(
+          'variables' => array('tags' => [], 'colors' => []),
+        ),
+
+        // Stream Providers
+        'shortcode_stream_providers' => array(
+          'variables' => array('title'=> NULL),
+        ),
+        // Stream Providers Large List
+        'shortcode_stream_providers_list_large' => array(
+          'variables' => array('title'=> NULL,'background_image'=> NULL),
+        ),
+
+        // Carousel
+        'shortcode_carousel' => array(
+          'variables' => array('title'=> NULL,'background_image'=> NULL,'count'=> NULL),
+        ),
+        // Carousel Matches
+        'shortcode_carousel_matches' => array(
+          'variables' => array('title'=> NULL,'background_image'=> NULL,'count'=> NULL,'type'=> 'matches'),
+        ),
+
+        // Calendar
+        'shortcode_calendar' => array(
+          'variables' => array('title'=> NULL,'subtitle'=> NULL),
+        ),
+
+        // Event Team List 
+        'shortcode_team_list' => array(
+          'variables' => array('participants' => NULL),
+        ),
+
+        //Shortcode Page
+        'shortcodepage' => array(
+          'variables' => array(),
+        ),
+      );
+}

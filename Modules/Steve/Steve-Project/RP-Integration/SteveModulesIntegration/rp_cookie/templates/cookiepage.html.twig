@@ -1,0 +1,32 @@
+<section class="CookiePage">
+	<div class="container cookies_form">
+	    <div class="row">
+	        <div class="col-lg-8">
+	            <div class="panel panel-default">
+	                <div class="panel-heading">
+	                    <h3 id="cookies_title" class="panel-title"> {{ 'cookie_head'|t }}<br>
+	                    <small>{{ 'cookie_subhead'|t }}</small>
+	                    <br> 
+	                </div>
+	                <div class="panel-body panel_body_padding">
+	                    <div class="def_conf">
+	                        <div class="pull-left" id="cookies_labels">
+	                            <span id="cookies_c" class="hidden">{{ 'cookies_levels'|t }} </span>
+	                            <input id="ex19" type="text" data-slider-ticks="[1, 2]">
+	                        </div>
+	                        <div id="cookies_content" class="pull-right">                            
+	                            <div>
+	                                <h4 id="cookies_requiered">{{ 'cookie_req'|t }}</h4>
+	                                <ul><li>{{ 'cookie_req_text'|t }}</li></ul>
+	                                <h4 id="cookies_optional">{{ 'cookie_opc'|t }}</h4>
+	                                <ul><li>{{ 'cookie_opc_text'|t }}</li></ul>
+								</div>
+	                        </div>
+	                    </div>                       
+	                    <input id="aggree" class="btn btn-primary pull-right" type="submit" value="{{ 'cookie_agree'|t }}"></h3>
+					</div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>

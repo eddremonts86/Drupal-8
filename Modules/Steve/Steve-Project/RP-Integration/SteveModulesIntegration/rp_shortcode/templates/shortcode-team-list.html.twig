@@ -1,0 +1,9 @@
+{% if participants %}
+	<span>
+		<ul>
+			{% for team in participants %}
+				<li> {{ team.name }} </li>
+			{% endfor %}
+		</ul>
+	</span>
+{% endif %}

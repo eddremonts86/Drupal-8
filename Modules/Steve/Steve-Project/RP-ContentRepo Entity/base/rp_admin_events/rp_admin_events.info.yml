@@ -1,0 +1,7 @@
+name: 'RP Admin Events'
+type: module
+description: 'Events Administration is a module to order all the events entities. '
+core: 8.x
+package: Rebel Penguin - Entities
+autor: 'Eduardo Valdes Inerarte'
+
